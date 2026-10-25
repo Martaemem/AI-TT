@@ -58,23 +58,30 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
           Alert.alert('Brak napisów w filmie', `Nie znalazłem napisów do tego filmu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         }
       }
+      let slideError = '';
       if (slides.length > 0) {
         setBusy(`Odczytuję tekst ze zdjęć (${slides.length})…`);
         try {
           const slidesText = await readSlides(slides, data.settings);
           if (slidesText) transcript = [transcript, `Tekst ze slajdów:\n${slidesText}`].filter(Boolean).join('\n\n');
+          else log('zdjęcia: AI nie zwróciło tekstu');
         } catch (e) {
-          Alert.alert('Nie udało się odczytać zdjęć', (e as Error).message);
+          slideError = (e as Error).message;
+          log(`zdjęcia: ${slideError}`);
         }
       }
       const source = [caption && `Opis filmu: ${caption}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
         .filter(Boolean)
         .join('\n\n');
       if (!caption && !transcript) {
-        Alert.alert('Nie udało się pobrać opisu', `Wklej poniżej opis lub transkrypcję filmu – AI uporządkuje ją w kroki.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
+        Alert.alert(
+          slides.length > 0 ? 'Nie udało się odczytać zdjęć' : 'Nie udało się pobrać opisu',
+          `${slides.length > 0 ? 'Wklej tekst ze slajdów ręcznie albo spróbuj ponownie.' : 'Wklej poniżej opis lub transkrypcję filmu – AI uporządkuje ją w kroki.'}\n\nSzczegóły techniczne:\n${diag.join('\n') || '(brak)'}`,
+        );
         setBusy('');
         return;
       }
+      if (slideError) Alert.alert('Zdjęć nie udało się odczytać', `${slideError}\n\nPorada powstanie bez tekstu ze slajdów.`);
       setBusy(hasKey ? 'AI porządkuje poradę…' : 'Porządkuję poradę…');
       const { analysis, error } = await analyzeTip(source, data.settings, caption);
       if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
