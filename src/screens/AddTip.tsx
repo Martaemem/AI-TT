@@ -7,7 +7,7 @@ import { colors } from '../theme';
 import { Button, Header } from '../components/ui';
 import { Nav } from '../nav';
 import { analyzeTip, extractTikTokUrl } from '../ai';
-import { readSlides } from '../vision';
+import { readSlides, Slide } from '../vision';
 import { fetchTikTokMeta, isGeneric } from '../tiktok';
 import { fetchTikTokTranscript } from '../transcript';
 import { Tip } from '../types';
@@ -17,7 +17,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
   const [url, setUrl] = useState(initialUrl ?? '');
   const [text, setText] = useState('');
   const [busy, setBusy] = useState('');
-  const [slides, setSlides] = useState<string[]>([]); // adresy zdjęć slajdów
+  const [slides, setSlides] = useState<Slide[]>([]); // wybrane zdjęcia slajdów
   const hasKey = data.settings.apiKey.trim().length > 0;
 
   const paste = async () => {
@@ -30,9 +30,11 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
       mediaTypes: ['images'],
       allowsMultipleSelection: true,
       selectionLimit: 12,
+      quality: 0.6,
+      base64: true,
     });
     if (res.canceled) return;
-    setSlides(res.assets.map((a) => a.uri));
+    setSlides(res.assets.map((a) => ({ uri: a.uri, base64: a.base64 })));
   };
 
   const run = async () => {
@@ -60,7 +62,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
       if (slides.length > 0) {
         setBusy(`Odczytuję tekst ze zdjęć (${slides.length})…`);
         try {
-          const slidesText = await readSlides(slides);
+          const slidesText = await readSlides(slides, data.settings);
           if (slidesText) transcript = [transcript, `Tekst ze slajdów:\n${slidesText}`].filter(Boolean).join('\n\n');
           else log('zdjęcia: nie rozpoznano żadnego tekstu');
         } catch (e) {
@@ -129,7 +131,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         <TextInput value={text} onChangeText={setText} multiline placeholder="Np. 1. Otwórz ChatGPT… 2. Wklej prompt…" placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
 
         <Text style={[st.label, { marginTop: 22 }]}>Slajdy ze zdjęć (opcjonalnie)</Text>
-        <Text style={st.hint}>Dla postów ze zdjęciami: zrób zrzuty ekranu slajdów, wybierz je tutaj, a telefon sam odczyta z nich tekst (bez klucza i internetu), który potem uporządkuje AI.</Text>
+        <Text style={st.hint}>Dla postów ze zdjęciami: zrób zrzuty ekranu slajdów, wybierz je tutaj, a aplikacja odczyta z nich tekst (najpierw w telefonie, a w razie potrzeby przez AI) i uporządkuje go.</Text>
         <Button title={slides.length ? `Wybrano ${slides.length} zdjęć – zmień` : 'Wybierz zrzuty slajdów'} icon="images-outline" outline onPress={pickSlides} />
 
         <View style={st.mode}>
