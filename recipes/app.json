@@ -6,18 +6,27 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "bsmakapp",
+    "icon": "./assets/icon.png",
     "ios": {
       "bundleIdentifier": "pl.aitt.bsmak"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#FAF1E8"
+        "backgroundColor": "#FDD34D",
+        "foregroundImage": "./assets/adaptive.png"
       },
       "predictiveBackGestureEnabled": false,
       "package": "pl.aitt.bsmak"
     },
     "plugins": [
-      ["expo-share-intent", { "androidIntentFilters": ["text/*"] }]
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": [
+            "text/*"
+          ]
+        }
+      ]
     ]
   }
 }

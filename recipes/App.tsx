@@ -5,7 +5,9 @@ import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 import { ShareIntentProvider, useShareIntentContext } from 'expo-share-intent';
 import { StoreProvider, useStore } from './src/store';
-import { colors } from './src/theme';
+import { useFonts, Baloo2_700Bold, Baloo2_800ExtraBold } from '@expo-google-fonts/baloo-2';
+import { Nunito_500Medium, Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito';
+import { colors, fonts } from './src/theme';
 import { Nav, Route } from './src/nav';
 import { extractUrl } from './src/source';
 import Home from './src/screens/Home';
@@ -22,6 +24,7 @@ type Tab = 'home' | 'plan' | 'shop' | 'more';
 
 function Root() {
   const { ready, data } = useStore();
+  const [fontsLoaded] = useFonts({ Baloo2_700Bold, Baloo2_800ExtraBold, Nunito_500Medium, Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold });
   const [tab, setTab] = useState<Tab>('home');
   const [stack, setStack] = useState<Route[]>([]);
   const { hasShareIntent, shareIntent, resetShareIntent } = useShareIntentContext();
@@ -56,7 +59,7 @@ function Root() {
     return () => sub.remove();
   }, [stack.length, tab, pop]);
 
-  if (!ready) return <View style={st.center}><ActivityIndicator color={colors.primary} size="large" /></View>;
+  if (!ready || !fontsLoaded) return <View style={st.center}><ActivityIndicator color={colors.ink} size="large" /></View>;
 
   const top = stack[stack.length - 1];
   let body: React.ReactNode;
@@ -81,11 +84,11 @@ function Root() {
   ];
   const TabBtn = ({ t }: { t: (typeof tabs)[number] }) => (
     <Pressable style={st.tab} onPress={() => { setStack([]); setTab(t.id); }}>
-      <View>
-        <Ionicons name={t.icon} size={26} color={tab === t.id ? colors.primary : colors.muted} />
+      <View style={[st.pill, tab === t.id && st.pillOn]}>
+        <Ionicons name={t.icon} size={22} color={colors.ink} />
         {!!t.badge && <View style={st.badge}><Text style={st.badgeText}>{t.badge > 99 ? '99+' : t.badge}</Text></View>}
       </View>
-      <Text style={[st.tabLabel, tab === t.id && { color: colors.primary }]}>{t.label}</Text>
+      <Text style={[st.tabLabel, tab === t.id && { color: colors.ink, fontFamily: fonts.bodyHeavy }]}>{t.label}</Text>
     </Pressable>
   );
 
@@ -96,7 +99,7 @@ function Root() {
         <TabBtn t={tabs[0]} />
         <TabBtn t={tabs[1]} />
         <Pressable style={st.fab} onPress={() => nav.push({ name: 'add' })}>
-          <Ionicons name="add" size={38} color="#fff" />
+          <Ionicons name="add" size={36} color={colors.ink} />
         </Pressable>
         <TabBtn t={tabs[2]} />
         <TabBtn t={tabs[3]} />
@@ -120,10 +123,12 @@ export default function App() {
 
 const st = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.bg },
-  bar: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', paddingVertical: 8, borderTopWidth: 1, borderTopColor: colors.line },
+  bar: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#fff', paddingVertical: 8, borderTopWidth: 2.5, borderTopColor: colors.ink },
   tab: { flex: 1, alignItems: 'center' },
-  tabLabel: { fontSize: 12, color: colors.muted, marginTop: 2 },
-  badge: { position: 'absolute', top: -4, right: -10, minWidth: 18, height: 18, borderRadius: 9, backgroundColor: colors.primaryDark, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 4 },
-  badgeText: { color: '#fff', fontSize: 11, fontWeight: '800' },
-  fab: { width: 64, height: 64, borderRadius: 32, backgroundColor: colors.primary, alignItems: 'center', justifyContent: 'center', marginTop: -26, marginHorizontal: 6, elevation: 6 },
+  pill: { paddingHorizontal: 14, paddingVertical: 3, borderRadius: 14, borderWidth: 2, borderColor: 'transparent' },
+  pillOn: { backgroundColor: colors.yellow, borderColor: colors.ink },
+  tabLabel: { fontSize: 12, color: colors.muted, marginTop: 2, fontFamily: fonts.bodyBold },
+  badge: { position: 'absolute', top: -6, right: -4, minWidth: 20, height: 20, borderRadius: 10, backgroundColor: colors.coral, borderWidth: 2, borderColor: colors.ink, alignItems: 'center', justifyContent: 'center', paddingHorizontal: 3 },
+  badgeText: { color: colors.ink, fontSize: 11, fontFamily: fonts.bodyHeavy },
+  fab: { width: 64, height: 64, borderRadius: 32, backgroundColor: colors.yellow, borderWidth: 2.5, borderBottomWidth: 6, borderColor: colors.ink, alignItems: 'center', justifyContent: 'center', marginTop: -28, marginHorizontal: 6 },
 });

@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@expo-google-fonts/baloo-2": "^0.4.2",
+    "@expo-google-fonts/nunito": "^0.4.2",
     "@expo/vector-icons": "^15.1.1",
     "@react-native-async-storage/async-storage": "^2.2.0",
     "expo": "~58.0.19",
     "expo-clipboard": "~58.0.4",
     "expo-constants": "~58.0.12",
+    "expo-font": "~58.0.10",
     "expo-keep-awake": "~58.0.3",
     "expo-linking": "~58.0.14",
     "expo-share-intent": "^9.0.0",
     "expo-status-bar": "~58.0.4",
     "react": "19.3.0",
     "react-native": "0.88.0",
-    "react-native-safe-area-context": "^5.10.1"
+    "react-native-safe-area-context": "^5.10.1",
+    "react-native-svg": "^15.16.0"
   },
   "devDependencies": {
     "@types/react": "~19.3.0",
@@ -22,7 +26,7 @@
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android"
+    "android": "expo run:android"
   },
   "private": true
 }
