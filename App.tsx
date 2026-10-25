@@ -3,6 +3,8 @@ import { ActivityIndicator, BackHandler, Pressable, StyleSheet, Text, View } fro
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
+import { ShareIntentProvider, useShareIntentContext } from 'expo-share-intent';
+import { extractTikTokUrl } from './src/ai';
 import { StoreProvider, useStore } from './src/store';
 import { colors } from './src/theme';
 import { Nav, Route } from './src/nav';
@@ -21,6 +23,7 @@ function Root() {
   const { ready } = useStore();
   const [tab, setTab] = useState<Tab>('home');
   const [stack, setStack] = useState<Route[]>([]);
+  const { hasShareIntent, shareIntent, resetShareIntent } = useShareIntentContext();
 
   const pop = useCallback(() => setStack((s) => s.slice(0, -1)), []);
   const nav: Nav = {
@@ -28,6 +31,14 @@ function Root() {
     pop,
     replace: (r) => setStack((s) => [...s.slice(0, -1), r]),
   };
+
+  // Link udostępniony z TikToka (Udostępnij → Porady AI) otwiera import i startuje go od razu
+  useEffect(() => {
+    if (!ready || !hasShareIntent) return;
+    const url = extractTikTokUrl(shareIntent.webUrl ?? shareIntent.text ?? '');
+    if (url) setStack([{ name: 'add', url, auto: true }]);
+    resetShareIntent();
+  }, [ready, hasShareIntent, shareIntent, resetShareIntent]);
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -52,7 +63,7 @@ function Root() {
     switch (top.name) {
       case 'detail': body = <Detail key={top.id} nav={nav} id={top.id} />; break;
       case 'steps': body = <Steps key={top.id} nav={nav} id={top.id} />; break;
-      case 'add': body = <AddTip nav={nav} initialUrl={top.url} />; break;
+      case 'add': body = <AddTip key={top.url} nav={nav} initialUrl={top.url} autoStart={top.auto} />; break;
       case 'list': body = <List nav={nav} collectionId={top.collectionId} title={top.title} />; break;
     }
   } else {
@@ -92,9 +103,11 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar style="dark" />
-      <StoreProvider>
-        <Root />
-      </StoreProvider>
+      <ShareIntentProvider>
+        <StoreProvider>
+          <Root />
+        </StoreProvider>
+      </ShareIntentProvider>
     </SafeAreaProvider>
   );
 }

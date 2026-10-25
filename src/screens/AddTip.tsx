@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Alert, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 import { useStore, uid } from '../store';
@@ -9,7 +9,7 @@ import { analyzeLocally, analyzeWithClaude, extractTikTokUrl, fetchTikTokMeta } 
 import { fetchTikTokTranscript } from '../transcript';
 import { Tip } from '../types';
 
-export default function AddTip({ nav, initialUrl }: { nav: Nav; initialUrl?: string }) {
+export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initialUrl?: string; autoStart?: boolean }) {
   const { data, addTip } = useStore();
   const [url, setUrl] = useState(initialUrl ?? '');
   const [text, setText] = useState('');
@@ -79,6 +79,16 @@ export default function AddTip({ nav, initialUrl }: { nav: Nav; initialUrl?: str
       setBusy('');
     }
   };
+
+  // Link z menu „Udostępnij” importujemy od razu
+  const started = useRef(false);
+  useEffect(() => {
+    if (autoStart && initialUrl && !started.current) {
+      started.current = true;
+      run();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>

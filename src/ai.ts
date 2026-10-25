@@ -7,16 +7,46 @@ export const extractTikTokUrl = (text: string): string | null => text.match(TIKT
 
 export type TikTokMeta = { title: string; author?: string; thumbnail?: string };
 
-/** Publiczne oEmbed TikToka: daje opis, autora i miniaturę (nie daje ścieżki audio). */
+const UA = 'Mozilla/5.0 (Linux; Android 14; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36';
+
+const decode = (t: string) =>
+  t.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+
+const metaTag = (html: string, prop: string): string | undefined => {
+  const m =
+    html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${prop}["'][^>]+content=["']([^"']*)["']`, 'i')) ??
+    html.match(new RegExp(`<meta[^>]+content=["']([^"']*)["'][^>]+(?:property|name)=["']${prop}["']`, 'i'));
+  return m ? decode(m[1]) : undefined;
+};
+
+/**
+ * Pobiera opis, autora i miniaturę. Najpierw rozwija krótkie linki (vm.tiktok.com),
+ * potem próbuje oEmbed, a gdy zawiedzie – czyta metadane (og:*) ze strony filmu.
+ */
 export async function fetchTikTokMeta(url: string): Promise<TikTokMeta | null> {
+  let finalUrl = url;
+  let html = '';
   try {
-    const res = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(url)}`);
-    if (!res.ok) return null;
-    const j = await res.json();
-    return { title: j.title ?? '', author: j.author_name, thumbnail: j.thumbnail_url };
+    const page = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'pl,en;q=0.8' } });
+    if (page.url) finalUrl = page.url;
+    html = await page.text();
   } catch {
-    return null;
+    // brak sieci / blokada – spróbujemy samego oEmbed
   }
+  try {
+    const res = await fetch(`https://www.tiktok.com/oembed?url=${encodeURIComponent(finalUrl.split('?')[0])}`);
+    if (res.ok) {
+      const j = await res.json();
+      if (j.title || j.thumbnail_url) return { title: j.title ?? '', author: j.author_name, thumbnail: j.thumbnail_url };
+    }
+  } catch {
+    // przechodzimy do metadanych strony
+  }
+  if (!html) return null;
+  const title = metaTag(html, 'og:description') ?? metaTag(html, 'description') ?? metaTag(html, 'og:title') ?? '';
+  const thumbnail = metaTag(html, 'og:image');
+  const author = finalUrl.match(/tiktok\.com\/@([^/?]+)/)?.[1];
+  return title || thumbnail ? { title, author, thumbnail } : null;
 }
 
 export type Analysis = Pick<

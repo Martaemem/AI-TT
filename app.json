@@ -5,12 +5,16 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
+    "scheme": "poradyai",
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#FAF1E8"
       },
       "predictiveBackGestureEnabled": false,
       "package": "pl.aitt.poradyai"
-    }
+    },
+    "plugins": [
+      ["expo-share-intent", { "androidIntentFilters": ["text/*"] }]
+    ]
   }
 }
