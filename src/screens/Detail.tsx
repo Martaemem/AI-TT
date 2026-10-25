@@ -8,7 +8,9 @@ import { analyzeTip } from '../ai';
 import { Nav } from '../nav';
 
 export default function Detail({ nav, id }: { nav: Nav; id: string }) {
-  const { data, updateTip, deleteTip, addCollection } = useStore();
+  const { data, updateTip, deleteTip, addCollection, addCategory } = useStore();
+  const [catPick, setCatPick] = useState(false);
+  const [newCat, setNewCat] = useState('');
   const [redoing, setRedoing] = useState(false);
   const tip = data.tips.find((t) => t.id === id);
   const [pick, setPick] = useState(false);
@@ -18,7 +20,8 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
   const redo = async () => {
     setRedoing(true);
     const { analysis, error } = await analyzeTip(tip.sourceText, data.settings, '');
-    updateTip(tip.id, { ...analysis, checked: [] });
+    // kategoria wybrana przez użytkownika zostaje, jeśli była już ustawiona poza listą domyślną
+    updateTip(tip.id, { ...analysis, category: data.categories.includes(analysis.category) ? analysis.category : tip.category, checked: [] });
     setRedoing(false);
     if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
   };
@@ -55,7 +58,7 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
           <Text style={st.title}>{tip.title}</Text>
           <View style={st.meta}>
             <Badge text={`${toolEmoji(tip.tool)} ${tip.tool}`} />
-            <Badge text={tip.category} />
+            <Pressable onPress={() => setCatPick(true)}><Badge text={`${tip.category} ✎`} /></Pressable>
             <Badge text={`Poziom: ${tip.difficulty}`} />
           </View>
           {!!tip.summary && <Text style={st.summary}>{tip.summary}</Text>}
@@ -146,6 +149,35 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
           <TextInput value={tip.note} onChangeText={(note) => updateTip(tip.id, { note })} placeholder="Dodaj notatkę" placeholderTextColor={colors.muted} multiline style={st.note} />
         </View>
       </ScrollView>
+
+      <Modal visible={catPick} transparent animationType="slide" onRequestClose={() => setCatPick(false)}>
+        <Pressable style={st.backdrop} onPress={() => setCatPick(false)} />
+        <View style={st.sheet}>
+          <Text style={[st.title, { fontSize: 22 }]}>Kategoria porady</Text>
+          <ScrollView style={{ maxHeight: 320 }}>
+            {data.categories.map((c) => (
+              <Pressable key={c} onPress={() => { updateTip(tip.id, { category: c }); setCatPick(false); }} style={st.collRow}>
+                <Text style={{ flex: 1, fontSize: 17, color: colors.text }}>{c}</Text>
+                <Ionicons name={tip.category === c ? 'radio-button-on' : 'radio-button-off'} size={24} color={tip.category === c ? colors.primary : colors.muted} />
+              </Pressable>
+            ))}
+          </ScrollView>
+          <View style={{ flexDirection: 'row', gap: 8, marginTop: 12 }}>
+            <TextInput value={newCat} onChangeText={setNewCat} placeholder="Nowa kategoria…" placeholderTextColor={colors.muted} style={[st.note, { flex: 1, marginTop: 0, minHeight: 0 }]} />
+            <Button
+              title="Dodaj"
+              onPress={() => {
+                const name = newCat.trim();
+                if (!name) return;
+                addCategory(name);
+                updateTip(tip.id, { category: name });
+                setNewCat('');
+                setCatPick(false);
+              }}
+            />
+          </View>
+        </View>
+      </Modal>
 
       <Modal visible={pick} transparent animationType="slide" onRequestClose={() => setPick(false)}>
         <Pressable style={st.backdrop} onPress={() => setPick(false)} />
