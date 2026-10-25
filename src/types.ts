@@ -1,3 +1,5 @@
+export type Term = { name: string; desc: string };
+
 export type Step = { text: string; prompt?: string };
 
 export type Tip = {
@@ -12,6 +14,8 @@ export type Tip = {
   difficulty: 'łatwe' | 'średnie' | 'trudne';
   steps: Step[];
   prompts: string[];
+  keyPoints?: string[]; // najważniejsze informacje z filmu
+  terms?: Term[]; // hasła / komendy / ustawienia do użycia
   toolsNeeded: string[];
   tags: string[];
   sourceText: string;
@@ -26,6 +30,8 @@ export type Tip = {
 
 export type Collection = { id: string; name: string; emoji: string };
 
-export type Settings = { apiKey: string; model: string };
+export type Provider = 'gemini' | 'claude';
+
+export type Settings = { provider: Provider; apiKey: string; model: string };
 
 export type Data = { tips: Tip[]; collections: Collection[]; settings: Settings };
