@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: [ccr-7fc4f7ca-w21ipn]
+    paths-ignore:
+      - 'recipes/**'
+      - '.github/workflows/build-recipes-apk.yml'
 
 permissions:
   contents: write
