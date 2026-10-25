@@ -8,7 +8,7 @@ import { Nav } from '../nav';
 
 export default function List({ nav, collectionId, title }: { nav: Nav; collectionId: string; title: string }) {
   const { data, deleteCollection } = useStore();
-  const tips = data.tips.filter((t) => (collectionId === 'all' ? true : collectionId === 'favorites' ? t.favorite : t.collectionIds.includes(collectionId)));
+  const tips = data.tips.filter((t) => (collectionId === 'all' ? true : collectionId === 'favorites' ? t.favorite : collectionId.startsWith('cat:') ? t.category === collectionId.slice(4) : t.collectionIds.includes(collectionId)));
   const custom = data.collections.some((c) => c.id === collectionId);
 
   return (
@@ -36,7 +36,7 @@ export default function List({ nav, collectionId, title }: { nav: Nav; collectio
         data={tips}
         keyExtractor={(t) => t.id}
         contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
-        ListEmptyComponent={<Text style={{ color: colors.muted, textAlign: 'center', marginTop: 40 }}>Pusto. Dodaj porady do tego zbioru ze szczegółów porady.</Text>}
+        ListEmptyComponent={<Text style={{ color: colors.muted, textAlign: 'center', marginTop: 40 }}>Pusto. Przypisz porady tutaj w ich szczegółach.</Text>}
         renderItem={({ item }) => (
           <View style={{ marginBottom: 14 }}>
             <TipCard tip={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />

@@ -3,7 +3,7 @@ import { AppState, FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput,
 import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import { useStore } from '../store';
-import { colors, CATEGORIES } from '../theme';
+import { colors } from '../theme';
 import { Chip, Header, TipCard } from '../components/ui';
 import { Nav } from '../nav';
 import { extractTikTokUrl } from '../ai';
@@ -56,7 +56,7 @@ export default function Home({ nav }: { nav: Nav }) {
         <Text style={{ fontSize: 28 }}>💡</Text>
         <Text style={st.tipText}>
           <Text style={{ fontWeight: '800', color: colors.text }}>Jak dodać? </Text>
-          Skopiuj link z TikToka i wklej go w aplikacji. AI uporządkuje poradę w kroki i prompty.
+          W TikToku wybierz Udostępnij → Porady AI. Ważne informacje znajdziesz potem w zakładce Wiedza.
         </Text>
       </View>
 
@@ -67,7 +67,7 @@ export default function Home({ nav }: { nav: Nav }) {
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 12 }}>
         <Chip label="Wszystkie" active={cat === null} onPress={() => setCat(null)} />
-        {CATEGORIES.map((c) => (
+        {data.categories.map((c) => (
           <Chip key={c} label={c} active={cat === c} onPress={() => setCat(cat === c ? null : c)} />
         ))}
       </ScrollView>
