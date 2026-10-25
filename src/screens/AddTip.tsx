@@ -38,13 +38,13 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         setBusy('Pobieram napisy z filmu…');
         transcript = (await fetchTikTokTranscript(link, log)) ?? '';
         if (!transcript) {
-          Alert.alert('Brak napisów w filmie', 'Nie znalazłem napisów do tego filmu, więc użyję tylko opisu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.');
+          Alert.alert('Brak napisów w filmie', `Nie znalazłem napisów do tego filmu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         }
       }
       const source = [meta?.title && `Opis filmu: ${meta.title}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
         .filter(Boolean)
         .join('\n\n');
-      if (!source) {
+      if (!meta?.title && !transcript) {
         Alert.alert('Nie udało się pobrać opisu', `Wklej poniżej opis lub transkrypcję filmu – AI uporządkuje ją w kroki.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         setBusy('');
         return;

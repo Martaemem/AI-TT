@@ -29,8 +29,19 @@ const embeddedDesc = (html: string): string | undefined => {
   }
 };
 
+/** Ogólne nagłówki typu „TikTok · autor” nie są opisem filmu. */
+const isGeneric = (t?: string) => !t || t.trim().length < 3 || (/^TikTok\b/i.test(t.trim()) && t.length < 80);
+
+/** og:description TikToka ma postać: „1K Likes, 2 Comments. TikTok video from x (@x): "opis"”. */
+const captionFromDescription = (d?: string): string | undefined => {
+  if (!d) return undefined;
+  const m = d.match(/TikTok video from [^:]*:\s*["“„]?([\s\S]*?)["”]?\s*$/i);
+  return (m ? m[1] : d).trim() || undefined;
+};
+
 const fromHtml = (html: string, finalUrl: string): TikTokMeta | null => {
-  const title = embeddedDesc(html) ?? metaTag(html, 'og:description') ?? metaTag(html, 'description') ?? metaTag(html, 'og:title') ?? '';
+  const candidates = [embeddedDesc(html), captionFromDescription(metaTag(html, 'og:description')), captionFromDescription(metaTag(html, 'description'))];
+  const title = candidates.find((c) => !isGeneric(c)) ?? '';
   const thumbnail = metaTag(html, 'og:image');
   const author = finalUrl.match(/tiktok\.com\/@([^/?]+)/)?.[1];
   return title || thumbnail ? { title, author, thumbnail } : null;
@@ -55,18 +66,36 @@ async function oembed(url: string, log: Log): Promise<TikTokMeta | null> {
  */
 export async function fetchTikTokMeta(url: string, log: Log = () => {}): Promise<TikTokMeta | null> {
   let finalUrl = url;
+  const acc: { best: TikTokMeta | null } = { best: null };
+  const merge = (m: TikTokMeta | null) => {
+    if (!m) return;
+    const b = acc.best;
+    acc.best = {
+      title: b && !isGeneric(b.title) ? b.title : m.title,
+      author: b?.author ?? m.author,
+      thumbnail: b?.thumbnail ?? m.thumbnail,
+    };
+  };
+  const done = () => !!acc.best && !isGeneric(acc.best.title) && !!acc.best.thumbnail;
+
   for (const [tag, ua] of USER_AGENTS) {
     try {
       const page = await fetch(url, { headers: { 'User-Agent': ua, 'Accept-Language': 'pl,en;q=0.8' } });
       const html = await page.text();
       if (page.url) finalUrl = page.url;
-      log(`${tag}: HTTP ${page.status}, ${html.length} B, ${finalUrl.slice(0, 70)}`);
       const meta = fromHtml(html, finalUrl);
-      if (meta) return meta;
+      log(`${tag}: HTTP ${page.status}, ${html.length} B, opis: ${meta?.title ? 'tak' : 'nie'}, ${finalUrl.slice(0, 60)}`);
+      merge(meta);
     } catch (e) {
       log(`${tag}: ${(e as Error).message}`);
     }
+    if (done()) return acc.best;
+    if (tag === 'bot') {
+      // oEmbed zwykle zwraca prawdziwy opis filmu – próbujemy go zaraz po stronie dla botów
+      merge(await oembed(finalUrl.split('?')[0], log));
+      if (done()) return acc.best;
+    }
   }
-  const clean = finalUrl.split('?')[0];
-  return (await oembed(clean, log)) ?? (clean !== url ? await oembed(url, log) : null);
+  if (isGeneric(acc.best?.title)) merge(await oembed(url, log));
+  return acc.best;
 }
