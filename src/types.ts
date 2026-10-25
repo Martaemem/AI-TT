@@ -30,7 +30,7 @@ export type Tip = {
 
 export type Collection = { id: string; name: string; emoji: string };
 
-export type Provider = 'gemini' | 'claude';
+export type Provider = 'gemini' | 'groq' | 'claude';
 
 export type Settings = { provider: Provider; apiKey: string; model: string };
 

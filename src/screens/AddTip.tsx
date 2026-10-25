@@ -99,9 +99,9 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         <TextInput value={text} onChangeText={setText} multiline placeholder="Np. 1. Otwórz ChatGPT… 2. Wklej prompt…" placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
 
         <View style={st.mode}>
-          <Text style={{ color: colors.text, fontWeight: '700' }}>{hasKey ? `✨ Tryb AI (${data.settings.provider === 'claude' ? 'Claude' : 'Gemini'})` : '📋 Tryb offline'}</Text>
+          <Text style={{ color: colors.text, fontWeight: '700' }}>{hasKey ? `✨ Tryb AI (${{ claude: 'Claude', groq: 'Groq', gemini: 'Gemini' }[data.settings.provider]})` : '📋 Tryb offline'}</Text>
           <Text style={{ color: colors.muted, marginTop: 4 }}>
-            {hasKey ? 'Porada zostanie rozpisana na kroki, prompty i narzędzia.' : 'Bez klucza porada jest porządkowana prostymi regułami. Darmowy klucz Gemini dodasz w Więcej → Ustawienia AI.'}
+            {hasKey ? 'Porada zostanie rozpisana na kroki, prompty i narzędzia.' : 'Bez klucza porada jest porządkowana prostymi regułami. Darmowy klucz dodasz w Więcej → Ustawienia AI.'}
           </Text>
         </View>
 

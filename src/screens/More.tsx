@@ -5,7 +5,7 @@ import { colors } from '../theme';
 import { Button, Chip, Header } from '../components/ui';
 import { Provider } from '../types';
 
-const DEFAULT_MODEL: Record<Provider, string> = { gemini: 'gemini-2.5-flash', claude: 'claude-sonnet-5-5' };
+const DEFAULT_MODEL: Record<Provider, string> = { groq: 'llama-3.3-70b-versatile', gemini: 'gemini-2.5-flash', claude: 'claude-sonnet-5-5' };
 
 export default function More() {
   const { data, setSettings } = useStore();
@@ -41,18 +41,25 @@ export default function More() {
         <Text style={st.h}>Ustawienia AI</Text>
         <Text style={st.p}>AI rozpisuje transkrypcję na najważniejsze informacje, hasła, kroki i prompty. Klucz zapisuje się tylko na tym telefonie i jest wysyłany wyłącznie do wybranego dostawcy.</Text>
         <View style={{ flexDirection: 'row', marginTop: 6 }}>
-          <Chip label="Gemini (darmowy)" active={provider === 'gemini'} onPress={() => pick('gemini')} />
+          <Chip label="Groq (darmowy)" active={provider === 'groq'} onPress={() => pick('groq')} />
+          <Chip label="Gemini" active={provider === 'gemini'} onPress={() => pick('gemini')} />
           <Chip label="Claude" active={provider === 'claude'} onPress={() => pick('claude')} />
         </View>
-        {provider === 'gemini' ? (
+        {provider === 'groq' && (
           <>
-            <Text style={[st.p, { marginTop: 10 }]}>Darmowy klucz: otwórz Google AI Studio, zaloguj się kontem Google, wybierz „Create API key” i skopiuj klucz tutaj.</Text>
+            <Text style={[st.p, { marginTop: 10 }]}>Darmowy klucz: otwórz Groq Console, zaloguj się (np. kontem Google), wybierz „Create API Key” i skopiuj klucz (zaczyna się od gsk_) tutaj.</Text>
+            <Button title="Otwórz Groq Console" icon="open-outline" outline onPress={() => Linking.openURL('https://console.groq.com/keys')} />
+          </>
+        )}
+        {provider === 'gemini' && (
+          <>
+            <Text style={[st.p, { marginTop: 10 }]}>Klucz z Google AI Studio. Uwaga: nowe klucze zaczynające się od „AQ.” bywają odrzucane. Wtedy użyj Groq.</Text>
             <Button title="Otwórz Google AI Studio" icon="open-outline" outline onPress={() => Linking.openURL('https://aistudio.google.com/apikey')} />
           </>
-        ) : (
-          <Text style={[st.p, { marginTop: 10 }]}>Klucz Claude (płatny) utworzysz w console.anthropic.com.</Text>
         )}
-        <TextInput value={key} onChangeText={setKey} placeholder={provider === 'gemini' ? 'AIza…' : 'sk-ant-…'} placeholderTextColor={colors.muted} autoCapitalize="none" autoCorrect={false} secureTextEntry style={st.input} />
+        {provider === 'claude' && <Text style={[st.p, { marginTop: 10 }]}>Klucz Claude (płatny) utworzysz w console.anthropic.com.</Text>}
+        <TextInput value={key} onChangeText={setKey} placeholder={provider === 'groq' ? 'gsk_…' : provider === 'gemini' ? 'AIza…' : 'sk-ant-…'} placeholderTextColor={colors.muted} autoCapitalize="none" autoCorrect={false} secureTextEntry style={st.input} />
+        <Text style={[st.p, { marginTop: 12, marginBottom: 0 }]}>Model AI (zostaw domyślny; to nie jest nazwa projektu):</Text>
         <TextInput value={model} onChangeText={setModel} placeholder="Model" placeholderTextColor={colors.muted} autoCapitalize="none" style={[st.input, { marginTop: 10 }]} />
         <Button
           title="Zapisz"

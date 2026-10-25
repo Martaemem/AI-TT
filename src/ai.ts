@@ -74,7 +74,19 @@ export async function analyzeWithClaude(source: string, apiKey: string, model: s
   return normalize(parseJson(text), source.slice(0, 60));
 }
 
-export async function analyzeWithGemini(source: string, apiKey: string, model: string): Promise<Analysis> {
+/** Wyciąga czytelny komunikat z odpowiedzi błędu (Google i Groq zwracają { error: { message } }). */
+const apiMessage = (body: string): string => {
+  try {
+    return String(JSON.parse(body)?.error?.message ?? body).slice(0, 200);
+  } catch {
+    return body.slice(0, 200);
+  }
+};
+
+export async function analyzeWithGemini(source: string, apiKey: string, rawModel: string): Promise<Analysis> {
+  // częsta pomyłka: w polu modelu ląduje coś innego, np. „projects/123” lub „models/gemini-…”
+  const cleaned = rawModel.replace(/^models\//, '').trim();
+  const model = /^gemini/i.test(cleaned) ? cleaned : 'gemini-2.5-flash';
   const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-goog-api-key': apiKey },
@@ -85,15 +97,40 @@ export async function analyzeWithGemini(source: string, apiKey: string, model: s
     }),
   });
   if (!res.ok) {
-    const body = await res.text();
-    if (res.status === 400 || res.status === 403) throw new Error('Gemini odrzucił klucz API. Sprawdź go w Więcej → Ustawienia AI.');
-    if (res.status === 404) throw new Error(`Nie ma modelu „${model}”. Zmień nazwę modelu w Więcej → Ustawienia AI.`);
+    const msg = apiMessage(await res.text());
+    if (res.status === 401 || res.status === 403)
+      throw new Error(`Google odrzucił klucz (${res.status}): ${msg}\n\nKlucze zaczynające się od „AQ.” bywają nieobsługiwane. Wybierz w ustawieniach Groq (darmowy).`);
+    if (res.status === 404) throw new Error(`Nie ma modelu „${model}”. Zmień go w Więcej → Ustawienia AI.`);
     if (res.status === 429) throw new Error('Przekroczony darmowy limit Gemini. Spróbuj za minutę.');
-    throw new Error(`Błąd Gemini ${res.status}: ${body.slice(0, 160)}`);
+    throw new Error(`Błąd Gemini ${res.status}: ${msg}`);
   }
   const json = await res.json();
   const text: string = (json.candidates?.[0]?.content?.parts ?? []).map((p: any) => p.text ?? '').join('');
   return normalize(parseJson(text), source.slice(0, 60));
+}
+
+export async function analyzeWithGroq(source: string, apiKey: string, model: string): Promise<Analysis> {
+  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', authorization: `Bearer ${apiKey}` },
+    body: JSON.stringify({
+      model,
+      temperature: 0.2,
+      response_format: { type: 'json_object' },
+      messages: [
+        { role: 'system', content: SYSTEM },
+        { role: 'user', content: source },
+      ],
+    }),
+  });
+  if (!res.ok) {
+    const msg = apiMessage(await res.text());
+    if (res.status === 401) throw new Error('Groq odrzucił klucz API. Sprawdź go w Więcej → Ustawienia AI.');
+    if (res.status === 429) throw new Error('Przekroczony darmowy limit Groq. Spróbuj za minutę.');
+    throw new Error(`Błąd Groq ${res.status}: ${msg}`);
+  }
+  const json = await res.json();
+  return normalize(parseJson(String(json.choices?.[0]?.message?.content ?? '')), source.slice(0, 60));
 }
 
 /** Porządkuje materiał wybranym AI; przy braku klucza lub błędzie używa trybu offline. */
@@ -101,11 +138,8 @@ export async function analyzeTip(source: string, settings: Settings, fallbackTit
   const key = settings.apiKey.trim();
   if (!key) return { analysis: analyzeLocally(source, fallbackTitle) };
   try {
-    const analysis =
-      settings.provider === 'claude'
-        ? await analyzeWithClaude(source, key, settings.model)
-        : await analyzeWithGemini(source, key, settings.model);
-    return { analysis };
+    const run = { claude: analyzeWithClaude, groq: analyzeWithGroq, gemini: analyzeWithGemini }[settings.provider];
+    return { analysis: await run(source, key, settings.model) };
   } catch (e) {
     return { analysis: analyzeLocally(source, fallbackTitle), error: (e as Error).message };
   }
