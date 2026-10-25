@@ -6,6 +6,7 @@ import { colors } from '../theme';
 import { Button, Header } from '../components/ui';
 import { Nav } from '../nav';
 import { analyzeLocally, analyzeWithClaude, extractTikTokUrl, fetchTikTokMeta } from '../ai';
+import { fetchTikTokTranscript } from '../transcript';
 import { Tip } from '../types';
 
 export default function AddTip({ nav, initialUrl }: { nav: Nav; initialUrl?: string }) {
@@ -29,7 +30,15 @@ export default function AddTip({ nav, initialUrl }: { nav: Nav; initialUrl?: str
     try {
       setBusy('Pobieram dane filmu…');
       const meta = link ? await fetchTikTokMeta(link) : null;
-      const source = [meta?.title && `Opis filmu: ${meta.title}`, meta?.author && `Autor: ${meta.author}`, text.trim() && `Transkrypcja / notatki:\n${text.trim()}`]
+      let transcript = text.trim();
+      if (!transcript && link) {
+        setBusy('Pobieram napisy z filmu…');
+        transcript = (await fetchTikTokTranscript(link)) ?? '';
+        if (!transcript) {
+          Alert.alert('Brak napisów w filmie', 'Nie znalazłem napisów do tego filmu, więc użyję tylko opisu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.');
+        }
+      }
+      const source = [meta?.title && `Opis filmu: ${meta.title}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
         .filter(Boolean)
         .join('\n\n');
       if (!source) {
@@ -81,7 +90,7 @@ export default function AddTip({ nav, initialUrl }: { nav: Nav; initialUrl?: str
         <Button title="Wklej ze schowka" icon="clipboard-outline" outline onPress={paste} style={{ marginTop: 10 }} />
 
         <Text style={[st.label, { marginTop: 22 }]}>Transkrypcja lub opis (opcjonalnie)</Text>
-        <Text style={st.hint}>TikTok udostępnia tylko opis filmu. Jeśli porada jest mówiona w filmie, wklej tu napisy / transkrypcję – wynik będzie dużo dokładniejszy.</Text>
+        <Text style={st.hint}>Aplikacja sama próbuje pobrać napisy z filmu. Jeśli ich nie ma, wklej tu transkrypcję – wynik będzie dużo dokładniejszy.</Text>
         <TextInput value={text} onChangeText={setText} multiline placeholder="Np. 1. Otwórz ChatGPT… 2. Wklej prompt…" placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
 
         <View style={st.mode}>
