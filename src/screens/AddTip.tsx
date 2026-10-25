@@ -17,7 +17,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
   const [url, setUrl] = useState(initialUrl ?? '');
   const [text, setText] = useState('');
   const [busy, setBusy] = useState('');
-  const [slides, setSlides] = useState<string[]>([]); // zdjęcia slajdów w base64
+  const [slides, setSlides] = useState<string[]>([]); // adresy zdjęć slajdów
   const hasKey = data.settings.apiKey.trim().length > 0;
 
   const paste = async () => {
@@ -30,11 +30,9 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
       mediaTypes: ['images'],
       allowsMultipleSelection: true,
       selectionLimit: 12,
-      quality: 0.6,
-      base64: true,
     });
     if (res.canceled) return;
-    setSlides(res.assets.map((a) => a.base64).filter((b): b is string => !!b));
+    setSlides(res.assets.map((a) => a.uri));
   };
 
   const run = async () => {
@@ -62,9 +60,9 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
       if (slides.length > 0) {
         setBusy(`Odczytuję tekst ze zdjęć (${slides.length})…`);
         try {
-          const slidesText = await readSlides(slides, data.settings);
+          const slidesText = await readSlides(slides);
           if (slidesText) transcript = [transcript, `Tekst ze slajdów:\n${slidesText}`].filter(Boolean).join('\n\n');
-          else log('zdjęcia: AI nie zwróciło tekstu');
+          else log('zdjęcia: nie rozpoznano żadnego tekstu');
         } catch (e) {
           slideError = (e as Error).message;
           log(`zdjęcia: ${slideError}`);
@@ -131,7 +129,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         <TextInput value={text} onChangeText={setText} multiline placeholder="Np. 1. Otwórz ChatGPT… 2. Wklej prompt…" placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
 
         <Text style={[st.label, { marginTop: 22 }]}>Slajdy ze zdjęć (opcjonalnie)</Text>
-        <Text style={st.hint}>Dla postów ze zdjęciami: zrób zrzuty ekranu slajdów, wybierz je tutaj, a AI przepisze z nich tekst i prompty.</Text>
+        <Text style={st.hint}>Dla postów ze zdjęciami: zrób zrzuty ekranu slajdów, wybierz je tutaj, a telefon sam odczyta z nich tekst (bez klucza i internetu), który potem uporządkuje AI.</Text>
         <Button title={slides.length ? `Wybrano ${slides.length} zdjęć – zmień` : 'Wybierz zrzuty slajdów'} icon="images-outline" outline onPress={pickSlides} />
 
         <View style={st.mode}>
