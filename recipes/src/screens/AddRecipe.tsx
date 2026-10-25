@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Alert, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { ActivityIndicator, Alert, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
 import { uid, useStore } from '../store';
-import { colors } from '../theme';
-import { Button, Header } from '../components/ui';
+import { box, colors, fonts } from '../theme';
+import { Button, Header, Text, inputStyle } from '../components/ui';
+import { Art } from '../components/Art';
 import { Nav } from '../nav';
 import { Draft, extractUrl, fetchSource, guessCategory, parseRecipeText, Source } from '../source';
 import { recipeWithAi } from '../ai';
@@ -103,31 +104,35 @@ export default function AddRecipe({ nav, initialUrl, autoStart }: { nav: Nav; in
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Header onBack={nav.pop} />
-      <ScrollView contentContainerStyle={{ padding: 20, paddingTop: 0 }} keyboardShouldPersistTaps="handled">
-        <Text style={st.h1}>Dodaj przepis</Text>
+      <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 40 }} keyboardShouldPersistTaps="handled">
+        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+          <Text style={[st.h1, { flex: 1 }]}>Dodaj przepis</Text>
+          <Art kind="pot" size={84} />
+        </View>
+
         <Text style={st.label}>Link do przepisu</Text>
         <Text style={st.hint}>TikTok, Instagram albo dowolna strona z przepisem (np. aniagotuje.pl, kwestiasmaku.com).</Text>
-        <TextInput value={url} onChangeText={setUrl} placeholder="https://…" placeholderTextColor={colors.muted} autoCapitalize="none" autoCorrect={false} style={st.input} />
-        <Button title="Wklej ze schowka" icon="clipboard-outline" outline onPress={paste} style={{ marginTop: 10 }} />
+        <TextInput value={url} onChangeText={setUrl} placeholder="https://…" placeholderTextColor={colors.muted} autoCapitalize="none" autoCorrect={false} style={inputStyle} />
+        <Button title="Wklej ze schowka" icon="clipboard-outline" outline onPress={paste} style={{ marginTop: 12 }} />
 
-        <Text style={[st.label, { marginTop: 22 }]}>Albo wklej tekst przepisu (opcjonalnie)</Text>
-        <TextInput value={text} onChangeText={setText} multiline placeholder={'Składniki:\n2 jajka\n200 g mąki\n\nPrzygotowanie:\n1. Wymieszaj…'} placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
+        <Text style={[st.label, { marginTop: 24 }]}>Albo wklej tekst przepisu (opcjonalnie)</Text>
+        <TextInput value={text} onChangeText={setText} multiline placeholder={'Składniki:\n2 jajka\n200 g mąki\n\nPrzygotowanie:\n1. Wymieszaj…'} placeholderTextColor={colors.muted} style={[inputStyle, { minHeight: 140, textAlignVertical: 'top' }]} />
 
-        <View style={st.mode}>
-          <Text style={{ color: colors.text, fontWeight: '700' }}>{hasKey ? `✨ Tryb AI (${{ claude: 'Claude', groq: 'Groq', gemini: 'Gemini' }[data.settings.provider]})` : '📋 Tryb bez AI'}</Text>
+        <View style={[box(colors.lavender, 22), { marginTop: 20, padding: 14 }]}>
+          <Text style={{ color: colors.ink, fontWeight: '800', fontSize: 16 }}>{hasKey ? `✨ Tryb AI (${{ claude: 'Claude', groq: 'Groq', gemini: 'Gemini' }[data.settings.provider]})` : '📋 Tryb bez AI'}</Text>
           <Text style={{ color: colors.muted, marginTop: 4 }}>
             {hasKey ? 'Przepisy z TikToka i Instagrama zostaną rozpisane na składniki i kroki.' : 'Strony z przepisami działają bez AI. Do filmów z TikToka dodaj darmowy klucz w Więcej → Ustawienia AI.'}
           </Text>
         </View>
 
         {busy ? (
-          <View style={{ alignItems: 'center', marginTop: 20 }}>
-            <ActivityIndicator color={colors.primary} size="large" />
+          <View style={{ alignItems: 'center', marginTop: 24 }}>
+            <ActivityIndicator color={colors.ink} size="large" />
             <Text style={{ color: colors.muted, marginTop: 8 }}>{busy}</Text>
           </View>
         ) : (
           <>
-            <Button title="Importuj przepis" icon="sparkles" onPress={run} style={{ marginTop: 20 }} />
+            <Button title="Importuj przepis" icon="sparkles" onPress={run} style={{ marginTop: 22 }} />
             <Button title="Wpisz ręcznie" icon="create-outline" outline onPress={() => nav.replace({ name: 'edit', draft: true })} style={{ marginTop: 12 }} />
           </>
         )}
@@ -137,9 +142,7 @@ export default function AddRecipe({ nav, initialUrl, autoStart }: { nav: Nav; in
 }
 
 const st = StyleSheet.create({
-  h1: { fontSize: 28, fontWeight: '800', color: colors.text, marginBottom: 18 },
-  label: { fontSize: 15, fontWeight: '700', color: colors.text, marginBottom: 8 },
-  hint: { color: colors.muted, marginBottom: 8, lineHeight: 20 },
-  input: { backgroundColor: colors.card, borderRadius: 14, padding: 14, fontSize: 16, color: colors.text, borderWidth: 1, borderColor: colors.line },
-  mode: { marginTop: 18, padding: 14, borderRadius: 14, backgroundColor: colors.primarySoft },
+  h1: { fontSize: 34, fontFamily: fonts.display, color: colors.ink, lineHeight: 42 },
+  label: { fontSize: 18, fontFamily: fonts.displayBold, color: colors.ink, marginBottom: 4, lineHeight: 26 },
+  hint: { color: colors.muted, marginBottom: 10, lineHeight: 20 },
 });

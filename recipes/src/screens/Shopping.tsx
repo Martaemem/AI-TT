@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { shoppingLabel, useStore } from '../store';
-import { colors } from '../theme';
-import { Button, Header } from '../components/ui';
+import { box, colors, fonts } from '../theme';
+import { Button, Check, Header, Tag, Text, inputStyle } from '../components/ui';
+import { Art } from '../components/Art';
 
 export default function Shopping() {
   const { data, addShoppingItem, toggleShopping, removeShopping, clearChecked, clearShopping } = useStore();
@@ -19,56 +20,59 @@ export default function Shopping() {
   };
 
   const row = (s: (typeof data.shopping)[number]) => (
-    <Pressable key={s.id} onPress={() => toggleShopping(s.id)} onLongPress={() => removeShopping(s.id)} style={st.row}>
-      <Ionicons name={s.checked ? 'checkbox' : 'square-outline'} size={26} color={s.checked ? colors.primary : colors.muted} />
+    <Pressable key={s.id} onPress={() => toggleShopping(s.id)} onLongPress={() => removeShopping(s.id)} style={[st.row, box(s.checked ? colors.sand : colors.card, 18), { borderBottomWidth: 4 }]}>
+      <Check on={s.checked} />
       <View style={{ flex: 1 }}>
         <Text style={[st.name, s.checked && { textDecorationLine: 'line-through', color: colors.muted }]}>{shoppingLabel(s)}</Text>
         {!!s.recipeTitle && <Text style={st.from} numberOfLines={1}>{s.recipeTitle}</Text>}
       </View>
       <Pressable onPress={() => removeShopping(s.id)} hitSlop={10}>
-        <Ionicons name="close" size={20} color={colors.muted} />
+        <Ionicons name="close" size={22} color={colors.ink} />
       </Pressable>
     </Pressable>
   );
 
   return (
-    <ScrollView contentContainerStyle={{ paddingBottom: 30 }} keyboardShouldPersistTaps="handled">
-      <Header title="Zakupy" right={<Text style={st.counter}>{open.length} do kupienia</Text>} />
-      <View style={st.add}>
-        <TextInput value={name} onChangeText={setName} onSubmitEditing={add} placeholder="Dodaj produkt…" placeholderTextColor={colors.muted} style={st.input} returnKeyType="done" />
-        <Button title="Dodaj" onPress={add} />
-      </View>
-
-      {data.shopping.length === 0 && (
-        <View style={{ alignItems: 'center', padding: 40 }}>
-          <Text style={{ fontSize: 56 }}>🛒</Text>
-          <Text style={st.empty}>Lista jest pusta. Dodaj składniki ze szczegółów przepisu.</Text>
+    <View style={{ flex: 1 }}>
+      <Header title="Zakupy" right={<View style={st.counter}><Text style={st.counterText}>{open.length} do kupienia</Text></View>} />
+      <ScrollView contentContainerStyle={{ paddingBottom: 30, paddingTop: 16 }} keyboardShouldPersistTaps="handled">
+        <View style={st.add}>
+          <TextInput value={name} onChangeText={setName} onSubmitEditing={add} placeholder="Dodaj produkt…" placeholderTextColor={colors.muted} style={[inputStyle, { flex: 1 }]} returnKeyType="done" />
+          <Button title="Dodaj" onPress={add} />
         </View>
-      )}
-      {open.map(row)}
-      {done.length > 0 && <Text style={st.section}>KUPIONE</Text>}
-      {done.map(row)}
 
-      {done.length > 0 && <Button title="Usuń kupione" outline icon="trash-outline" onPress={clearChecked} style={{ marginHorizontal: 20, marginTop: 18 }} />}
-      {data.shopping.length > 0 && (
-        <Button
-          title="Wyczyść całą listę"
-          outline
-          onPress={() => Alert.alert('Wyczyścić listę?', 'Wszystkie pozycje zostaną usunięte.', [{ text: 'Anuluj', style: 'cancel' }, { text: 'Wyczyść', style: 'destructive', onPress: clearShopping }])}
-          style={{ marginHorizontal: 20, marginTop: 12 }}
-        />
-      )}
-    </ScrollView>
+        {data.shopping.length === 0 && (
+          <View style={{ alignItems: 'center', padding: 30 }}>
+            <Art kind="basket" size={130} />
+            <Text style={st.emptyTitle}>Lista jest pusta</Text>
+            <Text style={st.empty}>Dodaj składniki ze szczegółów przepisu.</Text>
+          </View>
+        )}
+        {open.map(row)}
+        {done.length > 0 && <View style={{ marginHorizontal: 20, marginTop: 24, marginBottom: 4 }}><Tag label="Kupione" bg={colors.mint} /></View>}
+        {done.map(row)}
+
+        {done.length > 0 && <Button title="Usuń kupione" outline icon="trash-outline" onPress={clearChecked} style={{ marginHorizontal: 20, marginTop: 20 }} />}
+        {data.shopping.length > 0 && (
+          <Button
+            title="Wyczyść całą listę"
+            outline
+            onPress={() => Alert.alert('Wyczyścić listę?', 'Wszystkie pozycje zostaną usunięte.', [{ text: 'Anuluj', style: 'cancel' }, { text: 'Wyczyść', style: 'destructive', onPress: clearShopping }])}
+            style={{ marginHorizontal: 20, marginTop: 12 }}
+          />
+        )}
+      </ScrollView>
+    </View>
   );
 }
 
 const st = StyleSheet.create({
-  counter: { color: colors.primaryDark, fontWeight: '700', backgroundColor: colors.primarySoft, paddingHorizontal: 14, paddingVertical: 8, borderRadius: 20, overflow: 'hidden' },
-  add: { flexDirection: 'row', gap: 8, marginHorizontal: 20, marginBottom: 12 },
-  input: { flex: 1, backgroundColor: colors.card, borderRadius: 14, padding: 14, fontSize: 16, color: colors.text },
-  row: { flexDirection: 'row', alignItems: 'center', gap: 14, backgroundColor: colors.card, padding: 14, borderRadius: 14, marginHorizontal: 20, marginTop: 8 },
-  name: { fontSize: 17, color: colors.text },
+  counter: { backgroundColor: colors.yellow, borderWidth: 2.5, borderColor: colors.ink, borderBottomWidth: 4, borderRadius: 18, paddingHorizontal: 12, paddingVertical: 4 },
+  counterText: { color: colors.ink, fontWeight: '800', fontSize: 14 },
+  add: { flexDirection: 'row', gap: 10, marginHorizontal: 20, marginBottom: 14, alignItems: 'center' },
+  row: { flexDirection: 'row', alignItems: 'center', gap: 14, padding: 14, marginHorizontal: 20, marginTop: 10 },
+  name: { fontSize: 18, color: colors.ink, fontWeight: '700' },
   from: { color: colors.muted, fontSize: 13, marginTop: 2 },
-  section: { color: '#F59E0B', fontWeight: '800', letterSpacing: 1.5, marginTop: 24, marginBottom: 4, marginHorizontal: 20, fontSize: 14 },
-  empty: { color: colors.muted, textAlign: 'center', marginTop: 8, fontSize: 15 },
+  emptyTitle: { fontSize: 26, fontFamily: fonts.display, color: colors.ink, marginTop: 8, lineHeight: 34 },
+  empty: { color: colors.muted, textAlign: 'center', marginTop: 2, fontSize: 16 },
 });

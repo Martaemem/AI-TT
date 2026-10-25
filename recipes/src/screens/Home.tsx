@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { AppState, FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { AppState, FlatList, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Clipboard from 'expo-clipboard';
 import { useStore } from '../store';
-import { colors } from '../theme';
-import { Chip, Header, RecipeCard } from '../components/ui';
+import { box, colors, fonts } from '../theme';
+import { Chip, Header, RecipeCard, Text, inputStyle } from '../components/ui';
+import { Art } from '../components/Art';
 import { Nav } from '../nav';
 import { extractUrl } from '../source';
 
@@ -43,102 +44,106 @@ export default function Home({ nav }: { nav: Nav }) {
   const favorites = data.recipes.filter((r) => r.favorite);
 
   return (
-    <ScrollView contentContainerStyle={{ paddingBottom: 24 }} keyboardShouldPersistTaps="handled">
-      <Header title="BSmak" right={<Text style={st.counter}>{data.recipes.length} zapisanych</Text>} />
+    <View style={{ flex: 1 }}>
+      <Header logo title="bsmak" right={<View style={st.counter}><Text style={st.counterText}>{data.recipes.length} przepisów</Text></View>} />
+      <ScrollView contentContainerStyle={{ paddingBottom: 28, paddingTop: 18 }} keyboardShouldPersistTaps="handled">
+        {clipUrl && (
+          <Pressable style={[st.clip, box(colors.yellow, 22)]} onPress={() => nav.push({ name: 'add', url: clipUrl })}>
+            <Ionicons name="link" size={24} color={colors.ink} />
+            <Text style={st.clipText} numberOfLines={2}>Wykryto link w schowku. Dotknij, aby zaimportować przepis.</Text>
+          </Pressable>
+        )}
 
-      {clipUrl && (
-        <Pressable style={st.clip} onPress={() => nav.push({ name: 'add', url: clipUrl })}>
-          <Ionicons name="link" size={22} color={colors.primaryDark} />
-          <Text style={st.clipText} numberOfLines={2}>Wykryto link w schowku. Dotknij, aby zaimportować przepis.</Text>
-        </Pressable>
-      )}
-
-      <View style={st.tip}>
-        <Text style={{ fontSize: 28 }}>💡</Text>
-        <Text style={st.tipText}>
-          <Text style={{ fontWeight: '800', color: colors.text }}>Jak importować? </Text>
-          W TikToku lub Instagramie wybierz Udostępnij → BSmak albo wklej link w aplikacji.
-        </Text>
-      </View>
-
-      <View style={st.search}>
-        <Ionicons name="search" size={20} color={colors.muted} />
-        <TextInput placeholder="Szukaj przepisów lub składników…" placeholderTextColor={colors.muted} value={query} onChangeText={setQuery} style={{ flex: 1, fontSize: 16, color: colors.text }} />
-      </View>
-
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 12 }}>
-        <Chip label="Wszystkie" active={cat === null} onPress={() => setCat(null)} />
-        {data.categories.map((c) => (
-          <Chip key={c} label={c} active={cat === c} onPress={() => setCat(cat === c ? null : c)} />
-        ))}
-      </ScrollView>
-
-      {data.recipes.length === 0 ? (
-        <View style={st.empty}>
-          <Text style={{ fontSize: 56 }}>🍳</Text>
-          <Text style={st.emptyTitle}>Brak przepisów</Text>
-          <Text style={st.emptyText}>Dotknij „+”, aby zaimportować przepis z linku albo wpisać go ręcznie.</Text>
-        </View>
-      ) : searching ? (
-        <View style={{ paddingHorizontal: 20 }}>
-          <Text style={[st.h2, { marginBottom: 12 }]}>Wyniki ({filtered.length})</Text>
-          {filtered.map((r) => (
-            <View key={r.id} style={{ marginBottom: 14 }}>
-              <RecipeCard recipe={r} onPress={() => nav.push({ name: 'detail', id: r.id })} />
-            </View>
-          ))}
-        </View>
-      ) : (
-        <>
-          <View style={st.rowHead}>
-            <Text style={st.h2}>Ostatnio dodane</Text>
-            <Pressable onPress={() => nav.push({ name: 'list', filter: 'all', title: 'Wszystkie przepisy' })}>
-              <Text style={st.link}>Wszystkie →</Text>
-            </Pressable>
+        <View style={[st.tip, box(colors.mint, 26)]}>
+          <Art kind="pot" size={78} />
+          <View style={{ flex: 1 }}>
+            <Text style={st.tipTitle}>Jak importować?</Text>
+            <Text style={st.tipText}>W TikToku lub Instagramie wybierz Udostępnij → BSmak albo wklej link w aplikacji.</Text>
           </View>
-          <FlatList
-            horizontal
-            data={data.recipes.slice(0, 8)}
-            keyExtractor={(r) => r.id}
-            showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{ paddingHorizontal: 20 }}
-            renderItem={({ item }) => <RecipeCard width={290} recipe={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />}
-          />
-          {favorites.length > 0 && (
-            <>
-              <View style={[st.rowHead, { marginTop: 24 }]}>
-                <Text style={st.h2}>Ulubione</Text>
-                <Pressable onPress={() => nav.push({ name: 'list', filter: 'favorites', title: 'Ulubione' })}>
-                  <Text style={st.link}>Wszystkie →</Text>
-                </Pressable>
+        </View>
+
+        <View style={st.searchWrap}>
+          <Ionicons name="search" size={22} color={colors.ink} />
+          <TextInput placeholder="Szukaj przepisów lub składników…" placeholderTextColor={colors.muted} value={query} onChangeText={setQuery} style={st.searchInput} />
+        </View>
+
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 20, paddingVertical: 16 }}>
+          <Chip label="Wszystkie" active={cat === null} onPress={() => setCat(null)} />
+          {data.categories.map((c) => (
+            <Chip key={c} label={c} active={cat === c} onPress={() => setCat(cat === c ? null : c)} />
+          ))}
+        </ScrollView>
+
+        {data.recipes.length === 0 ? (
+          <View style={st.empty}>
+            <Art kind="basket" size={130} />
+            <Text style={st.emptyTitle}>Jeszcze pusto</Text>
+            <Text style={st.emptyText}>Dotknij „+”, aby zaimportować przepis z linku albo wpisać go ręcznie.</Text>
+          </View>
+        ) : searching ? (
+          <View style={{ paddingHorizontal: 20 }}>
+            <Text style={[st.h2, { marginBottom: 14 }]}>Wyniki ({filtered.length})</Text>
+            {filtered.map((r) => (
+              <View key={r.id} style={{ marginBottom: 6 }}>
+                <RecipeCard recipe={r} onPress={() => nav.push({ name: 'detail', id: r.id })} />
               </View>
-              <FlatList
-                horizontal
-                data={favorites}
-                keyExtractor={(r) => r.id}
-                showsHorizontalScrollIndicator={false}
-                contentContainerStyle={{ paddingHorizontal: 20 }}
-                renderItem={({ item }) => <RecipeCard width={290} recipe={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />}
-              />
-            </>
-          )}
-        </>
-      )}
-    </ScrollView>
+            ))}
+          </View>
+        ) : (
+          <>
+            <View style={st.rowHead}>
+              <Text style={st.h2}>Ostatnio dodane</Text>
+              <Pressable onPress={() => nav.push({ name: 'list', filter: 'all', title: 'Wszystkie przepisy' })}>
+                <Text style={st.link}>Wszystkie →</Text>
+              </Pressable>
+            </View>
+            <FlatList
+              horizontal
+              data={data.recipes.slice(0, 8)}
+              keyExtractor={(r) => r.id}
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 6 }}
+              renderItem={({ item }) => <RecipeCard width={280} recipe={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />}
+            />
+            {favorites.length > 0 && (
+              <>
+                <View style={[st.rowHead, { marginTop: 22 }]}>
+                  <Text style={st.h2}>Ulubione</Text>
+                  <Pressable onPress={() => nav.push({ name: 'list', filter: 'favorites', title: 'Ulubione' })}>
+                    <Text style={st.link}>Wszystkie →</Text>
+                  </Pressable>
+                </View>
+                <FlatList
+                  horizontal
+                  data={favorites}
+                  keyExtractor={(r) => r.id}
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 6 }}
+                  renderItem={({ item }) => <RecipeCard width={280} recipe={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />}
+                />
+              </>
+            )}
+          </>
+        )}
+      </ScrollView>
+    </View>
   );
 }
 
 const st = StyleSheet.create({
-  counter: { color: colors.primaryDark, fontWeight: '700', backgroundColor: colors.primarySoft, paddingHorizontal: 14, paddingVertical: 8, borderRadius: 20, overflow: 'hidden' },
-  clip: { flexDirection: 'row', alignItems: 'center', gap: 12, marginHorizontal: 20, marginBottom: 12, padding: 14, borderRadius: 16, backgroundColor: colors.primarySoft, borderWidth: 1, borderColor: colors.primary },
-  clipText: { flex: 1, color: colors.text, fontWeight: '600' },
-  tip: { flexDirection: 'row', gap: 12, marginHorizontal: 20, padding: 16, borderRadius: 18, backgroundColor: colors.card, alignItems: 'center' },
-  tipText: { flex: 1, color: colors.muted, fontSize: 15, lineHeight: 21 },
-  search: { flexDirection: 'row', alignItems: 'center', gap: 10, marginHorizontal: 20, marginTop: 14, paddingHorizontal: 14, borderRadius: 14, backgroundColor: colors.card },
-  rowHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 20, marginBottom: 12, marginTop: 8 },
-  h2: { fontSize: 24, fontWeight: '800', color: colors.text },
-  link: { color: colors.primary, fontSize: 17, fontWeight: '700' },
-  empty: { alignItems: 'center', padding: 40 },
-  emptyTitle: { fontSize: 22, fontWeight: '800', color: colors.text, marginTop: 12 },
-  emptyText: { color: colors.muted, textAlign: 'center', marginTop: 6, fontSize: 15 },
+  counter: { backgroundColor: colors.yellow, borderWidth: 2.5, borderColor: colors.ink, borderBottomWidth: 4, borderRadius: 18, paddingHorizontal: 12, paddingVertical: 4 },
+  counterText: { color: colors.ink, fontWeight: '800', fontSize: 14 },
+  clip: { flexDirection: 'row', alignItems: 'center', gap: 12, marginHorizontal: 20, marginBottom: 16, padding: 14 },
+  clipText: { flex: 1, color: colors.ink, fontWeight: '700' },
+  tip: { flexDirection: 'row', gap: 12, marginHorizontal: 20, paddingVertical: 12, paddingHorizontal: 14, alignItems: 'center' },
+  tipTitle: { fontFamily: fonts.display, fontSize: 22, color: colors.ink, lineHeight: 28 },
+  tipText: { color: colors.muted, fontSize: 15, lineHeight: 21 },
+  searchWrap: { flexDirection: 'row', alignItems: 'center', gap: 10, marginHorizontal: 20, marginTop: 18, ...box(colors.card, 20), borderBottomWidth: 4, paddingHorizontal: 14 },
+  searchInput: { ...inputStyle, flex: 1, borderWidth: 0, borderBottomWidth: 0, paddingHorizontal: 0 },
+  rowHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 20, marginBottom: 12 },
+  h2: { fontSize: 26, fontFamily: fonts.display, color: colors.ink, lineHeight: 34 },
+  link: { color: colors.ink, fontSize: 16, fontWeight: '800', textDecorationLine: 'underline' },
+  empty: { alignItems: 'center', padding: 30 },
+  emptyTitle: { fontSize: 26, fontFamily: fonts.display, color: colors.ink, marginTop: 8, lineHeight: 34 },
+  emptyText: { color: colors.muted, textAlign: 'center', marginTop: 4, fontSize: 16 },
 });

@@ -1,8 +1,9 @@
 import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { useStore } from '../store';
-import { colors } from '../theme';
-import { Header, RecipeCard } from '../components/ui';
+import { colors, fonts } from '../theme';
+import { Header, RecipeCard, Text } from '../components/ui';
+import { Art } from '../components/Art';
 import { Nav } from '../nav';
 
 export default function List({ nav, filter, title }: { nav: Nav; filter: string; title: string }) {
@@ -11,14 +12,19 @@ export default function List({ nav, filter, title }: { nav: Nav; filter: string;
   return (
     <View style={{ flex: 1 }}>
       <Header onBack={nav.pop} />
-      <Text style={{ fontSize: 30, fontWeight: '800', color: colors.text, paddingHorizontal: 20, marginBottom: 12 }}>{title}</Text>
+      <Text style={{ fontSize: 32, fontFamily: fonts.display, color: colors.ink, paddingHorizontal: 20, paddingTop: 16, lineHeight: 40 }}>{title}</Text>
       <FlatList
         data={items}
         keyExtractor={(r) => r.id}
-        contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24 }}
-        ListEmptyComponent={<Text style={{ color: colors.muted, textAlign: 'center', marginTop: 40 }}>Pusto.</Text>}
+        contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 24 }}
+        ListEmptyComponent={
+          <View style={{ alignItems: 'center', marginTop: 30 }}>
+            <Art kind="cloche" size={110} />
+            <Text style={{ color: colors.muted, marginTop: 8, fontSize: 16 }}>Pusto.</Text>
+          </View>
+        }
         renderItem={({ item }) => (
-          <View style={{ marginBottom: 14 }}>
+          <View style={{ marginBottom: 6 }}>
             <RecipeCard recipe={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />
           </View>
         )}
