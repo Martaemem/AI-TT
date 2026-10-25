@@ -9,7 +9,7 @@ import { Nav } from '../nav';
 import { Draft, extractUrl, fetchSource, guessCategory, parseRecipeText, Source } from '../source';
 import { recipeWithAi } from '../ai';
 import { Recipe } from '../types';
-import { minutesFromText } from '../units';
+import { estimateServings, minutesFromText, servingsFromText } from '../units';
 
 export default function AddRecipe({ nav, initialUrl, autoStart }: { nav: Nav; initialUrl?: string; autoStart?: boolean }) {
   const { data, saveRecipe } = useStore();
@@ -53,7 +53,7 @@ export default function AddRecipe({ nav, initialUrl, autoStart }: { nav: Nav; in
         }
         if (!parsed) {
           const p = parseRecipeText(material.replace(/^(Opis filmu|Opis|Transkrypcja|Tekst od użytkownika):\s*/gim, ''));
-          parsed = { title: source?.title || 'Nowy przepis', servings: 4, ingredients: p.ingredients, steps: p.steps, tags: [] };
+          parsed = { title: source?.title || 'Nowy przepis', servings: servingsFromText(material) ?? estimateServings(p.ingredients), ingredients: p.ingredients, steps: p.steps, tags: [] };
         }
         draft = parsed;
       }

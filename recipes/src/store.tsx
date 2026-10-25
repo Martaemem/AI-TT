@@ -59,11 +59,12 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   const addToShopping = useCallback((ings: Ingredient[], factor: number, recipeTitle?: string) => {
     setData((d) => {
       const list = [...d.shopping];
-      for (const ing of ings) {
+      for (const raw of ings) {
+        const ing = raw.unit === 'sztuka' ? { ...raw, unit: undefined } : raw; // „3 sztuki jajek” = „3 jajka”
         const base = toBase(ing, factor);
         const key = `${ingredientStem(ing.name)}|${base.dim}`;
         const src = { title: recipeTitle ?? '', amount: ing.amount === undefined ? undefined : ing.amount * factor, unit: ing.unit };
-        const idx = list.findIndex((s) => !s.checked && (s.key ?? `${ingredientStem(s.name)}|${toBase(s).dim}`) === key);
+        const idx = list.findIndex((s) => !s.checked && (s.key ?? `${ingredientStem(s.name)}|${toBase({ ...s, unit: s.unit === 'sztuka' ? undefined : s.unit }).dim}`) === key);
         if (idx >= 0) {
           const cur = list[idx];
           const sum = base.amount !== undefined && cur.amount !== undefined ? cur.amount + base.amount : cur.amount ?? base.amount;
@@ -125,7 +126,7 @@ export function useStore(): Store {
 }
 
 export const shoppingLabel = (s: ShoppingItem) => {
-  const qty = formatBase(s.amount, s.unit);
+  const qty = formatBase(s.amount, s.unit === 'sztuka' ? undefined : s.unit);
   return qty ? `${qty} ${s.name}` : s.name;
 };
 

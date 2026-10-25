@@ -45,7 +45,7 @@ export default function Home({ nav }: { nav: Nav }) {
 
   return (
     <View style={{ flex: 1 }}>
-      <Header logo title="bsmak" right={<View style={st.counter}><Text style={st.counterText}>{data.recipes.length} przepisów</Text></View>} />
+      <Header logo title="BSmak" right={<View style={st.counter}><Text style={st.counterText}>{data.recipes.length} przepisów</Text></View>} />
       <ScrollView contentContainerStyle={{ paddingBottom: 28, paddingTop: 18 }} keyboardShouldPersistTaps="handled">
         {clipUrl && (
           <Pressable style={[st.clip, box(colors.yellow, 22)]} onPress={() => nav.push({ name: 'add', url: clipUrl })}>

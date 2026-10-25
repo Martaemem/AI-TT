@@ -1,5 +1,5 @@
 import { Ingredient, Recipe, Step } from './types';
-import { isoToMinutes, minutesFromText, parseIngredient } from './units';
+import { estimateServings, isoToMinutes, minutesFromText, parseIngredient } from './units';
 import { fetchTikTokMeta, isGeneric, Log, USER_AGENTS } from './tiktok';
 import { fetchTikTokTranscript } from './transcript';
 
@@ -70,10 +70,10 @@ function instructionSteps(node: any): Step[] {
   return out;
 }
 
-function servingsFrom(y: any): number {
+function servingsFrom(y: any): number | undefined {
   const s = Array.isArray(y) ? y.join(' ') : String(y ?? '');
   const n = s.match(/\d+/);
-  return n ? Math.min(Math.max(Number(n[0]), 1), 100) : 4;
+  return n ? Math.min(Math.max(Number(n[0]), 1), 100) : undefined;
 }
 
 function imageFrom(img: any): string | undefined {
@@ -94,7 +94,7 @@ export function recipeFromJsonLd(html: string): Draft | null {
   const keywords = typeof node.keywords === 'string' ? node.keywords.split(',') : [].concat(node.keywords ?? []);
   return {
     title: stripTags(String(node.name ?? 'Przepis')),
-    servings: servingsFrom(node.recipeYield),
+    servings: servingsFrom(node.recipeYield) ?? estimateServings(ingredients),
     ingredients,
     steps,
     tags: keywords.map((k: string) => String(k).trim().toLowerCase()).filter(Boolean).slice(0, 5),
@@ -181,7 +181,7 @@ export async function fetchSource(url: string, log: Log): Promise<Source> {
 export function guessCategory(text: string, categories: string[]): string {
   const rules: [RegExp, string][] = [
     [/zup|rosół|krem z |barszcz|bulion/i, 'Zupy'],
-    [/ciast|tort|sernik|brownie|babk|szarlotk|muffin|drożdżow|pierni|makowiec/i, 'Ciasta'],
+    [/ciast|tort|sernik|brownie|babk|szarlotk|muffin|drożdżów|pierni|makowiec/i, 'Ciasta'],
     [/deser|lody|mus |pudding|cannoli|tiramisu|panna cotta|krem /i, 'Desery'],
     [/sałat/i, 'Sałatki'],
     [/śniadani|naleśnik|omlet|jajecznic|owsiank|tost|gofr/i, 'Śniadania'],

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, Pressable, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { shoppingLabel, useStore } from '../store';
+import { shoppingLabel, shoppingSources, useStore } from '../store';
 import { box, colors, fonts } from '../theme';
 import { Button, Check, Header, Tag, Text, inputStyle } from '../components/ui';
 import { Art } from '../components/Art';
@@ -24,7 +24,7 @@ export default function Shopping() {
       <Check on={s.checked} />
       <View style={{ flex: 1 }}>
         <Text style={[st.name, s.checked && { textDecorationLine: 'line-through', color: colors.muted }]}>{shoppingLabel(s)}</Text>
-        {!!s.recipeTitle && <Text style={st.from} numberOfLines={1}>{s.recipeTitle}</Text>}
+        {!!shoppingSources(s) && <Text style={st.from}>{shoppingSources(s)}</Text>}
       </View>
       <Pressable onPress={() => removeShopping(s.id)} hitSlop={10}>
         <Ionicons name="close" size={22} color={colors.ink} />

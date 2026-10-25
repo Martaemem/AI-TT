@@ -9,7 +9,7 @@ const system = (categories: string[]) => `Jesteś asystentem, który zamienia op
 Zwróć WYŁĄCZNIE obiekt JSON (bez markdown) o polach:
 {
  "title": nazwa dania po polsku,
- "servings": liczba porcji (liczba całkowita; jeśli brak informacji: 4),
+ "servings": liczba porcji (liczba całkowita). Weź ją z tekstu; jeśli jej nie ma, oszacuj realistycznie z ilości składników (np. ciasto z 500 g mąki to 10 porcji, obiad dla rodziny 4),
  "time": łączny czas w minutach (liczba) lub null,
  "category": jedna z: ${categories.join(', ')},
  "ingredients": [{"amount": liczba lub null, "unit": jednostka w mianowniku liczby pojedynczej (np. "łyżka", "szklanka", "g", "ml", "sztuka", "ząbek") lub null, "name": nazwa składnika}],
