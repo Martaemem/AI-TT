@@ -18,15 +18,29 @@ const metaTag = (html: string, prop: string): string | undefined => {
   return m ? decode(m[1]) : undefined;
 };
 
-/** Opis filmu z danych osadzonych na stronie (gdy brakuje znaczników og:*). */
+/**
+ * Opis wpisu z danych osadzonych na stronie. Na stronie jest kilka pól „desc” (część pusta lub ogólna),
+ * a prawdziwy podpis jest zwykle najdłuższy – dotyczy to zwłaszcza karuzel zdjęć (/photo/).
+ */
 const embeddedDesc = (html: string): string | undefined => {
-  const m = html.match(/"desc":"((?:[^"\\]|\\.)*)"/);
-  if (!m) return undefined;
-  try {
-    return JSON.parse(`"${m[1]}"`);
-  } catch {
-    return undefined;
+  let best = '';
+  for (const m of html.matchAll(/"desc":"((?:[^"\\]|\\.)*)"/g)) {
+    try {
+      const text = JSON.parse(`"${m[1]}"`) as string;
+      if (text.length > best.length) best = text;
+    } catch {
+      // uszkodzony zapis – pomijamy
+    }
   }
+  return best || undefined;
+};
+
+/** Tytuł strony ma postać: „autor on TikTok: \"opis\"” – ostatnia deska ratunku dla opisu. */
+const titleCaption = (html: string): string | undefined => {
+  const t = html.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1];
+  if (!t) return undefined;
+  const m = decode(t).match(/TikTok:\s*["“„]?([\s\S]*?)["”]?\s*$/i);
+  return m?.[1]?.trim() || undefined;
 };
 
 /** Ogólne nagłówki typu „TikTok · autor” nie są opisem filmu. */
@@ -40,7 +54,7 @@ const captionFromDescription = (d?: string): string | undefined => {
 };
 
 const fromHtml = (html: string, finalUrl: string): TikTokMeta | null => {
-  const candidates = [embeddedDesc(html), captionFromDescription(metaTag(html, 'og:description')), captionFromDescription(metaTag(html, 'description'))];
+  const candidates = [embeddedDesc(html), captionFromDescription(metaTag(html, 'og:description')), captionFromDescription(metaTag(html, 'description')), titleCaption(html)];
   const title = candidates.find((c) => !isGeneric(c)) ?? '';
   const thumbnail = metaTag(html, 'og:image');
   const author = finalUrl.match(/tiktok\.com\/@([^/?]+)/)?.[1];

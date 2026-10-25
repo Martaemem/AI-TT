@@ -33,15 +33,16 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
     try {
       setBusy('Pobieram dane filmu…');
       const meta = link ? await fetchTikTokMeta(link, log) : null;
+      const caption = meta?.title && !isGeneric(meta.title) ? meta.title : '';
       let transcript = text.trim();
       if (!transcript && link) {
         setBusy('Pobieram napisy z filmu…');
         transcript = (await fetchTikTokTranscript(link, log)) ?? '';
-        if (!transcript) {
+        // długi opis (np. lista narzędzi w poście) wystarcza – wtedy brak napisów nie jest problemem
+        if (!transcript && caption.length < 150) {
           Alert.alert('Brak napisów w filmie', `Nie znalazłem napisów do tego filmu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         }
       }
-      const caption = meta?.title && !isGeneric(meta.title) ? meta.title : '';
       const source = [caption && `Opis filmu: ${caption}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
         .filter(Boolean)
         .join('\n\n');
