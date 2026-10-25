@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Przepisy",
+    "slug": "przepisy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "przepisyapp",
+    "ios": {
+      "bundleIdentifier": "pl.aitt.przepisy"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FAF1E8"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "pl.aitt.przepisy"
+    },
+    "plugins": [
+      ["expo-share-intent", { "androidIntentFilters": ["text/*"] }]
+    ]
+  }
+}
