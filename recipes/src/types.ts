@@ -29,6 +29,9 @@ export type ShoppingItem = {
   unit?: string;
   checked: boolean;
   recipeTitle?: string;
+  key?: string;
+  /** z jakich przepisów pochodzi pozycja (ilości w oryginalnych jednostkach) */
+  sources?: { title: string; amount?: number; unit?: string }[];
 };
 
 export type PlanEntry = { id: string; date: string; recipeId: string }; // date: YYYY-MM-DD

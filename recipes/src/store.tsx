@@ -1,7 +1,7 @@
 import React, { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react';
 import { Data, Ingredient, PlanEntry, Recipe, Settings, ShoppingItem } from './types';
 import { defaultData, loadData, saveData } from './storage';
-import { formatAmount, ingredientKey, unitLabel } from './units';
+import { formatBase, ingredientStem, toBase } from './units';
 
 type Store = {
   ready: boolean;
@@ -60,12 +60,16 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     setData((d) => {
       const list = [...d.shopping];
       for (const ing of ings) {
-        const amount = ing.amount !== undefined ? ing.amount * factor : undefined;
-        const existing = list.findIndex((s) => !s.checked && ingredientKey(s) === ingredientKey(ing));
-        if (existing >= 0 && amount !== undefined && list[existing].amount !== undefined) {
-          list[existing] = { ...list[existing], amount: (list[existing].amount as number) + amount };
-        } else if (existing < 0) {
-          list.push({ id: uid(), name: ing.name, amount, unit: ing.unit, checked: false, recipeTitle });
+        const base = toBase(ing, factor);
+        const key = `${ingredientStem(ing.name)}|${base.dim}`;
+        const src = { title: recipeTitle ?? '', amount: ing.amount === undefined ? undefined : ing.amount * factor, unit: ing.unit };
+        const idx = list.findIndex((s) => !s.checked && (s.key ?? `${ingredientStem(s.name)}|${toBase(s).dim}`) === key);
+        if (idx >= 0) {
+          const cur = list[idx];
+          const sum = base.amount !== undefined && cur.amount !== undefined ? cur.amount + base.amount : cur.amount ?? base.amount;
+          list[idx] = { ...cur, key, amount: sum, sources: [...(cur.sources ?? []), src] };
+        } else {
+          list.push({ id: uid(), name: ing.name, amount: base.amount, unit: base.unit, checked: false, recipeTitle, key, sources: [src] });
         }
       }
       return { ...d, shopping: list };
@@ -120,5 +124,14 @@ export function useStore(): Store {
   return s;
 }
 
-export const shoppingLabel = (s: ShoppingItem) =>
-  s.amount !== undefined ? `${formatAmount(s.amount)}${s.unit ? ` ${unitLabel(s.unit, Number.isInteger(s.amount) ? s.amount : 1.5)}` : ''} ${s.name}` : s.name;
+export const shoppingLabel = (s: ShoppingItem) => {
+  const qty = formatBase(s.amount, s.unit);
+  return qty ? `${qty} ${s.name}` : s.name;
+};
+
+/** „Szarlotka: 2 szklanki · Karpatka: 300 g” – skąd się wzięła suma. */
+export const shoppingSources = (s: ShoppingItem): string => {
+  const src = s.sources ?? [];
+  if (src.length < 2 && !(src.length === 1 && src[0].title)) return '';
+  return src.map((x) => `${x.title || 'ręcznie'}${x.amount !== undefined ? `: ${formatBase(x.amount, x.unit)}` : ''}`).join(' · ');
+};

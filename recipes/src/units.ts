@@ -29,7 +29,7 @@ for (const [canon, forms] of Object.entries(FORMS)) {
   forms.forEach((f) => (LOOKUP[f] = canon));
 }
 Object.assign(LOOKUP, {
-  łyżkę: 'łyżka', łyżeczę: 'łyżeczka', szklankę: 'szklanka', szczyptę: 'szczypta', szt: 'sztuka', 'szt.': 'sztuka',
+  łyżkę: 'łyżka', łyżeczkę: 'łyżeczka', szklankę: 'szklanka', szczyptę: 'szczypta', szt: 'sztuka', 'szt.': 'sztuka',
   opak: 'opakowanie', 'opak.': 'opakowanie', tbsp: 'łyżka', tsp: 'łyżeczka', cup: 'szklanka', cups: 'szklanka',
   litr: 'l', litra: 'l', gram: 'g', gramy: 'g', gramów: 'g', 'g.': 'g', 'ml.': 'ml',
 });
@@ -139,3 +139,76 @@ export function isoToMinutes(iso?: string): number | undefined {
 
 /** Łączy takie same składniki (ta sama nazwa i jednostka) na liście zakupów. */
 export const ingredientKey = (i: { name: string; unit?: string }) => `${i.name.trim().toLowerCase()}|${i.unit ?? ''}`;
+
+// ---------- łączenie składników na liście zakupów ----------
+
+const MASS_G: Record<string, number> = { mg: 0.001, g: 1, dag: 10, kg: 1000 };
+const VOL_ML: Record<string, number> = { ml: 1, cl: 10, dl: 100, l: 1000, szklanka: 250, łyżka: 15, łyżeczka: 5 };
+
+// gramy na mililitr dla typowych produktów sypkich (pozwala zsumować „szklanki” z gramami)
+const DENSITY: [RegExp, number][] = [
+  [/^cukier\s+puder|^cukr\S*\s+puder/, 0.5],
+  [/^mąk/, 0.56],
+  [/^cukier|^cukr/, 0.8],
+  [/^masł/, 0.9],
+  [/^kasz/, 0.75],
+  [/^ryż/, 0.8],
+  [/^kakao/, 0.4],
+  [/^miód|^miod/, 1.4],
+  [/^sól|^soli/, 1.2],
+  [/^płatk/, 0.3],
+];
+
+/** Klucz do łączenia: pierwsze dwa słowa po 3 litery, więc „mąki pszennej” = „mąka pszenna”. */
+export function ingredientStem(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, ' ')
+    .split(/[^\p{L}\d]+/u)
+    .filter((w) => w.length > 2 && !/\d/.test(w) && w !== 'typ')
+    .slice(0, 2)
+    .map((w) => w.slice(0, 3))
+    .join(' ');
+}
+
+export type Base = { dim: string; amount?: number; unit?: string };
+
+/** Sprowadza ilość do g / ml albo zostawia jednostkę „sztukową”. */
+export function toBase(ing: { amount?: number; unit?: string; name: string }, factor = 1): Base {
+  const a = ing.amount === undefined ? undefined : ing.amount * factor;
+  const u = ing.unit;
+  if (u && MASS_G[u] !== undefined) return { dim: 'g', amount: a === undefined ? undefined : a * MASS_G[u], unit: 'g' };
+  if (u && VOL_ML[u] !== undefined) {
+    const ml = a === undefined ? undefined : a * VOL_ML[u];
+    const d = DENSITY.find(([re]) => re.test(ing.name.toLowerCase()));
+    if (d) return { dim: 'g', amount: ml === undefined ? undefined : ml * d[1], unit: 'g' };
+    return { dim: 'ml', amount: ml, unit: 'ml' };
+  }
+  return { dim: u ?? '', amount: a, unit: u };
+}
+
+/** 1500 g -> „1,5 kg”, 250 ml -> „250 ml”, reszta jak w przepisie. */
+export function formatBase(amount: number | undefined, unit: string | undefined): string {
+  if (amount === undefined) return '';
+  if (unit === 'g') return amount >= 1000 ? `${formatAmount(amount / 1000)} kg` : `${Math.round(amount)} g`;
+  if (unit === 'ml') return amount >= 1000 ? `${formatAmount(amount / 1000)} l` : `${Math.round(amount)} ml`;
+  const u = unitLabel(unit, Number.isInteger(amount) ? amount : 1.5);
+  return `${formatAmount(amount)}${u ? ` ${u}` : ''}`;
+}
+
+/** Liczba porcji z tekstu („dla 6 osób”, „8 porcji”). */
+export function servingsFromText(text: string): number | undefined {
+  const m = text.match(/(\d{1,2})\s*(?:porcj|osób|osoby|osoba|os\.|sztuk|kawałk)/i) ?? text.match(/dla\s+(\d{1,2})\b/i);
+  const n = m ? Number(m[1]) : 0;
+  return n >= 1 && n <= 50 ? n : undefined;
+}
+
+/** Szacunek, gdy przepis nie podaje porcji: ok. 300 g składników na osobę. */
+export function estimateServings(ings: Ingredient[]): number {
+  const total = ings.reduce((sum, i) => {
+    const b = toBase(i);
+    return b.unit === 'g' || b.unit === 'ml' ? sum + (b.amount ?? 0) : sum;
+  }, 0);
+  if (total <= 0) return 4;
+  return Math.min(12, Math.max(2, Math.round(total / 300)));
+}
