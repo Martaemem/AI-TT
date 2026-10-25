@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "BSmak",
+    "slug": "bsmak",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "bsmakapp",
+    "icon": "./assets/icon.png",
+    "ios": {
+      "bundleIdentifier": "pl.aitt.bsmak"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FDD34D",
+        "foregroundImage": "./assets/adaptive.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "pl.aitt.bsmak"
+    },
+    "plugins": [
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": [
+            "text/*"
+          ]
+        }
+      ]
+    ],
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/icon.png"
+    },
+    "experiments": {
+      "baseUrl": "/AI-TT"
+    }
+  }
+}
