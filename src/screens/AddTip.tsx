@@ -5,8 +5,8 @@ import { useStore, uid } from '../store';
 import { colors } from '../theme';
 import { Button, Header } from '../components/ui';
 import { Nav } from '../nav';
-import { analyzeLocally, analyzeWithClaude, extractTikTokUrl } from '../ai';
-import { fetchTikTokMeta } from '../tiktok';
+import { analyzeTip, extractTikTokUrl } from '../ai';
+import { fetchTikTokMeta, isGeneric } from '../tiktok';
 import { fetchTikTokTranscript } from '../transcript';
 import { Tip } from '../types';
 
@@ -41,26 +41,18 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
           Alert.alert('Brak napisów w filmie', `Nie znalazłem napisów do tego filmu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         }
       }
-      const source = [meta?.title && `Opis filmu: ${meta.title}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
+      const caption = meta?.title && !isGeneric(meta.title) ? meta.title : '';
+      const source = [caption && `Opis filmu: ${caption}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
         .filter(Boolean)
         .join('\n\n');
-      if (!meta?.title && !transcript) {
+      if (!caption && !transcript) {
         Alert.alert('Nie udało się pobrać opisu', `Wklej poniżej opis lub transkrypcję filmu – AI uporządkuje ją w kroki.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         setBusy('');
         return;
       }
       setBusy(hasKey ? 'AI porządkuje poradę…' : 'Porządkuję poradę…');
-      let analysis;
-      if (hasKey) {
-        try {
-          analysis = await analyzeWithClaude(source, data.settings.apiKey.trim(), data.settings.model);
-        } catch (e) {
-          Alert.alert('AI niedostępne', `${(e as Error).message}\n\nUżyję prostego porządkowania offline.`);
-          analysis = analyzeLocally(source, meta?.title ?? '');
-        }
-      } else {
-        analysis = analyzeLocally(source, meta?.title ?? '');
-      }
+      const { analysis, error } = await analyzeTip(source, data.settings, caption);
+      if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
       const tip: Tip = {
         id: uid(),
         url: link,
@@ -107,9 +99,9 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         <TextInput value={text} onChangeText={setText} multiline placeholder="Np. 1. Otwórz ChatGPT… 2. Wklej prompt…" placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
 
         <View style={st.mode}>
-          <Text style={{ color: colors.text, fontWeight: '700' }}>{hasKey ? '✨ Tryb AI (Claude)' : '📋 Tryb offline'}</Text>
+          <Text style={{ color: colors.text, fontWeight: '700' }}>{hasKey ? `✨ Tryb AI (${data.settings.provider === 'claude' ? 'Claude' : 'Gemini'})` : '📋 Tryb offline'}</Text>
           <Text style={{ color: colors.muted, marginTop: 4 }}>
-            {hasKey ? 'Porada zostanie rozpisana na kroki, prompty i narzędzia.' : 'Bez klucza API porada jest porządkowana prostymi regułami. Dodaj klucz w Więcej → Ustawienia AI.'}
+            {hasKey ? 'Porada zostanie rozpisana na kroki, prompty i narzędzia.' : 'Bez klucza porada jest porządkowana prostymi regułami. Darmowy klucz Gemini dodasz w Więcej → Ustawienia AI.'}
           </Text>
         </View>
 

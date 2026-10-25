@@ -30,7 +30,7 @@ const embeddedDesc = (html: string): string | undefined => {
 };
 
 /** Ogólne nagłówki typu „TikTok · autor” nie są opisem filmu. */
-const isGeneric = (t?: string) => !t || t.trim().length < 3 || (/^TikTok\b/i.test(t.trim()) && t.length < 80);
+export const isGeneric = (t?: string) => !t || t.trim().length < 3 || (/^TikTok\b/i.test(t.trim()) && t.length < 80);
 
 /** og:description TikToka ma postać: „1K Likes, 2 Comments. TikTok video from x (@x): "opis"”. */
 const captionFromDescription = (d?: string): string | undefined => {

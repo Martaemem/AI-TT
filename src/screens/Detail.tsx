@@ -4,14 +4,24 @@ import { Ionicons } from '@expo/vector-icons';
 import { useStore, uid } from '../store';
 import { colors } from '../theme';
 import { Button, CopyBox, Header, toolEmoji } from '../components/ui';
+import { analyzeTip } from '../ai';
 import { Nav } from '../nav';
 
 export default function Detail({ nav, id }: { nav: Nav; id: string }) {
   const { data, updateTip, deleteTip, addCollection } = useStore();
+  const [redoing, setRedoing] = useState(false);
   const tip = data.tips.find((t) => t.id === id);
   const [pick, setPick] = useState(false);
   const [newName, setNewName] = useState('');
   if (!tip) return <Header onBack={nav.pop} />;
+
+  const redo = async () => {
+    setRedoing(true);
+    const { analysis, error } = await analyzeTip(tip.sourceText, data.settings, '');
+    updateTip(tip.id, { ...analysis, checked: [] });
+    setRedoing(false);
+    if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
+  };
 
   const toggleStep = (i: number) =>
     updateTip(tip.id, { checked: tip.checked.includes(i) ? tip.checked.filter((x) => x !== i) : [...tip.checked, i] });
@@ -56,6 +66,28 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
             <Action icon="share-outline" label="Udostępnij" onPress={share} />
           </View>
 
+          {(tip.keyPoints?.length ?? 0) > 0 && (
+            <>
+              <Text style={st.section}>NAJWAŻNIEJSZE</Text>
+              {tip.keyPoints!.map((k, i) => (
+                <Text key={i} style={st.need}>• {k}</Text>
+              ))}
+            </>
+          )}
+
+          {(tip.terms?.length ?? 0) > 0 && (
+            <>
+              <Text style={st.section}>HASŁA I KOMENDY</Text>
+              {tip.terms!.map((t, i) => (
+                <View key={i} style={st.term}>
+                  <Text style={st.termName}>{t.name}</Text>
+                  {!!t.desc && <Text style={st.termDesc}>{t.desc}</Text>}
+                  <CopyBox text={t.name} />
+                </View>
+              ))}
+            </>
+          )}
+
           {tip.toolsNeeded.length > 0 && (
             <>
               <Text style={st.section}>POTRZEBNE</Text>
@@ -88,6 +120,8 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
               </Pressable>
             );
           })}
+
+          <Button title={redoing ? 'Porządkuję…' : data.settings.apiKey.trim() ? '✨ Uporządkuj ponownie z AI' : 'Uporządkuj ponownie'} outline disabled={redoing} onPress={redo} style={{ marginTop: 18 }} />
 
           {tip.url && (
             <Pressable onPress={() => Linking.openURL(tip.url!)} style={{ marginTop: 18 }}>
@@ -169,6 +203,9 @@ const st = StyleSheet.create({
   actions: { flexDirection: 'row', marginTop: 22 },
   actionCircle: { width: 62, height: 62, borderRadius: 31, borderWidth: 1.5, borderColor: colors.primary, alignItems: 'center', justifyContent: 'center' },
   section: { color: '#F59E0B', fontWeight: '800', letterSpacing: 1.5, marginTop: 28, marginBottom: 12, fontSize: 15 },
+  term: { backgroundColor: colors.card, borderRadius: 14, padding: 14, marginBottom: 10 },
+  termName: { fontSize: 18, fontWeight: '800', color: colors.text },
+  termDesc: { color: colors.muted, fontSize: 15, marginTop: 4, lineHeight: 21 },
   need: { fontSize: 17, color: colors.text, marginBottom: 6 },
   step: { flexDirection: 'row', gap: 14, paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: colors.line, alignItems: 'flex-start' },
   stepNo: { fontSize: 24, fontWeight: '800', color: colors.primary, width: 28 },
