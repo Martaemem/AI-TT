@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "poradyai",
+    "ios": {
+      "bundleIdentifier": "pl.aitt.poradyai"
+    },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#FAF1E8"
