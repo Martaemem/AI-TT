@@ -1,11 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, Alert, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import * as Clipboard from 'expo-clipboard';
+import * as ImagePicker from 'expo-image-picker';
 import { useStore, uid } from '../store';
 import { colors } from '../theme';
 import { Button, Header } from '../components/ui';
 import { Nav } from '../nav';
 import { analyzeTip, extractTikTokUrl } from '../ai';
+import { readSlides } from '../vision';
 import { fetchTikTokMeta, isGeneric } from '../tiktok';
 import { fetchTikTokTranscript } from '../transcript';
 import { Tip } from '../types';
@@ -15,6 +17,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
   const [url, setUrl] = useState(initialUrl ?? '');
   const [text, setText] = useState('');
   const [busy, setBusy] = useState('');
+  const [slides, setSlides] = useState<string[]>([]); // zdjęcia slajdów w base64
   const hasKey = data.settings.apiKey.trim().length > 0;
 
   const paste = async () => {
@@ -22,9 +25,21 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
     setUrl(extractTikTokUrl(t) ?? t);
   };
 
+  const pickSlides = async () => {
+    const res = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ['images'],
+      allowsMultipleSelection: true,
+      selectionLimit: 12,
+      quality: 0.6,
+      base64: true,
+    });
+    if (res.canceled) return;
+    setSlides(res.assets.map((a) => a.base64).filter((b): b is string => !!b));
+  };
+
   const run = async () => {
     const link = extractTikTokUrl(url) ?? undefined;
-    if (!link && !text.trim()) {
+    if (!link && !text.trim() && slides.length === 0) {
       Alert.alert('Brak materiału', 'Wklej link do TikToka albo opis / transkrypcję porady.');
       return;
     }
@@ -39,8 +54,17 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         setBusy('Pobieram napisy z filmu…');
         transcript = (await fetchTikTokTranscript(link, log)) ?? '';
         // długi opis (np. lista narzędzi w poście) wystarcza – wtedy brak napisów nie jest problemem
-        if (!transcript && caption.length < 150) {
+        if (!transcript && caption.length < 150 && slides.length === 0) {
           Alert.alert('Brak napisów w filmie', `Nie znalazłem napisów do tego filmu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
+        }
+      }
+      if (slides.length > 0) {
+        setBusy(`Odczytuję tekst ze zdjęć (${slides.length})…`);
+        try {
+          const slidesText = await readSlides(slides, data.settings);
+          if (slidesText) transcript = [transcript, `Tekst ze slajdów:\n${slidesText}`].filter(Boolean).join('\n\n');
+        } catch (e) {
+          Alert.alert('Nie udało się odczytać zdjęć', (e as Error).message);
         }
       }
       const source = [caption && `Opis filmu: ${caption}`, meta?.author && `Autor: ${meta.author}`, transcript && `Transkrypcja / notatki:\n${transcript}`]
@@ -98,6 +122,10 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         <Text style={[st.label, { marginTop: 22 }]}>Transkrypcja lub opis (opcjonalnie)</Text>
         <Text style={st.hint}>Aplikacja sama próbuje pobrać napisy z filmu. Jeśli ich nie ma, wklej tu transkrypcję – wynik będzie dużo dokładniejszy.</Text>
         <TextInput value={text} onChangeText={setText} multiline placeholder="Np. 1. Otwórz ChatGPT… 2. Wklej prompt…" placeholderTextColor={colors.muted} style={[st.input, { minHeight: 140, textAlignVertical: 'top' }]} />
+
+        <Text style={[st.label, { marginTop: 22 }]}>Slajdy ze zdjęć (opcjonalnie)</Text>
+        <Text style={st.hint}>Dla postów ze zdjęciami: zrób zrzuty ekranu slajdów, wybierz je tutaj, a AI przepisze z nich tekst i prompty.</Text>
+        <Button title={slides.length ? `Wybrano ${slides.length} zdjęć – zmień` : 'Wybierz zrzuty slajdów'} icon="images-outline" outline onPress={pickSlides} />
 
         <View style={st.mode}>
           <Text style={{ color: colors.text, fontWeight: '700' }}>{hasKey ? `✨ Tryb AI (${{ claude: 'Claude', groq: 'Groq', gemini: 'Gemini' }[data.settings.provider]})` : '📋 Tryb offline'}</Text>
