@@ -41,7 +41,7 @@ async function pickGroqVisionModel(apiKey: string): Promise<{ model: string | nu
     const res = await fetch(`${GROQ}/models`, { headers: { authorization: `Bearer ${apiKey}` } });
     if (!res.ok) return { model: null, all: [] };
     const all: string[] = ((await res.json()).data ?? []).map((m: any) => String(m.id));
-    for (const re of [/llama-4-scout/i, /llama-4-maverick/i, /scout|maverick/i, /vision|[-_]vl\b|[-_]vl[-_]/i, /pixtral|llava|gemma-3/i]) {
+    for (const re of [/llama-4-scout/i, /llama-4-maverick/i, /scout|maverick/i, /vision|[-_]vl\b|[-_]vl[-_]/i, /pixtral|llava|gemma-3/i, /qwen/i]) {
       const hit = all.find((id) => re.test(id));
       if (hit) return { model: hit, all };
     }
@@ -64,11 +64,13 @@ async function readWithAi(b64: string[], settings: Settings): Promise<string> {
       body: JSON.stringify({
         model,
         temperature: 0,
+        max_tokens: 4000,
         messages: [{ role: 'user', content: [{ type: 'text', text: OCR_PROMPT }, ...b64.map((d) => ({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${d}` } }))] }],
       }),
     });
-    if (!res.ok) throw new Error(`Groq ${res.status}: ${apiMessage(await res.text())}`);
-    return String((await res.json()).choices?.[0]?.message?.content ?? '');
+    if (!res.ok) throw new Error(`Groq (${model}) ${res.status}: ${apiMessage(await res.text())}`);
+    // modele „myślące” (np. Qwen) mogą doklejić blok rozumowania – odcinamy go
+    return String((await res.json()).choices?.[0]?.message?.content ?? '').replace(/<think>[\s\S]*?<\/think>/g, '').trim();
   }
   if (settings.provider === 'gemini') {
     const model = /^gemini/i.test(settings.model) ? settings.model : 'gemini-2.5-flash';
