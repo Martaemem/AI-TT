@@ -109,20 +109,49 @@ export async function analyzeWithGemini(source: string, apiKey: string, rawModel
   return normalize(parseJson(text), source.slice(0, 60));
 }
 
+const GROQ = 'https://api.groq.com/openai/v1';
+
+/** Pyta Groq o aktualną listę modeli (nazwy się zmieniają) i wybiera najlepszy do pracy z tekstem. */
+async function pickGroqModel(apiKey: string): Promise<string | null> {
+  try {
+    const res = await fetch(`${GROQ}/models`, { headers: { authorization: `Bearer ${apiKey}` } });
+    if (!res.ok) return null;
+    const ids: string[] = ((await res.json()).data ?? []).map((m: any) => String(m.id));
+    const chat = ids.filter((id) => !/whisper|guard|safeguard|tts|orpheus|playai|embed|distil/i.test(id));
+    const prefer = [/gpt-oss-120b/i, /llama-3\.3-70b/i, /llama-4/i, /gpt-oss-20b/i, /qwen/i, /kimi/i, /llama/i];
+    for (const re of prefer) {
+      const hit = chat.find((id) => re.test(id));
+      if (hit) return hit;
+    }
+    return chat[0] ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export async function analyzeWithGroq(source: string, apiKey: string, model: string): Promise<Analysis> {
-  const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', authorization: `Bearer ${apiKey}` },
-    body: JSON.stringify({
-      model,
-      temperature: 0.2,
-      response_format: { type: 'json_object' },
-      messages: [
-        { role: 'system', content: SYSTEM },
-        { role: 'user', content: source },
-      ],
-    }),
-  });
+  const call = (m: string, jsonMode: boolean) =>
+    fetch(`${GROQ}/chat/completions`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', authorization: `Bearer ${apiKey}` },
+      body: JSON.stringify({
+        model: m,
+        temperature: 0.2,
+        ...(jsonMode ? { response_format: { type: 'json_object' } } : {}),
+        messages: [
+          { role: 'system', content: SYSTEM },
+          { role: 'user', content: source },
+        ],
+      }),
+    });
+
+  let res = await call(model, true);
+  if (res.status === 404) {
+    // model wycofany lub niedostępny – bierzemy pierwszy działający z listy Groq
+    const alt = await pickGroqModel(apiKey);
+    if (alt && alt !== model) res = await call(alt, true);
+  }
+  if (res.status === 400) res = await call(model, false); // niektóre modele nie mają trybu JSON
   if (!res.ok) {
     const msg = apiMessage(await res.text());
     if (res.status === 401) throw new Error('Groq odrzucił klucz API. Sprawdź go w Więcej → Ustawienia AI.');

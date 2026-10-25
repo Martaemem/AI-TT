@@ -5,7 +5,7 @@ import { colors } from '../theme';
 import { Button, Chip, Header } from '../components/ui';
 import { Provider } from '../types';
 
-const DEFAULT_MODEL: Record<Provider, string> = { groq: 'llama-3.3-70b-versatile', gemini: 'gemini-2.5-flash', claude: 'claude-sonnet-5-5' };
+const DEFAULT_MODEL: Record<Provider, string> = { groq: 'openai/gpt-oss-120b', gemini: 'gemini-2.5-flash', claude: 'claude-sonnet-5-5' };
 
 export default function More() {
   const { data, setSettings } = useStore();
