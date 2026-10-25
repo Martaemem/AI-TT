@@ -1,4 +1,6 @@
-const UA = 'Mozilla/5.0 (Linux; Android 14; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36';
+import { Log, USER_AGENTS } from './tiktok';
+
+const UA = USER_AGENTS[2][1];
 
 type Sub = { LanguageCodeName?: string; Url?: string; UrlList?: string[]; Format?: string };
 
@@ -42,22 +44,30 @@ function extractArray(html: string, key: string): Sub[] {
  * Próbuje pobrać napisy (automatyczne lub dodane przez autora) ze strony filmu TikTok.
  * Zwraca null, gdy film nie ma napisów albo TikTok zmienił format strony.
  */
-export async function fetchTikTokTranscript(url: string): Promise<string | null> {
+export async function fetchTikTokTranscript(url: string, log: Log = () => {}): Promise<string | null> {
   try {
-    const page = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'pl,en;q=0.8' } });
-    if (!page.ok) return null;
-    const html = (await page.text()).replace(/\\u002F/g, '/');
-    const subs = [...extractArray(html, 'subtitleInfos'), ...extractArray(html, 'captionInfos')];
-    const withUrl = subs
-      .map((s) => ({ lang: s.LanguageCodeName ?? '', url: s.Url ?? s.UrlList?.[0] }))
-      .filter((s): s is { lang: string; url: string } => !!s.url);
-    if (withUrl.length === 0) return null;
-    const pick = withUrl.find((s) => s.lang.startsWith('pol')) ?? withUrl.find((s) => s.lang.startsWith('eng')) ?? withUrl[0];
-    const res = await fetch(pick.url, { headers: { 'User-Agent': UA } });
-    if (!res.ok) return null;
-    const text = subtitleToText(await res.text());
-    return text.length > 20 ? text : null;
-  } catch {
+    // Napisy są tylko w pełnej stronie, więc pomijamy bota (indeks 0) i próbujemy przeglądarek.
+    for (const [tag, ua] of USER_AGENTS.slice(1)) {
+      const page = await fetch(url, { headers: { 'User-Agent': ua, 'Accept-Language': 'pl,en;q=0.8' } });
+      const html = (await page.text()).replace(/\\u002F/g, '/');
+      const subs = [...extractArray(html, 'subtitleInfos'), ...extractArray(html, 'captionInfos')];
+      const withUrl = subs
+        .map((s) => ({ lang: s.LanguageCodeName ?? '', url: s.Url ?? s.UrlList?.[0] }))
+        .filter((s): s is { lang: string; url: string } => !!s.url);
+      log(`napisy (${tag}): HTTP ${page.status}, ${html.length} B, ${withUrl.length} ścieżek`);
+      if (withUrl.length === 0) continue;
+      const pick = withUrl.find((s) => s.lang.startsWith('pol')) ?? withUrl.find((s) => s.lang.startsWith('eng')) ?? withUrl[0];
+      const res = await fetch(pick.url, { headers: { 'User-Agent': UA } });
+      if (!res.ok) {
+        log(`napisy: pobranie ${res.status}`);
+        continue;
+      }
+      const text = subtitleToText(await res.text());
+      if (text.length > 20) return text;
+    }
+    return null;
+  } catch (e) {
+    log(`napisy: ${(e as Error).message}`);
     return null;
   }
 }

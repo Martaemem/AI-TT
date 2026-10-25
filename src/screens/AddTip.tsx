@@ -5,7 +5,8 @@ import { useStore, uid } from '../store';
 import { colors } from '../theme';
 import { Button, Header } from '../components/ui';
 import { Nav } from '../nav';
-import { analyzeLocally, analyzeWithClaude, extractTikTokUrl, fetchTikTokMeta } from '../ai';
+import { analyzeLocally, analyzeWithClaude, extractTikTokUrl } from '../ai';
+import { fetchTikTokMeta } from '../tiktok';
 import { fetchTikTokTranscript } from '../transcript';
 import { Tip } from '../types';
 
@@ -27,13 +28,15 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
       Alert.alert('Brak materiału', 'Wklej link do TikToka albo opis / transkrypcję porady.');
       return;
     }
+    const diag: string[] = [];
+    const log = (l: string) => diag.push(l);
     try {
       setBusy('Pobieram dane filmu…');
-      const meta = link ? await fetchTikTokMeta(link) : null;
+      const meta = link ? await fetchTikTokMeta(link, log) : null;
       let transcript = text.trim();
       if (!transcript && link) {
         setBusy('Pobieram napisy z filmu…');
-        transcript = (await fetchTikTokTranscript(link)) ?? '';
+        transcript = (await fetchTikTokTranscript(link, log)) ?? '';
         if (!transcript) {
           Alert.alert('Brak napisów w filmie', 'Nie znalazłem napisów do tego filmu, więc użyję tylko opisu. Aby uzyskać dokładniejszy wynik, wklej transkrypcję ręcznie.');
         }
@@ -42,7 +45,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         .filter(Boolean)
         .join('\n\n');
       if (!source) {
-        Alert.alert('Nie udało się pobrać opisu', 'Wklej poniżej opis lub transkrypcję filmu – AI uporządkuje ją w kroki.');
+        Alert.alert('Nie udało się pobrać opisu', `Wklej poniżej opis lub transkrypcję filmu – AI uporządkuje ją w kroki.\n\nSzczegóły techniczne:\n${diag.join('\n')}`);
         setBusy('');
         return;
       }
