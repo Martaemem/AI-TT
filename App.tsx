@@ -13,11 +13,11 @@ import AddTip from './src/screens/AddTip';
 import Detail from './src/screens/Detail';
 import Steps from './src/screens/Steps';
 import List from './src/screens/List';
-import Tools from './src/screens/Tools';
-import Prompts from './src/screens/Prompts';
+import Knowledge from './src/screens/Knowledge';
+import Categories from './src/screens/Categories';
 import More from './src/screens/More';
 
-type Tab = 'home' | 'tools' | 'prompts' | 'more';
+type Tab = 'home' | 'knowledge' | 'categories' | 'more';
 
 function Root() {
   const { ready } = useStore();
@@ -67,13 +67,13 @@ function Root() {
       case 'list': body = <List nav={nav} collectionId={top.collectionId} title={top.title} />; break;
     }
   } else {
-    body = tab === 'home' ? <Home nav={nav} /> : tab === 'tools' ? <Tools /> : tab === 'prompts' ? <Prompts /> : <More />;
+    body = tab === 'home' ? <Home nav={nav} /> : tab === 'knowledge' ? <Knowledge nav={nav} /> : tab === 'categories' ? <Categories nav={nav} /> : <More />;
   }
 
   const tabs: { id: Tab; label: string; icon: keyof typeof Ionicons.glyphMap }[] = [
     { id: 'home', label: 'Porady', icon: 'bulb' },
-    { id: 'tools', label: 'Narzędzia', icon: 'construct' },
-    { id: 'prompts', label: 'Prompty', icon: 'chatbubble-ellipses' },
+    { id: 'knowledge', label: 'Wiedza', icon: 'search' },
+    { id: 'categories', label: 'Kategorie', icon: 'folder-open' },
     { id: 'more', label: 'Więcej', icon: 'menu' },
   ];
   const TabBtn = ({ t }: { t: (typeof tabs)[number] }) => (
