@@ -1,20 +1,20 @@
 {
   "expo": {
-    "name": "Przepisy",
-    "slug": "przepisy",
+    "name": "BSmak",
+    "slug": "bsmak",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "scheme": "przepisyapp",
+    "scheme": "bsmakapp",
     "ios": {
-      "bundleIdentifier": "pl.aitt.przepisy"
+      "bundleIdentifier": "pl.aitt.bsmak"
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#FAF1E8"
       },
       "predictiveBackGestureEnabled": false,
-      "package": "pl.aitt.przepisy"
+      "package": "pl.aitt.bsmak"
     },
     "plugins": [
       ["expo-share-intent", { "androidIntentFilters": ["text/*"] }]

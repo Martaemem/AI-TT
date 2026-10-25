@@ -1,4 +1,4 @@
-name: Build Przepisy APK
+name: Build BSmak APK
 
 on:
   workflow_dispatch:
@@ -44,16 +44,16 @@ jobs:
         run: ./gradlew assembleRelease --no-daemon
 
       - name: Rename APK
-        run: cp android/app/build/outputs/apk/release/app-release.apk przepisy.apk
+        run: cp android/app/build/outputs/apk/release/app-release.apk bsmak.apk
 
       - uses: actions/upload-artifact@v4
         with:
-          name: przepisy-apk
-          path: recipes/przepisy.apk
+          name: bsmak-apk
+          path: recipes/bsmak.apk
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: recipes-${{ github.run_number }}
-          name: Przepisy (build ${{ github.run_number }})
-          files: recipes/przepisy.apk
+          tag_name: bsmak-${{ github.run_number }}
+          name: BSmak (build ${{ github.run_number }})
+          files: recipes/bsmak.apk

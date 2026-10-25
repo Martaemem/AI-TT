@@ -44,7 +44,7 @@ export default function Home({ nav }: { nav: Nav }) {
 
   return (
     <ScrollView contentContainerStyle={{ paddingBottom: 24 }} keyboardShouldPersistTaps="handled">
-      <Header title="Przepisy" right={<Text style={st.counter}>{data.recipes.length} zapisanych</Text>} />
+      <Header title="BSmak" right={<Text style={st.counter}>{data.recipes.length} zapisanych</Text>} />
 
       {clipUrl && (
         <Pressable style={st.clip} onPress={() => nav.push({ name: 'add', url: clipUrl })}>
@@ -57,7 +57,7 @@ export default function Home({ nav }: { nav: Nav }) {
         <Text style={{ fontSize: 28 }}>💡</Text>
         <Text style={st.tipText}>
           <Text style={{ fontWeight: '800', color: colors.text }}>Jak importować? </Text>
-          W TikToku lub Instagramie wybierz Udostępnij → Przepisy albo wklej link w aplikacji.
+          W TikToku lub Instagramie wybierz Udostępnij → BSmak albo wklej link w aplikacji.
         </Text>
       </View>
 
