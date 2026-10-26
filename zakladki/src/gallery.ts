@@ -1,4 +1,5 @@
-import * as MediaLibrary from 'expo-media-library';
+// W SDK 58 albumy i stronicowanie zdjęć są w starszym API pod tą ścieżką
+import * as MediaLibrary from 'expo-media-library/legacy';
 import { Item } from './types';
 import { newId } from './store';
 
