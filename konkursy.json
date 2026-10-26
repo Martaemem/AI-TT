@@ -1,58 +1,79 @@
 {
- "updatedAt": "2026-10-26T04:45:00+01:00",
+ "updatedAt": "2026-10-26T15:20:00+01:00",
  "contests": [
   {
    "end": "2026-11-29",
+   "minSpend": 50,
    "organizer": "Nofsza",
    "prizes": "Nagrody pieniężne i produktowe",
    "purchase": true,
+   "shops": [
+    "Arhelan"
+   ],
    "start": "2026-10-23",
    "task": "Zrób zakupy w Arhelanie za min. 50 zł z co najmniej jednym produktem loteryjnym i zachowaj paragon.",
    "title": "Loteria urodzinowa – 35 lat Arhelan",
+   "toBuy": "Zakupy z min. 1 produktem objętym loterią",
    "url": "https://www.e-konkursy.info/konkurs/loteria-urodzinowa-35-lat-arhelan1",
    "id": "arhelan-35"
   },
   {
    "end": "2026-10-27",
+   "minSpend": null,
    "organizer": "Bakoma",
    "prizes": "Wg regulaminu",
    "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
    "start": "2026-10-21",
    "task": "Kup min. 2 jogurty pitne biorące udział w akcji z aplikacją Żappka, odbierz kod i odpowiedz na pytanie na stronie akcji.",
    "title": "KSW × Bakoma w Żabce",
+   "toBuy": "2 jogurty pitne Bakoma z akcji (z aplikacją Żappka)",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-ksw-bakoma-w-zabce",
    "id": "bakoma-zabka"
   },
   {
    "end": "2026-12-23",
+   "minSpend": null,
    "organizer": "Beskidzkie",
    "prizes": "3 × 50 000 zł, bluzy, koszulki",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dwa opakowania przekąsek Beskidzkie i wypełnij formularz loterii.",
    "title": "Loteria Beskidzkie",
+   "toBuy": "2 opakowania przekąsek Beskidzkie",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
    "id": "beskidzkie"
   },
   {
    "end": "2026-11-16",
+   "minSpend": null,
    "organizer": "Bonduelle",
    "prizes": "50 000 zł, garnki Tefal, 756 × 50 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dwa produkty Bonduelle i wypełnij formularz loterii.",
    "title": "„Postaw na dobre chwile” – Bonduelle",
+   "toBuy": "2 produkty Bonduelle",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie?start=10",
    "id": "bonduelle"
   },
   {
    "end": "2026-12-13",
+   "minSpend": 30,
    "organizer": "Nofsza",
    "prizes": "AGD, elektronika, pieniądze",
    "purchase": true,
+   "shops": [
+    "Chata Polska"
+   ],
    "start": "2026-10-22",
    "task": "Zrób zakupy za min. 30 zł, wpisz dane na odwrocie paragonu i wrzuć go do urny w sklepie.",
    "title": "Jesienna loteria Chata Polska",
+   "toBuy": "Dowolne zakupy (dane na odwrocie paragonu, paragon do urny)",
    "url": "https://www.e-konkursy.info/konkurs/jesienna-loteria-chata-polska",
    "id": "chata-polska"
   },
@@ -70,23 +91,66 @@
   },
   {
    "end": "2026-11-30",
+   "minSpend": null,
    "organizer": "Corega",
    "prizes": "10 000 zł, 183 × 200 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dowolny produkt Corega i wypełnij formularz loterii.",
    "title": "„Smak jesieni z Corega”",
+   "toBuy": "1 dowolny produkt Corega",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
    "id": "corega-jesien"
   },
   {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-04",
+   "minSpend": null,
+   "organizer": "Smolar",
+   "prizes": "100 voucherów Slowhop po 1000 zł",
+   "purchase": true,
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-10-22",
+   "task": "Kup w Rossmannie produkt promocyjny marek Henkla (m.in. Persil, Perwoll, Somat, Gliss, Taft, Schauma, Fa, Syoss) i zgłoś paragon na stronie loterii.",
+   "title": "Loteria „Czysty świat” – Rossmann",
+   "toBuy": "1 produkt promocyjny Henkla (Persil, Perwoll, Somat, Gliss, Taft, Schauma, Fa, Syoss)",
+   "url": "https://www.loteriaczystyswiat.pl/",
+   "id": "czysty-swiat-rossmann"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-18",
+   "minSpend": 49,
+   "note": "Jedna zdrAPPka dziennie także za samo logowanie",
+   "organizer": "Delikatesy Centrum",
+   "prizes": "42 × Thermomix TM7, 4200 rabatów po 100 zł",
+   "purchase": true,
+   "shops": [
+    "Delikatesy Centrum"
+   ],
+   "start": "2026-10-08",
+   "task": "W aplikacji Delikatesy Centrum zbieraj wirtualne zdrAPPki – za każde 49 zł zakupów z Delikartą, za produkty partnerskie lub za codzienne logowanie – i zdrapuj je w aplikacji.",
+   "title": "„Jesienny deszcz prezentów” – Delikatesy Centrum",
+   "toBuy": "Zakupy z kartą Delikarta (zdrAPPka za każde 49 zł)",
+   "url": "https://www.delikatesy.pl/loteria",
+   "id": "delikatesy-centrum-deszcz"
+  },
+  {
    "end": "2026-11-12",
+   "minSpend": 15,
    "organizer": "Unilever",
    "prizes": "Citroën C3, 320 × 100 zł na zakupy",
    "purchase": true,
+   "shops": [
+    "Dino"
+   ],
    "start": null,
    "task": "Kup za min. 15 zł produkty Knorr, Hellmann’s, Amino, Tortex lub Namdong w Dino i dokończ zdanie: „Każda podróż smakuje lepiej, gdy…”.",
    "title": "„Kierunek dobry smak” – Dino",
+   "toBuy": "Knorr, Hellmann’s, Amino, Tortex lub Namdong",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
    "id": "dino-dobry-smak"
   },
@@ -103,46 +167,85 @@
   },
   {
    "end": "2026-11-20",
+   "minSpend": 69.99,
    "organizer": "2DM",
    "prizes": "Elektronika, kosmetyki",
    "purchase": true,
+   "shops": [
+    "Hebe"
+   ],
    "start": "2026-10-21",
    "task": "Kup Essenherb za min. 69,99 zł w Hebe, zarejestruj paragon i odpowiedz na pytanie.",
    "title": "Essenherb w Hebe – „Obudź energię swojej skóry”",
+   "toBuy": "Kosmetyki Essenherb",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-essenherb-w-hebe-obudz-energie-swojej-skory",
    "id": "essenherb-hebe"
   },
   {
    "end": "2026-11-28",
+   "minSpend": null,
    "organizer": "Henkel",
    "prizes": "8 × voucher wakacje.pl 10 000 zł, 59 × 500 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dwa produkty Fa, Schauma lub Palette i wypełnij formularz loterii.",
    "title": "„Wygraj wakacje marzeń!” – Fa, Schauma, Palette",
+   "toBuy": "2 produkty Fa, Schauma lub Palette",
    "url": "https://aktualnekonkursy.pl/?start=30",
    "id": "fa-schauma"
   },
   {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-10-30",
+   "minSpend": null,
+   "organizer": "Coca-Cola / Fanta",
+   "prizes": "Pobyt w zamku Moszna dla 2 osób, maszyny do popcornu, skarpetki Fanta",
+   "purchase": true,
+   "shops": [
+    "Carrefour",
+    "Auchan",
+    "E.Leclerc",
+    "Kaufland",
+    "Stokrotka",
+    "Intermarché",
+    "Dealz"
+   ],
+   "start": "2026-10-01",
+   "task": "Kup dowolną Fantę w Carrefourze, Auchan, E.Leclerc, Kauflandzie, Stokrotce, Intermarché lub Dealz i zarejestruj paragon na stronie loterii.",
+   "title": "Loteria „Fanta Halloween 2026”",
+   "toBuy": "1 dowolna Fanta",
+   "url": "https://www.coca-cola.com/pl/pl/offerings/fanta-halloween",
+   "id": "fanta-halloween"
+  },
+  {
    "end": "2026-11-04",
+   "minSpend": 35,
    "note": "Zgłoszenie SMS – sprawdź koszt w regulaminie.",
    "organizer": "Los Mejores",
    "prizes": "Wg regulaminu",
    "purchase": true,
+   "shops": [
+    "Intermarché"
+   ],
    "start": "2026-10-22",
    "task": "Kup Finish i/lub Vanish za min. 35 zł, zachowaj paragon i opisz swoją czystą drogę do wygranej SMS-em.",
    "title": "„Czysta droga do wygranej” – Intermarché",
+   "toBuy": "Finish i/lub Vanish",
    "url": "https://www.e-konkursy.info/konkursy/konkursy-promocyjne",
    "id": "finish-intermarche"
   },
   {
    "end": "2027-01-15",
+   "minSpend": null,
    "organizer": "kulinarnewyzwaniemistrza.pl",
    "prizes": "Sprzęt AGD, gadżety",
    "purchase": true,
+   "shops": [],
    "start": "2026-10-22",
    "task": "Kup wybrany produkt G3 Ferrari, zgłoś zakup i podziel się przepisem inspirowanym kuchnią włoską.",
    "title": "Kulinarne Wyzwanie Mistrza 3 – G3 Ferrari",
+   "toBuy": "1 wybrany produkt G3 Ferrari",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-kulinarne-wyzwanie-mistrza-3",
    "id": "g3ferrari-mistrz"
   },
@@ -170,14 +273,36 @@
   },
   {
    "end": "2026-11-09",
+   "minSpend": null,
    "organizer": "WebTalk",
    "prizes": "Wejściówki, nagrody pieniężne",
    "purchase": true,
+   "shops": [
+    "Lidl"
+   ],
    "start": "2026-10-19",
    "task": "Kup min. 2 produkty Heinz w Lidlu, wgraj zdjęcie paragonu i napisz rymowane zaklęcie ożywiające nudną imprezę.",
    "title": "Piekielny Konkurs Heinz i Lidl",
+   "toBuy": "2 produkty Heinz",
    "url": "https://www.e-konkursy.info/konkurs/piekielny-konkurs-heinz-i-lidl-wgraj-paragon-i-wygraj1",
    "id": "heinz-lidl"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-10-31",
+   "minSpend": null,
+   "organizer": "Creative Ideas",
+   "prizes": "5 × Nintendo Switch 2, 16 bonów Auchan po 250 zł",
+   "purchase": true,
+   "shops": [
+    "Auchan"
+   ],
+   "start": "2026-10-19",
+   "task": "Kup 2 produkty Hochland soSER 175 g w Auchan (sklep lub online), zachowaj paragon i w formularzu na seriodobry.pl napisz swój przepis na SERio przyjemny wieczór.",
+   "title": "„Wieczór, który SERio wciąga” – Hochland w Auchan",
+   "toBuy": "2 × Hochland soSER 175 g",
+   "url": "https://seriodobry.pl/",
+   "id": "hochland-serio-auchan"
   },
   {
    "end": "2026-11-30",
@@ -192,59 +317,123 @@
    "id": "hyundai-ioniq3"
   },
   {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-12-13",
+   "minSpend": null,
+   "organizer": "Indykpol",
+   "prizes": "8 warsztatów dla 2 osób z Jakubem Kuroniem, 332 torby",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-10-19",
+   "task": "Kup dowolne paczkowane mięso Indykpol, zachowaj paragon i zarejestruj go na stronie loterii (każdy paragon to osobne zgłoszenie).",
+   "title": "Loteria Indykpol „Gotuj po mistrzowsku”",
+   "toBuy": "Dowolne paczkowane mięso Indykpol",
+   "url": "https://www.gotowaniezindykpol.pl/",
+   "id": "indykpol-mistrzowsku"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2027-01-28",
+   "note": "Potrzebna aplikacja InPost Mobile",
+   "organizer": "Unique One / InPost",
+   "prizes": "10 × MINI Cooper, ponad 10 mln nagród natychmiastowych (bony, AGD, smartwatche)",
+   "purchase": false,
+   "start": "2026-10-21",
+   "task": "W aplikacji InPost Mobile wejdź w zakładkę „Nagrody” i zapisz się do loterii; wymieniaj InCoiny na InBoxy z nagrodami natychmiastowymi i zbieraj losy na samochody (m.in. za zakupy z asystentem w aplikacji).",
+   "title": "Loteria InPost „Ruszaj tropem nagród”",
+   "url": "https://inpost.pl/loteria",
+   "id": "inpost-loteria"
+  },
+  {
    "end": "2027-03-31",
+   "minSpend": null,
    "organizer": "Kasia",
    "prizes": "26 × mikser KitchenAid",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dwa produkty marki Kasia i wypełnij formularz loterii.",
    "title": "Loteria Kasia 2026/2027",
+   "toBuy": "2 produkty marki Kasia",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
    "id": "kasia-2026"
   },
   {
    "end": "2026-11-18",
+   "minSpend": 59,
    "organizer": "Rossmann / Kimoco",
    "prizes": "Hyundai Kona, 10 × Galaxy Z Flip8, 20 × Galaxy Watch8",
    "purchase": true,
+   "shops": [
+    "Rossmann"
+   ],
    "start": null,
    "task": "Kup produkty Kimoco za min. 59 zł w Rossmannie i wypełnij formularz loterii.",
    "title": "„Korean power” – Kimoco w Rossmannie",
+   "toBuy": "Kosmetyki Kimoco",
    "url": "https://aktualnekonkursy.pl/ad/konkursy-konsumenckie,2/korean-power-loteria-promocyjna-w-drogeriach-rossmann,24832",
    "id": "kimoco-rossmann"
   },
   {
    "end": "2026-11-08",
+   "minSpend": null,
    "organizer": "Ferrero",
    "prizes": "50 × voucher wakacje.pl 10 000 zł, bony Douglas, 50 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup Kinder Bueno w opakowaniu z informacją o loterii i wypełnij formularz.",
    "title": "„Spraw, by chwila była bueno” – Kinder Bueno",
+   "toBuy": "Kinder Bueno w opakowaniu z informacją o loterii",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie?start=10",
    "id": "kinder-bueno"
   },
   {
    "end": "2026-11-01",
+   "minSpend": null,
    "organizer": "Good Game",
    "prizes": "Gwarantowany zwrot 5 zł, nagrody pieniężne i zestawy",
    "purchase": true,
+   "shops": [
+    "Biedronka"
+   ],
    "start": "2026-10-26",
    "task": "Kup dwa batony KitKat w Biedronce, zachowaj paragon, zarejestruj się i odpowiedz na pytanie.",
    "title": "„Wgryź się w jesień” – KitKat w Biedronce",
+   "toBuy": "2 batony KitKat",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-wgryz-sie-w-jesien-biedronka",
    "id": "kitkat-biedronka"
   },
   {
    "end": "2026-11-01",
+   "minSpend": null,
    "organizer": "Storck",
    "prizes": "3 × iPhone 18 Pro, 50 × karta 300 zł",
    "purchase": true,
+   "shops": [
+    "Biedronka"
+   ],
    "start": null,
    "task": "Kup dwa batony Knoppers w Biedronce i dokończ zdanie: „Knoppers to mój sposób na przyjemność, kiedy…”.",
    "title": "„Chrupnij i zgarniaj nagrody” – Knoppers w Biedronce",
+   "toBuy": "2 batony Knoppers",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
    "id": "knoppers-biedronka"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-10-31",
+   "minSpend": null,
+   "organizer": "Unilever / Knorr",
+   "prizes": "Toyota Aygo X, 465 × 100 zł",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-10-01",
+   "task": "Kup 2 produkty Knorr (Nudle, Danie w kubku lub Gorący Kubek), zachowaj paragon i zarejestruj go na stronie promocji.",
+   "title": "Loteria Knorr „Smakowite nagrody!”",
+   "toBuy": "2 produkty Knorr: Nudle, Danie w kubku lub Gorący Kubek",
+   "url": "https://www.promocjeunilever.pl/knorr",
+   "id": "knorr-smakowite"
   },
   {
    "end": "2026-10-31",
@@ -259,34 +448,47 @@
   },
   {
    "end": "2026-11-08",
+   "minSpend": null,
    "organizer": "Smolar",
    "prizes": "Robot KitchenAid",
    "purchase": true,
+   "shops": [
+    "Auchan"
+   ],
    "start": "2026-10-22",
    "task": "Kup min. 2 opakowania parówek Krakus Selection w Auchan, zachowaj paragon i odpowiedz na pytanie.",
    "title": "„Parówki godne królewskiego stołu!” – Auchan",
+   "toBuy": "2 opakowania parówek Krakus Selection",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-parowki-godne-krolewskiego-stolu-auchan",
    "id": "krakus-auchan"
   },
   {
    "end": "2026-10-31",
+   "minSpend": null,
    "organizer": "Smolar",
    "prizes": "Miksery, pieniądze, karty Biedronki",
    "purchase": true,
+   "shops": [
+    "Biedronka"
+   ],
    "start": "2026-10-26",
    "task": "Kup produkty Krakus objęte promocją, zachowaj paragon i zarejestruj się.",
    "title": "„Wyśmienita uczta” – Krakus w Biedronce",
+   "toBuy": "Produkty Krakus objęte promocją",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-wysmienita-uczta-biedronka",
    "id": "krakus-biedronka"
   },
   {
    "end": "2026-11-15",
+   "minSpend": null,
    "organizer": "Lajkonik",
    "prizes": "50 000 zł, 9 × 3 000 zł, 504 × 100 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dwa produkty Lajkonik i wypełnij formularz loterii.",
    "title": "Loteria Lajkonik",
+   "toBuy": "2 produkty Lajkonik",
    "url": "https://aktualnekonkursy.pl/?start=80",
    "id": "lajkonik"
   },
@@ -314,12 +516,17 @@
   },
   {
    "end": "2026-11-05",
+   "minSpend": 49,
    "organizer": "Columbit",
    "prizes": "20 × zaproszenie dla 2 osób do Warszawy z noclegiem + 400 zł",
    "purchase": true,
+   "shops": [
+    "Hebe"
+   ],
    "start": "2026-10-23",
    "task": "Kup min. 2 produkty L’Oréal Paris za min. 49 zł w Hebe i opisz swój przedświąteczny rytuał piękna (do 300 znaków).",
    "title": "L’Oréal Paris Christmas Avenue – Hebe",
+   "toBuy": "Min. 2 produkty L’Oréal Paris na jednym paragonie",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-loreal-paris-christmas-avenue-hebe",
    "id": "loreal-hebe"
   },
@@ -336,6 +543,41 @@
    "id": "lubella-pluszaki"
   },
   {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-10-27",
+   "minSpend": null,
+   "note": "18+ (alkohol); zakupy do 27.10, zgłoszenia do 29.10",
+   "organizer": "Pink Pepper Media",
+   "prizes": "Głośniki JBL PartyBox, czytniki Kindle, bony Żabka 50 zł",
+   "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-21",
+   "task": "Kup w Żabce (z aplikacją Żappka) produkt promocyjny Lubelska 0,09 l, wpisz kod z aplikacji w formularzu na cukierekalbopsikus.pl i odpowiedz, jak spędzasz Halloween ze swoją paczką (do 300 znaków).",
+   "title": "Lubelska – „Cukierek albo psikus” w Żabce",
+   "toBuy": "Lubelska 0,09 l z promocji (z aplikacją Żappka)",
+   "url": "https://cukierekalbopsikus.pl/regulamin/",
+   "id": "lubelska-halloween-zabka"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "organizer": "Maretti / Kaufland",
+   "prizes": "Skuter Vespa Primavera 50, 30 pieców do pizzy",
+   "purchase": true,
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-10-01",
+   "task": "Kup w Kauflandzie 2 opakowania Maretti Bruschette 70 g, zachowaj paragon i zarejestruj go na stronie loterii.",
+   "title": "Loteria „Maretti Bruschette 2026” – Kaufland",
+   "toBuy": "2 × Maretti Bruschette 70 g",
+   "url": "https://www.loteriamaretti2026.pl/",
+   "id": "maretti-kaufland"
+  },
+  {
    "end": "2026-11-29",
    "organizer": "MediaMarkt",
    "prizes": "BMW Z3 M i inne",
@@ -345,6 +587,24 @@
    "title": "MediaMarkt – „Wjazd do Apki”",
    "url": "https://loteriowo.pl/lotteries/loteria-mediamarkt-wjazd-do-apki-pobierz-aplikacje-i-wygrywaj__lEe96tw3c",
    "id": "mediamarkt-apka"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-10-27",
+   "minSpend": null,
+   "note": "18+",
+   "organizer": "Albedo Marketing",
+   "prizes": "Wyjazd na F1 do Bahrajnu dla 2 osób, 5600 pakietów żappsów",
+   "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-21",
+   "task": "Kup w Żabce napój Monster Energy, zeskanuj aplikację Żappka przed płatnością i zarejestruj otrzymany kod w formularzu na stronie loterii.",
+   "title": "Loteria „Monster w McLaren” – Żabka",
+   "toBuy": "1 napój Monster Energy (z aplikacją Żappka)",
+   "url": "https://monsterxmclaren.pl/",
+   "id": "monster-mclaren-zabka"
   },
   {
    "end": "2026-10-31",
@@ -359,15 +619,37 @@
   },
   {
    "end": "2026-11-04",
+   "minSpend": 15,
    "note": "Zgłoszenie SMS – sprawdź koszt w regulaminie.",
    "organizer": "Albedo Marketing",
    "prizes": "Wejściówki, nagrody pieniężne",
    "purchase": true,
+   "shops": [
+    "Biedronka"
+   ],
    "start": "2026-10-21",
    "task": "Kup płatki lub batony Nestlé za min. 15 zł w Biedronce i wyślij SMS z odpowiedzią: „Jak wygląda Twoje śniadanie?”",
    "title": "„Od śniadania do wygrania” – Nestlé w Biedronce",
+   "toBuy": "Płatki lub batony zbożowe Nestlé",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-od-sniadania-do-wygrania-biedronka",
    "id": "nestle-biedronka"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-08",
+   "minSpend": null,
+   "organizer": "OneDayMore",
+   "prizes": "3 airfryery dwukomorowe, 5 airfryerów, 15 zestawów OneDayMore",
+   "purchase": true,
+   "shops": [
+    "Lidl"
+   ],
+   "start": "2026-10-26",
+   "task": "Kup owsiankę OneDayMore do airfryera w Lidlu, zachowaj paragon i odpowiedz na stronie konkursu, jak owsianka z airfryera i sprzęt z Lidla odmienią Twoje jesienne poranki.",
+   "title": "„Odmień swoje poranki” – OneDayMore w Lidlu",
+   "toBuy": "Owsianka OneDayMore do airfryera",
+   "url": "https://onedaymore.pl/konkurs",
+   "id": "onedaymore-lidl"
   },
   {
    "end": "2026-11-30",
@@ -404,25 +686,48 @@
   },
   {
    "end": "2026-11-25",
+   "minSpend": null,
    "organizer": "Mondelez",
    "prizes": "100 000 zł, 1 344 × 50 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup dwa wafelki Prince Polo (Classic + inny) i wypełnij formularz loterii.",
    "title": "„Kup złotego oraz innego i wygraj” – Prince Polo",
+   "toBuy": "2 wafelki Prince Polo: Classic + dowolny inny",
    "url": "https://aktualnekonkursy.pl/?start=80",
    "id": "prince-polo"
   },
   {
    "end": "2026-11-03",
+   "minSpend": null,
    "organizer": "Aldi / Pringles",
    "prizes": "Renault Clio, 5 × bon Orlen 850 zł",
    "purchase": true,
+   "shops": [
+    "Aldi"
+   ],
    "start": null,
    "task": "Kup chipsy Pringles w Aldi i wypełnij formularz loterii.",
    "title": "„Chrupnij auto” – Pringles w Aldi",
+   "toBuy": "Chipsy Pringles",
    "url": "https://aktualnekonkursy.pl/ad/konkursy-konsumenckie,2/chrupnij-auto-loteria-promocyjna-w-sklepach-aldi,24823",
    "id": "pringles-aldi"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-30",
+   "minSpend": 10,
+   "organizer": "Purina",
+   "prizes": "50 000 zł, 150 kart Booksy po 500 zł, 1100 zestawów Gourmet",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-10-01",
+   "task": "Kup karmę Purina Gourmet za min. 10 zł, zachowaj dowód zakupu i zarejestruj go na stronie loterii.",
+   "title": "Królewska Loteria Purina Gourmet 2026",
+   "toBuy": "Karma Purina Gourmet",
+   "url": "https://www.loteriagourmet.pl/",
+   "id": "purina-gourmet"
   },
   {
    "end": "2026-10-30",
@@ -435,6 +740,23 @@
    "title": "Radio Złote Przeboje – „Urodzinowe stówki”",
    "url": "https://radio.zloteprzeboje.pl/urodzinowe-stowki-od-radia-zlote-przeboje-konkurs-2",
    "id": "rzp-stowki"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-15",
+   "minSpend": 15,
+   "organizer": "Serenada",
+   "prizes": "8 zestawów AGD Bosch/Siemens, 56 frytkownic Bosch",
+   "purchase": true,
+   "shops": [
+    "Carrefour"
+   ],
+   "start": "2026-10-19",
+   "task": "Kup w Carrefourze sery Serenada lub Skarby Serowara za min. 15 zł na jednym paragonie i zarejestruj paragon na stronie loterii.",
+   "title": "Serenada – „Podwójna MOC SERdeczności!” w Carrefourze",
+   "toBuy": "Sery Serenada lub Skarby Serowara (jeden paragon)",
+   "url": "https://www.serdecznamoc.pl/",
+   "id": "serenada-carrefour"
   },
   {
    "end": "2026-11-20",
@@ -483,6 +805,19 @@
    "id": "twix-doppelgamer"
   },
   {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-10-31",
+   "note": "Sprawdź w regulaminie, czy potrzebny jest zakup",
+   "organizer": "Voltaren",
+   "prizes": "3 bilety na finał Ligi Mistrzów UEFA, piłki, torby, koszulki, kubki",
+   "purchase": false,
+   "start": "2026-10-01",
+   "task": "Na stronie akcji rozwiąż quiz o produktach Voltaren i zagraj w grę zręcznościową; po zdobyciu min. 100 punktów zarejestruj otrzymany kod w loterii.",
+   "title": "„Zostań w grze z Voltaren”",
+   "url": "https://zostanwgrze.pl/",
+   "id": "voltaren-zostan-w-grze"
+  },
+  {
    "end": "2026-10-26",
    "organizer": "wizaz.pl",
    "prizes": "50 zestawów emolientów",
@@ -495,14 +830,34 @@
   },
   {
    "end": "2026-11-30",
+   "minSpend": null,
    "organizer": "Wypasione",
    "prizes": "3 × 10 000 zł, 13 × 1 000 zł, 1 092 × 100 zł",
    "purchase": true,
+   "shops": [],
    "start": null,
    "task": "Kup mleko Wypasione i wypełnij formularz loterii.",
    "title": "„Smakuj Wypasione wygrane!” – mleko Wypasione",
+   "toBuy": "Mleko Wypasione",
    "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie?start=10",
    "id": "wypasione"
+  },
+  {
+   "addedAt": "2026-10-26T07:36:00+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "organizer": "Dr. Beckmann",
+   "prizes": "6 × 10 000 zł, 1000 e-bonów Rossmann",
+   "purchase": true,
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-10-01",
+   "task": "Kup w Rossmannie chusteczki Dr. Beckmann Magic Leaves z oznaczeniem loterii; jeśli w środku jest złoty listek – wyślij go z paragonem, a jeśli nie – zarejestruj paragon na stronie loterii.",
+   "title": "„Złoty Listek Dr. Beckmann” – Rossmann",
+   "toBuy": "Chusteczki Dr. Beckmann Magic Leaves z oznaczeniem loterii",
+   "url": "https://www.zlotylistekdrbeckmann.pl/",
+   "id": "zloty-listek-rossmann"
   }
  ]
 }
