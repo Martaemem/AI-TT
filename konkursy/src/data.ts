@@ -15,10 +15,59 @@ export type Contest = {
   url: string;
   note?: string;
   addedAt?: string;
+  /** Sklepy, w których trzeba kupić; pusta lista = dowolny sklep. */
+  shops?: string[];
+  /** Co i ile kupić, np. „2 batony KitKat”. */
+  toBuy?: string;
+  /** Minimalna kwota zakupu w zł, jeśli regulamin ją podaje. */
+  minSpend?: number | null;
 };
 
 export type Status = '' | 'sent' | 'later' | 'no';
-export type Mine = Record<string, { status: Status; answer: string; updatedAt?: string }>;
+export type Entry = {
+  status: Status;
+  answer: string;
+  updatedAt?: string;
+  /** Sklep wybrany przez Martę dla konkursu „w dowolnym sklepie”. */
+  shop?: string;
+  /** Odhaczone na liście zakupów. */
+  bought?: boolean;
+};
+export type Mine = Record<string, Entry>;
+
+/** Porównywanie nazw sklepów bez wielkości liter, ogonków i spacji. */
+export function shopKey(s: string): string {
+  return s
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .replace(/ł/g, 'l')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+export function fmtZl(n: number): string {
+  return (Math.round(n * 100) / 100).toFixed(n % 1 ? 2 : 0).replace('.', ',') + ' zł';
+}
+
+const SHOPS_KEY = 'konkursy:shops:v1';
+
+export async function loadCustomShops(): Promise<string[]> {
+  try {
+    const raw = await AsyncStorage.getItem(SHOPS_KEY);
+    return raw ? (JSON.parse(raw) as string[]) : [];
+  } catch {
+    return [];
+  }
+}
+
+export async function saveCustomShops(list: string[]): Promise<void> {
+  try {
+    await AsyncStorage.setItem(SHOPS_KEY, JSON.stringify(list));
+  } catch {
+    // nieistotne
+  }
+}
 export type Feed = { updatedAt?: string; contests: Contest[] };
 
 const LIST_KEY = 'konkursy:list:v1';

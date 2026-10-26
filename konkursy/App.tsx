@@ -5,6 +5,7 @@ import {
   Linking,
   Pressable,
   RefreshControl,
+  ScrollView,
   StyleSheet,
   Switch,
   Text,
@@ -18,12 +19,14 @@ import { Ionicons } from '@expo/vector-icons';
 import { useFonts, Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold } from '@expo-google-fonts/nunito';
 import {
   Contest,
+  Entry,
   Filters,
   Mine,
   Status,
   daysLeft,
   fetchFeed,
   fmtDate,
+  fmtZl,
   isNew,
   loadCachedFeed,
   loadFilters,
@@ -32,26 +35,8 @@ import {
   saveMine,
 } from './src/data';
 import { setupDailyReminder } from './src/notify';
-
-/** Kolory jak na grafice Marty: niebieski, czerwony, żółty, zielony na białym. */
-const C = {
-  blue: '#4285F4',
-  red: '#EA4335',
-  yellow: '#FBBC04',
-  green: '#34A853',
-  bg: '#F6F8FC',
-  card: '#FFFFFF',
-  text: '#1F2329',
-  muted: '#555C66',
-  line: '#DDE2EA',
-  blueInk: '#1A5FD6',
-  greenInk: '#1E7B3A',
-  yellowInk: '#8A5D00',
-  blueSoft: '#E8F0FE',
-  greenSoft: '#E6F4EA',
-  yellowSoft: '#FEF4D6',
-};
-const F = { body: 'Nunito_600SemiBold', bold: 'Nunito_700Bold', heavy: 'Nunito_800ExtraBold' };
+import Shopping from './src/Shopping';
+import { C, F } from './src/theme';
 
 const STATUS_LABEL: Record<Exclude<Status, ''>, string> = { sent: 'Wysłałam', later: 'Na później', no: 'Nie interesuje mnie' };
 const STATUS_COLOR: Record<Exclude<Status, ''>, string> = { sent: C.green, later: C.yellow, no: C.red };
@@ -143,6 +128,19 @@ function ContestCard({
           </View>
         )}
       </View>
+      {c.purchase && (c.toBuy || (c.shops && c.shops.length) || c.minSpend) ? (
+        <View style={styles.buyBox}>
+          <Ionicons name="cart-outline" size={22} color={C.blueInk} />
+          <View style={{ flex: 1, gap: 2 }}>
+            {!!c.toBuy && <Text style={styles.factValue}>{c.toBuy}</Text>}
+            <Text style={styles.small}>
+              {c.shops && c.shops.length ? c.shops.join(', ') : entry?.shop ? `${entry.shop} (Twój wybór)` : 'Dowolny sklep'}
+              {c.minSpend ? ` · za min. ${fmtZl(c.minSpend)}` : ''}
+              {entry?.bought ? ' · kupione ✓' : ''}
+            </Text>
+          </View>
+        </View>
+      ) : null}
       {!!c.note && <Text style={styles.note}>{c.note}</Text>}
       <View style={styles.acts}>
         {(Object.keys(STATUS_LABEL) as Exclude<Status, ''>[]).map((s) => {
@@ -218,6 +216,7 @@ function Root() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState('');
+  const [tab, setTab] = useState<'list' | 'shop'>('list');
   const mineRef = useRef<Mine>({});
 
   const refresh = useCallback(async () => {
@@ -263,6 +262,10 @@ function Root() {
   const onSaveAnswer = (id: string, text: string) => {
     const cur = mineRef.current[id] ?? { status: '' as Status, answer: '' };
     update({ ...mineRef.current, [id]: { ...cur, answer: text, updatedAt: new Date().toISOString() } });
+  };
+  const onPatch = (id: string, patch: Partial<Entry>) => {
+    const cur = mineRef.current[id] ?? { status: '' as Status, answer: '' };
+    update({ ...mineRef.current, [id]: { ...cur, ...patch, updatedAt: new Date().toISOString() } });
   };
   const setF = (f: Filters) => {
     setFilters(f);
@@ -310,8 +313,8 @@ function Root() {
       new Date(updatedAt).toLocaleString('pl-PL', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })
     : 'Lista aktualizuje się codziennie rano.';
 
-  const header = (
-    <View style={{ gap: 14, paddingBottom: 6 }}>
+  const top = (
+    <View style={{ gap: 14 }}>
       <View style={styles.header}>
         <Logo />
         <View style={{ flex: 1 }}>
@@ -319,6 +322,51 @@ function Root() {
           <Text style={styles.small}>{updText}</Text>
         </View>
       </View>
+      <View style={styles.tabs}>
+        {(
+          [
+            ['list', 'Konkursy', 'trophy-outline'],
+            ['shop', 'Lista zakupów', 'cart-outline'],
+          ] as const
+        ).map(([k, l, icon]) => {
+          const on = tab === k;
+          return (
+            <Pressable
+              key={k}
+              onPress={() => setTab(k)}
+              style={[styles.tab, on && styles.tabOn]}
+              accessibilityRole="tab"
+              accessibilityState={{ selected: on }}
+            >
+              <Ionicons name={icon} size={20} color={on ? '#FFFFFF' : C.text} />
+              <Text style={[styles.tabText, on && { color: '#FFFFFF' }]}>{l}</Text>
+            </Pressable>
+          );
+        })}
+      </View>
+      {!!error && <Text style={styles.error}>{error}</Text>}
+    </View>
+  );
+
+  if (tab === 'shop') {
+    return (
+      <SafeAreaView style={{ flex: 1, backgroundColor: C.bg }} edges={['top', 'left', 'right']}>
+        <StatusBar style="dark" />
+        <ScrollView
+          contentContainerStyle={{ padding: 16, gap: 14, paddingBottom: 48 }}
+          keyboardShouldPersistTaps="handled"
+          refreshControl={<RefreshControl refreshing={refreshing} onRefresh={refresh} colors={[C.blue, C.red, C.yellow, C.green]} />}
+        >
+          {top}
+          <Shopping contests={contests} mine={mine} onPatch={onPatch} />
+        </ScrollView>
+      </SafeAreaView>
+    );
+  }
+
+  const header = (
+    <View style={{ gap: 14, paddingBottom: 6 }}>
+      {top}
       <View style={styles.stats}>
         <Text style={styles.stat}>{active.length} aktywnych</Text>
         <Text style={styles.stat}>{counts.todo} do zrobienia</Text>
@@ -326,7 +374,6 @@ function Root() {
         <Text style={styles.stat}>{counts.sent} wysłanych</Text>
         {newCount > 0 && <Text style={[styles.stat, { backgroundColor: C.yellowSoft }]}>{newCount} nowych</Text>}
       </View>
-      {!!error && <Text style={styles.error}>{error}</Text>}
       <View style={styles.panel}>
         <Text style={styles.panelLabel}>Zakup</Text>
         <View style={styles.chips}>
@@ -405,6 +452,11 @@ const styles = StyleSheet.create({
   h1: { fontFamily: F.heavy, fontSize: 30, color: C.text, lineHeight: 36 },
   small: { fontFamily: F.body, fontSize: 15, color: C.muted, lineHeight: 21 },
   stats: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  tabs: { flexDirection: 'row', gap: 8, backgroundColor: C.card, borderRadius: 14, borderWidth: 1, borderColor: C.line, padding: 4 },
+  tab: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingVertical: 11, borderRadius: 10 },
+  tabOn: { backgroundColor: C.blue },
+  tabText: { fontFamily: F.heavy, fontSize: 16, color: C.text },
+  buyBox: { flexDirection: 'row', gap: 8, alignItems: 'flex-start', backgroundColor: C.blueSoft, borderRadius: 10, padding: 10 },
   stat: {
     fontFamily: F.bold,
     fontSize: 15,
