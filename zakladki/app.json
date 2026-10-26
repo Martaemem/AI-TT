@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Inspirownik",
+    "slug": "inspirownik",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "inspirownik",
+    "icon": "./assets/icon.png",
+    "ios": {
+      "bundleIdentifier": "pl.aitt.inspirownik"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF",
+        "foregroundImage": "./assets/adaptive.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "package": "pl.aitt.inspirownik",
+      "versionCode": 1
+    },
+    "plugins": [
+      [
+        "expo-share-intent",
+        {
+          "androidIntentFilters": [
+            "text/*",
+            "image/*"
+          ],
+          "androidMultiIntentFilters": [
+            "image/*"
+          ]
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Inspirownik dodaje zdjęcia do Twoich notatek.",
+          "cameraPermission": "Inspirownik robi zdjęcia do Twoich notatek."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Inspirownik pokazuje i porządkuje zdjęcia z Twojej galerii.",
+          "savePhotosPermission": "Inspirownik nie zapisuje zdjęć do galerii.",
+          "isAccessMediaLocationEnabled": false
+        }
+      ]
+    ]
+  }
+}

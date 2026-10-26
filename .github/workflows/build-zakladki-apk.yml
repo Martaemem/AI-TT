@@ -1,0 +1,49 @@
+name: Build Inspirownik APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [inspirownik]
+    paths:
+      - 'zakladki/**'
+      - '.github/workflows/build-zakladki-apk.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: zakladki
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - run: npm install
+      - run: npx tsc --noEmit
+      - name: Generate icons
+        run: |
+          npm install --no-save sharp
+          node scripts/make-icons.js
+      - run: npx expo prebuild --platform android --no-install
+      - name: Build APK
+        working-directory: zakladki/android
+        run: ./gradlew assembleRelease --no-daemon
+      - run: cp android/app/build/outputs/apk/release/app-release.apk inspirownik.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inspirownik.apk
+          path: zakladki/inspirownik.apk
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: inspirownik-${{ github.run_number }}
+          name: Inspirownik (build ${{ github.run_number }})
+          target_commitish: inspirownik
+          files: zakladki/inspirownik.apk
