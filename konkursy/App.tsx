@@ -36,6 +36,7 @@ import {
 } from './src/data';
 import { setupDailyReminder } from './src/notify';
 import Shopping from './src/Shopping';
+import { loadFound, sameContest, saveFound, searchNew } from './src/search';
 import { C, F } from './src/theme';
 
 const STATUS_LABEL: Record<Exclude<Status, ''>, string> = { sent: 'Wysłałam', later: 'Na później', no: 'Nie interesuje mnie' };
@@ -207,7 +208,15 @@ function ContestCard({
 
 function Root() {
   const [fontsLoaded] = useFonts({ Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold });
-  const [contests, setContests] = useState<Contest[]>([]);
+  const [feedList, setContests] = useState<Contest[]>([]);
+  const [found, setFound] = useState<Contest[]>([]);
+  const [searching, setSearching] = useState(false);
+  const [searchMsg, setSearchMsg] = useState('');
+  // Lista z porannej aktualizacji + konkursy znalezione przyciskiem „Szukaj nowych”, bez powtórzeń
+  const contests = useMemo(
+    () => [...feedList, ...found.filter((f) => !feedList.some((c) => sameContest(c, f)))],
+    [feedList, found],
+  );
   const [updatedAt, setUpdatedAt] = useState<string | undefined>();
   const [mine, setMine] = useState<Mine>({});
   const [filters, setFilters] = useState<Filters>({ buy: 'all', status: 'todo' });
@@ -236,7 +245,8 @@ function Root() {
 
   useEffect(() => {
     (async () => {
-      const [cached, m, f] = await Promise.all([loadCachedFeed(), loadMine(), loadFilters()]);
+      const [cached, m, f, fd] = await Promise.all([loadCachedFeed(), loadMine(), loadFilters(), loadFound()]);
+      setFound(fd);
       if (cached) {
         setContests(cached.contests);
         setUpdatedAt(cached.updatedAt);
@@ -267,6 +277,51 @@ function Root() {
     const cur = mineRef.current[id] ?? { status: '' as Status, answer: '' };
     update({ ...mineRef.current, [id]: { ...cur, ...patch, updatedAt: new Date().toISOString() } });
   };
+  // Gdy poranna lista zawiera konkurs znaleziony wcześniej ręcznie, przenieś status i odpowiedź i usuń duplikat
+  useEffect(() => {
+    if (!feedList.length || !found.length) return;
+    const dupes = found.filter((f) => feedList.some((c) => sameContest(c, f)));
+    if (!dupes.length) return;
+    let next = mineRef.current;
+    dupes.forEach((f) => {
+      const target = feedList.find((c) => sameContest(c, f));
+      if (target && next[f.id] && !next[target.id]) next = { ...next, [target.id]: next[f.id] };
+    });
+    if (next !== mineRef.current) update(next);
+    const rest = found.filter((f) => !dupes.includes(f));
+    setFound(rest);
+    saveFound(rest);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [feedList, found]);
+
+  const runSearch = async () => {
+    if (searching) return;
+    setSearching(true);
+    setSearchMsg('');
+    try {
+      const { added, pagesOk } = await searchNew(contests);
+      if (!pagesOk) {
+        setSearchMsg('Nie udało się połączyć ze stroną z konkursami. Sprawdź internet i spróbuj ponownie.');
+        return;
+      }
+      if (added.length) {
+        const next = [...found, ...added];
+        setFound(next);
+        saveFound(next);
+        setF({ ...filters, status: 'todo' });
+        setSearchMsg(
+          `Dodano ${added.length} ${added.length === 1 ? 'nowy konkurs' : added.length < 5 ? 'nowe konkursy' : 'nowych konkursów'} z plakietką „Nowy”.`,
+        );
+      } else {
+        setSearchMsg('Brak nowych konkursów. Wszystko, co znalazłam, jest już na liście.');
+      }
+    } catch {
+      setSearchMsg('Wyszukiwanie się nie udało. Spróbuj ponownie za chwilę.');
+    } finally {
+      setSearching(false);
+    }
+  };
+
   const setF = (f: Filters) => {
     setFilters(f);
     saveFilters(f);
@@ -374,6 +429,11 @@ function Root() {
         <Text style={styles.stat}>{counts.sent} wysłanych</Text>
         {newCount > 0 && <Text style={[styles.stat, { backgroundColor: C.yellowSoft }]}>{newCount} nowych</Text>}
       </View>
+      <Pressable onPress={runSearch} disabled={searching} style={[styles.searchBtn, searching && { opacity: 0.7 }]} accessibilityRole="button">
+        {searching ? <ActivityIndicator color="#FFFFFF" /> : <Ionicons name="search" size={22} color="#FFFFFF" />}
+        <Text style={styles.searchBtnText}>{searching ? 'Szukam nowych konkursów…' : 'Szukaj nowych konkursów'}</Text>
+      </Pressable>
+      {!!searchMsg && <Text style={styles.searchMsg}>{searchMsg}</Text>}
       <View style={styles.panel}>
         <Text style={styles.panelLabel}>Zakup</Text>
         <View style={styles.chips}>
@@ -452,6 +512,18 @@ const styles = StyleSheet.create({
   h1: { fontFamily: F.heavy, fontSize: 30, color: C.text, lineHeight: 36 },
   small: { fontFamily: F.body, fontSize: 15, color: C.muted, lineHeight: 21 },
   stats: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
+  searchBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    backgroundColor: C.green,
+    borderRadius: 12,
+    paddingVertical: 13,
+    paddingHorizontal: 16,
+  },
+  searchBtnText: { fontFamily: F.heavy, fontSize: 17, color: '#FFFFFF' },
+  searchMsg: { fontFamily: F.bold, fontSize: 15, color: C.text, backgroundColor: C.greenSoft, padding: 10, borderRadius: 10, overflow: 'hidden' },
   tabs: { flexDirection: 'row', gap: 8, backgroundColor: C.card, borderRadius: 14, borderWidth: 1, borderColor: C.line, padding: 4 },
   tab: { flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, paddingVertical: 11, borderRadius: 10 },
   tabOn: { backgroundColor: C.blue },
