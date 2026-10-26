@@ -136,5 +136,5 @@ const s = StyleSheet.create({
   btn: { flexDirection: 'row', alignItems: 'center', gap: 6, backgroundColor: 'rgba(255,255,255,0.18)', borderRadius: 10, paddingHorizontal: 14, paddingVertical: 10 },
   btnText: { fontFamily: F.heavy, fontSize: 15, color: '#FFFFFF' },
   msg: { fontFamily: F.bold, fontSize: 14, color: '#FFFFFF' },
-  empty: { ...StyleSheet.absoluteFillObject, alignItems: 'center', justifyContent: 'center' },
+  empty: { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' },
 });
