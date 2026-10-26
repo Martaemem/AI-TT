@@ -1,0 +1,49 @@
+name: Build Konkursownik APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [konkursownik]
+    paths:
+      - 'konkursy/**'
+      - '.github/workflows/build-konkursy-apk.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: konkursy
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - run: npm install
+      - run: npx tsc --noEmit
+      - name: Generate icons
+        run: |
+          npm install --no-save sharp
+          node scripts/make-icons.js
+      - run: npx expo prebuild --platform android --no-install
+      - name: Build APK
+        working-directory: konkursy/android
+        run: ./gradlew assembleRelease --no-daemon
+      - run: cp android/app/build/outputs/apk/release/app-release.apk konkursownik.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: konkursownik-apk
+          path: konkursy/konkursownik.apk
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: konkursownik-${{ github.run_number }}
+          name: Konkursownik (build ${{ github.run_number }})
+          target_commitish: konkursownik
+          files: konkursy/konkursownik.apk
