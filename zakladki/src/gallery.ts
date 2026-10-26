@@ -5,11 +5,16 @@ import { newId } from './store';
 
 export type AlbumInfo = { id: string; title: string; count: number };
 
-export async function ensureGalleryAccess(): Promise<boolean> {
-  const cur = await MediaLibrary.getPermissionsAsync(false, ['photo']);
-  if (cur.granted) return true;
-  const req = await MediaLibrary.requestPermissionsAsync(false, ['photo']);
-  return req.granted;
+export type Access = 'all' | 'limited' | 'none';
+
+/** „limited” = telefon dał dostęp tylko do wybranych zdjęć (Android 14+), wtedy import widzi tylko je. */
+export async function ensureGalleryAccess(): Promise<Access> {
+  const read = (r: { granted: boolean; accessPrivileges?: string }): Access =>
+    !r.granted ? 'none' : r.accessPrivileges === 'limited' ? 'limited' : 'all';
+  const cur = read(await MediaLibrary.getPermissionsAsync(false, ['photo']));
+  if (cur === 'all') return cur;
+  const req = read(await MediaLibrary.requestPermissionsAsync(false, ['photo']));
+  return req === 'none' ? cur : req;
 }
 
 export async function listAlbums(): Promise<AlbumInfo[]> {
@@ -34,7 +39,7 @@ export async function importAlbum(
   album: AlbumInfo,
   known: Set<string>,
   onProgress: (done: number, total: number) => void,
-): Promise<Item[]> {
+): Promise<{ items: Item[]; seen: number }> {
   const out: Item[] = [];
   let after: string | undefined;
   let seen = 0;
@@ -67,5 +72,5 @@ export async function importAlbum(
     if (!page.hasNextPage) break;
     after = page.endCursor;
   }
-  return out;
+  return { items: out, seen };
 }

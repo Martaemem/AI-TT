@@ -9,11 +9,12 @@ import { C, F } from '../theme';
 import { Btn, TopBar, st } from '../ui';
 import { Nav } from '../types';
 
-export default function More({ nav }: { nav: Nav }) {
+export default function More({ nav, cat, setCat }: { nav: Nav; cat: string; setCat: (c: string) => void }) {
   const { data, addCategory, renameCategory, deleteCategory, replaceAll } = useStore();
   const [names, setNames] = useState<Record<string, string>>({});
   const [newCat, setNewCat] = useState('');
   const [msg, setMsg] = useState('');
+  const [editing, setEditing] = useState(false);
 
   const counts = useMemo(() => {
     const m: Record<string, number> = {};
@@ -21,6 +22,21 @@ export default function More({ nav }: { nav: Nav }) {
     return m;
   }, [data.items]);
   const inbox = data.items.filter((i) => !i.cats.length).length;
+  const fromGallery = data.items.filter((i) => !!i.assetId).length;
+  const open = (id: string) => {
+    setCat(id);
+    nav.pop();
+  };
+  const sortedCats = useMemo(() => [...data.categories].sort((a, b) => a.name.localeCompare(b.name, 'pl')), [data.categories]);
+
+  const ViewRow = ({ id, icon, color, name, count }: { id: string; icon: keyof typeof Ionicons.glyphMap; color: string; name: string; count: number }) => (
+    <Pressable style={[st.card, s.viewRow, cat === id && { borderColor: color, borderWidth: 2 }]} onPress={() => open(id)} accessibilityRole="button">
+      <Ionicons name={icon} size={24} color={color} />
+      <Text style={s.viewName}>{name}</Text>
+      <Text style={s.count}>{count}</Text>
+      <Ionicons name="chevron-forward" size={20} color={C.muted} />
+    </Pressable>
+  );
 
   const exportBackup = async () => {
     setMsg('');
@@ -79,45 +95,54 @@ export default function More({ nav }: { nav: Nav }) {
 
   return (
     <View style={{ flex: 1 }}>
-      <TopBar title="Więcej" onBack={nav.pop} />
+      <TopBar title="Menu" onBack={nav.pop} />
       <ScrollView contentContainerStyle={{ padding: 16, gap: 18, paddingBottom: 60 }} keyboardShouldPersistTaps="handled">
         <View style={s.section}>
-          <Text style={s.h2}>Porządkowanie</Text>
-          <Pressable style={[st.card, s.action]} onPress={() => nav.push({ name: 'import' })}>
-            <Ionicons name="images-outline" size={26} color={C.blue} />
-            <View style={{ flex: 1 }}>
-              <Text style={s.actionTitle}>Import z galerii</Text>
-              <Text style={st.small}>Dodaj całe albumy, np. zrzuty ekranu albo zdjęcia z Pinteresta.</Text>
-            </View>
-            <Ionicons name="chevron-forward" size={22} color={C.muted} />
-          </Pressable>
-          <Pressable style={[st.card, s.action]} onPress={() => nav.push({ name: 'sort' })}>
-            <Ionicons name="file-tray-full-outline" size={26} color={C.green} />
-            <View style={{ flex: 1 }}>
-              <Text style={s.actionTitle}>Sortuj skrzynkę</Text>
-              <Text style={st.small}>{inbox ? `Do posortowania: ${inbox}` : 'Skrzynka jest pusta.'}</Text>
-            </View>
-            <Ionicons name="chevron-forward" size={22} color={C.muted} />
-          </Pressable>
+          <Text style={s.h2}>Przeglądaj</Text>
+          <ViewRow id="all" icon="apps-outline" color={C.text} name="Wszystko" count={data.items.length} />
+          <ViewRow id="none" icon="file-tray-full-outline" color={C.green} name="Do posortowania" count={inbox} />
+          <ViewRow id="gallery" icon="images-outline" color={C.blue} name="Zdjęcia z galerii" count={fromGallery} />
         </View>
 
         <View style={s.section}>
-          <Text style={s.h2}>Kategorie</Text>
-          {data.categories.map((c) => (
-            <View key={c.id} style={[st.card, s.cat]}>
-              <View style={[s.dot, { backgroundColor: c.color }]} />
-              <TextInput
-                value={names[c.id] ?? c.name}
-                onChangeText={(t) => setNames((n) => ({ ...n, [c.id]: t }))}
-                onEndEditing={() => names[c.id] !== undefined && renameCategory(c.id, names[c.id])}
-                style={s.catInput}
-              />
-              <Text style={s.count}>{counts[c.id] ?? 0}</Text>
-              <Pressable onPress={() => removeCat(c.id, c.name)} accessibilityLabel={`Usuń kategorię ${c.name}`} style={{ padding: 6 }}>
-                <Ionicons name="trash-outline" size={20} color={C.redInk} />
+          <View style={s.headRow}>
+            <Text style={[s.h2, { flex: 1 }]}>Kategorie</Text>
+            <Pressable onPress={() => setEditing((e) => !e)} style={s.editBtn} accessibilityRole="button">
+              <Ionicons name={editing ? 'checkmark' : 'create-outline'} size={18} color={C.blueInk} />
+              <Text style={s.editText}>{editing ? 'Gotowe' : 'Edytuj'}</Text>
+            </Pressable>
+          </View>
+          {!editing &&
+            sortedCats.map((c) => (
+              <Pressable key={c.id} style={[st.card, s.viewRow, cat === c.id && { borderColor: c.color, borderWidth: 2 }]} onPress={() => open(c.id)} accessibilityRole="button">
+                <View style={[s.dot, { backgroundColor: c.color }]} />
+                <Text style={s.viewName} numberOfLines={2}>
+                  {c.name}
+                </Text>
+                <Text style={s.count}>{counts[c.id] ?? 0}</Text>
+                <Ionicons name="chevron-forward" size={20} color={C.muted} />
               </Pressable>
-            </View>
-          ))}
+            ))}
+          {editing && (
+            <>
+              {sortedCats.map((c) => (
+                <View key={c.id} style={[st.card, s.cat]}>
+                  <View style={[s.dot, { backgroundColor: c.color }]} />
+                  <TextInput
+                    value={names[c.id] ?? c.name}
+                    onChangeText={(t) => setNames((n) => ({ ...n, [c.id]: t }))}
+                    onEndEditing={() => names[c.id] !== undefined && renameCategory(c.id, names[c.id])}
+                    style={s.catInput}
+                  />
+                  <Text style={s.count}>{counts[c.id] ?? 0}</Text>
+                  <Pressable onPress={() => removeCat(c.id, c.name)} accessibilityLabel={`Usuń kategorię ${c.name}`} style={{ padding: 6 }}>
+                    <Ionicons name="trash-outline" size={20} color={C.redInk} />
+                  </Pressable>
+                </View>
+              ))}
+              <Text style={st.small}>Stuknij nazwę, żeby ją zmienić. Usunięcie kategorii nie usuwa wpisów.</Text>
+            </>
+          )}
           <View style={s.row}>
             <TextInput
               value={newCat}
@@ -138,7 +163,26 @@ export default function More({ nav }: { nav: Nav }) {
               }}
             />
           </View>
-          <Text style={st.small}>Nazwę kategorii zmienisz, stukając w nią.</Text>
+        </View>
+
+        <View style={s.section}>
+          <Text style={s.h2}>Porządkowanie</Text>
+          <Pressable style={[st.card, s.action]} onPress={() => nav.push({ name: 'import' })}>
+            <Ionicons name="images-outline" size={26} color={C.blue} />
+            <View style={{ flex: 1 }}>
+              <Text style={s.actionTitle}>Import z galerii</Text>
+              <Text style={st.small}>Dodaj całe albumy, np. zrzuty ekranu albo zdjęcia z Pinteresta.</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={22} color={C.muted} />
+          </Pressable>
+          <Pressable style={[st.card, s.action]} onPress={() => nav.push({ name: 'sort' })}>
+            <Ionicons name="file-tray-full-outline" size={26} color={C.green} />
+            <View style={{ flex: 1 }}>
+              <Text style={s.actionTitle}>Sortuj skrzynkę</Text>
+              <Text style={st.small}>{inbox ? `Do posortowania: ${inbox}` : 'Skrzynka jest pusta.'}</Text>
+            </View>
+            <Ionicons name="chevron-forward" size={22} color={C.muted} />
+          </Pressable>
         </View>
 
         <View style={s.section}>
@@ -164,6 +208,11 @@ const s = StyleSheet.create({
   actionTitle: { fontFamily: F.heavy, fontSize: 17, color: C.text },
   cat: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 12, paddingVertical: 4 },
   dot: { width: 16, height: 16, borderRadius: 8 },
+  viewRow: { flexDirection: 'row', alignItems: 'center', gap: 12, paddingHorizontal: 14, paddingVertical: 14 },
+  viewName: { flex: 1, fontFamily: F.heavy, fontSize: 17, color: C.text },
+  headRow: { flexDirection: 'row', alignItems: 'center' },
+  editBtn: { flexDirection: 'row', alignItems: 'center', gap: 4, borderWidth: 1.5, borderColor: C.line, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7, backgroundColor: C.card },
+  editText: { fontFamily: F.heavy, fontSize: 14, color: C.blueInk },
   catInput: { flex: 1, fontFamily: F.bold, fontSize: 17, color: C.text, paddingVertical: 8 },
   count: { fontFamily: F.heavy, fontSize: 15, color: C.muted },
   row: { flexDirection: 'row', gap: 8, alignItems: 'center' },

@@ -1,10 +1,26 @@
 import React, { useMemo, useState } from 'react';
-import { FlatList, Image, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { FlatList, Image, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useStore } from '../store';
 import { C, F } from '../theme';
-import { CatChip, IconBtn, Logo, st } from '../ui';
-import { Item, Nav } from '../types';
+import { IconBtn, Logo, st } from '../ui';
+import { Category, Item, Nav } from '../types';
+
+/** Widoki specjalne obok kategorii: wszystko, skrzynka bez kategorii, zdjęcia zaimportowane z galerii. */
+export function matchesView(i: Item, cat: string): boolean {
+  if (cat === 'all') return true;
+  if (cat === 'none') return !i.cats.length;
+  if (cat === 'gallery') return !!i.assetId;
+  return i.cats.includes(cat);
+}
+
+export function viewInfo(cat: string, categories: Category[]): { name: string; color: string } {
+  if (cat === 'all') return { name: 'Wszystko', color: C.text };
+  if (cat === 'none') return { name: 'Do posortowania', color: C.green };
+  if (cat === 'gallery') return { name: 'Zdjęcia z galerii', color: C.blue };
+  const c = categories.find((x) => x.id === cat);
+  return c ? { name: c.name, color: c.color } : { name: 'Wszystko', color: C.text };
+}
 
 export default function Home({ nav, cat, setCat }: { nav: Nav; cat: string; setCat: (c: string) => void }) {
   const { data } = useStore();
@@ -12,22 +28,16 @@ export default function Home({ nav, cat, setCat }: { nav: Nav; cat: string; setC
   const [grid, setGrid] = useState(false);
   const inbox = useMemo(() => data.items.filter((i) => !i.cats.length).length, [data.items]);
 
-  const counts = useMemo(() => {
-    const m: Record<string, number> = {};
-    data.items.forEach((i) => i.cats.forEach((c) => (m[c] = (m[c] ?? 0) + 1)));
-    return m;
-  }, [data.items]);
-  const noCat = inbox;
-
   const rows = useMemo(() => {
     const ql = q.trim().toLowerCase();
     return data.items
-      .filter((i) => (cat === 'all' ? true : cat === 'none' ? !i.cats.length : i.cats.includes(cat)))
+      .filter((i) => matchesView(i, cat))
       .filter((i) => !ql || `${i.title} ${i.note} ${i.url ?? ''} ${i.site ?? ''}`.toLowerCase().includes(ql))
       .sort((a, b) => b.createdAt.localeCompare(a.createdAt));
   }, [data.items, cat, q]);
 
   const catById = (id: string) => data.categories.find((c) => c.id === id);
+  const view = viewInfo(cat, data.categories);
 
   const header = (
     <View style={{ gap: 12, paddingBottom: 4 }}>
@@ -61,19 +71,27 @@ export default function Home({ nav, cat, setCat }: { nav: Nav; cat: string; setC
           </Pressable>
         )}
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8, paddingRight: 8 }}>
-        <Pressable onPress={() => setCat('all')} style={[s.all, cat === 'all' && s.allOn]}>
-          <Text style={[s.allText, cat === 'all' && { color: '#FFFFFF' }]}>Wszystko · {data.items.length}</Text>
+      {/* Wyraźnie widać, co jest teraz otwarte; zmiana przez przycisk lub menu ☰ */}
+      <View style={[s.viewBar, { borderColor: view.color }]}>
+        <View style={[s.viewDot, { backgroundColor: view.color }]} />
+        <Pressable style={{ flex: 1 }} onPress={() => nav.push({ name: 'more' })} accessibilityRole="button" accessibilityLabel="Zmień kategorię">
+          <Text style={s.viewLabel}>{cat === 'all' ? 'POKAZUJĘ' : 'OTWARTA KATEGORIA'}</Text>
+          <Text style={s.viewName} numberOfLines={1}>
+            {view.name} · {rows.length}
+          </Text>
         </Pressable>
-        {data.categories.map((c) => (
-          <CatChip key={c.id} cat={c} on={cat === c.id} count={counts[c.id] ?? 0} onPress={() => setCat(cat === c.id ? 'all' : c.id)} />
-        ))}
-        {noCat > 0 && (
-          <Pressable onPress={() => setCat('none')} style={[s.all, cat === 'none' && s.allOn]}>
-            <Text style={[s.allText, cat === 'none' && { color: '#FFFFFF' }]}>Bez kategorii · {noCat}</Text>
+        {cat === 'all' ? (
+          <Pressable onPress={() => nav.push({ name: 'more' })} style={s.viewBtn} accessibilityRole="button">
+            <Ionicons name="albums-outline" size={18} color={C.blueInk} />
+            <Text style={s.viewBtnText}>Kategorie</Text>
+          </Pressable>
+        ) : (
+          <Pressable onPress={() => setCat('all')} style={s.viewBtn} accessibilityRole="button">
+            <Ionicons name="close" size={18} color={C.blueInk} />
+            <Text style={s.viewBtnText}>Wszystko</Text>
           </Pressable>
         )}
-      </ScrollView>
+      </View>
     </View>
   );
 
@@ -182,9 +200,12 @@ const s = StyleSheet.create({
   h1: { fontFamily: F.heavy, fontSize: 28, color: C.text, lineHeight: 34 },
   searchBox: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: C.card, borderWidth: 1.5, borderColor: C.line, borderRadius: 12, paddingHorizontal: 12 },
   search: { flex: 1, fontFamily: F.body, fontSize: 17, color: C.text, paddingVertical: 10 },
-  all: { borderWidth: 2, borderColor: C.text, borderRadius: 999, paddingHorizontal: 14, paddingVertical: 7, backgroundColor: C.card },
-  allOn: { backgroundColor: C.text },
-  allText: { fontFamily: F.heavy, fontSize: 15, color: C.text },
+  viewBar: { flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.card, borderWidth: 2, borderRadius: 14, paddingVertical: 10, paddingHorizontal: 12 },
+  viewDot: { width: 14, height: 14, borderRadius: 7 },
+  viewLabel: { fontFamily: F.heavy, fontSize: 11, color: C.muted, letterSpacing: 0.6 },
+  viewName: { fontFamily: F.heavy, fontSize: 18, color: C.text },
+  viewBtn: { flexDirection: 'row', alignItems: 'center', gap: 4, borderWidth: 1.5, borderColor: C.line, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 8 },
+  viewBtnText: { fontFamily: F.heavy, fontSize: 14, color: C.blueInk },
   row: { flexDirection: 'row', gap: 12, padding: 12 },
   thumb: { width: 84, height: 84, borderRadius: 10, backgroundColor: C.blueSoft },
   thumbEmpty: { alignItems: 'center', justifyContent: 'center' },

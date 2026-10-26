@@ -10,6 +10,8 @@ import { AlbumInfo, ensureGalleryAccess, importAlbum, listAlbums } from '../gall
 export default function Import({ nav }: { nav: Nav }) {
   const { data, addItems } = useStore();
   const [state, setState] = useState<'loading' | 'denied' | 'ready'>('loading');
+  const [limited, setLimited] = useState(false);
+  const [added, setAdded] = useState(0);
   const [albums, setAlbums] = useState<AlbumInfo[]>([]);
   const [busy, setBusy] = useState<string | null>(null);
   const [progress, setProgress] = useState('');
@@ -24,7 +26,9 @@ export default function Import({ nav }: { nav: Nav }) {
   const load = async () => {
     setState('loading');
     try {
-      if (!(await ensureGalleryAccess())) return setState('denied');
+      const access = await ensureGalleryAccess();
+      if (access === 'none') return setState('denied');
+      setLimited(access === 'limited');
       setAlbums(await listAlbums());
       setState('ready');
     } catch {
@@ -41,9 +45,17 @@ export default function Import({ nav }: { nav: Nav }) {
     setProgress('');
     try {
       const known = new Set(data.items.map((i) => i.assetId).filter((x): x is string => !!x));
-      const items = await importAlbum(a, known, (done, total) => setProgress(`${done} z ${total}`));
+      const { items, seen } = await importAlbum(a, known, (done, total) => setProgress(`${done} z ${total}`));
       addItems(items);
-      setResult((r) => ({ ...r, [a.id]: items.length ? `Dodano ${items.length} do skrzynki „Do posortowania”.` : 'Brak nowych zdjęć – wszystkie już są.' }));
+      setAdded((n) => n + items.length);
+      setResult((r) => ({
+        ...r,
+        [a.id]: items.length
+          ? `Dodano ${items.length} zdjęć do skrzynki „Do posortowania”.`
+          : seen === 0
+            ? 'Aplikacja nie widzi żadnego zdjęcia w tym albumie. Daj jej dostęp do wszystkich zdjęć (przycisk na górze).'
+            : 'Brak nowych zdjęć – wszystkie już są w aplikacji.',
+      }));
     } catch {
       setResult((r) => ({ ...r, [a.id]: 'Import się nie udał. Spróbuj ponownie.' }));
     } finally {
@@ -52,12 +64,33 @@ export default function Import({ nav }: { nav: Nav }) {
   };
 
   const header = (
-    <View style={s.info}>
-      <Ionicons name="information-circle" size={22} color={C.blueInk} />
-      <Text style={[st.small, { flex: 1, color: C.text }]}>
-        Zdjęcia nie są kopiowane, tylko wskazywane w galerii, więc nie zajmują dodatkowego miejsca. Ponowny import albumu dodaje tylko nowe zdjęcia.
-        Jeśli usuniesz zdjęcie z galerii, zniknie też tutaj.
-      </Text>
+    <View style={{ gap: 10, marginBottom: 4 }}>
+      {limited && (
+        <View style={s.warn}>
+          <Text style={[st.small, { color: C.text }]}>
+            Telefon dał aplikacji dostęp tylko do wybranych zdjęć, więc import ich nie widzi. Otwórz ustawienia → Uprawnienia → Zdjęcia i filmy → „Zezwalaj na
+            wszystkie”, a potem wróć tutaj.
+          </Text>
+          <Btn label="Otwórz ustawienia telefonu" icon="settings-outline" onPress={() => Linking.openSettings()} />
+        </View>
+      )}
+      {added > 0 && (
+        <Pressable style={s.done} onPress={() => nav.replace({ name: 'sort' })} accessibilityRole="button">
+          <Ionicons name="file-tray-full-outline" size={24} color="#FFFFFF" />
+          <View style={{ flex: 1 }}>
+            <Text style={s.doneTitle}>Dodano {added} zdjęć</Text>
+            <Text style={s.doneSub}>Stuknij, żeby od razu je posortować</Text>
+          </View>
+          <Ionicons name="chevron-forward" size={22} color="#FFFFFF" />
+        </Pressable>
+      )}
+      <View style={s.info}>
+        <Ionicons name="information-circle" size={22} color={C.blueInk} />
+        <Text style={[st.small, { flex: 1, color: C.text }]}>
+          Stuknij niebieską strzałkę przy albumie. Zdjęcia trafią do „Do posortowania” (zielony pasek na głównym ekranie) i do „Zdjęcia z galerii” w menu. Nie
+          są kopiowane, więc nie zajmują miejsca. Ponowny import dodaje tylko nowe zdjęcia.
+        </Text>
+      </View>
     </View>
   );
 
@@ -108,7 +141,11 @@ export default function Import({ nav }: { nav: Nav }) {
 
 const s = StyleSheet.create({
   center: { flex: 1, alignItems: 'center', justifyContent: 'center' },
-  info: { flexDirection: 'row', gap: 8, backgroundColor: C.blueSoft, borderRadius: 12, padding: 12, marginBottom: 4 },
+  info: { flexDirection: 'row', gap: 8, backgroundColor: C.blueSoft, borderRadius: 12, padding: 12 },
+  warn: { gap: 10, backgroundColor: C.yellowSoft, borderRadius: 12, padding: 12 },
+  done: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: C.green, borderRadius: 14, padding: 14 },
+  doneTitle: { fontFamily: F.heavy, fontSize: 18, color: '#FFFFFF' },
+  doneSub: { fontFamily: F.bold, fontSize: 14, color: '#FFFFFF' },
   album: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 14 },
   title: { fontFamily: F.heavy, fontSize: 18, color: C.text },
   btn: { backgroundColor: C.blue, borderRadius: 999, width: 48, height: 48, alignItems: 'center', justifyContent: 'center' },

@@ -73,7 +73,7 @@ function Root() {
   else if (top.name === 'detail') body = <Detail key={top.id} nav={nav} id={top.id} />;
   else if (top.name === 'edit')
     body = <Edit key={(top.id ?? 'new') + (top.url ?? '') + (top.photos?.join() ?? '')} nav={nav} id={top.id} url={top.url} photos={top.photos} text={top.text} cat={top.cat} />;
-  else if (top.name === 'more') body = <More nav={nav} />;
+  else if (top.name === 'more') body = <More nav={nav} cat={cat} setCat={setCat} />;
   else if (top.name === 'import') body = <Import nav={nav} />;
   else body = <Sort nav={nav} />;
 
@@ -81,7 +81,7 @@ function Root() {
     <SafeAreaView style={{ flex: 1, backgroundColor: C.bg }}>
       <View style={{ flex: 1 }}>{body}</View>
       {!top && (
-        <Pressable style={st.fab} onPress={() => nav.push({ name: 'edit', cat })} accessibilityRole="button" accessibilityLabel="Dodaj nowy wpis">
+        <Pressable style={st.fab} onPress={() => nav.push({ name: 'edit', cat: cat === 'gallery' ? undefined : cat })} accessibilityRole="button" accessibilityLabel="Dodaj nowy wpis">
           <Ionicons name="add" size={36} color={C.text} />
         </Pressable>
       )}
