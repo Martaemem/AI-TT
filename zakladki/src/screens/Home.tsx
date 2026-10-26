@@ -1,10 +1,12 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { FlatList, Image, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useStore } from '../store';
 import { C, F } from '../theme';
 import { IconBtn, Logo, st } from '../ui';
 import { Category, Item, Nav } from '../types';
+
+const hasImg = (i: Item) => !!(i.photos[0] ?? i.image);
 
 /** Widoki specjalne obok kategorii: wszystko, skrzynka bez kategorii, zdjęcia zaimportowane z galerii. */
 export function matchesView(i: Item, cat: string): boolean {
@@ -38,6 +40,18 @@ export default function Home({ nav, cat, setCat }: { nav: Nav; cat: string; setC
 
   const catById = (id: string) => data.categories.find((c) => c.id === id);
   const view = viewInfo(cat, data.categories);
+
+  // Przeglądarka pokazuje wszystkie zdjęcia z bieżącej listy, zaczynając od stukniętego
+  const openViewer = (item: Item) => {
+    const withImg = rows.filter(hasImg);
+    nav.push({ name: 'viewer', ids: withImg.map((i) => i.id), index: Math.max(0, withImg.findIndex((i) => i.id === item.id)) });
+  };
+  const photoCount = useMemo(() => rows.filter(hasImg).length, [rows]);
+
+  // Zdjęcia z galerii od razu w kafelkach
+  useEffect(() => {
+    if (cat === 'gallery') setGrid(true);
+  }, [cat]);
 
   const header = (
     <View style={{ gap: 12, paddingBottom: 4 }}>
@@ -92,6 +106,12 @@ export default function Home({ nav, cat, setCat }: { nav: Nav; cat: string; setC
           </Pressable>
         )}
       </View>
+      {photoCount > 0 && (
+        <Pressable style={s.browse} onPress={() => openViewer(rows.filter(hasImg)[0])} accessibilityRole="button">
+          <Ionicons name="play-circle-outline" size={22} color={C.blueInk} />
+          <Text style={s.browseText}>Przeglądaj zdjęcia jak w galerii · {photoCount}</Text>
+        </Pressable>
+      )}
     </View>
   );
 
@@ -109,9 +129,14 @@ export default function Home({ nav, cat, setCat }: { nav: Nav; cat: string; setC
       windowSize={7}
       renderItem={({ item }) =>
         grid ? (
-          <Tile item={item} onPress={() => nav.push({ name: 'detail', id: item.id })} />
+          <Tile item={item} onPress={() => (hasImg(item) ? openViewer(item) : nav.push({ name: 'detail', id: item.id }))} />
         ) : (
-          <Row item={item} onPress={() => nav.push({ name: 'detail', id: item.id })} catById={catById} />
+          <Row
+            item={item}
+            onPress={() => nav.push({ name: 'detail', id: item.id })}
+            onThumb={hasImg(item) ? () => openViewer(item) : undefined}
+            catById={catById}
+          />
         )
       }
       ListEmptyComponent={
@@ -147,12 +172,24 @@ function Tile({ item, onPress }: { item: Item; onPress: () => void }) {
   );
 }
 
-function Row({ item, onPress, catById }: { item: Item; onPress: () => void; catById: (id: string) => { name: string; color: string } | undefined }) {
+function Row({
+  item,
+  onPress,
+  onThumb,
+  catById,
+}: {
+  item: Item;
+  onPress: () => void;
+  onThumb?: () => void;
+  catById: (id: string) => { name: string; color: string } | undefined;
+}) {
   const thumb = item.photos[0] ?? item.image;
   return (
     <Pressable onPress={onPress} style={[st.card, s.row]}>
       {thumb ? (
-        <Image source={{ uri: thumb }} style={s.thumb} resizeMethod="resize" />
+        <Pressable onPress={onThumb ?? onPress} accessibilityLabel="Pokaż zdjęcie na pełnym ekranie">
+          <Image source={{ uri: thumb }} style={s.thumb} resizeMethod="resize" />
+        </Pressable>
       ) : (
         <View style={[s.thumb, s.thumbEmpty]}>
           <Ionicons name={item.url ? 'globe-outline' : 'document-text-outline'} size={28} color={C.blue} />
@@ -200,6 +237,8 @@ const s = StyleSheet.create({
   h1: { fontFamily: F.heavy, fontSize: 28, color: C.text, lineHeight: 34 },
   searchBox: { flexDirection: 'row', alignItems: 'center', gap: 8, backgroundColor: C.card, borderWidth: 1.5, borderColor: C.line, borderRadius: 12, paddingHorizontal: 12 },
   search: { flex: 1, fontFamily: F.body, fontSize: 17, color: C.text, paddingVertical: 10 },
+  browse: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, backgroundColor: C.blueSoft, borderRadius: 12, paddingVertical: 11 },
+  browseText: { fontFamily: F.heavy, fontSize: 15, color: C.blueInk },
   viewBar: { flexDirection: 'row', alignItems: 'center', gap: 10, backgroundColor: C.card, borderWidth: 2, borderRadius: 14, paddingVertical: 10, paddingHorizontal: 12 },
   viewDot: { width: 14, height: 14, borderRadius: 7 },
   viewLabel: { fontFamily: F.heavy, fontSize: 11, color: C.muted, letterSpacing: 0.6 },

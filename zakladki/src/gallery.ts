@@ -1,5 +1,23 @@
 // W SDK 58 albumy i stronicowanie zdjęć są w starszym API pod tą ścieżką
 import * as MediaLibrary from 'expo-media-library/legacy';
+import * as IntentLauncher from 'expo-intent-launcher';
+import { Linking } from 'react-native';
+
+/** Otwiera to jedno zdjęcie w aplikacji Galeria telefonu (bez szukania wśród wszystkich zdjęć). */
+export async function openInGallery(assetId: string): Promise<boolean> {
+  const uri = `content://media/external/images/media/${assetId}`;
+  try {
+    await IntentLauncher.startActivityAsync('android.intent.action.VIEW', { data: uri, type: 'image/*', flags: 1 });
+    return true;
+  } catch {
+    try {
+      await Linking.openURL(uri);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+}
 import { Item } from './types';
 import { newId } from './store';
 

@@ -27,6 +27,7 @@ export type Data = { items: Item[]; categories: Category[] };
 export type Route =
   | { name: 'detail'; id: string }
   | { name: 'edit'; id?: string; url?: string; photos?: string[]; text?: string; cat?: string }
+  | { name: 'viewer'; ids: string[]; index: number }
   | { name: 'more' }
   | { name: 'import' }
   | { name: 'sort' };

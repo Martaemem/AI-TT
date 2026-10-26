@@ -15,6 +15,7 @@ import Detail from './src/screens/Detail';
 import More from './src/screens/More';
 import Import from './src/screens/Import';
 import Sort from './src/screens/Sort';
+import Viewer from './src/screens/Viewer';
 
 function Root() {
   const { ready } = useStore();
@@ -73,12 +74,14 @@ function Root() {
   else if (top.name === 'detail') body = <Detail key={top.id} nav={nav} id={top.id} />;
   else if (top.name === 'edit')
     body = <Edit key={(top.id ?? 'new') + (top.url ?? '') + (top.photos?.join() ?? '')} nav={nav} id={top.id} url={top.url} photos={top.photos} text={top.text} cat={top.cat} />;
+  else if (top.name === 'viewer') body = <Viewer nav={nav} ids={top.ids} index={top.index} />;
   else if (top.name === 'more') body = <More nav={nav} cat={cat} setCat={setCat} />;
   else if (top.name === 'import') body = <Import nav={nav} />;
   else body = <Sort nav={nav} />;
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: C.bg }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: top?.name === 'viewer' ? '#000000' : C.bg }}>
+      <StatusBar style={top?.name === 'viewer' ? 'light' : 'dark'} />
       <View style={{ flex: 1 }}>{body}</View>
       {!top && (
         <Pressable style={st.fab} onPress={() => nav.push({ name: 'edit', cat: cat === 'gallery' ? undefined : cat })} accessibilityRole="button" accessibilityLabel="Dodaj nowy wpis">

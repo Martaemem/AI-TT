@@ -6,6 +6,7 @@ import { useStore } from '../store';
 import { C, F } from '../theme';
 import { Btn, CatChip, IconBtn, TopBar, st } from '../ui';
 import { Nav } from '../types';
+import { openInGallery } from '../gallery';
 
 export default function Detail({ nav, id }: { nav: Nav; id: string }) {
   const { data, deleteItem } = useStore();
@@ -60,6 +61,15 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
           {item.title}
         </Text>
         {!!item.site && <Text style={s.site}>{item.site}</Text>}
+        {!!item.assetId && (
+          <Btn
+            label="Otwórz w galerii telefonu"
+            icon="images-outline"
+            onPress={async () => {
+              if (!(await openInGallery(item.assetId!))) Alert.alert('Galeria', 'Nie udało się otworzyć zdjęcia. Mogło zostać usunięte z telefonu.');
+            }}
+          />
+        )}
         {!!item.url && (
           <View style={s.row}>
             <Btn label="Otwórz stronę" icon="open-outline" onPress={() => Linking.openURL(item.url!).catch(() => {})} style={{ flex: 2 }} />
