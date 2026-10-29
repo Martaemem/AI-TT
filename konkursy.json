@@ -1,6 +1,40 @@
 {
- "updatedAt": "2026-10-26T15:20:00+01:00",
+ "updatedAt": "2026-10-29T07:39:12+01:00",
  "contests": [
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-11-08",
+   "minSpend": 100,
+   "note": "Wymaga Allegro Smart! i zgłoszenia na stronie – losy sprzed zgłoszenia są nieaktywne",
+   "organizer": "Allegro",
+   "prizes": "1 000 000 zł, iPhone’y, vouchery podróżne 10 000 zł, karty podarunkowe",
+   "purchase": true,
+   "shops": [
+    "Allegro"
+   ],
+   "start": "2026-09-28",
+   "task": "Zgłoś się na stronie loterii, a potem rób zakupy z dostawą Smart! za min. 100 zł u jednego sprzedawcy, by zbierać losy.",
+   "title": "Loteria Allegro Smart! 2026",
+   "toBuy": "Zakupy z dostawą Smart! za min. 100 zł w jednej transakcji",
+   "url": "https://allegro.pl/smart/loteria",
+   "id": "allegro-smart-loteria"
+  },
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-31",
+   "minSpend": null,
+   "note": "Zachowaj wieczko z kodem i paragon",
+   "organizer": "Hochland / Almette",
+   "prizes": "EkoDOM z działką w górach, 305 × 1000 zł",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-07-13",
+   "task": "Kup promocyjny serek Almette, zachowaj paragon i wieczko z kodem, zarejestruj kod na almette.pl.",
+   "title": "Loteria Almette „Dom z natury 11”",
+   "toBuy": "Min. 1 promocyjny produkt Almette (z kodem pod wieczkiem)",
+   "url": "https://www.almette.pl/loteria-2026/",
+   "id": "almette-dom-z-natury"
+  },
   {
    "end": "2026-11-29",
    "minSpend": 50,
@@ -78,16 +112,36 @@
    "id": "chata-polska"
   },
   {
-   "end": "2026-11-22",
-   "note": "Tylko 18+. Sposób zgłoszenia sprawdź w regulaminie.",
-   "organizer": "chivas.com",
-   "prizes": "Marynarka na miarę",
-   "purchase": false,
-   "start": "2026-10-19",
-   "task": "Opisz swoje ulubione nuty smakowe whisky Chivas Regal 16.",
-   "title": "Chivas Regal – marynarka szyta na miarę",
-   "url": "https://www.e-konkursy.info/konkurs/wygraj-marynarke-na-miare-chivas-regal-16-x-balamonte",
-   "id": "chivas-marynarka"
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-12-02",
+   "minSpend": null,
+   "note": "Zachowaj paragon",
+   "organizer": "Smolar / Cirio",
+   "prizes": "Voucher wakacje.pl 10 000 zł, 6 frytkownic Philips, 45 zestawów Cirio",
+   "purchase": true,
+   "shops": [],
+   "start": null,
+   "task": "Kup dowolny produkt Cirio, ugotuj z nim danie, zrób zdjęcie i wyślij je przez formularz na stronie konkursu razem z danymi paragonu.",
+   "title": "„Zamień gotowanie w wygrywanie z Cirio”",
+   "toBuy": "Dowolny produkt Cirio",
+   "url": "https://www.konkurscirio.pl/",
+   "id": "cirio-gotowanie"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-10-30",
+   "minSpend": null,
+   "note": "Wymaga aplikacji CokeApp; zachowaj paragon",
+   "organizer": "Coca-Cola",
+   "prizes": "Zestawy ceramiki Bolesławiec, vouchery 20 zł, darmowe nadanie InPost",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-09-07",
+   "task": "Kup napój Coca-Cola objęty promocją, wpisz kod spod nakrętki lub zawleczki w aplikacji CokeApp i użyj tokena jako losu w loterii (albo zbieraj tokeny na ceramikę).",
+   "title": "Loteria Coca-Cola × Bolesławiec 2026",
+   "toBuy": "Napój Coca-Cola z kodem promocyjnym pod nakrętką/zawleczką",
+   "url": "https://www.coca-cola.com/pl/pl/offerings/boleslawiec-2026",
+   "id": "coca-cola-boleslawiec"
   },
   {
    "end": "2026-11-30",
@@ -139,6 +193,26 @@
    "id": "delikatesy-centrum-deszcz"
   },
   {
+   "addedAt": "2026-10-29T07:39:12+01:00",
+   "end": "2026-11-05",
+   "minSpend": null,
+   "note": "18+. Zakupy 28.10–03.11, zgłoszenia do 05.11. Bez Żabka Nano. Wymagane aktywne konto Żappka. Praca musi być własną twórczością. Każdy zakup 2 szt. = osobne zgłoszenie.",
+   "organizer": "Studio REC Sp. z o.o.",
+   "prizes": "Voucher Wakacje.pl 10 000 zł, 20 × głośnik JBL PartyBox",
+   "purchase": true,
+   "rulesUrl": "https://konkursdesperados.pl/pdf/regulamin.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-28",
+   "task": "Kup 2 Desperados w Żabce z aplikacją Żappka, odbierz kod i opisz straszną opowieść halloweenową (do 1500 znaków) w formularzu.",
+   "title": "„Desperados Halloween 2026” – Żabka",
+   "toBuy": "2 piwa Desperados (jednorazowo, ze zeskanowaną Żappką)",
+   "url": "https://konkursdesperados.pl",
+   "verified": true,
+   "id": "desperados-halloween-zabka"
+  },
+  {
    "end": "2026-11-12",
    "minSpend": 15,
    "organizer": "Unilever",
@@ -155,6 +229,26 @@
    "id": "dino-dobry-smak"
   },
   {
+   "addedAt": "2026-10-29T07:39:12+01:00",
+   "end": "2026-11-10",
+   "minSpend": null,
+   "note": "18+. Zdrapka w opakowaniu. Zachowaj oryginalną zdrapkę i paragon. Zgłoszenie wygranej do 10.11, 23:59. Może skończyć się wcześniej, gdy zabraknie produktów.",
+   "organizer": "SMOLAR Agencja Promocyjno-Reklamowa / Drosed",
+   "prizes": "100 frytkownic Tefal, 1300 nagród łącznie, bony Dino 100–500 zł",
+   "purchase": true,
+   "rulesUrl": "https://loteriadrosed.pl/regulaminy/Regulamin_loterii_Drosed_Dino.pdf",
+   "shops": [
+    "Dino"
+   ],
+   "start": "2026-10-01",
+   "task": "Kup produkt Drosed AirFryer z naklejką LOTERIA w Dino i zdrap kartę z opakowania; wygraną zgłoś formularzem na stronie.",
+   "title": "„Koszyk pełen nagród” – Drosed w Dino",
+   "toBuy": "1 produkt Drosed AirFryer z naklejką LOTERIA (Tempura Nuggets, Roasted Chicken Wings lub Wrap Mexicana)",
+   "url": "https://loteriadrosed.pl/",
+   "verified": true,
+   "id": "drosed-dino-koszyk"
+  },
+  {
    "end": "2027-05-10",
    "organizer": "Fundacja na Rzecz Myślenia im. Barbary Skargi",
    "prizes": "Nagrody pieniężne",
@@ -164,6 +258,19 @@
    "title": "Esej filozoficzny „Dlaczego demokracja?”",
    "url": "https://www.e-konkursy.info/konkurs/vi-edycja-konkursu-na-esej-filozoficzny-dlaczego-demokracja",
    "id": "esej-demokracja"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-11-03",
+   "note": "Zgłoszenia do 3.11 godz. 12:00; pokaz w Warszawie – trzeba pojechać na miejsce",
+   "organizer": "Radio Eska",
+   "prizes": "10 podwójnych zaproszeń na przedpremierowy pokaz w Helios Warszawa (6.11)",
+   "purchase": false,
+   "start": "2026-10-27",
+   "task": "W formularzu oryginalnie odpowiedz, jaki jest sprawdzony sposób Twoich dzieci na nawiązywanie nowych przyjaźni.",
+   "title": "Eska – „Jesień w kinie” (pokaz LEGO Friends)",
+   "url": "https://musical.eska.pl/",
+   "id": "eska-lego-friends"
   },
   {
    "end": "2026-11-20",
@@ -217,6 +324,36 @@
    "toBuy": "1 dowolna Fanta",
    "url": "https://www.coca-cola.com/pl/pl/offerings/fanta-halloween",
    "id": "fanta-halloween"
+  },
+  {
+   "addedAt": "2026-10-29T07:39:12+01:00",
+   "end": "2026-11-10",
+   "note": "Wymagane darmowe konto Filmweb. Redakcja wybiera 5 najciekawszych odpowiedzi. Limit znaków nie podany.",
+   "organizer": "Filmweb",
+   "prizes": "5 komiksów „Gramatyka w komiksie. Baba od polskiego przedstawia”",
+   "purchase": false,
+   "rulesUrl": "https://www.filmweb.pl/regulations",
+   "start": "2026-10-28",
+   "task": "Zaloguj się na Filmwebie i w formularzu napisz, która postać z książek lub komiksów byłaby najlepszym nauczycielem i dlaczego.",
+   "title": "Filmweb – „Gramatyka w komiksie”",
+   "url": "https://www.filmweb.pl/contest/5902",
+   "verified": true,
+   "id": "filmweb-gramatyka"
+  },
+  {
+   "addedAt": "2026-10-29T07:39:12+01:00",
+   "end": "2026-11-10",
+   "note": "Wymagane darmowe konto Filmweb. Redakcja wybiera 3 najciekawsze odpowiedzi. Limit znaków nie podany.",
+   "organizer": "Filmweb",
+   "prizes": "3 zestawy „Pucio. Samolot z figurkami” (89,90 zł)",
+   "purchase": false,
+   "rulesUrl": "https://www.filmweb.pl/regulations",
+   "start": "2026-10-28",
+   "task": "Zaloguj się na Filmwebie i w formularzu konkursu napisz, dokąd poleciałabyś z Puciem i jego rodziną samolotem i dlaczego.",
+   "title": "Filmweb – „Pucio. Samolot z figurkami”",
+   "url": "https://www.filmweb.pl/contest/5903",
+   "verified": true,
+   "id": "filmweb-pucio"
   },
   {
    "end": "2026-11-04",
@@ -305,6 +442,23 @@
    "id": "hochland-serio-auchan"
   },
   {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-28",
+   "minSpend": null,
+   "organizer": "Hochland",
+   "prizes": "5 projektorów Samsung Freestyle, 50 bonów 100 zł do Intermarché",
+   "purchase": true,
+   "shops": [
+    "Intermarché"
+   ],
+   "start": "2026-10-15",
+   "task": "Kup 2 produkty soSER, zachowaj paragon i w formularzu opisz (do 250 znaków) przepis na idealny wieczór filmowy z soSER-em.",
+   "title": "„SERio Przyjemny” – Hochland w Intermarché",
+   "toBuy": "Min. 2 produkty soSER Hochland",
+   "url": "https://serioprzyjemny.pl/",
+   "id": "hochland-soser-intermarche"
+  },
+  {
    "end": "2026-11-30",
    "note": "Trzeba pojechać do salonu.",
    "organizer": "Hyundai Motor Poland",
@@ -343,6 +497,21 @@
    "title": "Loteria InPost „Ruszaj tropem nagród”",
    "url": "https://inpost.pl/loteria",
    "id": "inpost-loteria"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-10-31",
+   "note": "18+. Bez zakupu (regulamin §2 ust. 3). Typy do pierwszego gwizdka (sob. 31.10, 14:45), potwierdź linkiem z maila. Zgoda marketingowa dobrowolna (daje dodatkowy typ).",
+   "organizer": "CLOVIN S.A. (czystagra.pl)",
+   "prizes": "Koszulka meczowa Jagiellonii z autografami (500 zł)",
+   "purchase": false,
+   "rulesUrl": "https://czystagra.pl/wygrajkoszulke/regulamin.html",
+   "start": "2026-10-26",
+   "task": "W formularzu wytypuj dokładny wynik meczu Wieczysta Kraków – Jagiellonia, posiadanie piłki i liczbę podań Jagiellonii, a potem potwierdź zgłoszenie linkiem z maila.",
+   "title": "Wytypuj mecz Jagiellonii – koszulka z autografami",
+   "url": "https://czystagra.pl/wygrajkoszulke/",
+   "verified": true,
+   "id": "jagiellonia-koszulka"
   },
   {
    "end": "2027-03-31",
@@ -436,17 +605,6 @@
    "id": "knorr-smakowite"
   },
   {
-   "end": "2026-10-31",
-   "organizer": "Komputronik S.A.",
-   "prizes": "Komputer PC (podatek po stronie organizatora)",
-   "purchase": false,
-   "start": "2026-10-05",
-   "task": "Złóż zestaw w koszyku, odpowiedz jak będzie wyglądał komputer za 30 lat i wypełnij formularz.",
-   "title": "Komputronik – komputer za 15 000 zł",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-stworz-komputer-pc-za-15-tys-zl-i-wygraj-go",
-   "id": "komputronik-pc"
-  },
-  {
    "end": "2026-11-08",
    "minSpend": null,
    "organizer": "Smolar",
@@ -472,10 +630,10 @@
     "Biedronka"
    ],
    "start": "2026-10-26",
-   "task": "Kup produkty Krakus objęte promocją, zachowaj paragon i zarejestruj się.",
+   "task": "Kup min. 2 produkty Krakus w Biedronce, zachowaj paragon i zgłoś się na stronie akcji.",
    "title": "„Wyśmienita uczta” – Krakus w Biedronce",
-   "toBuy": "Produkty Krakus objęte promocją",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-wysmienita-uczta-biedronka",
+   "toBuy": "Min. 2 produkty Krakus",
+   "url": "https://www.krakuswbiedronce.pl/",
    "id": "krakus-biedronka"
   },
   {
@@ -589,6 +747,43 @@
    "id": "mediamarkt-apka"
   },
   {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-31",
+   "minSpend": null,
+   "organizer": "Milka / Lidl",
+   "prizes": "10 zestawów kinomana, 30 abonamentów Cinema City Unlimited, 300 podwójnych biletów",
+   "purchase": true,
+   "shops": [
+    "Lidl"
+   ],
+   "start": "2026-10-15",
+   "task": "Kup 2 produkty Milka (w tym Mmmax), zachowaj paragon i w formularzu wymyśl smak i nazwę czekolady inspirowanej ulubionym filmem.",
+   "title": "„Kinowa Milka” w Lidlu",
+   "toBuy": "2 produkty Milka, w tym tabliczka Milka Mmmax",
+   "url": "https://milka-lidl.pl/",
+   "id": "milka-kino-lidl"
+  },
+  {
+   "addedAt": "2026-10-29T07:39:12+01:00",
+   "end": "2026-11-29",
+   "minSpend": null,
+   "note": "18+. Jeden paragon = jedno zgłoszenie (także e-paragon Lidl Plus). Zawsze ten sam numer telefonu. Paragon zachowaj do 13.04.2027. Losowanie 30.11.",
+   "organizer": "Albedo Marketing / Coca-Cola HBC Polska",
+   "prizes": "Wyjazd dla 2 osób na GP Formuły 1 w Bahrajnie (ok. 47 800 zł)",
+   "purchase": true,
+   "rulesUrl": "https://monsterwlidl.pl/storage/1/Regulamin_loterii_promocyjnej_Monster_x_McLaren_Lidl.pdf",
+   "shops": [
+    "Lidl"
+   ],
+   "start": "2026-10-26",
+   "task": "Kup co najmniej 2 napoje Monster na jednym paragonie w Lidlu i zarejestruj paragon w formularzu na stronie.",
+   "title": "Loteria „Monster x McLaren” w Lidlu",
+   "toBuy": "2 napoje Monster (dowolne) na jednym paragonie",
+   "url": "https://monsterwlidl.pl/",
+   "verified": true,
+   "id": "monster-mclaren-lidl"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-10-27",
    "minSpend": null,
@@ -608,13 +803,16 @@
   },
   {
    "end": "2026-10-31",
+   "note": "18+. Bez zakupu, ale wymagana karta myKiK. Formularz na stronie sprawdź – zgoda na newsletter może być oznaczona jako obowiązkowa. KiK dostaje licencję na zdjęcie. Bony tylko do sklepów stacjonarnych.",
    "organizer": "KiK Textil",
    "prizes": "15 × bon KiK 200 zł",
    "purchase": false,
+   "rulesUrl": "https://firma.kik.pl/fileadmin/gewinnspiele/pl/Teilnahmebedingungen_Fotowettbewerb_PL.pdf",
    "start": "2026-10-01",
    "task": "Wyślij kreatywne zdjęcie przez formularz (JPG/PNG, do 10 MB).",
    "title": "myKiK – zdjęcie „Halloween”",
    "url": "https://firma.kik.pl/mykikkonkurs",
+   "verified": true,
    "id": "mykik-halloween"
   },
   {
@@ -635,6 +833,19 @@
    "id": "nestle-biedronka"
   },
   {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2027-03-07",
+   "note": "Zgłoszenia na stowarzyszenie@arche.pl; JPG min. 3000 px krótszy bok",
+   "organizer": "Stowarzyszenie Arche",
+   "prizes": "Voucher na 3 noce dla 2 osób w hotelu Arche, wyróżnienia – 1 noc",
+   "purchase": false,
+   "start": null,
+   "task": "Sfotografuj do 3 zapomnianych, niszczejących zabytków (3–5 zdjęć każdego) i wyślij je mailem z formularzem zgłoszeniowym.",
+   "title": "Konkurs fotograficzny „(Nie)zapomniane zabytki” – V edycja",
+   "url": "https://stowarzyszenie.arche.pl/Podstrony/Konkurs-Niezapomniane-zabytki---konkurs-fotograficzny,582",
+   "id": "niezapomniane-zabytki"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-08",
    "minSpend": null,
@@ -652,6 +863,24 @@
    "id": "onedaymore-lidl"
   },
   {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-27",
+   "minSpend": null,
+   "note": "Zakup do 27.10, rejestracja kodu do 30.10",
+   "organizer": "Mars / Orbit",
+   "prizes": "80 kart Prezentmarzeń po 500 zł",
+   "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-21",
+   "task": "Kup 2 gumy z Żappką, zarejestruj kod i kreatywnie opisz idealną 15-minutową przerwę.",
+   "title": "Orbit w Żabce – bon 500 zł do Prezentmarzeń",
+   "toBuy": "Min. 2 gumy Orbit, Airwaves, Winterfresh lub Wrigley’s (z Żappką)",
+   "url": "https://wygrajzorbit.pl/",
+   "id": "orbit-zabka"
+  },
+  {
    "end": "2026-11-30",
    "organizer": "Fundacja Natura i Sztuka",
    "prizes": "1 000 / 700 / 500 zł",
@@ -663,15 +892,43 @@
    "id": "ozdoba-papierowa"
   },
   {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-11-03",
+   "organizer": "portalkryminalny.pl",
+   "prizes": "5 egzemplarzy książki",
+   "purchase": false,
+   "start": "2026-10-26",
+   "task": "Odpowiedz w formularzu, czy „Rostoły. Klątwa Wilczego Boru” to pierwsza opowieść o Rostołach.",
+   "title": "portalkryminalny.pl – „Rostoły. Klątwa Wilczego Boru”",
+   "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-z-rostolami",
+   "id": "portalkryminalny-rostoly"
+  },
+  {
    "end": "2026-10-29",
+   "note": "Formularz na stronie (imię, adres, telefon), formularz można wypełnić tylko raz. Kończy się dziś.",
    "organizer": "portalkryminalny.pl",
    "prizes": "Książka",
    "purchase": false,
+   "rulesUrl": "https://portalkryminalny.pl/podstrona/konkursowy-savoir-vivre",
    "start": "2026-10-20",
    "task": "Odpowiedz, jaki zawód ma główna bohaterka serii Przemysława Piotrowskiego.",
    "title": "portalkryminalny.pl – „Ślepa, czarna noc”",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-ze-slepa-czarna-noca",
+   "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-ze-slepa-czarna-noca",
+   "verified": true,
    "id": "portalkryminalny-slepa"
+  },
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-11-03",
+   "note": "Termin niejasny: artykuł podaje 3.11, serwis 26.11 – zgłoś się do 3.11",
+   "organizer": "portalmedialny.pl",
+   "prizes": "1 egzemplarz książki Mileny Wójtowicz",
+   "purchase": false,
+   "start": "2026-10-26",
+   "task": "Wypełnij formularz i podaj, ile lat temu Wisława Szymborska dostała Nagrodę Nobla.",
+   "title": "portalmedialny.pl – „Jesteś jeszcze ty”",
+   "url": "https://portalmedialny.pl/art/98026/jestes-jeszcze-ty-milena-wojtowicz.html/",
+   "id": "portalmedialny-jestes-jeszcze-ty"
   },
   {
    "end": "2026-11-19",
@@ -683,6 +940,24 @@
    "title": "portalmedialny.pl – „Start-up i venture capital”",
    "url": "https://www.e-konkursy.info/konkurs/wygraj-ksiazke-start-up-i-venture-capital-szymona-janiaka",
    "id": "portalmedialny-startup"
+  },
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-27",
+   "minSpend": null,
+   "note": "Zakup do 27.10, zgłoszenie do 29.10",
+   "organizer": "Mondelez / Prince Polo",
+   "prizes": "10 000 zł, 450 bluz",
+   "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
+   "start": null,
+   "task": "Kup 2 wafelki Prince Polo z Żappką i w formularzu napisz, jaki jest Twój ulubiony mix smaków i dlaczego.",
+   "title": "„Miksuj smaki. Po swojemu” – Prince Polo w Żabce",
+   "toBuy": "2 wafelki Prince Polo (z aplikacją Żappka)",
+   "url": "https://konkursprincepolo.pl/",
+   "id": "prince-polo-zabka-miksuj"
   },
   {
    "end": "2026-11-25",
@@ -715,6 +990,24 @@
    "id": "pringles-aldi"
   },
   {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-27",
+   "minSpend": null,
+   "note": "Ostatni dzień!",
+   "organizer": "about ad / Kraft Heinz",
+   "prizes": "100 zestawów misek z Bolesławca, 300 gier karcianych",
+   "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-21",
+   "task": "Kup 2 produkty Pudliszki z Żappką, odbierz kod i w formularzu napisz, jak namówisz ulubioną osobę na wspólny obiad.",
+   "title": "„Skoczmy na obiad razemmm” – Pudliszki w Żabce",
+   "toBuy": "Min. 2 produkty promocyjne Pudliszki (z aplikacją Żappka)",
+   "url": "https://www.kraftheinz.com/pl-PL/pudliszki/skoczmynaobiad",
+   "id": "pudliszki-zabka"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-30",
    "minSpend": 10,
@@ -728,18 +1021,6 @@
    "toBuy": "Karma Purina Gourmet",
    "url": "https://www.loteriagourmet.pl/",
    "id": "purina-gourmet"
-  },
-  {
-   "end": "2026-10-30",
-   "note": "Autorka najciekawszej odpowiedzi dostaje telefon z 5 szybkimi pytaniami.",
-   "organizer": "Radio Złote Przeboje",
-   "prizes": "5 × 2 400 zł, 20 × 100 zł",
-   "purchase": false,
-   "start": "2026-10-23",
-   "task": "Opisz najprzyjemniejsze wspomnienie związane z Radiem Złote Przeboje (do 800 znaków).",
-   "title": "Radio Złote Przeboje – „Urodzinowe stówki”",
-   "url": "https://radio.zloteprzeboje.pl/urodzinowe-stowki-od-radia-zlote-przeboje-konkurs-2",
-   "id": "rzp-stowki"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
@@ -757,6 +1038,58 @@
    "toBuy": "Sery Serenada lub Skarby Serowara (jeden paragon)",
    "url": "https://www.serdecznamoc.pl/",
    "id": "serenada-carrefour"
+  },
+  {
+   "addedAt": "2026-10-29T07:39:12+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "note": "18+. Odpowiedź max 500 znaków (liczone w Wordzie), bez linków i zdjęć, własna twórczość. Każde zgłoszenie = osobny paragon. Organizator może publikować zwycięskie odpowiedzi.",
+   "organizer": "All about Sp. z o.o. / Stock Polska",
+   "prizes": "Voucher Wakacje.pl 28 000 zł na wyjazd do Meksyku",
+   "purchase": true,
+   "rulesUrl": "https://www.konkurssierra.pl/wp-content/uploads/2026/10/Wygraj_wyjazd_do_Meksyku_-_regulamin_konkursu.pdf",
+   "shops": [],
+   "start": "2026-10-26",
+   "task": "Kup butelkę Sierra Tequila, wgraj paragon i odpowiedz (do 500 znaków) o wspomnieniu świętowanym po meksykańsku w Día de los Muertos.",
+   "title": "„Wygraj wyjazd do Meksyku” – Sierra Tequila",
+   "toBuy": "1 butelka Sierra Tequila 0,5 l lub 0,7 l",
+   "url": "https://www.konkurssierra.pl/",
+   "verified": true,
+   "id": "sierra-tequila-meksyk"
+  },
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-10-27",
+   "minSpend": null,
+   "note": "18+. Zakup do 27.10, zgłoszenie do 29.10",
+   "organizer": "OS3",
+   "prizes": "150 bluz „Strasznie Fajna Bluza”",
+   "purchase": true,
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-21",
+   "task": "Kup produkt Soplica z Żappką, odbierz kod i w formularzu wymyśl imię oraz zabawny opis mrocznej postaci (do 500 znaków).",
+   "title": "„Soplica Halloween” w Żabce",
+   "toBuy": "1 produkt promocyjny Soplica (z aplikacją Żappka)",
+   "url": "https://soplica.pl/halloween_2026/",
+   "id": "soplica-halloween-zabka"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-12-27",
+   "minSpend": null,
+   "note": "Zgłoszenia dopiero od 2 listopada",
+   "organizer": "Smolar",
+   "prizes": "100 000 zł oraz 560 × 100 zł",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup dowolny Olej Polski albo Mąkę Szymanowską typ 480, zachowaj paragon i zarejestruj go w formularzu na stronie loterii. Każdy paragon to osobne zgłoszenie.",
+   "title": "Loteria „Sto tysięcy” – Olej Polski i Mąka Szymanowska",
+   "toBuy": "1 produkt: Olej Polski lub Mąka Szymanowska typ 480",
+   "url": "https://stotysiecy.pl",
+   "id": "sto-tysiecy"
   },
   {
    "end": "2026-11-20",
@@ -782,40 +1115,87 @@
    "id": "triennale-grafiki"
   },
   {
-   "end": "2026-11-08",
-   "organizer": "TRIVARO",
-   "prizes": "Podwójne bilety na mecz 17.11",
-   "purchase": false,
-   "start": "2026-10-01",
-   "task": "Zarejestruj się przez baner na stronie głównej organizatora.",
-   "title": "Trivaro – bilety na mecz Polska–Szwecja",
-   "url": "https://www.e-konkursy.info/konkurs/wygraj-podwojne-bilety-na-mecz-polska-szwecja-1711",
-   "id": "trivaro-mecz"
-  },
-  {
    "end": "2026-10-30",
-   "note": "Zgłoś się przez formularz na stronie, nie komentarzem. 1 zgłoszenie na osobę.",
+   "note": "18+. Zgłoś przez formularz na twix.pl, nie komentarzem (1 zgłoszenie). Zakaz treści stworzonych przez AI lub z pomocą AI. Zadania o zastępstwo w pracy są wykluczone. Zwycięzca musi być dostępny 19.11.",
    "organizer": "Mars Polska",
    "prizes": "PS5 Pro + fotel gamingowy",
    "purchase": false,
+   "rulesUrl": "https://www.twix.com/pl/regulamin",
    "start": "2026-10-19",
    "task": "Napisz, o jakie zadanie poprosiłabyś swojego cyfrowego sobowtóra na jeden dzień.",
    "title": "Twix – „Doppelgamer”",
    "url": "https://www.twix.com/pl/",
+   "verified": true,
    "id": "twix-doppelgamer"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-10-31",
-   "note": "Sprawdź w regulaminie, czy potrzebny jest zakup",
+   "note": "18+. Udział bezpłatny, bez zakupu – kod dostajesz za min. 100 pkt w grze na stronie. Zgłoszenia do 31.10, codziennie 00:00–23:59.",
    "organizer": "Voltaren",
    "prizes": "3 bilety na finał Ligi Mistrzów UEFA, piłki, torby, koszulki, kubki",
    "purchase": false,
+   "rulesUrl": "https://www.zostanwgrze.pl/sites/39107f68e464e81a136b1c6b2641ea65/Regulamin%20-%20Zosta%C5%84%20w%20grze%20z%20Voltaren.pdf",
    "start": "2026-10-01",
    "task": "Na stronie akcji rozwiąż quiz o produktach Voltaren i zagraj w grę zręcznościową; po zdobyciu min. 100 punktów zarejestruj otrzymany kod w loterii.",
    "title": "„Zostań w grze z Voltaren”",
    "url": "https://zostanwgrze.pl/",
+   "verified": true,
    "id": "voltaren-zostan-w-grze"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2027-03-21",
+   "note": "Zgłoszenia na konkursmhn@pan.pl; zdjęcia muszą być z Warszawy",
+   "organizer": "Muzeum i Instytut Zoologii PAN / Polska Akademia Nauk",
+   "prizes": "Karty Empik o łącznej wartości 30 000 zł",
+   "purchase": false,
+   "start": "2026-09-23",
+   "task": "Wyślij mailem do 5 zdjęć przyrody zrobionych na terenie Warszawy (z lat 2023–2027) wraz z wymaganymi dokumentami.",
+   "title": "Konkurs fotograficzny „Warszawa. Naturalnie”",
+   "url": "https://konkursmhn.pan.pl/",
+   "id": "warszawa-naturalnie"
+  },
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-11-30",
+   "note": "18+. Bez zakupu – formularz na stronie, odpowiedź do 1000 znaków ze spacjami, musi być oryginalna i własna. Można zgłaszać się codziennie (każda odpowiedź inna). Licencja na odpowiedź dla Wedla (5 lat), możliwa publikacja bez podpisu.",
+   "organizer": "GoldenSubmarine / E. Wedel",
+   "prizes": "50 zestawów: gra „rozmawiajMY”, voucher 100 zł do Pijalni Czekolady, słodycze Wedel",
+   "purchase": false,
+   "rulesUrl": "https://czas-razem.wedel.pl/assets/download/regulamin-konkursu-Lubi9RW.pdf",
+   "start": "2026-10-01",
+   "task": "Wypełnij formularz na stronie i napisz (do 1000 znaków), z kim chcesz spędzić czas i dlaczego.",
+   "title": "„Czas razem” – E. Wedel",
+   "url": "https://czas-razem.wedel.pl/",
+   "verified": true,
+   "id": "wedel-czas-razem"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-10-29",
+   "note": "Po teście trzeba napisać recenzję",
+   "organizer": "wizaz.pl",
+   "prizes": "100 zestawów Eveline Cosmetics (ok. 340 zł)",
+   "purchase": false,
+   "start": "2026-10-27",
+   "task": "Wypełnij formularz zgłoszeniowy na Wizaz.pl; wybrane osoby dostaną zestaw kosmetyków do ust i oczu i opiszą je w recenzjach na Wizażu.",
+   "title": "Wizaż – 100 recenzentek makijażu Eveline Cosmetics",
+   "url": "https://wizaz.pl/klub-recenzentki/eveline-make-up-test-recenzentek",
+   "id": "wizaz-eveline"
+  },
+  {
+   "addedAt": "2026-10-28T07:37:02+01:00",
+   "end": "2026-10-31",
+   "note": "Tylko dla osób w wieku 40–55 lat. Suplementy na okres menopauzy; po teście trzeba napisać recenzję. Termin naboru niepotwierdzony na stronie.",
+   "organizer": "wizaz.pl",
+   "prizes": "50 zestawów Femiflamax (ok. 60 zł)",
+   "purchase": false,
+   "start": "2026-10-27",
+   "task": "Zgłoś chęć udziału w teście na Wizaz.pl; 50 wybranych osób dostanie zestawy suplementów do przetestowania i opisania na Wizażu.",
+   "title": "Wizaż – test suplementów Femiflamax",
+   "url": "https://wizaz.pl/klub-recenzentki/femiflamax-suplementy-test-recenzentek",
+   "id": "wizaz-femiflamax"
   },
   {
    "end": "2026-10-26",
@@ -858,6 +1238,22 @@
    "toBuy": "Chusteczki Dr. Beckmann Magic Leaves z oznaczeniem loterii",
    "url": "https://www.zlotylistekdrbeckmann.pl/",
    "id": "zloty-listek-rossmann"
+  },
+  {
+   "addedAt": "2026-10-27T07:37:11+01:00",
+   "end": "2026-12-20",
+   "minSpend": 1,
+   "note": "18+. Płatności z aplikacji banku podanej przy rejestracji",
+   "organizer": "Polski Standard Płatności (BLIK)",
+   "prizes": "4200 czeków BLIK po 1000 zł",
+   "purchase": true,
+   "shops": [],
+   "start": "2026-09-28",
+   "task": "Zarejestruj się na stronie, zrób płatność rejestracyjną 1 zł i płać BLIK-iem z tej samej aplikacji banku – wygrywają „szczęśliwe kwoty”.",
+   "title": "Loteria „Zwrotnica BLIKA” 2026",
+   "toBuy": "Dowolne płatności BLIK od 1 zł do 4999,99 zł",
+   "url": "https://www.zwrotnicablika.pl/",
+   "id": "zwrotnica-blika"
   }
  ]
 }
