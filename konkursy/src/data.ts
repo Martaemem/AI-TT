@@ -11,7 +11,12 @@ export type Contest = {
   prizes?: string;
   start?: string | null;
   end?: string | null;
-  purchase: boolean;
+  /** true = trzeba kupić, false = bez zakupu (potwierdzone), null = nie wiadomo – do sprawdzenia w regulaminie. */
+  purchase: boolean | null;
+  /** Sprawdzone w oficjalnym regulaminie lub na stronie organizatora. */
+  verified?: boolean;
+  /** Link do oficjalnego regulaminu. */
+  rulesUrl?: string;
   url: string;
   note?: string;
   addedAt?: string;
@@ -32,6 +37,8 @@ export type Entry = {
   shop?: string;
   /** Odhaczone na liście zakupów. */
   bought?: boolean;
+  /** Usunięte przez Martę z listy (można przywrócić). */
+  hidden?: boolean;
 };
 export type Mine = Record<string, Entry>;
 
@@ -114,7 +121,7 @@ export async function saveMine(mine: Mine): Promise<void> {
   }
 }
 
-export type Filters = { buy: 'all' | 'free' | 'buy'; status: 'todo' | 'later' | 'sent' | 'no' | 'all' };
+export type Filters = { buy: 'all' | 'free' | 'buy' | 'check'; status: 'todo' | 'later' | 'sent' | 'no' | 'all' | 'hidden' };
 
 export async function loadFilters(): Promise<Filters | null> {
   try {

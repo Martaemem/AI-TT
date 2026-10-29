@@ -25,7 +25,7 @@ export default function Shopping({ contests, mine, onPatch }: Props) {
   const relevant = useMemo(
     () =>
       contests.filter((c) => {
-        if (!c.purchase) return false;
+        if (c.purchase !== true || mine[c.id]?.hidden) return false;
         const n = daysLeft(c.end);
         if (n !== null && n < 0) return false;
         const st = mine[c.id]?.status;

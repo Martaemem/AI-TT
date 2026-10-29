@@ -117,7 +117,9 @@ function toContest(r: Raw): Contest | null {
     .trim();
   const all = `${r.title} ${desc}`;
   if (SOCIAL.test(all) || EXCLUDE.test(all)) return null;
-  const purchase = PURCHASE.test(all) && !NO_PURCHASE.test(all);
+  // Krótki opis z serwisu zbiorczego nie wystarcza, żeby uznać konkurs za „bez zakupu”.
+  // Zakup oznaczamy tylko, gdy opis wprost go wymaga; w pozostałych przypadkach: do sprawdzenia w regulaminie.
+  const purchase: boolean | null = PURCHASE.test(all) && !NO_PURCHASE.test(all) ? true : null;
   const shops = purchase ? SHOPS.filter(([, rx]) => rx.test(all)).map(([n]) => n) : [];
   // Podział na zdania z ochroną skrótów typu „min.”, „np.”
   const guarded = desc.replace(/\b(min|np|ok|tj|ul|godz|szt|op|in)\./gi, '$1§');
@@ -135,7 +137,8 @@ function toContest(r: Raw): Contest | null {
     end,
     purchase,
     url: `${BASE}/konkurs/${r.slug}`,
-    note: 'Znalezione wyszukiwaniem w aplikacji – sprawdź regulamin przed zgłoszeniem.',
+    note: 'Znalezione wyszukiwaniem w aplikacji, niesprawdzone w regulaminie. Przed zgłoszeniem sprawdź zakup, sposób zgłoszenia i czy nie trzeba publikować w mediach społecznościowych.',
+    verified: false,
     addedAt: new Date().toISOString(),
     shops,
     toBuy: purchase && buySentence ? (buySentence.length > 160 ? buySentence.slice(0, 157) + '…' : buySentence) : undefined,
@@ -162,7 +165,8 @@ export function sameContest(a: Contest, b: Contest): boolean {
 export async function loadFound(): Promise<Contest[]> {
   try {
     const raw = await AsyncStorage.getItem(FOUND_KEY);
-    return raw ? (JSON.parse(raw) as Contest[]) : [];
+    // Starsze wyniki wyszukiwania mogły być błędnie oznaczone jako „bez zakupu” – teraz są do sprawdzenia
+    return raw ? (JSON.parse(raw) as Contest[]).map((c) => ({ ...c, purchase: c.purchase === true ? true : null, verified: false })) : [];
   } catch {
     return [];
   }

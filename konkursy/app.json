@@ -2,7 +2,7 @@
   "expo": {
     "name": "Konkursownik",
     "slug": "konkursownik",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "scheme": "konkursownik",
@@ -17,7 +17,7 @@
       },
       "predictiveBackGestureEnabled": false,
       "package": "pl.aitt.konkursownik",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": ["POST_NOTIFICATIONS"]
     },
     "plugins": [

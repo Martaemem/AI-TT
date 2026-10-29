@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   ActivityIndicator,
+  Alert,
   FlatList,
   Linking,
   Pressable,
@@ -41,13 +42,19 @@ import { C, F } from './src/theme';
 
 const STATUS_LABEL: Record<Exclude<Status, ''>, string> = { sent: 'Wysłałam', later: 'Na później', no: 'Nie interesuje mnie' };
 const STATUS_COLOR: Record<Exclude<Status, ''>, string> = { sent: C.green, later: C.yellow, no: C.red };
-const BUY_OPTS: [Filters['buy'], string][] = [['all', 'Wszystkie'], ['free', 'Bez zakupu'], ['buy', 'Z zakupem']];
+const BUY_OPTS: [Filters['buy'], string][] = [
+  ['all', 'Wszystkie'],
+  ['free', 'Bez zakupu'],
+  ['buy', 'Z zakupem'],
+  ['check', 'Do sprawdzenia'],
+];
 const ST_OPTS: [Filters['status'], string][] = [
   ['todo', 'Do zrobienia'],
   ['later', 'Na później'],
   ['sent', 'Wysłane'],
   ['no', 'Nieinteresujące'],
   ['all', 'Wszystkie'],
+  ['hidden', 'Usunięte'],
 ];
 
 function Logo() {
@@ -74,11 +81,13 @@ function ContestCard({
   entry,
   onStatus,
   onSaveAnswer,
+  onHide,
 }: {
   c: Contest;
   entry?: Mine[string];
   onStatus: (id: string, s: Exclude<Status, ''>) => void;
   onSaveAnswer: (id: string, text: string) => void;
+  onHide: (id: string, hide: boolean) => void;
 }) {
   const status = entry?.status ?? '';
   const saved = entry?.answer ?? '';
@@ -96,9 +105,14 @@ function ContestCard({
     <View style={[styles.card, { borderLeftColor: stripe }, status === 'no' && { opacity: 0.6 }]}>
       <View style={styles.badges}>
         {isNew(c) && <Text style={[styles.badge, { backgroundColor: C.yellowSoft, color: C.yellowInk }]}>Nowy</Text>}
-        <Text style={[styles.badge, c.purchase ? { backgroundColor: C.blueSoft, color: C.blueInk } : { backgroundColor: C.greenSoft, color: C.greenInk }]}>
-          {c.purchase ? 'Z zakupem' : 'Bez zakupu'}
-        </Text>
+        {c.purchase === true ? (
+          <Text style={[styles.badge, { backgroundColor: C.blueSoft, color: C.blueInk }]}>Z zakupem</Text>
+        ) : c.purchase === false ? (
+          <Text style={[styles.badge, { backgroundColor: C.greenSoft, color: C.greenInk }]}>Bez zakupu</Text>
+        ) : (
+          <Text style={[styles.badge, { backgroundColor: C.yellowSoft, color: C.yellowInk }]}>Do sprawdzenia</Text>
+        )}
+        {c.verified && <Text style={[styles.badge, { backgroundColor: C.greenSoft, color: C.greenInk }]}>✓ Regulamin sprawdzony</Text>}
       </View>
       <Pressable onPress={() => Linking.openURL(c.url).catch(() => setMsg('Nie udało się otworzyć linku.'))} accessibilityRole="link">
         <Text style={styles.title}>
@@ -143,6 +157,18 @@ function ContestCard({
         </View>
       ) : null}
       {!!c.note && <Text style={styles.note}>{c.note}</Text>}
+      {!!c.rulesUrl && (
+        <Pressable onPress={() => Linking.openURL(c.rulesUrl!).catch(() => setMsg('Nie udało się otworzyć regulaminu.'))} style={styles.rules}>
+          <Ionicons name="document-text-outline" size={18} color={C.blueInk} />
+          <Text style={styles.rulesText}>Regulamin</Text>
+        </Pressable>
+      )}
+      {entry?.hidden && (
+        <Pressable onPress={() => onHide(c.id, false)} style={styles.restore}>
+          <Ionicons name="arrow-undo-outline" size={18} color="#FFFFFF" />
+          <Text style={styles.restoreText}>Przywróć na listę</Text>
+        </Pressable>
+      )}
       <View style={styles.acts}>
         {(Object.keys(STATUS_LABEL) as Exclude<Status, ''>[]).map((s) => {
           const on = status === s;
@@ -158,6 +184,12 @@ function ContestCard({
             </Pressable>
           );
         })}
+        {!entry?.hidden && (
+          <Pressable onPress={() => onHide(c.id, true)} style={styles.del} accessibilityRole="button" accessibilityLabel="Usuń z listy">
+            <Ionicons name="trash-outline" size={20} color={C.redInk} />
+            <Text style={styles.delText}>Usuń</Text>
+          </Pressable>
+        )}
       </View>
       <Pressable onPress={() => setOpen((o) => !o)} style={styles.ansToggle}>
         <Ionicons name={open ? 'chevron-up' : 'create-outline'} size={20} color={C.blueInk} />
@@ -322,12 +354,47 @@ function Root() {
     }
   };
 
+  const [undo, setUndo] = useState<{ ids: string[]; label: string } | null>(null);
+  const setHidden = (ids: string[], hide: boolean) => {
+    let next = { ...mineRef.current };
+    ids.forEach((id) => {
+      const cur = next[id] ?? { status: '' as Status, answer: '' };
+      next = { ...next, [id]: { ...cur, hidden: hide, updatedAt: new Date().toISOString() } };
+    });
+    update(next);
+  };
+  const onHide = (id: string, hide: boolean) => {
+    setHidden([id], hide);
+    if (hide) {
+      const t = contests.find((c) => c.id === id)?.title ?? 'konkurs';
+      setUndo({ ids: [id], label: `Usunięto „${t}”` });
+    } else setUndo(null);
+  };
+  const hideMany = (ids: string[]) => {
+    if (!ids.length) return;
+    Alert.alert('Usunąć z listy?', `Usunąć ${ids.length} konkursów widocznych teraz na liście? Znajdziesz je w filtrze „Usunięte”.`, [
+      { text: 'Anuluj', style: 'cancel' },
+      {
+        text: 'Usuń',
+        style: 'destructive',
+        onPress: () => {
+          setHidden(ids, true);
+          setUndo({ ids, label: `Usunięto ${ids.length} konkursów` });
+        },
+      },
+    ]);
+  };
+
   const setF = (f: Filters) => {
     setFilters(f);
     saveFilters(f);
   };
 
-  const active = useMemo(() => contests.filter((c) => { const n = daysLeft(c.end); return n === null || n >= 0; }), [contests]);
+  // Usunięte przez Martę nie liczą się nigdzie poza widokiem „Usunięte”
+  const active = useMemo(
+    () => contests.filter((c) => { const n = daysLeft(c.end); return (n === null || n >= 0) && !mine[c.id]?.hidden; }),
+    [contests, mine],
+  );
   const counts = useMemo(() => {
     const k = { todo: 0, later: 0, sent: 0, no: 0 };
     active.forEach((c) => {
@@ -337,18 +404,26 @@ function Root() {
     return k;
   }, [active, mine]);
   const newCount = useMemo(() => active.filter(isNew).length, [active]);
+  const hiddenCount = useMemo(() => contests.filter((c) => mine[c.id]?.hidden).length, [contests, mine]);
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
     return contests
       .filter((c) => {
         const st = mine[c.id]?.status || '';
+        const hidden = !!mine[c.id]?.hidden;
         const n = daysLeft(c.end);
-        if (!showOld && n !== null && n < 0) return false;
-        if (filters.buy === 'free' && c.purchase) return false;
-        if (filters.buy === 'buy' && !c.purchase) return false;
-        if (filters.status === 'todo' && st) return false;
-        if (filters.status !== 'todo' && filters.status !== 'all' && st !== filters.status) return false;
+        if (filters.status === 'hidden') {
+          if (!hidden) return false;
+        } else {
+          if (hidden) return false;
+          if (!showOld && n !== null && n < 0) return false;
+          if (filters.status === 'todo' && st) return false;
+          if (filters.status !== 'todo' && filters.status !== 'all' && st !== filters.status) return false;
+        }
+        if (filters.buy === 'free' && c.purchase !== false) return false;
+        if (filters.buy === 'buy' && c.purchase !== true) return false;
+        if (filters.buy === 'check' && c.purchase != null) return false;
         if (q && !`${c.title} ${c.organizer ?? ''} ${c.task ?? ''} ${c.prizes ?? ''}`.toLowerCase().includes(q)) return false;
         return true;
       })
@@ -458,6 +533,29 @@ function Root() {
           <Switch value={showOld} onValueChange={setShowOld} trackColor={{ true: C.blue, false: C.line }} thumbColor="#FFFFFF" />
           <Text style={styles.small}>Pokaż zakończone</Text>
         </View>
+        {filters.status !== 'hidden' && rows.length > 0 && (filters.status !== 'todo' || filters.buy !== 'all' || !!query.trim() || showOld) && (
+          <Pressable onPress={() => hideMany(rows.map((c) => c.id))} style={styles.bulk} accessibilityRole="button">
+            <Ionicons name="trash-outline" size={18} color={C.redInk} />
+            <Text style={styles.bulkText}>Usuń wszystkie widoczne ({rows.length})</Text>
+          </Pressable>
+        )}
+        {filters.status === 'hidden' && rows.length > 0 && (
+          <Pressable
+            onPress={() => {
+              setHidden(
+                rows.map((c) => c.id),
+                false,
+              );
+              setUndo(null);
+            }}
+            style={styles.bulk}
+            accessibilityRole="button"
+          >
+            <Ionicons name="arrow-undo-outline" size={18} color={C.blueInk} />
+            <Text style={[styles.bulkText, { color: C.blueInk }]}>Przywróć wszystkie ({rows.length})</Text>
+          </Pressable>
+        )}
+        {hiddenCount > 0 && filters.status !== 'hidden' && <Text style={styles.small}>Usunięte: {hiddenCount} (filtr „Usunięte” pozwala je przywrócić)</Text>}
       </View>
     </View>
   );
@@ -472,7 +570,7 @@ function Root() {
         contentContainerStyle={{ padding: 16, gap: 14, paddingBottom: 48 }}
         keyboardShouldPersistTaps="handled"
         refreshControl={<RefreshControl refreshing={refreshing} onRefresh={refresh} colors={[C.blue, C.red, C.yellow, C.green]} />}
-        renderItem={({ item }) => <ContestCard c={item} entry={mine[item.id]} onStatus={onStatus} onSaveAnswer={onSaveAnswer} />}
+        renderItem={({ item }) => <ContestCard c={item} entry={mine[item.id]} onStatus={onStatus} onSaveAnswer={onSaveAnswer} onHide={onHide} />}
         ListEmptyComponent={
           loading ? (
             <View style={styles.center}>
@@ -493,6 +591,26 @@ function Root() {
           </Text>
         }
       />
+      {undo && (
+        <View style={styles.undo}>
+          <Text style={styles.undoText} numberOfLines={2}>
+            {undo.label}
+          </Text>
+          <Pressable
+            onPress={() => {
+              setHidden(undo.ids, false);
+              setUndo(null);
+            }}
+            style={styles.undoBtn}
+            accessibilityRole="button"
+          >
+            <Text style={styles.undoBtnText}>Cofnij</Text>
+          </Pressable>
+          <Pressable onPress={() => setUndo(null)} accessibilityLabel="Zamknij">
+            <Ionicons name="close" size={22} color="#FFFFFF" />
+          </Pressable>
+        </View>
+      )}
     </SafeAreaView>
   );
 }
@@ -507,6 +625,31 @@ export default function App() {
 
 const styles = StyleSheet.create({
   center: { alignItems: 'center', justifyContent: 'center', gap: 10, padding: 24 },
+  rules: { flexDirection: 'row', alignItems: 'center', gap: 6, alignSelf: 'flex-start' },
+  rulesText: { fontFamily: F.heavy, fontSize: 15, color: C.blueInk, textDecorationLine: 'underline' },
+  restore: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, backgroundColor: C.blue, borderRadius: 10, paddingVertical: 10 },
+  restoreText: { fontFamily: F.heavy, fontSize: 15, color: '#FFFFFF' },
+  del: { flexDirection: 'row', alignItems: 'center', gap: 4, borderWidth: 1.5, borderColor: C.line, borderRadius: 10, paddingHorizontal: 12, paddingVertical: 9 },
+  delText: { fontFamily: F.bold, fontSize: 16, color: C.redInk },
+  bulk: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 6, borderWidth: 1.5, borderColor: C.line, borderRadius: 10, paddingVertical: 10, marginTop: 2 },
+  bulkText: { fontFamily: F.heavy, fontSize: 15, color: C.redInk },
+  undo: {
+    position: 'absolute',
+    left: 12,
+    right: 12,
+    bottom: 16,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    backgroundColor: C.text,
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    elevation: 6,
+  },
+  undoText: { flex: 1, fontFamily: F.bold, fontSize: 15, color: '#FFFFFF' },
+  undoBtn: { backgroundColor: C.yellow, borderRadius: 8, paddingHorizontal: 12, paddingVertical: 6 },
+  undoBtnText: { fontFamily: F.heavy, fontSize: 15, color: C.text },
   dot: { position: 'absolute', borderRadius: 999 },
   header: { flexDirection: 'row', alignItems: 'center', gap: 14 },
   h1: { fontFamily: F.heavy, fontSize: 30, color: C.text, lineHeight: 36 },
