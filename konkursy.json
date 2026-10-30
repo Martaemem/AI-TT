@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-29T07:39:12+01:00",
+ "updatedAt": "2026-10-30T07:39:18+01:00",
  "contests": [
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
@@ -34,6 +34,26 @@
    "toBuy": "Min. 1 promocyjny produkt Almette (z kodem pod wieczkiem)",
    "url": "https://www.almette.pl/loteria-2026/",
    "id": "almette-dom-z-natury"
+  },
+  {
+   "addedAt": "2026-10-30T07:39:18+01:00",
+   "end": "2026-11-05",
+   "minSpend": null,
+   "note": "18+. Także zakupy.biedronka.pl. Każde zgłoszenie = nowy paragon i inna odpowiedź. Zachowaj oryginał paragonu.",
+   "organizer": "Creative Ideas Marek Wojcieszyński / Hochland",
+   "prizes": "Voucher wakacje.pl 15 000 zł, 20 ekspresów AeroPress Go Plus z kubkiem",
+   "purchase": true,
+   "rulesUrl": "https://almettesmakiitalii.pl/docs/Regulamin_konkurs_ALMETTE-SMAKI-ITALII_Biedronka.pdf",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-10-29",
+   "task": "Kup 2 serki Almette SMAKI ITALII w Biedronce, zgłoś paragon w formularzu i zaproponuj nowy smak serii z uzasadnieniem (do 250 znaków).",
+   "title": "„Almette SMAKI ITALII” – Biedronka",
+   "toBuy": "2 serki Almette SMAKI ITALII 150 g (trufla lub czarny czosnek)",
+   "url": "https://almettesmakiitalii.pl/",
+   "verified": true,
+   "id": "almette-smaki-italii-biedronka"
   },
   {
    "end": "2026-11-29",
@@ -110,6 +130,26 @@
    "toBuy": "Dowolne zakupy (dane na odwrocie paragonu, paragon do urny)",
    "url": "https://www.e-konkursy.info/konkurs/jesienna-loteria-chata-polska",
    "id": "chata-polska"
+  },
+  {
+   "addedAt": "2026-10-30T07:39:18+01:00",
+   "end": "2026-11-11",
+   "minSpend": null,
+   "note": "18+ (16+ za zgodą opiekuna). Wymaga konta na platformie Joy i polskiego konta bankowego. Paragon fiskalny – jeden paragon na jedno zgłoszenie. Bez wzmianek o innych markach.",
+   "organizer": "Avanti / Frito Lay Poland (PepsiCo)",
+   "prizes": "5 × voucher Itaka 20 000 zł, 140 × 1000 zł, 700 × 100 zł (etapy dzienne)",
+   "purchase": true,
+   "rulesUrl": "https://www.joy-pepsico.eu/joypepsico-pl-prod/s3fs-public/coupons/Regulamin%20Biedronka%20CHEETOS%20x%20AVENGERS_FINAL.pdf",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-10-29",
+   "task": "Kup jednorazowo 2 opakowania Cheetos w Biedronce i na platformie Joy odpowiedz, jakie supermoce miałby Chester w Avengers (do 300 znaków).",
+   "title": "„Graj jak superbohater z Cheetos x Avengers” – Biedronka",
+   "toBuy": "2 opakowania Cheetos (dowolne) na jednym paragonie",
+   "url": "https://www.joy-pepsico.eu/pl-pl/brands/cheetos/promotions/super-cheetos",
+   "verified": true,
+   "id": "cheetos-avengers-biedronka"
   },
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
@@ -260,19 +300,6 @@
    "id": "esej-demokracja"
   },
   {
-   "addedAt": "2026-10-28T07:37:02+01:00",
-   "end": "2026-11-03",
-   "note": "Zgłoszenia do 3.11 godz. 12:00; pokaz w Warszawie – trzeba pojechać na miejsce",
-   "organizer": "Radio Eska",
-   "prizes": "10 podwójnych zaproszeń na przedpremierowy pokaz w Helios Warszawa (6.11)",
-   "purchase": false,
-   "start": "2026-10-27",
-   "task": "W formularzu oryginalnie odpowiedz, jaki jest sprawdzony sposób Twoich dzieci na nawiązywanie nowych przyjaźni.",
-   "title": "Eska – „Jesień w kinie” (pokaz LEGO Friends)",
-   "url": "https://musical.eska.pl/",
-   "id": "eska-lego-friends"
-  },
-  {
    "end": "2026-11-20",
    "minSpend": 69.99,
    "organizer": "2DM",
@@ -387,6 +414,26 @@
    "id": "g3ferrari-mistrz"
   },
   {
+   "addedAt": "2026-10-30T07:39:18+01:00",
+   "end": "2026-11-05",
+   "minSpend": null,
+   "note": "18+ (alkohol). Zakupy tylko do 3.11, zgłoszenia do 5.11. Wymaga Żappki z potwierdzonym wiekiem. Zakaz tekstów generowanych przez AI. Max 2 zgłoszenia dziennie.",
+   "organizer": "Smolar / Carlsberg Polska",
+   "prizes": "80 koszulek So Hard, 5 biletów na So Hard Birthday (Warszawa, 4.12)",
+   "purchase": true,
+   "rulesUrl": "https://www.konkursgarage.pl/regulaminy/Regulamin_konkursu_Garage-%28Zabka%29.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-10-28",
+   "task": "Kup 2 butelki Garage w Żabce z Żappką, odbierz kod i w formularzu wymyśl motyw przewodni wydarzenia So Hard z uzasadnieniem (do 300 znaków).",
+   "title": "„Garage So Hard” – Żabka",
+   "toBuy": "2 butelki Garage 8% 0,4 l (jedna transakcja, ze skanem Żappki)",
+   "url": "https://www.konkursgarage.pl/",
+   "verified": true,
+   "id": "garage-so-hard-zabka"
+  },
+  {
    "end": "2026-10-26",
    "organizer": "granice.pl",
    "prizes": "Książka",
@@ -407,6 +454,26 @@
    "title": "granice.pl – książka „Ukochane kości”",
    "url": "https://www.e-konkursy.info/konkurs/wygraj-ksiazke-ukochane-kosci",
    "id": "granice-ukochane-kosci"
+  },
+  {
+   "addedAt": "2026-10-30T07:39:18+01:00",
+   "end": "2026-11-12",
+   "minSpend": null,
+   "note": "18+. Zakupy 29.10–12.11; regulamin: konkurs trwa do 19.11 – zgłoś się najlepiej do 12.11. Tylko 1 zgłoszenie na osobę. Licencja wyłączna na odpowiedź.",
+   "organizer": "HAIRMATE Sp. z o.o.",
+   "prizes": "10 voucherów 1000 zł do salonów Hairmate, 100 zestawów kosmetyków (200 zł)",
+   "purchase": true,
+   "rulesUrl": "https://konkurs.hairmate.com/docs/regulamin.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-10-29",
+   "task": "Kup 2 produkty Hairmate w Rossmannie, wypełnij formularz na konkurs.hairmate.com i opisz swój najlepszy trik fryzjerski „Style like a PRO”.",
+   "title": "Hairmate „Style like a PRO” – Rossmann",
+   "toBuy": "2 produkty Hairmate (jeden paragon)",
+   "url": "https://konkurs.hairmate.com/",
+   "verified": true,
+   "id": "hairmate-style-like-a-pro-rossmann"
   },
   {
    "end": "2026-11-09",
@@ -460,14 +527,16 @@
   },
   {
    "end": "2026-11-30",
-   "note": "Trzeba pojechać do salonu.",
+   "note": "18+. Trzeba pojechać do salonu na jazdę testową. UWAGA: zgoda na kontakt marketingowy jest warunkiem udziału. Jedno zgłoszenie na osobę.",
    "organizer": "Hyundai Motor Poland",
-   "prizes": "Wg regulaminu",
+   "prizes": "3 × IONIQ 3 na ok. 12 miesięcy (z ubezpieczeniem), 33 vouchery 300 zł na akcesoria",
    "purchase": false,
+   "rulesUrl": "https://dmassets.hyundai.com/is/content/hyundaiautoever/Regulamin_konkurs_IONIQ+3pdf",
    "start": "2026-10-15",
-   "task": "Umów jazdę testową u dealera Hyundai i odbierz kod konkursowy.",
+   "task": "Odbądź jazdę testową IONIQ 3 u dealera Hyundai, zeskanuj otrzymany kod QR, wpisz numer zgłoszenia i odpowiedz na jedno z trzech pytań o IONIQ 3.",
    "title": "Hyundai – „IONIQ 3”",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-ioniq-3-to-wiecej-niz-wolnosc1",
+   "url": "https://www.hyundai.com/pl/pl/oferta/promocje/konkurs-ioniq-3.html",
+   "verified": true,
    "id": "hyundai-ioniq3"
   },
   {
@@ -605,6 +674,21 @@
    "id": "knorr-smakowite"
   },
   {
+   "addedAt": "2026-10-30T07:39:18+01:00",
+   "end": "2026-11-01",
+   "note": "Zgłoszenia do 1.11 godz. 20:00. Koncert w Krakowie – trzeba pojechać na miejsce. Dopisz: „Akceptuję regulamin konkursu oraz zapoznałem się z Obowiązkiem Administratora o przetwarzaniu danych osobowych”.",
+   "organizer": "Urząd Miasta Krakowa (krakow.pl)",
+   "prizes": "Podwójne zaproszenia na koncert 6.11, godz. 20:00",
+   "purchase": false,
+   "rulesUrl": null,
+   "start": "2026-10-30",
+   "task": "Wyślij e-mail na konkurs.mk@um.krakow.pl (temat: DONGURALESKO) z odpowiedzią, dlaczego to Ty powinieneś/powinnaś wygrać, i wymaganym oświadczeniem o akceptacji regulaminu.",
+   "title": "Kraków – bilety na koncert Donguralesko w Klubie Zaścianek",
+   "url": "https://krakow.pl/informacje/343693,1342,komunikat,wygraj_bilety_do_klubu_zascianek_.html",
+   "verified": true,
+   "id": "krakow-zascianek-donguralesko"
+  },
+  {
    "end": "2026-11-08",
    "minSpend": null,
    "organizer": "Smolar",
@@ -652,24 +736,30 @@
   },
   {
    "end": "2026-11-30",
-   "organizer": "Izba Adwokacka w Katowicach",
+   "note": "Pełna zdolność do czynności prawnych (18+). Formularz podpisany (e-podpis lub skan). Zwycięzca przenosi autorskie prawa majątkowe. Dowolna liczba projektów. Bez opłat.",
+   "organizer": "Okręgowa Rada Adwokacka w Katowicach",
    "prizes": "3 000 zł",
    "purchase": false,
+   "rulesUrl": "https://adwokatura.katowice.pl/wp-content/uploads/2026/10/Regulamin-Konkursu-na-Logo-Izby-Adwokackiej-w-Katowicach.pdf",
    "start": null,
-   "task": "Zaprojektuj logo izby (dla pełnoletnich).",
+   "task": "Zaprojektuj logo Izby Adwokackiej w Katowicach i wyślij PDF z formularzem na sekretariat@adwokatura.katowice.pl (temat: KONKURS NA LOGO).",
    "title": "Logo Izby Adwokackiej w Katowicach",
-   "url": "https://aktualnekonkursy.pl/ad/konkursy-plastyczne,4/konkurs-na-logo-izby-adwokackiej-w-katowicach,24822",
+   "url": "https://adwokatura.katowice.pl/konkurs-na-logo-izby-adwokackiej-w-katowicach/",
+   "verified": true,
    "id": "logo-adwokatura"
   },
   {
    "end": "2026-11-30",
-   "organizer": "Międzynarodowe Biennale Architektury Kraków",
+   "note": "18+, jeden projekt na osobę/zespół. AI dozwolone, ale trzeba zgłosić zakres użycia. Zwycięzca przenosi prawa majątkowe. Bez opłat.",
+   "organizer": "SARP Kraków",
    "prizes": "5 000 zł",
    "purchase": false,
+   "rulesUrl": "https://sarp.krakow.pl/wp-content/uploads/2026/10/MBA_KONKURS_REGULAMIN.pdf",
    "start": null,
-   "task": "Zaprojektuj znak graficzny biennale (dla pełnoletnich).",
+   "task": "Zaprojektuj logotyp i podstawową identyfikację Międzynarodowego Biennale Architektury Kraków 2027; plansza A3 w PDF na biuro@sarp.krakow.pl do 30.11, 23:00.",
    "title": "Logo Biennale Architektury MBA 2027",
-   "url": "https://aktualnekonkursy.pl/ad/konkursy-plastyczne,4/konkurs-na-logo-mba-2027,24825",
+   "url": "https://sarp.krakow.pl/2026/10/19/konkurs-na-logotyp-i-podstawowa-identyfikacje-wizualna-miedzynarodowego-biennale-architektury-krakow-2027/",
+   "verified": true,
    "id": "logo-mba"
   },
   {
@@ -737,13 +827,16 @@
   },
   {
    "end": "2026-11-29",
-   "organizer": "MediaMarkt",
-   "prizes": "BMW Z3 M i inne",
+   "note": "18+. Wymaga darmowego członkostwa w programie myMediaMarkt i aplikacji. Zgłoszenia do 29.11, 23:59. Zgłaszaj się wcześnie – są losowania tygodniowe.",
+   "organizer": "Grzegrzółka Loterie / MediaMarkt",
+   "prizes": "BMW Z3 M Roadster (ok. 225 tys. zł), cotygodniowe: iPhone 17, PS5, Switch 2, laptopy i inne",
    "purchase": false,
+   "rulesUrl": "https://assets.ctfassets.net/4lyxhctxrf55/6ggEfwUApTWLDJKNP5gLsq/9ae7aa4c509b8670e03f65f795b4f605/Regulamin_Loteria_MM_WJAZD_DO_APKI_final.pdf",
    "start": "2026-09-07",
-   "task": "Pobierz aplikację MediaMarkt i zgłoś się w loterii.",
+   "task": "W aplikacji myMediaMarkt kliknij baner loterii i wypełnij formularz (imię, nazwisko, e-mail, telefon, numer karty myMediaMarkt). Jedno zgłoszenie na osobę.",
    "title": "MediaMarkt – „Wjazd do Apki”",
-   "url": "https://loteriowo.pl/lotteries/loteria-mediamarkt-wjazd-do-apki-pobierz-aplikacje-i-wygrywaj__lEe96tw3c",
+   "url": "https://mediamarkt.pl/pl/campaign/loteria",
+   "verified": true,
    "id": "mediamarkt-apka"
   },
   {
@@ -882,25 +975,31 @@
   },
   {
    "end": "2026-11-30",
+   "note": "Dla wszystkich (dorośli też), udział bezpłatny, 1 praca na osobę/zespół. Wysyłka lub osobiście: Fundacja Natura i Sztuka, ul. Graniczna 28, 05-230 Kobyłka – praca musi dotrzeć do 30.11. Dołącz formularz, etykietę i opis. Ręcznie robiona, głównie z papieru.",
    "organizer": "Fundacja Natura i Sztuka",
    "prizes": "1 000 / 700 / 500 zł",
    "purchase": false,
+   "rulesUrl": "https://manufakturapapieruczerpanego.pl/wp-content/uploads/2026/10/REGULAMIN-KONKURSU-1.pdf",
    "start": null,
    "task": "Zrób papierową ozdobę choinkową (bez plastiku i gotowych elementów) i wyślij pocztą do Kobyłki.",
    "title": "„Mała rzecz, wielka radość” – ozdoba z papieru",
    "url": "https://manufakturapapieruczerpanego.pl/mala-rzecz-wielka-radosc-papierowa-zabawka-na-choinke-konkurs-z-cyklu-sztuka-papieru/",
+   "verified": true,
    "id": "ozdoba-papierowa"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-11-03",
+   "note": "Formularz na stronie (imię, nazwisko, e-mail, adres). Zgłoszenia do 3.11.",
    "organizer": "portalkryminalny.pl",
    "prizes": "5 egzemplarzy książki",
    "purchase": false,
+   "rulesUrl": "https://portalkryminalny.pl/podstrona/konkursowy-savoir-vivre",
    "start": "2026-10-26",
    "task": "Odpowiedz w formularzu, czy „Rostoły. Klątwa Wilczego Boru” to pierwsza opowieść o Rostołach.",
    "title": "portalkryminalny.pl – „Rostoły. Klątwa Wilczego Boru”",
    "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-z-rostolami",
+   "verified": true,
    "id": "portalkryminalny-rostoly"
   },
   {
@@ -920,7 +1019,7 @@
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-11-03",
-   "note": "Termin niejasny: artykuł podaje 3.11, serwis 26.11 – zgłoś się do 3.11",
+   "note": "18+ (16–18 za zgodą rodzica). Treść konkursu: do 3.11 (pasek boczny podaje 26.11 – zgłoś się do 3.11). Losowanie spośród poprawnych odpowiedzi. Regulamin na stronie konkursu.",
    "organizer": "portalmedialny.pl",
    "prizes": "1 egzemplarz książki Mileny Wójtowicz",
    "purchase": false,
@@ -928,17 +1027,20 @@
    "task": "Wypełnij formularz i podaj, ile lat temu Wisława Szymborska dostała Nagrodę Nobla.",
    "title": "portalmedialny.pl – „Jesteś jeszcze ty”",
    "url": "https://portalmedialny.pl/art/98026/jestes-jeszcze-ty-milena-wojtowicz.html/",
+   "verified": true,
    "id": "portalmedialny-jestes-jeszcze-ty"
   },
   {
    "end": "2026-11-19",
+   "note": "18+ (16–18 za zgodą rodzica). Udział bezpłatny, regulamin na stronie konkursu.",
    "organizer": "portalmedialny.pl",
    "prizes": "Książka",
    "purchase": false,
    "start": null,
-   "task": "Wykonaj zadanie konkursowe i wypełnij formularz zgłoszeniowy.",
+   "task": "Wypełnij formularz konkursowy i odpowiedz, ile lat temu odbyła się premiera filmu „Rejs” Marka Piwowskiego.",
    "title": "portalmedialny.pl – „Start-up i venture capital”",
-   "url": "https://www.e-konkursy.info/konkurs/wygraj-ksiazke-start-up-i-venture-capital-szymona-janiaka",
+   "url": "https://portalmedialny.pl/art/98177/start-up-i-venture-capital-co-nalezy-zrobic-by-skutecznie-pozyskac-finansowanie-dla-swojej-spoki-szymon-janiak.html/",
+   "verified": true,
    "id": "portalmedialny-startup"
   },
   {
@@ -1093,26 +1195,17 @@
   },
   {
    "end": "2026-11-20",
-   "note": "Konkurs na miejscu: 20.11, godz. 18:00.",
-   "organizer": "Biblioteka Oliwska, Gdańsk",
+   "note": "18+. Konkurs na miejscu: 20.11, 18:00, Biblioteka Oliwska (ul. Opata Rybińskiego 9). Wiersz własny, niepublikowany, w 3 egz. + formularz. Udział bezpłatny.",
+   "organizer": "WiMBP w Gdańsku – Biblioteka Oliwska / Gdański Klub Poetów",
    "prizes": "Pula 1 200 zł",
    "purchase": false,
+   "rulesUrl": "https://wbpg.org.pl/wp-content/uploads/2026/10/2026_49_Zal_1_do_Zarz.pdf",
    "start": null,
    "task": "Przeczytaj na żywo swój wiersz z min. dwoma słowami: strach, obawa, duch, zmora, przerażenie, groza, zjawa.",
    "title": "Konkurs poetycki „Strachy są wszędzie”",
-   "url": "https://aktualnekonkursy.pl/ad/konkursy-literackie,3/xv-otwarty-konkurs-poetycki-strachy-sa-wszedzie,24824",
+   "url": "https://wbpg.org.pl/wydarzenia/xv-otwarty-konkurs-poetycki-strachy-sa-wszedzie/",
+   "verified": true,
    "id": "strachy-gdansk"
-  },
-  {
-   "end": "2026-12-18",
-   "organizer": "MTG Kraków",
-   "prizes": "Grand Prix 30 000 zł",
-   "purchase": false,
-   "start": null,
-   "task": "Zgłoś pracę z zakresu sztuki graficznej.",
-   "title": "Międzynarodowe Triennale Grafiki 2027",
-   "url": "https://aktualnekonkursy.pl/ad/konkursy-plastyczne,4/miedzynarodowe-triennale-grafiki-2027,24831",
-   "id": "triennale-grafiki"
   },
   {
    "end": "2026-10-30",
@@ -1183,19 +1276,6 @@
    "title": "Wizaż – 100 recenzentek makijażu Eveline Cosmetics",
    "url": "https://wizaz.pl/klub-recenzentki/eveline-make-up-test-recenzentek",
    "id": "wizaz-eveline"
-  },
-  {
-   "addedAt": "2026-10-28T07:37:02+01:00",
-   "end": "2026-10-31",
-   "note": "Tylko dla osób w wieku 40–55 lat. Suplementy na okres menopauzy; po teście trzeba napisać recenzję. Termin naboru niepotwierdzony na stronie.",
-   "organizer": "wizaz.pl",
-   "prizes": "50 zestawów Femiflamax (ok. 60 zł)",
-   "purchase": false,
-   "start": "2026-10-27",
-   "task": "Zgłoś chęć udziału w teście na Wizaz.pl; 50 wybranych osób dostanie zestawy suplementów do przetestowania i opisania na Wizażu.",
-   "title": "Wizaż – test suplementów Femiflamax",
-   "url": "https://wizaz.pl/klub-recenzentki/femiflamax-suplementy-test-recenzentek",
-   "id": "wizaz-femiflamax"
   },
   {
    "end": "2026-10-26",
