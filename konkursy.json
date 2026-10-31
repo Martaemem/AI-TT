@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-30T07:39:18+01:00",
+ "updatedAt": "2026-10-31T07:41:10+01:00",
  "contests": [
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
@@ -201,17 +201,20 @@
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-04",
    "minSpend": null,
+   "note": "18+. Rossmann stacjonarnie lub rossmann.pl. Jeden paragon = jedno zgłoszenie; zachowaj oryginał paragonu.",
    "organizer": "Smolar",
    "prizes": "100 voucherów Slowhop po 1000 zł",
    "purchase": true,
+   "rulesUrl": "https://www.loteriaczystyswiat.pl/regulaminy/Regulamin_loterii_Czysty_swiat.pdf",
    "shops": [
     "Rossmann"
    ],
    "start": "2026-10-22",
    "task": "Kup w Rossmannie produkt promocyjny marek Henkla (m.in. Persil, Perwoll, Somat, Gliss, Taft, Schauma, Fa, Syoss) i zgłoś paragon na stronie loterii.",
    "title": "Loteria „Czysty świat” – Rossmann",
-   "toBuy": "1 produkt promocyjny Henkla (Persil, Perwoll, Somat, Gliss, Taft, Schauma, Fa, Syoss)",
+   "toBuy": "Min. 1 produkt marek Henkla: Persil, Perwoll, Silan, E, Clin, Bref, Somat, Pur, Gliss, Taft, Schauma, Fa, got2b, LIVE, Creme Supreme, Syoss",
    "url": "https://www.loteriaczystyswiat.pl/",
+   "verified": true,
    "id": "czysty-swiat-rossmann"
   },
   {
@@ -290,13 +293,16 @@
   },
   {
    "end": "2027-05-10",
+   "note": "Zakaz tekstów generowanych przez AI (wolno tylko do pisowni/formatowania). Jeden tekst na osobę. Dwa pliki PDF: esej z godłem + dane autora.",
    "organizer": "Fundacja na Rzecz Myślenia im. Barbary Skargi",
-   "prizes": "Nagrody pieniężne",
+   "prizes": "Laureat 30 000 zł + publikacja książkowa, finaliści po 15 000 zł",
    "purchase": false,
+   "rulesUrl": "https://barbaraskarga.org/content/regulamin",
    "start": "2026-10-01",
-   "task": "Napisz niepublikowany esej filozoficzny po polsku.",
+   "task": "Napisz niepublikowany esej filozoficzny po polsku „Dlaczego demokracja?” (2–8 arkuszy, czyli 80–320 tys. znaków) i wyślij anonimowo z godłem na konkurs@barbaraskarga.org.",
    "title": "Esej filozoficzny „Dlaczego demokracja?”",
-   "url": "https://www.e-konkursy.info/konkurs/vi-edycja-konkursu-na-esej-filozoficzny-dlaczego-demokracja",
+   "url": "https://barbaraskarga.org/content/ogloszenie_konkursu/fundacja-na-rzecz-myslenia-im-barbary-skargi-oglasza-konkurs-na-esej",
+   "verified": true,
    "id": "esej-demokracja"
   },
   {
@@ -385,10 +391,11 @@
   {
    "end": "2026-11-04",
    "minSpend": 35,
-   "note": "Zgłoszenie SMS – sprawdź koszt w regulaminie.",
+   "note": "18+. SMS na 4321 (koszt wg operatora) „czystadroga.nr paragonu.odpowiedź”, max 160 znaków. Każde 35 zł na jednym paragonie = 1 zgłoszenie.",
    "organizer": "Los Mejores",
-   "prizes": "Wg regulaminu",
+   "prizes": "Voucher podróżny 5000 zł, 12 walizek American Tourister, 40 bonów Intermarché 200 zł",
    "purchase": true,
+   "rulesUrl": "https://www.wyczyscnagrody.pl/akcje/108_Regulamin.pdf",
    "shops": [
     "Intermarché"
    ],
@@ -396,7 +403,8 @@
    "task": "Kup Finish i/lub Vanish za min. 35 zł, zachowaj paragon i opisz swoją czystą drogę do wygranej SMS-em.",
    "title": "„Czysta droga do wygranej” – Intermarché",
    "toBuy": "Finish i/lub Vanish",
-   "url": "https://www.e-konkursy.info/konkursy/konkursy-promocyjne",
+   "url": "https://www.wyczyscnagrody.pl/akcje/108.html",
+   "verified": true,
    "id": "finish-intermarche"
   },
   {
@@ -557,15 +565,42 @@
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2027-01-28",
-   "note": "Potrzebna aplikacja InPost Mobile",
+   "minSpend": null,
+   "note": "18+. Regulamin nie przewiduje bezpłatnej ścieżki – potrzebne InCoiny lub opłacony zakup. Aplikacja InPost Mobile.",
    "organizer": "Unique One / InPost",
    "prizes": "10 × MINI Cooper, ponad 10 mln nagród natychmiastowych (bony, AGD, smartwatche)",
-   "purchase": false,
+   "purchase": true,
+   "rulesUrl": "https://uniqueone.pl/wp-content/uploads/2026/10/REGULAMIN-LOTERII_promocyjnej-InPost_Ruszaj-tropem-nagrod.pdf",
+   "shops": [
+    "InPost"
+   ],
    "start": "2026-10-21",
    "task": "W aplikacji InPost Mobile wejdź w zakładkę „Nagrody” i zapisz się do loterii; wymieniaj InCoiny na InBoxy z nagrodami natychmiastowymi i zbieraj losy na samochody (m.in. za zakupy z asystentem w aplikacji).",
    "title": "Loteria InPost „Ruszaj tropem nagród”",
+   "toBuy": "InBox za 100 InCoinów (zdobywanych za usługi InPost, np. nadanie/odbiór paczki) albo opłacone zakupy w asystencie zakupowym w aplikacji",
    "url": "https://inpost.pl/loteria",
+   "verified": true,
    "id": "inpost-loteria"
+  },
+  {
+   "addedAt": "2026-10-31T07:41:10+01:00",
+   "end": "2026-11-04",
+   "minSpend": 35,
+   "note": "18+. SMS na 4321 (koszt wg operatora) „czysty.nr paragonu.odpowiedź”, max 160 znaków. Każde 35 zł = 1 zgłoszenie. Zachowaj paragon.",
+   "organizer": "Los Mejores",
+   "prizes": "5000 zł, 5 frytkownic Bosch, 10 bonów Intermarché 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.wyczyscnagrody.pl/akcje/109_Regulamin.pdf",
+   "shops": [
+    "Intermarché"
+   ],
+   "start": "2026-10-22",
+   "task": "Kup produkty Bryza, Woolite, Air Wick, Lovela lub Cillit Bang za min. 35 zł w Intermarché i wyślij SMS z odpowiedzią na pytanie „Jaki jest Twój czysty przepis na wygraną?”.",
+   "title": "„Czysty przepis na wygraną!” – Intermarché",
+   "toBuy": "Produkty Bryza, Woolite, Air Wick, Lovela i/lub Cillit Bang za min. 35 zł na jednym paragonie",
+   "url": "https://www.wyczyscnagrody.pl/akcje/109.html",
+   "verified": true,
+   "id": "intermarche-czysty-przepis"
   },
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
@@ -627,38 +662,6 @@
    "id": "kinder-bueno"
   },
   {
-   "end": "2026-11-01",
-   "minSpend": null,
-   "organizer": "Good Game",
-   "prizes": "Gwarantowany zwrot 5 zł, nagrody pieniężne i zestawy",
-   "purchase": true,
-   "shops": [
-    "Biedronka"
-   ],
-   "start": "2026-10-26",
-   "task": "Kup dwa batony KitKat w Biedronce, zachowaj paragon, zarejestruj się i odpowiedz na pytanie.",
-   "title": "„Wgryź się w jesień” – KitKat w Biedronce",
-   "toBuy": "2 batony KitKat",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-wgryz-sie-w-jesien-biedronka",
-   "id": "kitkat-biedronka"
-  },
-  {
-   "end": "2026-11-01",
-   "minSpend": null,
-   "organizer": "Storck",
-   "prizes": "3 × iPhone 18 Pro, 50 × karta 300 zł",
-   "purchase": true,
-   "shops": [
-    "Biedronka"
-   ],
-   "start": null,
-   "task": "Kup dwa batony Knoppers w Biedronce i dokończ zdanie: „Knoppers to mój sposób na przyjemność, kiedy…”.",
-   "title": "„Chrupnij i zgarniaj nagrody” – Knoppers w Biedronce",
-   "toBuy": "2 batony Knoppers",
-   "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
-   "id": "knoppers-biedronka"
-  },
-  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-10-31",
    "minSpend": null,
@@ -705,19 +708,22 @@
    "id": "krakus-auchan"
   },
   {
-   "end": "2026-10-31",
+   "end": "2026-11-14",
    "minSpend": null,
+   "note": "18+. Zakaz używania AI. Jeden paragon = jedno zgłoszenie, bez emotikonów.",
    "organizer": "Smolar",
-   "prizes": "Miksery, pieniądze, karty Biedronki",
+   "prizes": "3 × mikser KitchenAid, 5 × karta gerlach.pl 1000 zł, 50 × e-kod Biedronka 200 zł",
    "purchase": true,
+   "rulesUrl": "https://www.krakuswbiedronce.pl/regulaminy/Regulamin_konkursu_Krakus_%28Biedronka%29.pdf",
    "shops": [
     "Biedronka"
    ],
-   "start": "2026-10-26",
-   "task": "Kup min. 2 produkty Krakus w Biedronce, zachowaj paragon i zgłoś się na stronie akcji.",
+   "start": "2026-10-29",
+   "task": "Kup min. 2 produkty Krakus w Biedronce i opisz w formularzu, jak przygotowujesz swoją wyśmienitą ucztę z Krakus (max 300 znaków).",
    "title": "„Wyśmienita uczta” – Krakus w Biedronce",
    "toBuy": "Min. 2 produkty Krakus",
    "url": "https://www.krakuswbiedronce.pl/",
+   "verified": true,
    "id": "krakus-biedronka"
   },
   {
@@ -765,9 +771,11 @@
   {
    "end": "2026-11-05",
    "minSpend": 49,
+   "note": "18+. Hebe stacjonarnie lub hebe.pl. Odpowiedź do 300 znaków + zdjęcie paragonu. Nagroda to wyjazd na event w Warszawie 26.11.2026.",
    "organizer": "Columbit",
    "prizes": "20 × zaproszenie dla 2 osób do Warszawy z noclegiem + 400 zł",
    "purchase": true,
+   "rulesUrl": "https://columbit.nazwa.pl/regulaminy/2876_L'Oreal_konkurs-Hebe-regulamin.pdf",
    "shops": [
     "Hebe"
    ],
@@ -775,19 +783,42 @@
    "task": "Kup min. 2 produkty L’Oréal Paris za min. 49 zł w Hebe i opisz swój przedświąteczny rytuał piękna (do 300 znaków).",
    "title": "L’Oréal Paris Christmas Avenue – Hebe",
    "toBuy": "Min. 2 produkty L’Oréal Paris na jednym paragonie",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-loreal-paris-christmas-avenue-hebe",
+   "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-lorealparis-christmas-avenue",
+   "verified": true,
    "id": "loreal-hebe"
   },
   {
+   "addedAt": "2026-10-31T07:41:10+01:00",
+   "end": "2026-11-04",
+   "minSpend": null,
+   "note": "18+. Każde zgłoszenie = osobny paragon; zachowaj oryginał do 11.12.2026.",
+   "organizer": "Columbit",
+   "prizes": "Skuter Vespa Primavera 125, 10 × e-karta Hebe 500 zł, 100 zestawów kosmetyków",
+   "purchase": true,
+   "rulesUrl": "https://lorealeventy-pl.beauty-campaigns.com/uploads/media/b/6ab1308350205616762780.pdf",
+   "shops": [
+    "Hebe"
+   ],
+   "start": "2026-10-21",
+   "task": "Kup dowolny produkt L’Oréal Paris w Hebe i dokończ w formularzu zdanie „Moje laboratorium piękna to…” (max 300 znaków), dołączając zdjęcie paragonu.",
+   "title": "„Domowe laboratorium piękna” – L’Oréal Paris w Hebe",
+   "toBuy": "Min. 1 produkt L’Oréal Paris (sklep Hebe lub hebe.pl)",
+   "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-piekno-napedzane-sila-nauki",
+   "verified": true,
+   "id": "loreal-laboratorium-hebe"
+  },
+  {
    "end": "2027-02-28",
-   "note": "Wygrywają prace z największą liczbą głosów; edycje co miesiąc.",
+   "note": "18+ (niepełnoletni za zgodą opiekuna). Wygrywa 10+10 prac z największą liczbą głosów w każdej miesięcznej edycji (X 2026–II 2027). Dane mogą służyć marketingowi Lubelli – sprzeciw = rezygnacja z udziału.",
    "organizer": "Lubella",
    "prizes": "Pluszak z Twojego projektu, maskotki",
    "purchase": false,
+   "rulesUrl": "https://bawsieiodkrywaj.pl/regulamin.pdf",
    "start": "2026-10-05",
    "task": "Narysuj postać lub użyj generatora, nadaj jej imię i wyślij przez formularz.",
    "title": "Lubella – „Generator Płatko-Pluszaków”",
    "url": "https://bawsieiodkrywaj.pl/",
+   "verified": true,
    "id": "lubella-pluszaki"
   },
   {
@@ -911,24 +942,26 @@
   {
    "end": "2026-11-04",
    "minSpend": 15,
-   "note": "Zgłoszenie SMS – sprawdź koszt w regulaminie.",
+   "note": "18+. SMS na 4321 (koszt wg operatora), prefiks PLA, max 250 znaków. Zachowaj oryginał paragonu.",
    "organizer": "Albedo Marketing",
-   "prizes": "Wejściówki, nagrody pieniężne",
+   "prizes": "Bilety do parku Mandoria dla 4 osób, walizki Ochnik, e-kody Biedronka 100 zł",
    "purchase": true,
+   "rulesUrl": "https://regulaminy.albedomarketing.pl/storage/terms/uyOrMEeZgwgveGoGq9pz6W6ggHvHu8-metaUmVndWxhbWluIE9kIMWbbmlhZGFuaWEgZG8gd3lncmFuaWEgdyBzaWVjaSBCaWVkcm9ua2FfVEYucGRm-.pdf",
    "shops": [
     "Biedronka"
    ],
    "start": "2026-10-21",
    "task": "Kup płatki lub batony Nestlé za min. 15 zł w Biedronce i wyślij SMS z odpowiedzią: „Jak wygląda Twoje śniadanie?”",
    "title": "„Od śniadania do wygrania” – Nestlé w Biedronce",
-   "toBuy": "Płatki lub batony zbożowe Nestlé",
+   "toBuy": "Płatki śniadaniowe lub batony zbożowe Nestlé za min. 15 zł na jednym paragonie",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-od-sniadania-do-wygrania-biedronka",
+   "verified": true,
    "id": "nestle-biedronka"
   },
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
    "end": "2027-03-07",
-   "note": "Zgłoszenia na stowarzyszenie@arche.pl; JPG min. 3000 px krótszy bok",
+   "note": "Zgłoszenia na stowarzyszenie@arche.pl (lub link do dysku); max 3 obiekty, 3–5 zdjęć JPG min. 3000 px krótszy bok; karta zgłoszeniowa i umowa o prawa autorskie. Wyniki do 30.04.2027.",
    "organizer": "Stowarzyszenie Arche",
    "prizes": "Voucher na 3 noce dla 2 osób w hotelu Arche, wyróżnienia – 1 noc",
    "purchase": false,
@@ -936,7 +969,23 @@
    "task": "Sfotografuj do 3 zapomnianych, niszczejących zabytków (3–5 zdjęć każdego) i wyślij je mailem z formularzem zgłoszeniowym.",
    "title": "Konkurs fotograficzny „(Nie)zapomniane zabytki” – V edycja",
    "url": "https://stowarzyszenie.arche.pl/Podstrony/Konkurs-Niezapomniane-zabytki---konkurs-fotograficzny,582",
+   "verified": true,
    "id": "niezapomniane-zabytki"
+  },
+  {
+   "addedAt": "2026-10-31T07:41:10+01:00",
+   "end": "2026-11-13",
+   "note": "Zgłoszenia do 13.11 godz. 10:00. Trzeba odebrać nagrodę osobiście w redakcji w Świdnicy i pojechać na koncert. Zgoda na publikację danych zwycięzcy.",
+   "organizer": "swidnica24.pl",
+   "prizes": "2 × podwójne zaproszenie na koncert OMASTA (26.11.2026, Świdnica)",
+   "purchase": false,
+   "rulesUrl": "https://swidnica24.pl/regulamin-konkursow/",
+   "start": "2026-10-29",
+   "task": "Wyślij e-mail z tematem „Noce Jazzowe” na konkurs@swidnica24.pl i w kilku zdaniach napisz, dlaczego chcesz pójść na ten koncert (podaj imię, nazwisko, telefon).",
+   "title": "swidnica24.pl – zaproszenia na koncert OMASTA",
+   "url": "https://swidnica24.pl/2026/10/miedzy-jazzem-a-hip-hopem-omasta-zagra-na-33-swidnickich-nocach-jazzowych/",
+   "verified": true,
+   "id": "omasta-swidnica"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
@@ -988,6 +1037,21 @@
    "id": "ozdoba-papierowa"
   },
   {
+   "addedAt": "2026-10-31T07:41:10+01:00",
+   "end": "2026-11-11",
+   "note": "Formularz na stronie (imię, nazwisko, e-mail, telefon, adres). Bez publikacji w social media.",
+   "organizer": "portalkryminalny.pl",
+   "prizes": "10 egzemplarzy powieści „Po strzelbie” (Media Rodzina)",
+   "purchase": false,
+   "rulesUrl": "https://portalkryminalny.pl/podstrona/konkursowy-savoir-vivre",
+   "start": null,
+   "task": "Odpowiedz w formularzu na pytanie: przy jakim znanym polskim filmie Dariusz Gizak był konsultantem scenariusza i produkcji?",
+   "title": "portalkryminalny.pl – „Po strzelbie”",
+   "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-po-strzelbie",
+   "verified": true,
+   "id": "portalkryminalny-po-strzelbie"
+  },
+  {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-11-03",
    "note": "Formularz na stronie (imię, nazwisko, e-mail, adres). Zgłoszenia do 3.11.",
@@ -1029,6 +1093,20 @@
    "url": "https://portalmedialny.pl/art/98026/jestes-jeszcze-ty-milena-wojtowicz.html/",
    "verified": true,
    "id": "portalmedialny-jestes-jeszcze-ty"
+  },
+  {
+   "addedAt": "2026-10-31T07:41:10+01:00",
+   "end": "2026-11-03",
+   "note": "18+ (16–18 za zgodą rodzica). Udział bezpłatny, losowanie wśród poprawnych odpowiedzi. Regulamin na stronie konkursu.",
+   "organizer": "Obraz Dnia / portalmedialny.pl",
+   "prizes": "Książka „Powrót do Maple Tree” (Alison Sherlock)",
+   "purchase": false,
+   "start": null,
+   "task": "Kliknij „Biorę udział w konkursie”, wypełnij formularz i poprawnie odpowiedz na zadanie (podpowiedź w podlinkowanym artykule).",
+   "title": "portalmedialny.pl – „Powrót do Maple Tree”",
+   "url": "https://portalmedialny.pl/art/98025/powrot-do-maple-tree-alison-sherlock.html",
+   "verified": true,
+   "id": "portalmedialny-maple-tree"
   },
   {
    "end": "2026-11-19",
@@ -1078,17 +1156,20 @@
   {
    "end": "2026-11-03",
    "minSpend": null,
-   "organizer": "Aldi / Pringles",
+   "note": "18+. Jeden paragon = jedno zgłoszenie; zachowaj oryginał paragonu. Losowanie 6.11.2026.",
+   "organizer": "Smolar",
    "prizes": "Renault Clio, 5 × bon Orlen 850 zł",
    "purchase": true,
+   "rulesUrl": "https://chrupnij-auto.pl/regulaminy/Regulamin_Chrupnij_auto.pdf",
    "shops": [
     "Aldi"
    ],
-   "start": null,
-   "task": "Kup chipsy Pringles w Aldi i wypełnij formularz loterii.",
+   "start": "2026-10-19",
+   "task": "Kup min. 1 puszkę Pringles w Aldi i zgłoś numer paragonu w formularzu na stronie loterii.",
    "title": "„Chrupnij auto” – Pringles w Aldi",
-   "toBuy": "Chipsy Pringles",
-   "url": "https://aktualnekonkursy.pl/ad/konkursy-konsumenckie,2/chrupnij-auto-loteria-promocyjna-w-sklepach-aldi,24823",
+   "toBuy": "Min. 1 puszka Pringles (dowolny smak)",
+   "url": "https://chrupnij-auto.pl/",
+   "verified": true,
    "id": "pringles-aldi"
   },
   {
@@ -1239,14 +1320,16 @@
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
    "end": "2027-03-21",
-   "note": "Zgłoszenia na konkursmhn@pan.pl; zdjęcia muszą być z Warszawy",
-   "organizer": "Muzeum i Instytut Zoologii PAN / Polska Akademia Nauk",
-   "prizes": "Karty Empik o łącznej wartości 30 000 zł",
+   "note": "Zgłoszenia na konkursmhn@pan.pl (każde zdjęcie osobnym mailem). Zakaz fotomontażu i obrazów generowanych/uzupełnianych przez AI. Kategoria amatorzy/profesjonaliści. Licencja niewyłączna dla muzeum.",
+   "organizer": "Muzeum Historii Naturalnej PAN",
+   "prizes": "Karty Empik: 3000/2500/2000 zł w każdej z 4 kategorii (łącznie 30 000 zł)",
    "purchase": false,
+   "rulesUrl": "https://konkursmhn.pan.pl/dokumenty/Regulamin%20Konkursu%20Warszawa%20Naturalnie.pdf",
    "start": "2026-09-23",
    "task": "Wyślij mailem do 5 zdjęć przyrody zrobionych na terenie Warszawy (z lat 2023–2027) wraz z wymaganymi dokumentami.",
    "title": "Konkurs fotograficzny „Warszawa. Naturalnie”",
    "url": "https://konkursmhn.pan.pl/",
+   "verified": true,
    "id": "warszawa-naturalnie"
   },
   {
