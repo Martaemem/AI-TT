@@ -1,22 +1,24 @@
 {
- "updatedAt": "2026-10-31T07:41:10+01:00",
+ "updatedAt": "2026-11-01T07:52:00+01:00",
  "contests": [
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-11-08",
    "minSpend": 100,
-   "note": "Wymaga Allegro Smart! i zgłoszenia na stronie – losy sprzed zgłoszenia są nieaktywne",
+   "note": "18+; wymaga konta Allegro z aktywnym (płatnym) abonamentem Smart! i zgłoszenia na stronie – losy sprzed zgłoszenia są nieaktywne. Sprawdzone w komunikacie prasowym Allegro.",
    "organizer": "Allegro",
-   "prizes": "1 000 000 zł, iPhone’y, vouchery podróżne 10 000 zł, karty podarunkowe",
+   "prizes": "1 000 000 zł, 6 × voucher Allegro Wakacje 10 000 zł, 42 × iPhone Air, karty podarunkowe",
    "purchase": true,
+   "rulesUrl": "https://allegro.pl/regulaminy/regulamin-loterii-allegro-smart-2026-Bv33BwYG2sK",
    "shops": [
     "Allegro"
    ],
    "start": "2026-09-28",
-   "task": "Zgłoś się na stronie loterii, a potem rób zakupy z dostawą Smart! za min. 100 zł u jednego sprzedawcy, by zbierać losy.",
+   "task": "Jednorazowo zarejestruj się w loterii na koncie z aktywnym Smart!, a losy dostaniesz automatycznie za zamówienia Smart! od 100 zł u jednego sprzedającego (powyżej 150 zł – więcej losów).",
    "title": "Loteria Allegro Smart! 2026",
-   "toBuy": "Zakupy z dostawą Smart! za min. 100 zł w jednej transakcji",
+   "toBuy": "Zamówienie Smart! za min. 100 zł od jednego sprzedającego",
    "url": "https://allegro.pl/smart/loteria",
+   "verified": true,
    "id": "allegro-smart-loteria"
   },
   {
@@ -104,16 +106,39 @@
   {
    "end": "2026-11-16",
    "minSpend": null,
-   "organizer": "Bonduelle",
-   "prizes": "50 000 zł, garnki Tefal, 756 × 50 zł",
+   "note": "18+; jeden paragon = jedno zgłoszenie; nagrody godzinowe – zgłaszaj w godz. 8:00–20:00.",
+   "organizer": "Los Mejores (Bonduelle)",
+   "prizes": "50 000 zł, 36 × zestaw Tefal Ingenio, 756 × czek BLIK 50 zł",
    "purchase": true,
+   "rulesUrl": "https://bonduelle-lp26-admin-pl.b-cdn.net/api/homepage-uploads/file/Regulamin_Bonduelle_PL_51.pdf",
    "shops": [],
-   "start": null,
-   "task": "Kup dwa produkty Bonduelle i wypełnij formularz loterii.",
+   "start": "2026-09-15",
+   "task": "Kup min. 2 produkty Bonduelle, wypełnij formularz i wgraj zdjęcie paragonu.",
    "title": "„Postaw na dobre chwile” – Bonduelle",
-   "toBuy": "2 produkty Bonduelle",
-   "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie?start=10",
+   "toBuy": "Min. 2 produkty Bonduelle na jednym paragonie",
+   "url": "https://wygraj.bonduelle.pl/",
+   "verified": true,
    "id": "bonduelle"
+  },
+  {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "note": "Sprawdzone na oficjalnej stronie akcji (regulaminu PDF nie udało się odczytać – wiek i limit znaków niepotwierdzone); 1 zgłoszenie na osobę; potrzebny paragon, nie potwierdzenie zamówienia.",
+   "organizer": "Procter & Gamble",
+   "prizes": "4 × podwójne bilety F1 (2027), 50 × torba, 85 × czapka Audi F1",
+   "purchase": true,
+   "rulesUrl": "https://cdn-prd.pgjoltx.com/-/media/Growing-Families-Version1/GF-PL/2026/001---konkursy/braun-f1-mex-oct-nov26/TC/Regulamin-konkursuKup-wybrane-produkty-Braun-i-zyskaj-szanse-by-zobaczyc-Audi-Revolut-F1-Team-na-zyw.pdf?rev=6ec4246e813d4288b64d141952bb33b7",
+   "shops": [
+    "Media Expert"
+   ],
+   "start": "2026-10-16",
+   "task": "Kup w Media Expert wybraną golarkę lub trymer Braun, wgraj zdjęcie paragonu, podaj EAN i odpowiedz, na jaki legendarny moment będziesz gotowy dzięki Braun.",
+   "title": "Braun w Media Expert – bilety na Audi Revolut F1 Team",
+   "toBuy": "1 wybrana golarka lub trymer Braun (lista EAN na stronie)",
+   "url": "https://www.everydayme.pl/konkursy/braun-mediaexpert-2026",
+   "verified": true,
+   "id": "braun-media-expert-f1"
   },
   {
    "end": "2026-12-13",
@@ -166,6 +191,21 @@
    "toBuy": "Dowolny produkt Cirio",
    "url": "https://www.konkurscirio.pl/",
    "id": "cirio-gotowanie"
+  },
+  {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-12-31",
+   "note": "18+; zakaz AI; udział bezpłatny, ale w filmie musi być produkt Clinex Professional; wymagane konto na platformie; filmy trafiają do galerii na stronie organizatora; licencja wyłączna dla laureatów.",
+   "organizer": "AMTRA",
+   "prizes": "3 ekspresy De'Longhi, 7 × odkurzacz Kärcher, 12 × bon 200 zł (co tydzień)",
+   "purchase": false,
+   "rulesUrl": "https://konkurs.clinex.com.pl/regulamin-konkursu/",
+   "start": "2026-10-01",
+   "task": "Nagraj krótki film, jak sprzątasz z produktem Clinex Professional (miejsce, sposób użycia, efekt), i wgraj go na platformie konkursowej.",
+   "title": "„Wyzwanie Czystości” – Clinex Professional",
+   "url": "https://konkurs.clinex.com.pl/",
+   "verified": true,
+   "id": "clinex-wyzwanie-czystosci"
   },
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
@@ -221,18 +261,20 @@
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-18",
    "minSpend": 49,
-   "note": "Jedna zdrAPPka dziennie także za samo logowanie",
-   "organizer": "Delikatesy Centrum",
+   "note": "18+; wymagana aplikacja i Delikarta; zdrAPPka też za produkty partnerskie (od 10 zł) i 1 dziennie za logowanie; maks. 30 dziennie; wymagana zgoda na przekazanie informacji o wygranej do Eurocash Franczyza.",
+   "organizer": "Grzegrzółka Loterie (Delikatesy Centrum)",
    "prizes": "42 × Thermomix TM7, 4200 rabatów po 100 zł",
    "purchase": true,
+   "rulesUrl": "https://www.delikatesy.pl/regulamin-loterii-deszcz-prezentow",
    "shops": [
     "Delikatesy Centrum"
    ],
    "start": "2026-10-08",
    "task": "W aplikacji Delikatesy Centrum zbieraj wirtualne zdrAPPki – za każde 49 zł zakupów z Delikartą, za produkty partnerskie lub za codzienne logowanie – i zdrapuj je w aplikacji.",
-   "title": "„Jesienny deszcz prezentów” – Delikatesy Centrum",
+   "title": "„Jesienny deszcz świątecznych prezentów” – Delikatesy Centrum",
    "toBuy": "Zakupy z kartą Delikarta (zdrAPPka za każde 49 zł)",
    "url": "https://www.delikatesy.pl/loteria",
+   "verified": true,
    "id": "delikatesy-centrum-deszcz"
   },
   {
@@ -258,18 +300,41 @@
   {
    "end": "2026-11-12",
    "minSpend": 15,
+   "note": "18+; jeden paragon = jedno zgłoszenie; jedna nagroda na osobę.",
    "organizer": "Unilever",
-   "prizes": "Citroën C3, 320 × 100 zł na zakupy",
+   "prizes": "Citroën C3, 320 × bon Dino 100 zł",
    "purchase": true,
+   "rulesUrl": "https://promocjaunilever.pl/wp-content/themes/Intermarche/img/Unilever_Konkurs_KIerunek_Dobry_Smak_Dino.pdf",
    "shops": [
     "Dino"
    ],
-   "start": null,
-   "task": "Kup za min. 15 zł produkty Knorr, Hellmann’s, Amino, Tortex lub Namdong w Dino i dokończ zdanie: „Każda podróż smakuje lepiej, gdy…”.",
+   "start": "2026-10-12",
+   "task": "Kup w Dino produkty Knorr, Hellmann’s, Amino, Tortex lub Namdong za min. 15 zł i dokończ zdanie „Każda podróż smakuje lepiej, gdy…” (maks. 600 znaków).",
    "title": "„Kierunek dobry smak” – Dino",
    "toBuy": "Knorr, Hellmann’s, Amino, Tortex lub Namdong",
-   "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
+   "url": "https://promocjaunilever.pl/",
+   "verified": true,
    "id": "dino-dobry-smak"
+  },
+  {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-04",
+   "minSpend": null,
+   "note": "18+; jeden paragon = jedno zgłoszenie; zgoda marketingowa opcjonalna.",
+   "organizer": "SMOLAR (Unilever)",
+   "prizes": "3 × voucher Slowhop 2000 zł, 50 × e-karta Kaufland 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.promocjeunilever.pl/sites/f84433c1346533ce8b3e1ffd1e12ba8d/Regulamin%20-%20Poczuj%20jesienny%20chill!.pdf?6f14d0fea7df9941178d0a71fc02b85f=",
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-10-15",
+   "task": "Kup w Kauflandzie promocyjny produkt Dove lub Axe i dokończ zdanie „Czuję jesienny chill...” (maks. 300 znaków).",
+   "title": "„Poczuj jesienny chill!” – Dove i Axe w Kauflandzie",
+   "toBuy": "1 produkt: żel Dove 720 ml / Dove Men+Care 700 ml, dezodorant Dove 300 ml lub żel Axe 900 ml z pompką",
+   "url": "https://www.promocjeunilever.pl/jesiennychill",
+   "verified": true,
+   "id": "dove-axe-kaufland-chill"
   },
   {
    "addedAt": "2026-10-29T07:39:12+01:00",
@@ -308,17 +373,20 @@
   {
    "end": "2026-11-20",
    "minSpend": 69.99,
-   "organizer": "2DM",
-   "prizes": "Elektronika, kosmetyki",
+   "note": "18+; tylko jedno zgłoszenie na osobę; paragon do jednorazowego użycia.",
+   "organizer": "2DM (Merkury S.A.)",
+   "prizes": "iPhone 17 Pro, 3 × słuchawki JBL, 40 × powerbank Xiaomi + zestawy Essenherb",
    "purchase": true,
+   "rulesUrl": "https://www.essenherb.pl/regulamin.pdf",
    "shops": [
     "Hebe"
    ],
    "start": "2026-10-21",
-   "task": "Kup Essenherb za min. 69,99 zł w Hebe, zarejestruj paragon i odpowiedz na pytanie.",
+   "task": "Kup Essenherb za min. 69,99 zł w Hebe, wgraj paragon i odpowiedz, jaką energię chcesz obudzić w swojej skórze (maks. 700 znaków).",
    "title": "Essenherb w Hebe – „Obudź energię swojej skóry”",
    "toBuy": "Kosmetyki Essenherb",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-essenherb-w-hebe-obudz-energie-swojej-skory",
+   "url": "https://www.essenherb.pl/",
+   "verified": true,
    "id": "essenherb-hebe"
   },
   {
@@ -442,6 +510,24 @@
    "id": "garage-so-hard-zabka"
   },
   {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-12-23",
+   "minSpend": 15,
+   "note": "18+; wgrywasz zdjęcie paragonu; można zgłaszać się wielokrotnie z nowymi paragonami; zgody marketingowe opcjonalne.",
+   "organizer": "POLITAN (marka Gosia)",
+   "prizes": "20 × frytkownica Ninja",
+   "purchase": true,
+   "rulesUrl": "https://konkursgosia.pl/wp-content/uploads/2026/09/Regulamin-do-konkursu-swieta-bez-spiny-2026.pdf",
+   "shops": [],
+   "start": "2026-10-05",
+   "task": "Kup produkty Gosia za min. 15 zł na jednym paragonie i odpowiedz, jaki jest Twój patent na święta bez spiny (maks. 500 znaków).",
+   "title": "„Święta bez spiny? Mamy na to patent!” – Gosia",
+   "toBuy": "Dowolne produkty marki Gosia",
+   "url": "https://konkursgosia.pl/",
+   "verified": true,
+   "id": "gosia-swieta-bez-spiny"
+  },
+  {
    "end": "2026-10-26",
    "organizer": "granice.pl",
    "prizes": "Książka",
@@ -486,17 +572,20 @@
   {
    "end": "2026-11-09",
    "minSpend": null,
+   "note": "18+; tylko jedno zgłoszenie na osobę; produkty na jednym paragonie.",
    "organizer": "WebTalk",
-   "prizes": "Wejściówki, nagrody pieniężne",
+   "prizes": "50 × karta Cinema City Unlimited, 100 × karta Lidl 100 zł",
    "purchase": true,
+   "rulesUrl": "https://www.heinz.com/pl-PL/piekielnykonkurs/terms",
    "shops": [
     "Lidl"
    ],
    "start": "2026-10-19",
-   "task": "Kup min. 2 produkty Heinz w Lidlu, wgraj zdjęcie paragonu i napisz rymowane zaklęcie ożywiające nudną imprezę.",
+   "task": "Kup min. 2 produkty Heinz w Lidlu, wgraj zdjęcie paragonu i wymyśl rymowane zaklęcie ożywiające nudną halloweenową imprezę (maks. 250 znaków).",
    "title": "Piekielny Konkurs Heinz i Lidl",
    "toBuy": "2 produkty Heinz",
-   "url": "https://www.e-konkursy.info/konkurs/piekielny-konkurs-heinz-i-lidl-wgraj-paragon-i-wygraj1",
+   "url": "https://www.heinz.com/pl-PL/piekielnykonkurs",
+   "verified": true,
    "id": "heinz-lidl"
   },
   {
@@ -634,32 +723,21 @@
   {
    "end": "2026-11-18",
    "minSpend": 59,
-   "organizer": "Rossmann / Kimoco",
+   "note": "18+; zachowaj oryginał paragonu; jeden paragon = jedno zgłoszenie; losowanie 20.11.2026.",
+   "organizer": "SMOLAR (Kimoco)",
    "prizes": "Hyundai Kona, 10 × Galaxy Z Flip8, 20 × Galaxy Watch8",
    "purchase": true,
+   "rulesUrl": "https://loteriakimoco.smolar.pl/regulaminy/Regulamin_loterii_Kimoco_Korean_Power.pdf",
    "shops": [
     "Rossmann"
    ],
-   "start": null,
-   "task": "Kup produkty Kimoco za min. 59 zł w Rossmannie i wypełnij formularz loterii.",
+   "start": "2026-10-15",
+   "task": "Kup produkty Kimoco za min. 59 zł na jednym paragonie w Rossmannie (także rossmann.pl) i zarejestruj paragon w formularzu loterii.",
    "title": "„Korean power” – Kimoco w Rossmannie",
    "toBuy": "Kosmetyki Kimoco",
-   "url": "https://aktualnekonkursy.pl/ad/konkursy-konsumenckie,2/korean-power-loteria-promocyjna-w-drogeriach-rossmann,24832",
+   "url": "https://loteriakimoco.smolar.pl/",
+   "verified": true,
    "id": "kimoco-rossmann"
-  },
-  {
-   "end": "2026-11-08",
-   "minSpend": null,
-   "organizer": "Ferrero",
-   "prizes": "50 × voucher wakacje.pl 10 000 zł, bony Douglas, 50 zł",
-   "purchase": true,
-   "shops": [],
-   "start": null,
-   "task": "Kup Kinder Bueno w opakowaniu z informacją o loterii i wypełnij formularz.",
-   "title": "„Spraw, by chwila była bueno” – Kinder Bueno",
-   "toBuy": "Kinder Bueno w opakowaniu z informacją o loterii",
-   "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie?start=10",
-   "id": "kinder-bueno"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
@@ -694,17 +772,20 @@
   {
    "end": "2026-11-08",
    "minSpend": null,
-   "organizer": "Smolar",
-   "prizes": "Robot KitchenAid",
+   "note": "18+; zakaz AI; jeden paragon = jedno zgłoszenie (zachowaj oryginał); jedna nagroda na osobę/gospodarstwo.",
+   "organizer": "SMOLAR (Animex Foods)",
+   "prizes": "5 × robot KitchenAid, 10 × blender KitchenAid",
    "purchase": true,
+   "rulesUrl": "https://www.smolar.pl/sites/default/files/regulamin_konkursu_parowki_krakus_auchan.pdf",
    "shops": [
     "Auchan"
    ],
    "start": "2026-10-22",
-   "task": "Kup min. 2 opakowania parówek Krakus Selection w Auchan, zachowaj paragon i odpowiedz na pytanie.",
+   "task": "Kup min. 2 opakowania parówek Krakus w Auchan i napisz, jak je przyrządzasz, by zasłużyły na koronę (maks. 300 znaków, bez emotikon).",
    "title": "„Parówki godne królewskiego stołu!” – Auchan",
-   "toBuy": "2 opakowania parówek Krakus Selection",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-parowki-godne-krolewskiego-stolu-auchan",
+   "toBuy": "Min. 2 opakowania parówek Krakus na jednym paragonie",
+   "url": "https://www.konkurskrakus.pl",
+   "verified": true,
    "id": "krakus-auchan"
   },
   {
@@ -729,15 +810,18 @@
   {
    "end": "2026-11-15",
    "minSpend": null,
-   "organizer": "Lajkonik",
+   "note": "18+ (mimo nazwy „Junior”); wymagane konto Paczka Lorenz; jeden paragon = jedno zgłoszenie.",
+   "organizer": "NOFSZA (Lorenz)",
    "prizes": "50 000 zł, 9 × 3 000 zł, 504 × 100 zł",
    "purchase": true,
+   "rulesUrl": "https://paczkalorenz.pl/wp-content/uploads/2026/07/Regulamin_LOTERIA_LAJKONIK_JUNIOR.pdf",
    "shops": [],
-   "start": null,
-   "task": "Kup dwa produkty Lajkonik i wypełnij formularz loterii.",
-   "title": "Loteria Lajkonik",
-   "toBuy": "2 produkty Lajkonik",
-   "url": "https://aktualnekonkursy.pl/?start=80",
+   "start": "2026-08-17",
+   "task": "Kup min. 2 produkty Lajkonik, zaloguj się na konto Paczka Lorenz, zarejestruj paragon (numer, data, zdjęcie) i odkryj e-zdrapkę.",
+   "title": "Loteria Lajkonik Junior",
+   "toBuy": "Min. 2 produkty Lajkonik na jednym paragonie",
+   "url": "https://paczkalorenz.pl/loterialajkonikjunior",
+   "verified": true,
    "id": "lajkonik"
   },
   {
@@ -808,6 +892,26 @@
    "id": "loreal-laboratorium-hebe"
   },
   {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-05",
+   "minSpend": 12,
+   "note": "18+; zakaz AI; jeden paragon = jedno zgłoszenie, zachowaj oryginał; sprzeciw wobec marketingu Maspexu oznacza rezygnację z udziału.",
+   "organizer": "Amooco (MW Food / Maspex)",
+   "prizes": "3 × Thermomix TM7, 30 × bon Kaufland 500 zł",
+   "purchase": true,
+   "rulesUrl": "https://smaczniezlubella.pl/pliki/regulamin.pdf",
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-10-16",
+   "task": "Kup w Kauflandzie produkty Lubella lub Łowicz za min. 12 zł i opisz swój sposób na szybki rodzinny obiad (maks. 1000 znaków).",
+   "title": "„Szybko! Smacznie! Obiadowo!” – Lubella i Łowicz w Kauflandzie",
+   "toBuy": "Produkty promocyjne Lubella/Łowicz (lista w regulaminie)",
+   "url": "https://smaczniezlubella.pl/",
+   "verified": true,
+   "id": "lubella-kaufland-obiadowo"
+  },
+  {
    "end": "2027-02-28",
    "note": "18+ (niepełnoletni za zgodą opiekuna). Wygrywa 10+10 prac z największą liczbą głosów w każdej miesięcznej edycji (X 2026–II 2027). Dane mogą służyć marketingowi Lubelli – sprzeciw = rezygnacja z udziału.",
    "organizer": "Lubella",
@@ -869,6 +973,26 @@
    "url": "https://mediamarkt.pl/pl/campaign/loteria",
    "verified": true,
    "id": "mediamarkt-apka"
+  },
+  {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "note": "18+; zgłoszenia od 2.11 od 11:00; jeden paragon = jedno zgłoszenie; zachowaj oryginał paragonu do 26.03.2027; liczą się też zakupy.biedronka.pl i Biek Express.",
+   "organizer": "SMOLAR (Milka / Mondelez)",
+   "prizes": "100 000 zł, 10 × AirPods Max, 20 × kubek Stanley",
+   "purchase": true,
+   "rulesUrl": "https://loteriamilka.pl/regulaminy/Regulamin_loterii_Mmmax_wygrana_Milka_%28Biedronka%29.pdf",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup w Biedronce min. 2 czekolady Milka w jednej transakcji, w tym min. 1 Milka Mmmax Biscoff, i zarejestruj paragon w formularzu loterii.",
+   "title": "„Mmmax wygrana” – Milka w Biedronce",
+   "toBuy": "Min. 2 czekolady Milka, w tym min. 1 Milka Mmmax Biscoff",
+   "url": "https://loteriamilka.pl/",
+   "verified": true,
+   "id": "milka-biedronka-mmmax"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
@@ -991,18 +1115,41 @@
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-08",
    "minSpend": null,
+   "note": "18+; zakaz AI; jeden paragon = jedno zgłoszenie, zachowaj paragon do 31.12.2026; liczy się też sklep onedaymore.pl.",
    "organizer": "OneDayMore",
    "prizes": "3 airfryery dwukomorowe, 5 airfryerów, 15 zestawów OneDayMore",
    "purchase": true,
+   "rulesUrl": "https://onedaymore.pl/wp-content/uploads/2026/10/Regulamin-konkursu-LidlxOneDayMore-ODMien-swoje-poranki.pdf",
    "shops": [
     "Lidl"
    ],
    "start": "2026-10-26",
-   "task": "Kup owsiankę OneDayMore do airfryera w Lidlu, zachowaj paragon i odpowiedz na stronie konkursu, jak owsianka z airfryera i sprzęt z Lidla odmienią Twoje jesienne poranki.",
+   "task": "Kup Owsiankę AirFryer OneDayMore w Lidlu i odpowiedz, jak owsianka i sprzęt z Lidla odmienią Twoje jesienne poranki (maks. 500 znaków).",
    "title": "„Odmień swoje poranki” – OneDayMore w Lidlu",
-   "toBuy": "Owsianka OneDayMore do airfryera",
+   "toBuy": "Min. 1 Owsianka AirFryer OneDayMore",
    "url": "https://onedaymore.pl/konkurs",
+   "verified": true,
    "id": "onedaymore-lidl"
+  },
+  {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-11",
+   "minSpend": null,
+   "note": "18+; tylko oponeo.pl; zwrot zakupu = utrata nagrody.",
+   "organizer": "Oponeo.pl",
+   "prizes": "E-karty Morele: 5 × 1500 zł, 10 × 1000 zł, 25 × 500 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.oponeo.pl/ndcr/files/campaign/Regulamin-1348.pdf",
+   "shops": [
+    "Oponeo"
+   ],
+   "start": "2026-10-14",
+   "task": "Kup w Oponeo komplet 4 opon Bridgestone Blizzak 6 (min. 17\") i napisz, dokąd zabierzesz bliskich tej zimy (min. 160 znaków).",
+   "title": "Bridgestone Blizzak 6 w Oponeo",
+   "toBuy": "4 opony Bridgestone Blizzak 6, min. 17\", w jednej transakcji",
+   "url": "https://www.oponeo.pl/konkurs-bridgestone",
+   "verified": true,
+   "id": "oponeo-bridgestone-blizzak"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
@@ -1206,12 +1353,32 @@
    "id": "purina-gourmet"
   },
   {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-15",
+   "minSpend": null,
+   "note": "18+; zakaz AI; dowolny sklep w PL oprócz Notino; jeden paragon = jedno zgłoszenie; zachowaj paragon do 12.02.2027.",
+   "organizer": "Addicters (Coty)",
+   "prizes": "10 000 zł na karcie, 40 × walizka + kosmetyczka, 60 × zestaw Rimmel",
+   "purchase": true,
+   "rulesUrl": "https://www.konkursrimmel.pl/assets/regulamin.pdf",
+   "shops": [],
+   "start": "2026-10-15",
+   "task": "Kup podkład Rimmel Multitasker Blur Booster i min. 1 inny kosmetyk Rimmel w jednej transakcji, potem odpowiedz, co sprawia, że jesteś multitaskerką (maks. 1000 znaków).",
+   "title": "„Multitaskerki Rimmel w akcji”",
+   "toBuy": "Rimmel Multitasker Blur Booster + min. 1 inny produkt Rimmel",
+   "url": "https://www.konkursrimmel.pl/",
+   "verified": true,
+   "id": "rimmel-multitaskerki"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-15",
    "minSpend": 15,
+   "note": "18+; min. 15 zł po rabatach na jednym paragonie; zachowaj oryginał paragonu; jeden paragon = jedno zgłoszenie.",
    "organizer": "Serenada",
    "prizes": "8 zestawów AGD Bosch/Siemens, 56 frytkownic Bosch",
    "purchase": true,
+   "rulesUrl": "https://serdecznamoc.pl/regulaminy/Regulamin_loterii_Serenada_2026.pdf",
    "shops": [
     "Carrefour"
    ],
@@ -1220,6 +1387,7 @@
    "title": "Serenada – „Podwójna MOC SERdeczności!” w Carrefourze",
    "toBuy": "Sery Serenada lub Skarby Serowara (jeden paragon)",
    "url": "https://www.serdecznamoc.pl/",
+   "verified": true,
    "id": "serenada-carrefour"
   },
   {
@@ -1303,6 +1471,21 @@
    "id": "twix-doppelgamer"
   },
   {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-01",
+   "note": "Kończy się dziś o 23:59; 18+; bez zakupu; maks. 1 nagroda na osobę.",
+   "organizer": "Agencja Graf (Podravka Polska)",
+   "prizes": "KitchenAid Artisan, 3 × Philips Air Fryer, 5 × Garmin Venu 3",
+   "purchase": false,
+   "rulesUrl": "https://vegeta.com/pl/regulamin-konkursu-pod-nazwa/",
+   "start": "2026-09-28",
+   "task": "W formularzu opisz kreatywny pomysł na danie z Vegetą (maks. 300 znaków).",
+   "title": "„Oryginalna Vegeta do wszystkiego najlepszego”",
+   "url": "https://vegeta.com/pl/zawsze-oryginalna-zawsze-vegeta/",
+   "verified": true,
+   "id": "vegeta-do-wszystkiego"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-10-31",
    "note": "18+. Udział bezpłatny, bez zakupu – kod dostajesz za min. 100 pkt w grze na stronie. Zgłoszenia do 31.10, codziennie 00:00–23:59.",
@@ -1370,6 +1553,21 @@
    "title": "Wizaż – recenzentka Nivelium PRO",
    "url": "https://www.e-konkursy.info/konkurs/konkurs-zostan-recenzentka-i-przetestuj-zestawy-kosmetykow-nivelium-pro",
    "id": "wizaz-nivelium"
+  },
+  {
+   "addedAt": "2026-11-01T07:50:00+01:00",
+   "end": "2026-11-04",
+   "note": "Zgłoszenia do 4.11 do 9:00; trzeba pojechać na koncert do Wrocławia (5.11, 19:00); wygrywa pierwsza i ostatnia poprawna odpowiedź; wygrana na wroclaw.pl maks. raz na 30 dni.",
+   "organizer": "Agencja Rozwoju Aglomeracji Wrocławskiej (wroclaw.pl)",
+   "prizes": "2 × podwójne zaproszenie na koncert 5.11.2026 we Wrocławiu",
+   "purchase": false,
+   "rulesUrl": "https://www.wroclaw.pl/dla-mieszkanca/ogolny-regulamin-konkursow-prowadznych-na-portalu-wroclawpl",
+   "start": "2026-10-29",
+   "task": "W formularzu podaj nazwisko min. jednego słynnego kompozytora, który występował w Oratorium Marianum.",
+   "title": "wroclaw.pl – zaproszenia na koncert Wrocław Baroque Ensemble",
+   "url": "https://www.wroclaw.pl/dla-mieszkanca/koncert-wroclaw-baroque-ensemble-oratorium-marianum-zaproszenia-konkurs",
+   "verified": true,
+   "id": "wroclaw-baroque-zaproszenia"
   },
   {
    "end": "2026-11-30",
