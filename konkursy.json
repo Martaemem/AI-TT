@@ -1,6 +1,24 @@
 {
- "updatedAt": "2026-11-02T07:43:19+01:00",
+ "updatedAt": "2026-11-03T07:39:14+01:00",
  "contests": [
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2027-04-30",
+   "minSpend": null,
+   "note": "18+; zachowaj oryginalny paragon (zdjęcie musi pokazać nazwę i NIP sklepu, nr paragonu, produkt); kilka produktów na jednym paragonie = 1 zgłoszenie.",
+   "organizer": "NAV agency (dla Danone)",
+   "prizes": "6 × wyjazd dla 4 osób do Minecraft Experience (Dania), 26 × pad Xbox, 2000 × pluszak Minecraft",
+   "purchase": true,
+   "rulesUrl": "https://loteriaactimel.pl/assets/regulamin.pdf",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup dowolny produkt Actimel, wgraj zdjęcie paragonu na stronie loterii i podaj telefon oraz e-mail. Każdy paragon to jedno zgłoszenie.",
+   "title": "Loteria „Actimel x Minecraft”",
+   "toBuy": "1 dowolny produkt Actimel",
+   "url": "https://loteriaactimel.pl/",
+   "verified": true,
+   "id": "actimel-minecraft"
+  },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-11-08",
@@ -95,15 +113,18 @@
   {
    "end": "2026-12-23",
    "minSpend": null,
-   "organizer": "Beskidzkie",
-   "prizes": "3 × 50 000 zł, bluzy, koszulki",
+   "note": "18+; zachowaj oryginalny paragon; jeden paragon = jedno zgłoszenie; maks. 2 nagrody natychmiastowe na osobę.",
+   "organizer": "Hagen (dla Aksam)",
+   "prizes": "3 × 50 000 zł, 840 × bluza lub zestaw koszulka + skarpetki",
    "purchase": true,
+   "rulesUrl": "https://chrupomania.pl/public/regulamin.pdf",
    "shops": [],
-   "start": null,
-   "task": "Kup dwa opakowania przekąsek Beskidzkie i wypełnij formularz loterii.",
-   "title": "Loteria Beskidzkie",
-   "toBuy": "2 opakowania przekąsek Beskidzkie",
-   "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
+   "start": "2026-10-01",
+   "task": "Kup 2 przekąski Beskidzkie na jednym paragonie, wypełnij formularz na chrupomania.pl (z NIP sklepu) i wgraj zdjęcie paragonu.",
+   "title": "Loteria Beskidzkie „CHRUPomania”",
+   "toBuy": "2 produkty promocyjne Beskidzkie Przekąski na jednym paragonie",
+   "url": "https://chrupomania.pl/",
+   "verified": true,
    "id": "beskidzkie"
   },
   {
@@ -528,20 +549,6 @@
    "id": "finish-intermarche"
   },
   {
-   "end": "2027-01-15",
-   "minSpend": null,
-   "organizer": "kulinarnewyzwaniemistrza.pl",
-   "prizes": "Sprzęt AGD, gadżety",
-   "purchase": true,
-   "shops": [],
-   "start": "2026-10-22",
-   "task": "Kup wybrany produkt G3 Ferrari, zgłoś zakup i podziel się przepisem inspirowanym kuchnią włoską.",
-   "title": "Kulinarne Wyzwanie Mistrza 3 – G3 Ferrari",
-   "toBuy": "1 wybrany produkt G3 Ferrari",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-kulinarne-wyzwanie-mistrza-3",
-   "id": "g3ferrari-mistrz"
-  },
-  {
    "addedAt": "2026-10-30T07:39:18+01:00",
    "end": "2026-11-05",
    "minSpend": null,
@@ -794,15 +801,18 @@
   {
    "end": "2027-03-31",
    "minSpend": null,
-   "organizer": "Kasia",
+   "note": "18+; co tydzień 1 mikser KitchenAid; zachowaj oryginalny paragon; jeden paragon = jedno zgłoszenie; zgłoszenie po godzinie zakupu.",
+   "organizer": "Smolar (dla Flora Food Poland)",
    "prizes": "26 × mikser KitchenAid",
    "purchase": true,
+   "rulesUrl": "https://loteriakasia.smolar.pl/regulaminy/Regulamin_loterii_Loteria_Kasia.pdf",
    "shops": [],
-   "start": null,
-   "task": "Kup dwa produkty marki Kasia i wypełnij formularz loterii.",
+   "start": "2026-10-01",
+   "task": "Kup jednorazowo min. 2 produkty Kasia (Kasia, Kasia Crema 15% lub 31%) i zarejestruj paragon w formularzu na mojeciasto.pl.",
    "title": "Loteria Kasia 2026/2027",
-   "toBuy": "2 produkty marki Kasia",
-   "url": "https://aktualnekonkursy.pl/konkursy-konsumenckie",
+   "toBuy": "2 produkty Kasia na jednym paragonie",
+   "url": "https://www.mojeciasto.pl/loteria",
+   "verified": true,
    "id": "kasia-2026"
   },
   {
@@ -838,6 +848,26 @@
    "toBuy": "2 produkty Knorr: Nudle, Danie w kubku lub Gorący Kubek",
    "url": "https://www.promocjeunilever.pl/knorr",
    "id": "knorr-smakowite"
+  },
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2026-11-14",
+   "minSpend": null,
+   "note": "18+; ZAKAZ użycia AI do odpowiedzi; tylko papierowy paragon fiskalny (e-paragony z aplikacji nieakceptowane); odpowiedź trzeba wysłać w 10 minut po grze.",
+   "organizer": "ASPE (dla Kompanii Piwowarskiej)",
+   "prizes": "15 × 5100 zł (w tym wyjazd do browaru Velké Popovice), 2808 × kufel",
+   "purchase": true,
+   "rulesUrl": "https://www.wygrywajzkozlem.pl/Regulamin.pdf",
+   "shops": [
+    "Dino"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup w Dino 4 piwa Kozel, wgraj zdjęcie paragonu, zagraj w grę zręcznościową, a potem w 10 minut opisz, jak się ucieszysz z wygranej i wyjazdu do kraju Kozla (do 500 znaków).",
+   "title": "„Wygrywaj z Kozlem” – Dino",
+   "toBuy": "4 piwa Kozel (dowolny wariant) na jednym paragonie",
+   "url": "https://www.wygrywajzkozlem.pl/",
+   "verified": true,
+   "id": "kozel-dino"
   },
   {
    "addedAt": "2026-10-30T07:39:18+01:00",
@@ -893,6 +923,42 @@
    "id": "krakus-biedronka"
   },
   {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2027-02-14",
+   "minSpend": null,
+   "note": "18+; tylko przez stronę (bez SMS); zachowaj paragon – zwycięzca wysyła jego zdjęcie; jeden paragon = jedno zgłoszenie.",
+   "organizer": "Fortuna PS (dla Prymat)",
+   "prizes": "100 000 zł, 150 × 1000 zł, 1050 × 100 zł (BLIK/przelew)",
+   "purchase": true,
+   "rulesUrl": "https://loteria-kucharek.pl/pdf/regulamin.pdf",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup dowolny produkt Kucharek i zarejestruj numer paragonu w formularzu loterii (do 5 paragonów dziennie).",
+   "title": "Loteria „Kucharek” 2026",
+   "toBuy": "1 dowolny produkt Kucharek",
+   "url": "https://loteria-kucharek.pl/",
+   "verified": true,
+   "id": "kucharek-loteria-2026"
+  },
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2026-12-04",
+   "minSpend": null,
+   "note": "Pełnoletni (pełna zdolność do czynności prawnych); jeden paragon = jedno zgłoszenie; limitu znaków brak; licencja na odpowiedź dla organizatora; zgoda marketingowa dobrowolna.",
+   "organizer": "Kupiec",
+   "prizes": "20 × 600 zł",
+   "purchase": true,
+   "rulesUrl": "https://konkurs.kupiec.pl/regulamin_konkursu_edycja_2.pdf",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup min. 2 produkty Kupiec (ryże, kasze, Lunchmix), wgraj paragon i kreatywnie odpowiedz, jak nagroda pomogłaby Ci spędzić niezapomniane wspólne chwile z rodziną.",
+   "title": "„Kupiec na wspólne chwile!”",
+   "toBuy": "2 produkty Kupiec (ryż, kasza lub Lunchmix) na jednym paragonie",
+   "url": "https://konkurs.kupiec.pl/",
+   "verified": true,
+   "id": "kupiec-wspolne-chwile"
+  },
+  {
    "end": "2026-11-15",
    "minSpend": null,
    "note": "18+ (mimo nazwy „Junior”); wymagane konto Paczka Lorenz; jeden paragon = jedno zgłoszenie.",
@@ -908,6 +974,26 @@
    "url": "https://paczkalorenz.pl/loterialajkonikjunior",
    "verified": true,
    "id": "lajkonik"
+  },
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2026-11-15",
+   "minSpend": null,
+   "note": "18+ (16+ za zgodą opiekuna); wymagane konto na platformie Joy PepsiCo i polskie konto bankowe; jeden paragon = jedno zgłoszenie; zgoda marketingowa niewymagana.",
+   "organizer": "Avanti (dla Frito Lay)",
+   "prizes": "Voucher Wakacje.pl 50 000 zł, 10 × Samsung Galaxy S26, 20 × 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.joy-pepsico.eu/joypepsico-pl-prod/s3fs-public/coupons/Regulamin%20konkurs%20LAYS_LIDL_smak_orientu_FINAL.pdf",
+   "shops": [
+    "Lidl"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup w Lidlu produkt Lay's, Cheetos lub Doritos i odpowiedz: „Gdyby smak Lay's Chicken Masala był miejscem na mapie, jak by wyglądało i co warto byłoby tam odkryć?” (do 300 znaków).",
+   "title": "„Smak orientu z Lay's” – Lidl",
+   "toBuy": "1 produkt Lay's, Cheetos lub Doritos",
+   "url": "https://www.joy-pepsico.eu/pl-pl/brands/lays/promotions/smak-orientu-z-lays/promo",
+   "verified": true,
+   "id": "lays-smak-orientu-lidl"
   },
   {
    "end": "2026-11-30",
@@ -975,6 +1061,24 @@
    "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-piekno-napedzane-sila-nauki",
    "verified": true,
    "id": "loreal-laboratorium-hebe"
+  },
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2027-02-02",
+   "minSpend": null,
+   "note": "18+; ZAKAZ tekstów generowanych przez AI; zachowaj oryginalny paragon; zwycięzca przenosi prawa autorskie do odpowiedzi.",
+   "organizer": "Smolar (dla Mokate)",
+   "prizes": "3 × 10 000 zł, 8 × 1000 zł, 50 × 200 zł, 100 × zestaw LOYD",
+   "purchase": true,
+   "rulesUrl": "https://www.konkursloyd.pl/regulaminy/Regulamin_Konkurs_LOYD.pdf",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup dowolną herbatę LOYD i w formularzu dokończ zdanie „Moja chwila staje się magiczna, gdy…” (do 300 znaków ze spacjami).",
+   "title": "Konkurs LOYD – „Herbata z nutą magii”",
+   "toBuy": "1 opakowanie herbaty LOYD",
+   "url": "https://www.konkursloyd.pl/",
+   "verified": true,
+   "id": "loyd-magiczna-chwila"
   },
   {
    "addedAt": "2026-11-01T07:50:00+01:00",
@@ -1271,6 +1375,26 @@
    "id": "oponeo-bridgestone-blizzak"
   },
   {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "Sprawdzone na oficjalnej stronie akcji (regulaminu PDF nie udało się odczytać – wiek i limit znaków niepotwierdzone); wymagane konto EverydayMe; także mediaexpert.pl i aplikacja; dowód zakupu tylko raz na EverydayMe.",
+   "organizer": "Procter & Gamble (everydayme.pl)",
+   "prizes": "5 × rakieta tenisowa z autografem Igi Świątek",
+   "purchase": true,
+   "rulesUrl": "https://cdn-prd.pgjoltx.com/-/media/Growing-Families-Version1/GF-PL/2026/001---konkursy/konkurs-oral-b-2026-mex-nov-dec26/Uploaded-08102026/Regulamin-konkursu_Konkurs---Konkurs-Oral-B-iO_Media-Expert.pdf",
+   "shops": [
+    "Media Expert"
+   ],
+   "start": "2026-11-01",
+   "task": "Kup w Media Expert szczoteczkę Oral-B iO z listy, zaloguj się na EverydayMe i dokończ zdanie „Zdrowy uśmiech to dla mnie…”.",
+   "title": "Oral-B iO w Media Expert – rakiety Igi Świątek",
+   "toBuy": "1 szczoteczka elektryczna Oral-B iO z listy promocyjnej",
+   "url": "https://www.everydayme.pl/konkursy/konkurs-oral-b-2026",
+   "verified": true,
+   "id": "oral-b-media-expert"
+  },
+  {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-10-27",
    "minSpend": null,
@@ -1301,6 +1425,26 @@
    "url": "https://manufakturapapieruczerpanego.pl/mala-rzecz-wielka-radosc-papierowa-zabawka-na-choinke-konkurs-z-cyklu-sztuka-papieru/",
    "verified": true,
    "id": "ozdoba-papierowa"
+  },
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2027-01-10",
+   "minSpend": null,
+   "note": "18+; także rossmann.pl; jeden paragon = jedno zgłoszenie; zgoda marketingowa dobrowolna (daje dodatkowy los).",
+   "organizer": "Smolar (dla pheym)",
+   "prizes": "4 × iPhone 17 Pro, 4 × Dyson Airwrap, 100 × e-karta Rossmann 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.pheym-loteria.pl/regulamin.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup zestaw świąteczny pheym.box w Rossmannie, zachowaj paragon i zarejestruj go w formularzu loterii.",
+   "title": "Loteria świąteczna pheym.box – Rossmann",
+   "toBuy": "1 zestaw pheym.box (Crush, Vibe, That's Hot lub Cherish)",
+   "url": "https://www.pheym-loteria.pl/",
+   "verified": true,
+   "id": "pheym-box-rossmann"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
@@ -1603,16 +1747,18 @@
    "addedAt": "2026-10-28T07:37:02+01:00",
    "end": "2026-12-27",
    "minSpend": null,
-   "note": "Zgłoszenia dopiero od 2 listopada",
+   "note": "18+; zgłoszenia od 2.11 (11:00) do 27.12; zachowaj oryginalny paragon; jeden paragon = jedno zgłoszenie (do 5 losów: olej 3 l = 3, 5 l = 5).",
    "organizer": "Smolar",
    "prizes": "100 000 zł oraz 560 × 100 zł",
    "purchase": true,
+   "rulesUrl": "https://stotysiecy.pl/regulaminy/Regulamin_loterii_Olej_Polski.pdf",
    "shops": [],
    "start": "2026-11-02",
    "task": "Kup dowolny Olej Polski albo Mąkę Szymanowską typ 480, zachowaj paragon i zarejestruj go w formularzu na stronie loterii. Każdy paragon to osobne zgłoszenie.",
    "title": "Loteria „Sto tysięcy” – Olej Polski i Mąka Szymanowska",
-   "toBuy": "1 produkt: Olej Polski lub Mąka Szymanowska typ 480",
+   "toBuy": "1 produkt: Olej Polski (1/3/5 l) lub Mąka Szymanowska typ 480",
    "url": "https://stotysiecy.pl",
+   "verified": true,
    "id": "sto-tysiecy"
   },
   {
@@ -1756,6 +1902,21 @@
    "url": "https://www.wroclaw.pl/dla-mieszkanca/koncert-wroclaw-baroque-ensemble-oratorium-marianum-zaproszenia-konkurs",
    "verified": true,
    "id": "wroclaw-baroque-zaproszenia"
+  },
+  {
+   "addedAt": "2026-11-03T07:39:14+01:00",
+   "end": "2026-11-06",
+   "note": "Zgłoszenia do 6.11 do 9:00; trzeba pojechać na koncert do Wrocławia (7–26.11); wygrywają 3 pierwsze i 3 ostatnie poprawne odpowiedzi; wygrana na wroclaw.pl maks. raz na 30 dni.",
+   "organizer": "Agencja Rozwoju Aglomeracji Wrocławskiej (wroclaw.pl)",
+   "prizes": "6 × podwójne zaproszenie na listopadowy koncert w NFM",
+   "purchase": false,
+   "rulesUrl": "https://www.wroclaw.pl/dla-mieszkanca/ogolny-regulamin-konkursow-prowadznych-na-portalu-wroclawpl",
+   "start": "2026-11-02",
+   "task": "W formularzu odpowiedz, która edycja Konkursu im. Henryka Wieniawskiego właśnie się zakończyła (podpowiedź na stronie NFM).",
+   "title": "wroclaw.pl – podwójne zaproszenia na koncerty w NFM (listopad)",
+   "url": "https://www.wroclaw.pl/dla-mieszkanca/podwojne-bilety-na-koncerty-do-nfm-w-listopadzie-konkurs",
+   "verified": true,
+   "id": "wroclaw-nfm-listopad"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
