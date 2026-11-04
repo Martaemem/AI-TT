@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-03T07:39:14+01:00",
+ "updatedAt": "2026-11-04T07:38:30+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -95,6 +95,26 @@
    "id": "arhelan-35"
   },
   {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-11-15",
+   "minSpend": null,
+   "note": "18+; 1 paragon = 1 zgłoszenie (można wiele z różnych paragonów); zachowaj paragon; zwycięzca przenosi prawa do tekstu.",
+   "organizer": "LOOK AD Buczyk (dla Bakoma)",
+   "prizes": "5 × karta 10 000 zł, 30 zestawów (głośnik Marshall, koc, kubek), bony Dino 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://konkursbakoma.pl/api/v1/documents/terms",
+   "shops": [
+    "Dino"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup 2 produkty Bakoma w Dino i w formularzu z paragonem opisz swój idealny scenariusz na jesienny relaks z produktami Bakoma (max 500 znaków).",
+   "title": "„Rozpłyń się w przyjemności z Bakomą” – Dino",
+   "toBuy": "2 dowolne produkty Bakoma",
+   "url": "https://konkursbakoma.pl/",
+   "verified": true,
+   "id": "bakoma-dino-relaks"
+  },
+  {
    "end": "2026-10-27",
    "minSpend": null,
    "organizer": "Bakoma",
@@ -126,6 +146,46 @@
    "url": "https://chrupomania.pl/",
    "verified": true,
    "id": "beskidzkie"
+  },
+  {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-11-28",
+   "minSpend": null,
+   "note": "18+; zakupy i zgłoszenia do 28.11 godz. 12:00; tylko zakup online w Kuchni Vikinga; 1 ID zamówienia = 1 zgłoszenie.",
+   "organizer": "Nofsza (dla Kuchnia Vikinga)",
+   "prizes": "Volvo XC40, 4 bony wakacyjne Fly.pl, 513 nagród natychmiastowych (bony na dietę, punkty)",
+   "purchase": true,
+   "rulesUrl": "https://blackviking.kuchniavikinga.pl/pliki/regulamin",
+   "shops": [
+    "Kuchnia Vikinga (online)"
+   ],
+   "start": "2026-11-02",
+   "task": "Zamów i opłać dietę pudełkową Kuchni Vikinga (serwis lub aplikacja), potem zarejestruj ID zamówienia w formularzu loterii (e-zdrapka; dieta 5+ dni daje losy).",
+   "title": "Loteria „Black VIKING” – Volvo XC40",
+   "toBuy": "dieta pudełkowa Kuchni Vikinga (min. 5 dni, by brać udział w losowaniach)",
+   "url": "https://blackviking.kuchniavikinga.pl/",
+   "verified": true,
+   "id": "black-viking-volvo"
+  },
+  {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-11-21",
+   "minSpend": null,
+   "note": "18+; zachowaj oryginalny paragon do 9.02.2027; 1 paragon = 1 zgłoszenie; jeden numer telefonu; zgody marketingowe dobrowolne.",
+   "organizer": "Albedo Marketing (dla Nutricia)",
+   "prizes": "3 × 15 000 zł (tygodniowe), 220 e-kodów Biedronka po 200 zł, 100 kalendarzy adwentowych BoboVita",
+   "purchase": true,
+   "rulesUrl": "https://loteriawbiedronce.bobovita.pl/storage/1/Regulamin_loterii_promocyjnej_Bobovita_w_Biedronce_2-%281%29.pdf",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup jednorazowo min. 4 produkty BoboVita w Biedronce i zarejestruj paragon (numer, data, zdjęcie) oraz numer telefonu na stronie loterii.",
+   "title": "Loteria „BoboVita w Biedronce”",
+   "toBuy": "min. 4 produkty BoboVita na jednym paragonie",
+   "url": "https://loteriawbiedronce.bobovita.pl/",
+   "verified": true,
+   "id": "bobovita-biedronka"
   },
   {
    "end": "2026-11-16",
@@ -273,6 +333,24 @@
    "id": "coca-cola-boleslawiec"
   },
   {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2027-01-11",
+   "minSpend": null,
+   "note": "Od 13 lat (nagrody główne 18+); zachowaj paragon i opakowanie z kodem; zgłoszenia do 11.01.2027 godz. 17:00.",
+   "organizer": "Fortis (dla Coca-Cola)",
+   "prizes": "2 pobyty w Hotelu Arłamów, 250 voucherów Mandoria, ponad 3000 nagród natychmiastowych (bony, Airfryery, projektory)",
+   "purchase": true,
+   "rulesUrl": "https://www.coca-cola.com/pl/pl/offerings/christmas/regulamin-loterii",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup napój promocyjny Coca-Cola, wpisz kod spod nakrętki/zawleczki/etykiety w aplikacji Coca-Cola lub na stronie, wymień token na los.",
+   "title": "Loteria „Świętuj z Coca-Cola” – pobyt w Arłamowie",
+   "toBuy": "1 napój promocyjny z kodem (Coca-Cola, Fanta, Sprite, Kinley, Cappy, Fuzetea)",
+   "url": "https://www.coca-cola.com/pl/pl/offerings/christmas/ncp",
+   "verified": true,
+   "id": "coca-cola-swietuj-arlamow"
+  },
+  {
    "end": "2026-11-30",
    "minSpend": null,
    "note": "18+. Jeden paragon to jedno zgłoszenie. Zachowaj oryginał paragonu do zakończenia reklamacji.",
@@ -308,6 +386,21 @@
    "url": "https://www.loteriaczystyswiat.pl/",
    "verified": true,
    "id": "czysty-swiat-rossmann"
+  },
+  {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-12-07",
+   "note": "18+; zgłoszenia do 7.12 godz. 11:59; tekst NIE może być wygenerowany przez AI; 1 zgłoszenie na osobę; potrzebny ważny dowód/paszport; dojazd do Warszawy we własnym zakresie.",
+   "organizer": "Renault Polska",
+   "prizes": "Wyjazd dla 2 osób na Brussels Motor Show 15–17.01.2027 (bilety lotnicze, hotel 4*, wejściówki), ok. 13 100 zł",
+   "purchase": false,
+   "rulesUrl": "https://cdn.group.renault.com/dac/pl/pdf/inne/Renault-Regulamin-Konkursu-Brussels-Motor-Show.pdf.asset.pdf/4220812868.pdf",
+   "start": "2026-10-27",
+   "task": "W formularzu na stronie Dacii napisz, dlaczego Ty i wybrana osoba powinniście pojechać z Dacią do Brukseli na Brussels Motor Show (max 500 znaków ze spacjami).",
+   "title": "„Dacia – Road to Brussels”",
+   "url": "https://www.dacia.pl/kampania/road-to-brussels.html",
+   "verified": true,
+   "id": "dacia-road-to-brussels"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
@@ -385,6 +478,24 @@
    "url": "https://promocjaunilever.pl/",
    "verified": true,
    "id": "dino-dobry-smak"
+  },
+  {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-12-13",
+   "minSpend": null,
+   "note": "18+ (16+ za zgodą opiekuna); wymagane konto na platformie Joy i polskie konto bankowe; 1 zgłoszenie dziennie; 6 etapów tygodniowych; zwycięzca przenosi prawa autorskie.",
+   "organizer": "Avanti (dla Frito Lay)",
+   "prizes": "Co tydzień: 5000 zł + gadżety i karton Doritos; 2 × gadżety i karton Doritos",
+   "purchase": true,
+   "rulesUrl": "https://www.joy-pepsico.eu/joypepsico-pl-prod/s3fs-public/coupons/Regulamin_Konkurs%20Doritos%20Loaded_FINAL.pdf",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup Doritos, przygotuj własne danie z ich użyciem, zrób zdjęcie z opakowaniem i wyślij przez formularz na platformie Joy (składniki max 500 znaków, przygotowanie max 1000 znaków).",
+   "title": "„Doritos Loaded – pokaż swój przepis i wygrywaj”",
+   "toBuy": "min. 1 produkt Doritos",
+   "url": "https://www.joy-pepsico.eu/pl-pl/brands/doritos/promotions/doritos-loaded",
+   "verified": true,
+   "id": "doritos-loaded"
   },
   {
    "addedAt": "2026-11-01T07:50:00+01:00",
@@ -1133,6 +1244,21 @@
    "id": "lubelska-halloween-zabka"
   },
   {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-11-15",
+   "note": "18+; 1 zgłoszenie na osobę; zgoda na newsletter dobrowolna; wynik ogłaszany na stronie i Instagramie organizatora (nic nie trzeba publikować).",
+   "organizer": "Mangų mangas UAB",
+   "prizes": "Zestaw egzotycznych owoców ok. 650 zł; wszyscy dostają kody rabatowe",
+   "purchase": false,
+   "rulesUrl": "https://mangumangas.pl/regulamin",
+   "start": "2026-10-12",
+   "task": "Wypełnij formularz na stronie (e-mail + akceptacja regulaminu) i w 1–2 zdaniach odpowiedz: jaki owoc chcesz znaleźć w swoim pierwszym boxie i dlaczego.",
+   "title": "„Wygraj zestaw Mangų Mangas”",
+   "url": "https://mangumangas.pl/",
+   "verified": true,
+   "id": "mangu-mangas-owoce"
+  },
+  {
    "end": "2026-11-29",
    "note": "18+. Wymaga darmowego członkostwa w programie myMediaMarkt i aplikacji. Zgłoszenia do 29.11, 23:59. Zgłaszaj się wcześnie – są losowania tygodniowe.",
    "organizer": "Grzegrzółka Loterie / MediaMarkt",
@@ -1238,6 +1364,26 @@
    "toBuy": "1 napój Monster Energy (z aplikacją Żappka)",
    "url": "https://monsterxmclaren.pl/",
    "id": "monster-mclaren-zabka"
+  },
+  {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-12-31",
+   "minSpend": 50,
+   "note": "18+; tylko sklepy stacjonarne; 1 paragon = 1 zgłoszenie; dwa cykle (do 30.11 i do 31.12); praca ma być własną twórczością; licencja na publikację nagrodzonych prac.",
+   "organizer": "Great Open House (dla MR.DIY)",
+   "prizes": "Bon Wakacje.pl 30 000 zł, 59 nagród (JBL, Xiaomi, Airfryer, Instax…), 440 bonów MR.DIY po 50 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.mrdiy50-konkurs.pl/regulation.pdf",
+   "shops": [
+    "MR.DIY"
+   ],
+   "start": "2026-11-02",
+   "task": "Po zakupie za min. 50 zł w MR.DIY wypełnij formularz z paragonem i odpowiedz (max 500 znaków), które miejsce w domu/ogrodzie potrzebuje metamorfozy; o nagrodę główną dodatkowo 3–5 zdjęć własnego projektu z opisem.",
+   "title": "Konkurs MR.DIY – 30 000 zł na wycieczkę marzeń",
+   "toBuy": "dowolne produkty MR.DIY za min. 50 zł (sklep stacjonarny)",
+   "url": "https://www.mrdiy50-konkurs.pl/",
+   "verified": true,
+   "id": "mrdiy-30000-wycieczka"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
@@ -1902,6 +2048,21 @@
    "url": "https://www.wroclaw.pl/dla-mieszkanca/koncert-wroclaw-baroque-ensemble-oratorium-marianum-zaproszenia-konkurs",
    "verified": true,
    "id": "wroclaw-baroque-zaproszenia"
+  },
+  {
+   "addedAt": "2026-11-04T07:38:30+01:00",
+   "end": "2026-11-06",
+   "note": "Zgłoszenia do 6.11 godz. 9:00; wygrywa pierwsze i ostatnie zgłoszenie; odbiór nagrody prawdopodobnie osobiście we Wrocławiu.",
+   "organizer": "Urząd Miejski Wrocławia (portal wroclaw.pl)",
+   "prizes": "2 podwójne zaproszenia na dowolny film (Helios Bielany, Helios Magnolia)",
+   "purchase": false,
+   "rulesUrl": "https://www.wroclaw.pl/dla-mieszkanca/ogolny-regulamin-konkursow-prowadznych-na-portalu-wroclawpl",
+   "start": "2026-11-03",
+   "task": "W formularzu na wroclaw.pl podaj dane i odpowiedz na pytanie: ile kin Helios jest we Wrocławiu?",
+   "title": "wroclaw.pl – podwójne zaproszenia do kin Helios",
+   "url": "https://www.wroclaw.pl/dla-mieszkanca/zaproszenia-na-wybrany-film-do-heliosa",
+   "verified": true,
+   "id": "wroclaw-helios-listopad"
   },
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
