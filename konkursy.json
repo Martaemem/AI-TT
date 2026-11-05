@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-04T07:38:30+01:00",
+ "updatedAt": "2026-11-05T07:39:05+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -538,6 +538,24 @@
    "id": "drosed-dino-koszyk"
   },
   {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+; zakaz używania AI; zachowaj paragon; bez obowiązkowych zgód marketingowych; jedna nagroda na osobę.",
+   "organizer": "Nova Group (dla Duracell)",
+   "prizes": "2 × wyjazd dla 2 osób na mecz Real Madryt – FC Barcelona (przelot, hotel, 1000 zł kieszonkowego/os.)",
+   "purchase": true,
+   "rulesUrl": "https://duracellscanwin.com/assets/documents/terms-and-conditions_pl-pl.pdf",
+   "shops": [],
+   "start": "2026-08-15",
+   "task": "Kup dowolny produkt Duracell, na duracellscanwin.com wgraj zdjęcie paragonu i odpowiedz: „Niektóre chwile zasługują na doliczony czas. Którą z nich przedłużył(a)byś z energią Duracell i dlaczego?” (do 200 znaków).",
+   "title": "Duracell „Skanuj i wygraj 2026” – El Clásico w Madrycie",
+   "toBuy": "dowolny produkt Duracell",
+   "url": "https://duracellscanwin.com/pl-pl",
+   "verified": true,
+   "id": "duracell-skanuj-wygraj-2026"
+  },
+  {
    "end": "2027-05-10",
    "note": "Zakaz tekstów generowanych przez AI (wolno tylko do pisowni/formatowania). Jeden tekst na osobę. Dwa pliki PDF: esej z godłem + dane autora.",
    "organizer": "Fundacja na Rzecz Myślenia im. Barbary Skargi",
@@ -981,6 +999,20 @@
    "id": "kozel-dino"
   },
   {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-11-08",
+   "note": "Do 8.11 godz. 20:00; dopisz w mailu akceptację regulaminu i klauzuli RODO; trzeba pojechać do Krakowa 14.11.",
+   "organizer": "Urząd Miasta Krakowa",
+   "prizes": "podwójne zaproszenie na pokaz 14.11.2026, Muzeum Manggha",
+   "purchase": false,
+   "start": "2026-11-04",
+   "task": "Napisz mailem, jakie wydarzenie historyczne chciałbyś zobaczyć na własne oczy, gdybyś mógł cofnąć się w czasie; temat maila: ALICE, adres konkurs.mk@um.krakow.pl.",
+   "title": "Kraków – bilety na 27. Festiwal Filmu Niemego („Alice Guy”)",
+   "url": "https://krakow.pl/informacje/344611,1342,komunikat,27__festiwal_filmu_niemego___wygraj_bilety_.html",
+   "verified": true,
+   "id": "krakow-festiwal-filmu-niemego-alice"
+  },
+  {
    "addedAt": "2026-10-30T07:39:18+01:00",
    "end": "2026-11-01",
    "note": "Zgłoszenia do 1.11 godz. 20:00. Koncert w Krakowie – trzeba pojechać na miejsce. Dopisz: „Akceptuję regulamin konkursu oraz zapoznałem się z Obowiązkiem Administratora o przetwarzaniu danych osobowych”.",
@@ -1032,6 +1064,21 @@
    "url": "https://www.krakuswbiedronce.pl/",
    "verified": true,
    "id": "krakus-biedronka"
+  },
+  {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2027-02-01",
+   "note": "18+ (lub 18 lat do 31.01.2027); bezpłatny; całkowity zakaz AI; tekst niepublikowany i nienagradzany; 1 praca; zgłoszenia do 1.02.2027 godz. 12:00 na konkurs3.kryminal.poznan@wm.poznan.pl.",
+   "organizer": "Wydawnictwo Miejskie Posnania",
+   "prizes": "3000 / 2000 / 1000 zł, do 7 wyróżnień po 500 zł, publikacja w antologii",
+   "purchase": false,
+   "rulesUrl": "https://www.poznan.pl/mim/public/wortals/attachments.att?co=show&instance=9461&parent=289456&lang=pl&id=560009",
+   "start": "2026-10-30",
+   "task": "Napisz opowiadanie kryminalne z akcją w Poznaniu, hasło „W białych rękawiczkach” (20–30 tys. znaków ze spacjami), wyślij mailem z podpisanym oświadczeniem.",
+   "title": "III Konkurs na opowiadanie „Kryminał do Poznania. W białych rękawiczkach”",
+   "url": "https://www.poznan.pl/mim/wortals/wm/news,9461/kryminal-do-poznania-w-bialych-rekawiczkach,289456.html&wo_id=485",
+   "verified": true,
+   "id": "kryminal-do-poznania-3"
   },
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1172,6 +1219,26 @@
    "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-piekno-napedzane-sila-nauki",
    "verified": true,
    "id": "loreal-laboratorium-hebe"
+  },
+  {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-11-17",
+   "minSpend": null,
+   "note": "18+; zakupy tylko 4–10.11, zgłoszenia do 17.11; zakaz AI; bez zdjęć i linków w odpowiedzi; wymagana Żappka.",
+   "organizer": "Cukier Works (dla Lorenz)",
+   "prizes": "10 × 2000 zł, 30 × drukarka Instax Square Link z wkładem, 50 × zestaw snacków Lorenz",
+   "purchase": true,
+   "rulesUrl": "https://paczkalorenz.pl/wp-content/uploads/2026/11/fundusz-domowka-regulamin-2026-11-02.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-04",
+   "task": "Kup 2 produkty Lorenz w Żabce z aplikacją Żappka (quest), odbierz kod i na paczkalorenz.pl/domowkaplus odpowiedz, jak podkręcisz domówkę dofinansowaniem 2000 zł (do 300 znaków).",
+   "title": "„Fundusz Domówka+” – Lorenz w Żabce",
+   "toBuy": "2 produkty Lorenz (Crunchips, Curly, Monster Munch, Wiejskie Ziemniaczki, Nic Nac's, Lajkonik) z aplikacją Żappka",
+   "url": "https://paczkalorenz.pl/konkursy-i-aktywacje/domowkaplus/",
+   "verified": true,
+   "id": "lorenz-domowka-plus-zabka"
   },
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1816,6 +1883,26 @@
    "id": "rimmel-multitaskerki"
   },
   {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-11-11",
+   "minSpend": null,
+   "note": "18+; wymagany Klub Rossmann i aplikacja Rossmann PL; zakaz odpowiedzi generowanych przez AI; licencja dla Rossmanna na odpowiedź.",
+   "organizer": "Rossmann Supermarkety Drogeryjne Polska (fundator: Unilever)",
+   "prizes": "3 × Dyson V8 Cyclone, 25 × Clean Box Cif + klapki Kubota, 100 × e-karta Rossmann 50 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-sprzatnij-nagrody-w-swoim-stylu%E2%80%9D-1565014287011848192.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-10-29",
+   "task": "Kup produkt Cif z listy akcji w Rossmannie z kartą Klubu Rossmann, potem w aplikacji Rossmann PL odpowiedz na pytanie: „Każdy ma swój sposób na sprzątanie. Jaki jest Twój styl i jak pomaga Ci w nim Cif?”",
+   "title": "Misja Zakupowa „Sprzątnij nagrody w swoim stylu” – Cif w Rossmannie",
+   "toBuy": "dowolny produkt Cif z listy akcji (sklep stacjonarny lub online, zarejestrowany na kartę Klubu Rossmann)",
+   "url": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-sprzatnij-nagrody-w-swoim-stylu%E2%80%9D-1565014287011848192.pdf",
+   "verified": true,
+   "id": "rossmann-cif-misja-zakupowa"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-15",
    "minSpend": 15,
@@ -1834,6 +1921,21 @@
    "url": "https://www.serdecznamoc.pl/",
    "verified": true,
    "id": "serenada-carrefour"
+  },
+  {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-11-27",
+   "note": "Bez wpisowego, bez limitu wieku; JPG/TIFF 300 dpi, krótszy bok min. 25 cm; laureaci przenoszą prawa autorskie nieodpłatnie; regulamin nie mówi o AI.",
+   "organizer": "Miejski Ośrodek Kultury w Siedlcach",
+   "prizes": "2000 / 1000 / 500 zł",
+   "purchase": false,
+   "rulesUrl": "https://mok.siedlce.pl/storage/media/20001/Regulamin.pdf?v=1792659606",
+   "start": null,
+   "task": "Prześlij do 4 zdjęć z nieoczywistym spojrzeniem na codzienność przez formularz na mok.siedlce.pl, z podpisaną umową (załącznik nr 1).",
+   "title": "Konkurs fotograficzny „To nie jest to, czym się wydaje”",
+   "url": "https://mok.siedlce.pl/pl/konkursy/ogolnopolski-konkurs-fotograficzny-to-nie-jest-to-czym-sie-wydaje",
+   "verified": true,
+   "id": "siedlce-foto-to-nie-jest"
   },
   {
    "addedAt": "2026-10-29T07:39:12+01:00",
@@ -1922,6 +2024,21 @@
    "id": "strachy-gdansk"
   },
   {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-11-30",
+   "note": "Kategoria dorosłych: od 16 lat; bezpłatny; 1 praca, niepublikowana i nienagradzana; wymagana karta zgłoszenia i zgoda RODO.",
+   "organizer": "Świdnicki Ośrodek Kultury",
+   "prizes": "pula 2000 zł (m.in. 2 × 600 zł za I miejsca)",
+   "purchase": false,
+   "rulesUrl": "https://sok.com.pl/wydarzenie/ogolnopolski-konkurs-wiersza-obrazkowego-2026/",
+   "start": "2026-11-02",
+   "task": "Stwórz wiersz obrazkowy (tekst po polsku ułożony w kształt przedmiotu, budynku, zwierzęcia itp.) i wyślij jako PDF A4 z kartą zgłoszenia na konkurs@sok.com.pl.",
+   "title": "Ogólnopolski Konkurs Wiersza Obrazkowego 2026",
+   "url": "https://sok.com.pl/wydarzenie/ogolnopolski-konkurs-wiersza-obrazkowego-2026/",
+   "verified": true,
+   "id": "swidnica-wiersz-obrazkowy-2026"
+  },
+  {
    "end": "2026-10-30",
    "note": "18+. Zgłoś przez formularz na twix.pl, nie komentarzem (1 zgłoszenie). Zakaz treści stworzonych przez AI lub z pomocą AI. Zadania o zastępstwo w pracy są wykluczone. Zwycięzca musi być dostępny 19.11.",
    "organizer": "Mars Polska",
@@ -1994,6 +2111,26 @@
    "url": "https://czas-razem.wedel.pl/",
    "verified": true,
    "id": "wedel-czas-razem"
+  },
+  {
+   "addedAt": "2026-11-05T07:39:05+01:00",
+   "end": "2026-11-19",
+   "minSpend": null,
+   "note": "18+; zakupy 4–17.11, zgłoszenia do 19.11; wymagana aplikacja Żappka; 1 kod = 1 zgłoszenie; odpowiedź niepublikowana wcześniej.",
+   "organizer": "Amooco Grzegorz Kańduła (dla LOTTE Wedel)",
+   "prizes": "2 × voucher na wyjazd w Alpy 25 000 zł, 3 × deska Burton, 5 × karta Sportano 1000 zł",
+   "purchase": true,
+   "rulesUrl": "https://tripzwedlem.pl/pliki/regulamin.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-04",
+   "task": "Kup w Żabce min. 3 produkty E.Wedel w jednej transakcji z aplikacją Żappka, odbierz kod i na tripzwedlem.pl dokończ zdanie „Mój górski vibe to...” (do 500 znaków).",
+   "title": "„Zabierz E.Wedel w góry!” – Żabka",
+   "toBuy": "min. 3 produkty E.Wedel w jednej transakcji, z aplikacją Żappka",
+   "url": "https://tripzwedlem.pl/",
+   "verified": true,
+   "id": "wedel-zabka-gory"
   },
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
