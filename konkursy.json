@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-05T07:39:05+01:00",
+ "updatedAt": "2026-11-06T07:38:46+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -556,6 +556,26 @@
    "id": "duracell-skanuj-wygraj-2026"
   },
   {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-11-20",
+   "minSpend": null,
+   "note": "18+; także superpharm.pl; jeden paragon = jedno zgłoszenie; zachowaj oryginał paragonu do 22.01.2027.",
+   "organizer": "L’Oréal Polska (koordynator Columbit)",
+   "prizes": "2 × voucher do Odyssey Club Hotel Wellness & SPA (3290 zł), 20 × karta Super-Pharm 100 zł, 50 × zestaw Elseve Hyaluron Plump",
+   "purchase": true,
+   "rulesUrl": "https://lorealeventy-pl.beauty-campaigns.com/uploads/media/b/6aeb43883d17d371286889.pdf",
+   "shops": [
+    "Super-Pharm"
+   ],
+   "start": "2026-11-06",
+   "task": "Kup 2 produkty Elseve (w tym maskę, serum lub olejek), wgraj zdjęcie paragonu i odpowiedz, jaki efekt chcesz osiągnąć dzięki rytuałowi Elseve (do 300 znaków).",
+   "title": "„Odkryj swój rytuał Elseve” – Super-Pharm",
+   "toBuy": "2 produkty Elseve naraz, w tym min. 1 maska, serum lub olejek",
+   "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-odkryj-swoj-rytual-elseve",
+   "verified": true,
+   "id": "elseve-super-pharm-rytual"
+  },
+  {
    "end": "2027-05-10",
    "note": "Zakaz tekstów generowanych przez AI (wolno tylko do pisowni/formatowania). Jeden tekst na osobę. Dwa pliki PDF: esej z godłem + dane autora.",
    "organizer": "Fundacja na Rzecz Myślenia im. Barbary Skargi",
@@ -714,6 +734,21 @@
    "url": "https://konkursgosia.pl/",
    "verified": true,
    "id": "gosia-swieta-bez-spiny"
+  },
+  {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-11-12",
+   "note": "Formularz na stronie (e-mail, imię, nazwisko, adres, telefon dla kuriera); obserwowanie FB/IG tylko sugerowane, nieobowiązkowe.",
+   "organizer": "granice.pl",
+   "prizes": "Książka „Łykając złoto”",
+   "purchase": false,
+   "rulesUrl": "https://www.granice.pl/regulamin",
+   "start": "2026-11-05",
+   "task": "Odpowiedz w formularzu na pytanie: gdybyś mógł poznać tylko jeden sekret swojej rodziny, czego chciałbyś się dowiedzieć?",
+   "title": "granice.pl – książka „Łykając złoto”",
+   "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-lykajac-zloto/3064",
+   "verified": true,
+   "id": "granice-lykajac-zloto"
   },
   {
    "end": "2026-10-26",
@@ -913,6 +948,24 @@
    "id": "intermarche-czysty-przepis"
   },
   {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2027-01-06",
+   "minSpend": null,
+   "note": "18+; 4 etapy (do 17.11, 1.12, 15.12, 6.01) – paragon musi pochodzić z danego etapu; jeden paragon = jedno zgłoszenie; sprzeciw wobec marketingu bezpośredniego = rezygnacja z udziału.",
+   "organizer": "Obiekt Studio (dla CEDC International)",
+   "prizes": "etapy: 56 × głośnik Marshall Willen II, 20 × polar, 20 × Instax mini 12, 56 × zestaw gadżetów; finał: 3 × Soundboks 4",
+   "purchase": true,
+   "rulesUrl": "https://www.zapolujnanagrody.pl/_files/ugd/00b46b_133163a94dcd4ae68ff85fdc6c66502e.pdf",
+   "shops": [],
+   "start": "2026-11-04",
+   "task": "Kup butelkę Jägermeistera (min. 0,5 l), wgraj paragon na stronie i odpowiedz na pytanie danego etapu (do 1000 znaków). Etap 1 do 17.11: jaki numer odpala domówkę Twojego stada i dlaczego.",
+   "title": "„Jägermeister – Zapoluj na nagrody”",
+   "toBuy": "1 butelka Jägermeister (Original, Orange, Manifest, Winter lub Retro Edition) min. 0,5 l",
+   "url": "https://www.zapolujnanagrody.pl/",
+   "verified": true,
+   "id": "jagermeister-zapoluj-na-nagrody"
+  },
+  {
    "addedAt": "2026-10-28T07:37:02+01:00",
    "end": "2026-10-31",
    "note": "18+. Bez zakupu (regulamin §2 ust. 3). Typy do pierwszego gwizdka (sob. 31.10, 14:45), potwierdź linkiem z maila. Zgoda marketingowa dobrowolna (daje dodatkowy typ).",
@@ -1011,6 +1064,62 @@
    "url": "https://krakow.pl/informacje/344611,1342,komunikat,27__festiwal_filmu_niemego___wygraj_bilety_.html",
    "verified": true,
    "id": "krakow-festiwal-filmu-niemego-alice"
+  },
+  {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-11-08",
+   "note": "Do 8.11 godz. 20:00; dopisz w mailu akceptację regulaminu i klauzuli RODO; trzeba pojechać do Krakowa 14.11.",
+   "organizer": "Urząd Miasta Krakowa",
+   "prizes": "podwójne zaproszenie na koncert 14.11.2026, Klub Gwarek",
+   "purchase": false,
+   "start": "2026-11-04",
+   "task": "Napisz mailem, jakie miejsce na świecie ma według Ciebie najbardziej magiczną atmosferę; temat maila: OGNIA, adres konkurs.mk@um.krakow.pl.",
+   "title": "Kraków – zaproszenie na koncert Daj Ognia (Klub Gwarek)",
+   "url": "https://krakow.pl/informacje/344467,1342,komunikat,wygraj_bilety_do_klubu_gwarek_.html",
+   "verified": true,
+   "id": "krakow-gwarek-daj-ognia"
+  },
+  {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-11-08",
+   "note": "Do 8.11 godz. 20:00; dopisz w mailu akceptację regulaminu i klauzuli RODO; trzeba pojechać do Krakowa 20.11.",
+   "organizer": "Urząd Miasta Krakowa",
+   "prizes": "podwójne zaproszenie na koncert 20.11.2026, Klub Gwarek",
+   "purchase": false,
+   "start": "2026-11-04",
+   "task": "Napisz mailem, co jest ciekawsze: muzyka, która od razu wpada w ucho, czy ta odkrywana po kilku przesłuchaniach; temat maila: ORK, adres konkurs.mk@um.krakow.pl.",
+   "title": "Kraków – zaproszenie na koncert O.R.k (Klub Gwarek)",
+   "url": "https://krakow.pl/informacje/344467,1342,komunikat,wygraj_bilety_do_klubu_gwarek_.html",
+   "verified": true,
+   "id": "krakow-gwarek-ork"
+  },
+  {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-11-08",
+   "note": "Do 8.11 godz. 20:00; dopisz w mailu akceptację regulaminu i klauzuli RODO; trzeba pojechać do Krakowa 11.11.",
+   "organizer": "Urząd Miasta Krakowa",
+   "prizes": "podwójne zaproszenie na koncert 11.11.2026, Klub Gwarek",
+   "purchase": false,
+   "start": "2026-11-04",
+   "task": "Napisz mailem, jaka jest najbardziej spontaniczna rzecz, na którą zdecydowałeś się w życiu; temat maila: SARI, adres konkurs.mk@um.krakow.pl.",
+   "title": "Kraków – zaproszenie na koncert Sari Schorr (Klub Gwarek)",
+   "url": "https://krakow.pl/informacje/344467,1342,komunikat,wygraj_bilety_do_klubu_gwarek_.html",
+   "verified": true,
+   "id": "krakow-gwarek-sari-schorr"
+  },
+  {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-11-08",
+   "note": "Do 8.11 godz. 20:00; dopisz w mailu akceptację regulaminu i klauzuli RODO; trzeba pojechać do Krakowa 18.11.",
+   "organizer": "Urząd Miasta Krakowa",
+   "prizes": "podwójne zaproszenie na koncert 18.11.2026, Klub Studio",
+   "purchase": false,
+   "start": "2026-11-04",
+   "task": "Napisz mailem, dlaczego to właśnie Ty powinieneś/powinnaś wygrać; temat maila: HUBERT, adres konkurs.mk@um.krakow.pl.",
+   "title": "Kraków – zaproszenie na koncert Hubert & prawy brzeg (Klub Studio)",
+   "url": "https://krakow.pl/informacje/344479,1342,komunikat,wygraj_bilety_na_koncert_w_klubie_studio_.html",
+   "verified": true,
+   "id": "krakow-studio-hubert"
   },
   {
    "addedAt": "2026-10-30T07:39:18+01:00",
@@ -1640,6 +1749,26 @@
    "id": "ozdoba-papierowa"
   },
   {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-12-23",
+   "minSpend": null,
+   "note": "Tylko sklepy stacjonarne Kaufland; wymaga konta EverydayMe; jeden paragon = jedno zgłoszenie; wygrywa jury za kreatywność. Sprawdzono na stronie akcji (PDF regulaminu niedostępny do odczytu).",
+   "organizer": "Procter & Gamble (agencja Pelargos)",
+   "prizes": "voucher Rainbow 30 000 zł na rodzinny wyjazd do Laponii, 20 × zestaw P&G (300 zł)",
+   "purchase": true,
+   "rulesUrl": "https://cdn-prd.pgjoltx.com/-/media/Growing-Families-Version1/GF-PL/2026/001---konkursy/xmas-kaufland-novdec26/Regulamin-konkursu_Spenij-witeczne-marzenia-z-PG.pdf",
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-11-05",
+   "task": "Kup 2 zestawy prezentowe P&G na jednym paragonie, zarejestruj paragon w formularzu EverydayMe i napisz, jakie jedno świąteczne marzenie spełniłby Ci Mikołaj i dlaczego.",
+   "title": "„Spełnij świąteczne marzenia z P&G” – Kaufland",
+   "toBuy": "2 zestawy prezentowe Gillette, Head & Shoulders, Pantene lub Old Spice (z listy w akcji) na jednym paragonie",
+   "url": "https://www.everydayme.pl/konkursy/laponia",
+   "verified": true,
+   "id": "pg-kaufland-laponia"
+  },
+  {
    "addedAt": "2026-11-03T07:39:14+01:00",
    "end": "2027-01-10",
    "minSpend": null,
@@ -1706,8 +1835,8 @@
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-11-03",
-   "note": "Formularz na stronie (imię, nazwisko, e-mail, adres). Zgłoszenia do 3.11.",
+   "end": "2026-11-09",
+   "note": "Formularz na stronie (imię, nazwisko, e-mail, telefon, adres). Termin przedłużony – zgłoszenia do 9.11.",
    "organizer": "portalkryminalny.pl",
    "prizes": "5 egzemplarzy książki",
    "purchase": false,
@@ -1732,6 +1861,21 @@
    "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-ze-slepa-czarna-noca",
    "verified": true,
    "id": "portalkryminalny-slepa"
+  },
+  {
+   "addedAt": "2026-11-06T07:38:46+01:00",
+   "end": "2026-12-01",
+   "note": "Formularz (imię, nazwisko, e-mail, miasto); zapis na newsletter nieobowiązkowy; tylko 1 nagroda.",
+   "organizer": "portalmedialny.pl",
+   "prizes": "1 egzemplarz książki „Dyrdymarki”",
+   "purchase": false,
+   "rulesUrl": "https://portalmedialny.pl/regulaminy/konkurs/",
+   "start": "2026-11-01",
+   "task": "Odpowiedz w formularzu: ile lat temu ukazał się singel „Money, Money, Money” zespołu ABBA (podpowiedź w artykule).",
+   "title": "portalmedialny.pl – „Dyrdymarki” Marka Niedźwieckiego",
+   "url": "https://portalmedialny.pl/konkursy/3576/dyrdymarki-marek-niedzwiecki.html",
+   "verified": true,
+   "id": "portalmedialny-dyrdymarki"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
