@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T07:38:46+01:00",
+ "updatedAt": "2026-11-07T07:39:50+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -556,6 +556,26 @@
    "id": "duracell-skanuj-wygraj-2026"
   },
   {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-11-12",
+   "minSpend": null,
+   "note": "18+; zakup tylko 4–10.11 z aplikacją Żappka (bez Żabka Nano); rejestracja do 12.11; wyniki 16.11.",
+   "organizer": "Studio REC",
+   "prizes": "iPhone 18 Pro 512 GB, 30 × 500 zł",
+   "purchase": true,
+   "rulesUrl": "https://piwoeb.pl/pdf/regulamin.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-04",
+   "task": "Kup piwo EB w Żabce ze skanem Żappki, a potem na piwoeb.pl wpisz kod i opisz, ile smaków ma Twój charakter (do 600 znaków).",
+   "title": "„EB – charakter ma wiele smaków” – Żabka",
+   "toBuy": "1 piwo EB z listy promocyjnej (każda puszka/butelka = 1 kod)",
+   "url": "https://piwoeb.pl/",
+   "verified": true,
+   "id": "eb-charakter-zabka"
+  },
+  {
    "addedAt": "2026-11-06T07:38:46+01:00",
    "end": "2026-11-20",
    "minSpend": null,
@@ -647,6 +667,21 @@
    "toBuy": "1 dowolna Fanta",
    "url": "https://www.coca-cola.com/pl/pl/offerings/fanta-halloween",
    "id": "fanta-halloween"
+  },
+  {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2027-02-28",
+   "note": "Udział bez opłat; tekst niepublikowany i nienagradzany; 1 utwór na osobę; plik doc/rtf/odt/pdf; licencja na antologię i promocję; adres e-mail na stronie konkursu.",
+   "organizer": "Zielonogórski Klub Fantastyki Ad Astra",
+   "prizes": "1500 zł, statuetka „Zielonogórska Wiedźma”, publikacja w antologii",
+   "purchase": false,
+   "rulesUrl": "https://fantazje.adastra.zgora.pl/regulamin-10-edycji/",
+   "start": null,
+   "task": "Napisz opowiadanie fantastyczne związane z Zieloną Górą (przeszłość, teraźniejszość lub przyszłość), temat przewodni „Dziki Zachód”, do 30 000 znaków ze spacjami, i wyślij mailem.",
+   "title": "Konkurs literacki „Fantazje Zielonogórskie” (XVII edycja)",
+   "url": "https://fantazje.adastra.zgora.pl/",
+   "verified": true,
+   "id": "fantazje-zielonogorskie-2027"
   },
   {
    "addedAt": "2026-10-29T07:39:12+01:00",
@@ -1628,6 +1663,26 @@
    "id": "nestle-biedronka"
   },
   {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-11-18",
+   "minSpend": 20,
+   "note": "18+; SMS 0,62 zł z VAT; jeden paragon = jedno zgłoszenie; zachowaj paragon do 19.01.2027; wykluczone mleka początkowe i produkty dla dzieci do 3 lat; liczy się też intermarche.pl.",
+   "organizer": "Unique One (Nestlé Polska)",
+   "prizes": "20 000 zł (losowanie 24.11), 250 × bon Intermarché 200 zł, 50 × bon 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://uniqueone.pl/wp-content/uploads/2026/11/REGULAMIN_loterii-audioteksowej_Jesienna_moc_nagrod_od_Nestle_2026.pdf",
+   "shops": [
+    "Intermarché"
+   ],
+   "start": "2026-11-05",
+   "task": "Kup produkty Nestlé za min. 20 zł na jednym paragonie w Intermarché i wyślij SMS z numerem paragonu na 70966 – od razu dowiesz się o nagrodzie natychmiastowej.",
+   "title": "„Jesienna moc nagród od Nestlé” – Intermarché",
+   "toBuy": "Produkty Nestlé z listy (m.in. Nescafé, KitKat, Lion, Winiary, Maggi, Nesquik) za min. 20 zł na jednym paragonie",
+   "url": "https://intermarche.pl/konkurs/jesienna-moc-nagrod-od-nestle/",
+   "verified": true,
+   "id": "nestle-intermarche-jesienna-moc"
+  },
+  {
    "addedAt": "2026-10-28T07:37:02+01:00",
    "end": "2027-03-07",
    "note": "Zgłoszenia na stowarzyszenie@arche.pl (lub link do dysku); max 3 obiekty, 3–5 zdjęć JPG min. 3000 px krótszy bok; karta zgłoszeniowa i umowa o prawa autorskie. Wyniki do 30.04.2027.",
@@ -2047,6 +2102,26 @@
    "id": "rossmann-cif-misja-zakupowa"
   },
   {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-11-18",
+   "minSpend": null,
+   "note": "18+, tylko członkowie Klubu Rossmann w aplikacji; ZAKAZ AI w odpowiedzi; zakupy w sklepie lub online na tę samą kartę.",
+   "organizer": "Rossmann (fundator Nutricia)",
+   "prizes": "100 × karta podarunkowa Rossmann 100 zł; każdy dostaje kupon na Bebiko PRO+",
+   "purchase": true,
+   "rulesUrl": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-%E2%80%93-lepiej-rosnie-sie-razem-%E2%80%9D-1567161045850562560.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-05",
+   "task": "W aplikacji Rossmann PL kup 2 produkty z puli misji (Bebiko) na kartę Klubu Rossmann i odpowiedz w aplikacji: „Jaki wspólny moment pokazał Ci ostatnio, że razem tworzycie świetny zespół?”.",
+   "title": "Misja Zakupowa „Lepiej rośnie się razem” – Rossmann",
+   "toBuy": "2 produkty z puli misji (Bebiko – lista w aplikacji), mogą być na kilku paragonach",
+   "url": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-%E2%80%93-lepiej-rosnie-sie-razem-%E2%80%9D-1567161045850562560.pdf",
+   "verified": true,
+   "id": "rossmann-misja-bebiko"
+  },
+  {
    "addedAt": "2026-10-26T07:36:00+01:00",
    "end": "2026-11-15",
    "minSpend": 15,
@@ -2098,6 +2173,26 @@
    "url": "https://www.konkurssierra.pl/",
    "verified": true,
    "id": "sierra-tequila-meksyk"
+  },
+  {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-11-15",
+   "minSpend": null,
+   "note": "18+; zgłoszenie SMS na 4031 (koszt wg taryfy operatora); paragon fiskalny (bez faktury z NIP) – zachowaj; liczy się też zakupy.auchan.pl; jury ocenia kreatywność, 4 etapy.",
+   "organizer": "Expansja Advertising (Colian)",
+   "prizes": "4 × kupon islodycze.pl 300 zł + voucher do kina dla 2 os., 56 × voucher do kina dla 2 os.",
+   "purchase": true,
+   "rulesUrl": "https://expansja.pl/wp-content/uploads/2026/10/Regulamin_Sliwka_Naleczowska_i_Lalka.pdf",
+   "shops": [
+    "Auchan"
+   ],
+   "start": "2026-10-15",
+   "task": "Kup Śliwkę Nałęczowską w Auchan i wyślij SMS „TAK.[nr paragonu].[odpowiedź]” na 4031, kończąc zdanie „Gdyby Wokulski spróbował Śliwki Nałęczowskiej, to...” (zalecane do 160 znaków, bez polskich znaków).",
+   "title": "„Śliwka Nałęczowska i Lalka” – Auchan",
+   "toBuy": "1 opakowanie Śliwki Nałęczowskiej (190 g kartonik, 300 g bombonierka, 350 g torba, 490 g lub 250 g puszka)",
+   "url": "https://expansja.pl/wp-content/uploads/2026/10/Regulamin_Sliwka_Naleczowska_i_Lalka.pdf",
+   "verified": true,
+   "id": "sliwka-naleczowska-lalka-auchan"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
@@ -2242,6 +2337,26 @@
    "id": "warszawa-naturalnie"
   },
   {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-12-20",
+   "minSpend": 20,
+   "note": "18+; start zgłoszeń 9.11; zachowaj paragon (zgubiony = utrata nagrody); jeden paragon = jedno zgłoszenie; odpowiedź oryginalna, niepublikowana.",
+   "organizer": "Amooco Grzegorz Kańduła (LOTTE Wedel)",
+   "prizes": "2 × 10 000 zł, 25 × karta Zalando 500 zł, 50 × karta Allegro 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://wedelzprzyjemnoscia.pl/pliki/regulamin.pdf",
+   "shops": [
+    "Chorten"
+   ],
+   "start": "2026-11-09",
+   "task": "Kup produkty E.Wedel za min. 20 zł na jednym paragonie w sklepie Chorten i w formularzu dokończ zdanie „Mój przepis na chłodne dni to…” (do 500 znaków).",
+   "title": "„Na chłodne dni? Wedel. Z przyjemnością” – Chorten",
+   "toBuy": "Produkty E.Wedel (bez cukierków na wagę) za min. 20 zł na jednym paragonie",
+   "url": "https://wedelzprzyjemnoscia.pl/",
+   "verified": true,
+   "id": "wedel-chorten-chlodne-dni"
+  },
+  {
    "addedAt": "2026-10-27T07:37:11+01:00",
    "end": "2026-11-30",
    "note": "18+. Bez zakupu – formularz na stronie, odpowiedź do 1000 znaków ze spacjami, musi być oryginalna i własna. Można zgłaszać się codziennie (każda odpowiedź inna). Licencja na odpowiedź dla Wedla (5 lat), możliwa publikacja bez podpisu.",
@@ -2381,6 +2496,26 @@
    "id": "zloty-listek-rossmann"
   },
   {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-11-12",
+   "minSpend": null,
+   "note": "18+; zakup tylko 4–10.11 z aplikacją Żappka (bez Żabka Nano); zgłoszenia do 12.11; bez zdjęć i linków w odpowiedzi; 1 osoba = 1 nagroda.",
+   "organizer": "Pink Pepper Media (Stock Polska)",
+   "prizes": "3 sztabki złota 5 g, 3 zegarki Citizen, 50 bonów Żabka 50 zł",
+   "purchase": true,
+   "rulesUrl": "https://wygrajzlotokonkurs.pl/regulamin/",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-04",
+   "task": "Kup Żołądkową Gorzką 0,5 l lub 0,7 l w Żabce ze skanem Żappki i w formularzu na wygrajzlotokonkurs.pl opisz swoją „złotą legendę” (do 300 znaków).",
+   "title": "„Wygraj złoto” – Żołądkowa Gorzka w Żabce",
+   "toBuy": "1 butelka Żołądkowej Gorzkiej 0,5 l lub 0,7 l (każda butelka = 1 kod)",
+   "url": "https://wygrajzlotokonkurs.pl/",
+   "verified": true,
+   "id": "zoladkowa-wygraj-zloto-zabka"
+  },
+  {
    "addedAt": "2026-11-02T08:00:00+01:00",
    "end": "2026-11-30",
    "minSpend": null,
@@ -2405,6 +2540,26 @@
    "url": "https://skubnijsianko.pl/",
    "verified": true,
    "id": "zubr-skubnij-sianko"
+  },
+  {
+   "addedAt": "2026-11-07T07:39:50+01:00",
+   "end": "2026-11-12",
+   "minSpend": null,
+   "note": "18+; zakup tylko 4–10.11 z aplikacją Żappka (bez Żabka Nano); zgłoszenia do 12.11; odpowiedź własnego autorstwa; 1 osoba = 1 nagroda.",
+   "organizer": "Chromatique Julian Pęksa (CEDC International)",
+   "prizes": "deska snowboardowa, 10 kurtek, 50 bluz Żubrówki",
+   "purchase": true,
+   "rulesUrl": "https://zappka.app/wp-content/uploads/2026/11/Regulamin-Zubrowka-w45.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-04",
+   "task": "Kup produkt Żubrówka w Żabce ze skanem Żappki, a potem na żubrówka.pl wpisz kod i opisz swój przepis na niezapomnianą zimę (do 500 znaków).",
+   "title": "„żuBRRRówka – zimowy konkurs” – Żabka",
+   "toBuy": "1 promocyjny produkt Żubrówka (każdy produkt = 1 zgłoszenie)",
+   "url": "https://zubrowka.pl/",
+   "verified": true,
+   "id": "zubrowka-zimowy-zabka"
   }
  ]
 }
