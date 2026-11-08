@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T07:39:50+01:00",
+ "updatedAt": "2026-11-08T07:40:33+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1298,6 +1298,26 @@
    "id": "lays-smak-orientu-lidl"
   },
   {
+   "addedAt": "2026-11-08T07:40:33+01:00",
+   "end": "2027-02-28",
+   "minSpend": null,
+   "note": "18+. Ankieta obowiązkowa. Paragon bez NIP; może być e-paragon z Lidl Plus (aplikacja niewymagana).",
+   "organizer": "SMOLAR Agencja Promocyjno-Reklamowa (dla Lidl)",
+   "prizes": "Co tydzień 10× karta Lidl 100 zł, co miesiąc karta 5000 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.lidl.pl/c/ankieta-twoja-opinia-regulamin/s10008488",
+   "shops": [
+    "Lidl"
+   ],
+   "start": "2026-03-01",
+   "task": "Zrób zakupy w sklepie Lidl, wypełnij ankietę na stronie loterii i zgłoś paragon (numer, data zakupu, e-mail).",
+   "title": "Loteria Lidl „Twoja opinia” – edycja 9",
+   "toBuy": "Dowolne zakupy w sklepie stacjonarnym (nie liczą się sam alkohol, tytoń, leki, mleko dla niemowląt, karty podarunkowe); 1 paragon = 1 zgłoszenie",
+   "url": "https://www.lidl.pl/c/ankieta-twoja-opinia-regulamin/s10008488",
+   "verified": true,
+   "id": "lidl-twoja-opinia-edycja-9"
+  },
+  {
    "end": "2026-11-30",
    "note": "Pełna zdolność do czynności prawnych (18+). Formularz podpisany (e-podpis lub skan). Zwycięzca przenosi autorskie prawa majątkowe. Dowolna liczba projektów. Bez opłat.",
    "organizer": "Okręgowa Rada Adwokacka w Katowicach",
@@ -1824,6 +1844,26 @@
    "id": "pg-kaufland-laponia"
   },
   {
+   "addedAt": "2026-11-08T07:40:33+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "note": "18+, tylko polski sklep online. Odpowiedź oryginalna, niepublikowana. Można wygrać 1 nagrodę.",
+   "organizer": "COSMETICS LAB Sp. z o.o.",
+   "prizes": "Roczny zapas Pharmaceris N (800 zł), 10× voucher 150 zł",
+   "purchase": true,
+   "rulesUrl": "https://pharmaceris.com/konkurs-pharmaceris-n",
+   "shops": [
+    "Sklep internetowy pharmaceris.com"
+   ],
+   "start": "2026-11-03",
+   "task": "Kup produkt Pharmaceris N w sklepie internetowym i w polu „KONKURS” przy zamówieniu opisz swoją idealną kurację z Pharmaceris N (max 1000 znaków).",
+   "title": "„Jesień z Pharmaceris” – konkurs Pharmaceris N",
+   "toBuy": "Min. 1 produkt Pharmaceris N (1 zamówienie = 1 zgłoszenie)",
+   "url": "https://pharmaceris.com/oferty-specjalne/konkurs-pharmaceris-n",
+   "verified": true,
+   "id": "pharmaceris-n-jesien"
+  },
+  {
    "addedAt": "2026-11-03T07:39:14+01:00",
    "end": "2027-01-10",
    "minSpend": null,
@@ -2100,6 +2140,26 @@
    "url": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-sprzatnij-nagrody-w-swoim-stylu%E2%80%9D-1565014287011848192.pdf",
    "verified": true,
    "id": "rossmann-cif-misja-zakupowa"
+  },
+  {
+   "addedAt": "2026-11-08T07:40:33+01:00",
+   "end": "2026-11-11",
+   "minSpend": null,
+   "note": "18+, wymagany Klub Rossmann i aplikacja Rossmann PL (zgłoszenie w aplikacji, do 11.11 23:59). Odpowiedź musi być własna.",
+   "organizer": "Rossmann Supermarkety Drogeryjne Polska Sp. z o.o.",
+   "prizes": "5× oczyszczacz powietrza Philips, 100× karta Rossmann 50 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-zaopiekuj-swoje-zeby-z-pasta-elmex%E2%80%8B%E2%80%9D-1567159198339342336.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-05",
+   "task": "Kup 2 produkty Elmex z puli akcji na kartę Klubu Rossmann i odpowiedz w aplikacji Rossmann PL na pytanie „Jaki jest Twój sekret zdrowego uśmiechu?”.",
+   "title": "Misja Zakupowa „Zaopiekuj swoje zęby z Elmex” – Rossmann",
+   "toBuy": "2 produkty Elmex z puli misji (sklep stacjonarny lub online, na jedną kartę Klubu Rossmann)",
+   "url": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-zaopiekuj-swoje-zeby-z-pasta-elmex%E2%80%8B%E2%80%9D-1567159198339342336.pdf",
+   "verified": true,
+   "id": "rossmann-elmex-misja-zakupowa"
   },
   {
    "addedAt": "2026-11-07T07:39:50+01:00",
@@ -2474,6 +2534,26 @@
    "url": "https://www.wroclaw.pl/dla-mieszkanca/podwojne-bilety-na-koncerty-do-nfm-w-listopadzie-konkurs",
    "verified": true,
    "id": "wroclaw-nfm-listopad"
+  },
+  {
+   "addedAt": "2026-11-08T07:40:33+01:00",
+   "end": "2026-12-02",
+   "minSpend": null,
+   "note": "18+. Zakaz używania AI. Zakupy do 1.12, zgłoszenia do 2.12. Nie liczą się sklepy Żabka Nano. Zachowaj paragon.",
+   "organizer": "Żabka Polska sp. z o.o.",
+   "prizes": "Bon na wyjazd na Majorkę (+ VIP na koncert Skolima) lub do Hongkongu + nagrody rzeczowe",
+   "purchase": true,
+   "rulesUrl": "https://www.zabka.pl/regulamin-hot-dog/",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-04",
+   "task": "Kup Hot Dog Max, wpisz kod z paragonu na zabka.pl/wyzwanie-hot-dog, wybierz kategorię (New School/Old School) i napisz, za którym hot dogiem i stylem życia jesteś i dlaczego (max 300 znaków).",
+   "title": "„Wyzwanie Hot Dog” – Żabka",
+   "toBuy": "1 Hot Dog Max Skolim lub Van Damme (1 paragon = 1 zgłoszenie)",
+   "url": "https://www.zabka.pl/wyzwanie-hot-dog/",
+   "verified": true,
+   "id": "zabka-hot-dog-wyzwanie"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
