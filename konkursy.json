@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T07:40:33+01:00",
+ "updatedAt": "2026-11-09T07:41:30+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -146,6 +146,24 @@
    "url": "https://chrupomania.pl/",
    "verified": true,
    "id": "beskidzkie"
+  },
+  {
+   "addedAt": "2026-11-09T07:40:57+01:00",
+   "end": "2026-12-27",
+   "minSpend": null,
+   "note": "18+; zakup do 20.12, rejestracja do 27.12; sklep stacjonarny lub internetowy w Polsce; max 5 zgłoszeń (każde z innym dowodem); potwierdzenie przelewu/zamówienia nie wystarcza; zwycięzca wysyła zdjęcie/wideo produktu z kodem.",
+   "organizer": "Karlsbad Sp. z o.o. (dla BLACK+DECKER)",
+   "prizes": "Wyjazd dla 4 osób do Disney World w Orlando (150 000 zł), 56 × odkurzacz pionowy BLACK+DECKER",
+   "purchase": true,
+   "rulesUrl": "https://www.karlsbad.pl/wp-content/uploads/2026/10/regulamin-loteria-bd-202600919.pdf",
+   "shops": [],
+   "start": "2026-11-01",
+   "task": "Kup produkt BLACK+DECKER i zarejestruj dowód zakupu w formularzu na stronie loterii.",
+   "title": "Loteria BLACK+DECKER – wakacje w Disney World",
+   "toBuy": "1 produkt BLACK+DECKER (bez akcesoriów, baterii i części zamiennych)",
+   "url": "https://www.mensura.pl/loteria-black-decker-disney-world",
+   "verified": true,
+   "id": "black-decker-disney-world"
   },
   {
    "addedAt": "2026-11-04T07:38:30+01:00",
@@ -1559,6 +1577,26 @@
    "id": "milka-kino-lidl"
   },
   {
+   "addedAt": "2026-11-09T07:40:57+01:00",
+   "end": "2026-12-06",
+   "minSpend": null,
+   "note": "18+; zgłoszenia od 9.11 godz. 12:00; 1 paragon = 1 zgłoszenie, paragonów nie łączy się; zachowaj oryginał paragonu (może być wymagany do 20.01.2027).",
+   "organizer": "Fortis Sp. J. (dla Monster)",
+   "prizes": "4 × zestaw gamingowy (komputer, fotel, biurko), lodówki i pufy Monster, słuchawki, 500 × bon Dino 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://rozegrajto.pl/files/regulamin.pdf",
+   "shops": [
+    "Dino"
+   ],
+   "start": "2026-11-09",
+   "task": "Kup w Dino 2 napoje Monster na jednym paragonie i zarejestruj paragon w formularzu na rozegrajto.pl.",
+   "title": "Loteria „Monster w Dino!”",
+   "toBuy": "2 dowolne napoje Monster (jeden paragon)",
+   "url": "https://rozegrajto.pl/",
+   "verified": true,
+   "id": "monster-dino-gaming"
+  },
+  {
    "addedAt": "2026-10-29T07:39:12+01:00",
    "end": "2026-11-29",
    "minSpend": null,
@@ -1717,6 +1755,26 @@
    "id": "niezapomniane-zabytki"
   },
   {
+   "addedAt": "2026-11-09T07:40:57+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "note": "18+; tylko sklep stacjonarny Biedronka; jury ocenia odpowiedź (kreatywność); każde zgłoszenie = inny paragon i inna odpowiedź; organizator dostaje licencję na odpowiedź.",
+   "organizer": "GoldenSubmarine (dla NIVEA Polska)",
+   "prizes": "10 × oczyszczacz powietrza Dyson Purifier Humidify+Cool, 150 × e-karta Biedronka 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.nivea.pl/artykuly/engage/zadbajo/terms-and-conditions",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-11-02",
+   "task": "Kup krem NIVEA Care 7w1 w Biedronce, w formularzu odpowiedz na pytanie „O co chcesz zadbać tej jesieni?” (do 400 znaków) i wgraj zdjęcie paragonu.",
+   "title": "„NIVEA Care – Zadbaj o nawilżenie” – Biedronka",
+   "toBuy": "1 krem do twarzy NIVEA Care 7w1",
+   "url": "https://nivea.pl/zadbajonawilzenie",
+   "verified": true,
+   "id": "nivea-care-biedronka"
+  },
+  {
    "addedAt": "2026-10-31T07:41:10+01:00",
    "end": "2026-11-13",
    "note": "Zgłoszenia do 13.11 godz. 10:00. Trzeba odebrać nagrodę osobiście w redakcji w Świdnicy i pojechać na koncert. Zgoda na publikację danych zwycięzcy.",
@@ -1842,6 +1900,26 @@
    "url": "https://www.everydayme.pl/konkursy/laponia",
    "verified": true,
    "id": "pg-kaufland-laponia"
+  },
+  {
+   "addedAt": "2026-11-09T07:40:57+01:00",
+   "end": "2026-11-30",
+   "minSpend": 70,
+   "note": "Wymagane konto EverydayMe; jeden paragon min. 70 zł; każde zgłoszenie = nowy paragon (nieużyty w innych akcjach EverydayMe) i nowa odpowiedź; nagroda główna za kreatywność.",
+   "organizer": "Procter & Gamble (EverydayMe)",
+   "prizes": "100 000 zł na mieszkanie/remont, 8 × karta Kaufland 500 zł, co tydzień 5 × karta Kaufland 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://cdn-prd.pgjoltx.com/-/media/Growing-Families-Version1/GF-PL/2026/001---konkursy/MBCI-kaufland-oct-nov26/Regulamin-konkursu_KFL-MBCI_26.pdf?rev=3fb00dfe3718451ca2125973af4bd543",
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-10-01",
+   "task": "Kup produkty P&G za min. 70 zł w Kauflandzie, zaloguj się na EverydayMe, wgraj paragon i odpowiedz: „Jakie mieszkaniowe marzenie chciałabyś/chciałbyś zrealizować?”.",
+   "title": "„Mieszkaniowe marzenia” – P&G w Kauflandzie",
+   "toBuy": "Produkty marek P&G (np. Ariel, Fairy, Lenor, Gillette, Pampers, Oral-B) za min. 70 zł na jednym paragonie",
+   "url": "https://www.everydayme.pl/konkursy/mieszkaniowemarzenie",
+   "verified": true,
+   "id": "pg-kaufland-mieszkaniowe-marzenia"
   },
   {
    "addedAt": "2026-11-08T07:40:33+01:00",
@@ -2122,6 +2200,21 @@
    "id": "rimmel-multitaskerki"
   },
   {
+   "addedAt": "2026-11-09T07:40:57+01:00",
+   "end": "2026-11-14",
+   "note": "16+; zgłoszenia do 14.11 do godz. 18:00; tekst ma być samodzielną twórczością; jury wybiera 3 zwycięzców.",
+   "organizer": "Grupa RMF",
+   "prizes": "3 × wybrana zabawka z Amazon.pl (np. LEGO, Barbie, Play-Doh)",
+   "purchase": false,
+   "rulesUrl": "https://www.rmf.fm/regulamin-konkursow",
+   "start": "2026-11-07",
+   "task": "Wybierz zabawkę z listy i w formularzu opisz najbardziej zaskakującą zabawę wymyśloną przez Twoje dziecko (do 200 znaków).",
+   "title": "RMF FM – „Zabawka, od której zaczyna się pasja” (Amazon.pl)",
+   "url": "https://www.rmf.fm/r/amazon-2026.html",
+   "verified": true,
+   "id": "rmf-amazon-zabawka-pasja"
+  },
+  {
    "addedAt": "2026-11-05T07:39:05+01:00",
    "end": "2026-11-11",
    "minSpend": null,
@@ -2253,6 +2346,21 @@
    "url": "https://expansja.pl/wp-content/uploads/2026/10/Regulamin_Sliwka_Naleczowska_i_Lalka.pdf",
    "verified": true,
    "id": "sliwka-naleczowska-lalka-auchan"
+  },
+  {
+   "addedAt": "2026-11-09T07:40:57+01:00",
+   "end": "2026-12-31",
+   "note": "18+; tylko 1 zgłoszenie na osobę; zwycięzca wybierany co miesiąc przez komisję; odpowiedź własna i niepublikowana; sprawdź w formularzu, czy zgoda marketingowa jest obowiązkowa.",
+   "organizer": "GROW SMART & PARTNERS (Snuza)",
+   "prizes": "Co miesiąc zestaw Snuza: niania Looksi + monitor oddechu Hero MD (999 zł)",
+   "purchase": false,
+   "rulesUrl": "https://www.netranova.pl/data/include/cms//REGULAMIN_KONKURSU_SNUZA_2026..pdf?v=1791380532107",
+   "start": "2026-10-07",
+   "task": "W formularzu na snuza.pl odpowiedz w 2–3 zdaniach: „Maluszek zasnął, a Ty wychodzisz z pokoju. Co najbardziej chciałabyś wtedy wiedzieć?”.",
+   "title": "„Pierwsze noce ze Snuzą”",
+   "url": "https://snuza.pl/Konkurs-PIerwsze-noce-ze-Snuza-clinks-pol-599.html",
+   "verified": true,
+   "id": "snuza-pierwsze-noce"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
