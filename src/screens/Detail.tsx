@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Alert, Image, Linking, Modal, Pressable, ScrollView, Share, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Dimensions, Image, Linking, Modal, Pressable, ScrollView, Share, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useStore, uid } from '../store';
 import { colors } from '../theme';
 import { Button, CopyBox, Header, toolEmoji } from '../components/ui';
 import { analyzeTip } from '../ai';
 import { Nav } from '../nav';
+import { pickPhotos, removePhoto, takePhoto } from '../photos';
 
 export default function Detail({ nav, id }: { nav: Nav; id: string }) {
   const { data, updateTip, deleteTip, addCollection, addCategory } = useStore();
@@ -15,13 +16,15 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
   const tip = data.tips.find((t) => t.id === id);
   const [pick, setPick] = useState(false);
   const [newName, setNewName] = useState('');
+  const [newNote, setNewNote] = useState('');
+  const [editNote, setEditNote] = useState<{ id: string; text: string } | null>(null);
+  const [viewPhoto, setViewPhoto] = useState<string | null>(null);
   if (!tip) return <Header onBack={nav.pop} />;
 
   const redo = async () => {
     setRedoing(true);
     const { analysis, error } = await analyzeTip(tip.sourceText, data.settings, '');
-    // kategoria wybrana przez użytkownika zostaje, jeśli była już ustawiona poza listą domyślną
-    updateTip(tip.id, { ...analysis, category: data.categories.includes(analysis.category) ? analysis.category : tip.category, checked: [] });
+    updateTip(tip.id, { ...analysis, checked: [] });
     setRedoing(false);
     if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
   };
@@ -35,20 +38,64 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
     });
 
   const confirmDelete = () =>
-    Alert.alert('Usunąć poradę?', tip.title, [
+    Alert.alert('Usunąć porę?', tip.title, [
       { text: 'Anuluj', style: 'cancel' },
-      { text: 'Usuń', style: 'destructive', onPress: () => { deleteTip(tip.id); nav.pop(); } },
+      { text: 'Usuń', style: 'destructive', onPress: () => { (tip.photos ?? []).forEach(removePhoto); deleteTip(tip.id); nav.pop(); } },
     ]);
 
   const toggleCollection = (cid: string) =>
     updateTip(tip.id, { collectionIds: tip.collectionIds.includes(cid) ? tip.collectionIds.filter((x) => x !== cid) : [...tip.collectionIds, cid] });
 
+  const photos = tip.photos ?? [];
+  const notes = tip.notes ?? [];
+  const addPhotos = (uris: string[]) => uris.length && updateTip(tip.id, { photos: [...photos, ...uris] });
+  const askPhoto = () =>
+    Alert.alert('Dodaj zdjęcie', undefined, [
+      { text: 'Z galerii', onPress: () => pickPhotos().then(addPhotos).catch((e) => Alert.alert('Nie udało się dodać zdjęcia', String(e?.message ?? e))) },
+      { text: 'Zrób zdjęcie', onPress: () => takePhoto().then((u) => u && addPhotos([u])).catch((e) => Alert.alert('Aparat', String(e?.message ?? e))) },
+      { text: 'Anuluj', style: 'cancel' },
+    ]);
+  const deletePhoto = (uri: string) =>
+    Alert.alert('Usunąć zdjęcie?', undefined, [
+      { text: 'Anuluj', style: 'cancel' },
+      {
+        text: 'Usuń',
+        style: 'destructive',
+        onPress: () => {
+          removePhoto(uri);
+          updateTip(tip.id, { photos: photos.filter((p) => p !== uri), cover: tip.cover === uri ? undefined : tip.cover });
+          setViewPhoto(null);
+        },
+      },
+    ]);
+  const addNote = () => {
+    const text = newNote.trim();
+    if (!text) return;
+    updateTip(tip.id, { notes: [{ id: uid(), text, createdAt: Date.now() }, ...notes] });
+    setNewNote('');
+  };
+  const saveEditedNote = () => {
+    if (!editNote) return;
+    const text = editNote.text.trim();
+    updateTip(tip.id, { notes: text ? notes.map((n) => (n.id === editNote.id ? { ...n, text } : n)) : notes.filter((n) => n.id !== editNote.id) });
+    setEditNote(null);
+  };
+  const noteDate = (t: number) => new Date(t).toLocaleDateString('pl-PL', { day: 'numeric', month: 'short', year: 'numeric' });
+
   return (
     <View style={{ flex: 1 }}>
-      <Header onBack={nav.pop} right={<Pressable onPress={confirmDelete} hitSlop={12}><Ionicons name="trash-outline" size={24} color={colors.text} /></Pressable>} />
+      <Header
+        onBack={nav.pop}
+        right={
+          <>
+            <Pressable onPress={() => nav.push({ name: 'edit', id: tip.id })} hitSlop={10}><Ionicons name="create-outline" size={25} color={colors.text} /></Pressable>
+            <Pressable onPress={confirmDelete} hitSlop={12}><Ionicons name="trash-outline" size={24} color={colors.text} /></Pressable>
+          </>
+        }
+      />
       <ScrollView contentContainerStyle={{ paddingBottom: 40 }}>
         <View style={st.hero}>
-          {tip.thumbnail ? <Image source={{ uri: tip.thumbnail }} style={{ width: '100%', height: '100%' }} resizeMode="cover" /> : <Text style={{ fontSize: 80 }}>{toolEmoji(tip.tool)}</Text>}
+          {tip.cover ?? tip.thumbnail ? <Image source={{ uri: tip.cover ?? tip.thumbnail }} style={{ width: '100%', height: '100%' }} resizeMode="cover" /> : <Text style={{ fontSize: 80 }}>{toolEmoji(tip.tool)}</Text>}
           <Pressable style={st.heart} onPress={() => updateTip(tip.id, { favorite: !tip.favorite })}>
             <Ionicons name={tip.favorite ? 'heart' : 'heart-outline'} size={24} color="#fff" />
           </Pressable>
@@ -124,7 +171,7 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
             );
           })}
 
-          <Button title={redoing ? 'Porządkuję…' : data.settings.apiKey.trim() ? '✨ Uporządkuj ponownie z AI' : 'Uporządkuj ponownie'} outline disabled={redoing} onPress={redo} style={{ marginTop: 18 }} />
+          <Button title={redoing ? 'Porządkuję…' : data.settings.apiKey.trim() ? '✨ Ułóż ponownie z AI' : 'Ułóż ponownie'} outline disabled={redoing} onPress={redo} style={{ marginTop: 18 }} />
 
           {tip.url && (
             <Pressable onPress={() => Linking.openURL(tip.url!)} style={{ marginTop: 18 }}>
@@ -146,9 +193,62 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
               ))}
             </View>
           </View>
-          <TextInput value={tip.note} onChangeText={(note) => updateTip(tip.id, { note })} placeholder="Dodaj notatkę" placeholderTextColor={colors.muted} multiline style={st.note} />
+          <View style={{ flexDirection: 'row', gap: 8, marginTop: 14, alignItems: 'flex-end' }}>
+            <TextInput value={newNote} onChangeText={setNewNote} placeholder="Dodaj notatkę" placeholderTextColor={colors.muted} multiline style={[st.note, { flex: 1, marginTop: 0, minHeight: 56 }]} />
+            <Button title="Dodaj" onPress={addNote} disabled={!newNote.trim()} />
+          </View>
+          {notes.map((n) => (
+            <Pressable key={n.id} onPress={() => setEditNote({ id: n.id, text: n.text })} style={st.noteCard}>
+              <Text style={{ fontSize: 16, lineHeight: 23, color: colors.text }}>{n.text}</Text>
+              <Text style={{ color: colors.muted, fontSize: 12, marginTop: 6 }}>{noteDate(n.createdAt)} · dotknij, aby edytować</Text>
+            </Pressable>
+          ))}
+
+          <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Text style={st.section}>ZDJĘCIA</Text>
+            <Pressable onPress={askPhoto} style={st.addPhoto} hitSlop={8}>
+              <Ionicons name="camera-outline" size={18} color={colors.primaryDark} />
+              <Text style={{ color: colors.primaryDark, fontWeight: '700' }}>Dodaj</Text>
+            </Pressable>
+          </View>
+          {photos.length === 0 && <Text style={{ color: colors.muted }}>Dodaj własne zdjęcia, np. zrzuty ekranu albo efekt wypróbowania porady.</Text>}
+          <View style={st.grid}>
+            {photos.map((u) => (
+              <Pressable key={u} onPress={() => setViewPhoto(u)} style={st.thumb}>
+                <Image source={{ uri: u }} style={{ width: '100%', height: '100%' }} />
+                {tip.cover === u && <View style={st.coverTag}><Ionicons name="star" size={12} color="#fff" /></View>}
+              </Pressable>
+            ))}
+          </View>
         </View>
       </ScrollView>
+
+      <Modal visible={!!editNote} transparent animationType="slide" onRequestClose={() => setEditNote(null)}>
+        <Pressable style={st.backdrop} onPress={() => setEditNote(null)} />
+        <View style={st.sheet}>
+          <Text style={[st.title, { fontSize: 22 }]}>Edytuj notatkę</Text>
+          <TextInput value={editNote?.text ?? ''} onChangeText={(text) => setEditNote((e) => (e ? { ...e, text } : e))} multiline autoFocus style={[st.note, { minHeight: 120 }]} />
+          <Text style={{ color: colors.muted, marginTop: 8 }}>Puste pole usunie notatkę.</Text>
+          <View style={{ flexDirection: 'row', gap: 10, marginTop: 14 }}>
+            <Button title="Usuń" outline onPress={() => { if (editNote) updateTip(tip.id, { notes: notes.filter((n) => n.id !== editNote.id) }); setEditNote(null); }} style={{ flex: 1 }} />
+            <Button title="Zapisz" onPress={saveEditedNote} style={{ flex: 2 }} />
+          </View>
+        </View>
+      </Modal>
+
+      <Modal visible={!!viewPhoto} animationType="fade" onRequestClose={() => setViewPhoto(null)}>
+        <View style={{ flex: 1, backgroundColor: '#000' }}>
+          {viewPhoto && <Image source={{ uri: viewPhoto }} style={{ flex: 1 }} resizeMode="contain" />}
+          <View style={st.viewerBar}>
+            <Pressable onPress={() => setViewPhoto(null)} style={st.viewerBtn}><Ionicons name="close" size={22} color="#fff" /><Text style={st.viewerTxt}>Zamknij</Text></Pressable>
+            <Pressable onPress={() => { if (viewPhoto) updateTip(tip.id, { cover: tip.cover === viewPhoto ? undefined : viewPhoto }); setViewPhoto(null); }} style={st.viewerBtn}>
+              <Ionicons name={tip.cover === viewPhoto ? 'star' : 'star-outline'} size={22} color="#fff" />
+              <Text style={st.viewerTxt}>{tip.cover === viewPhoto ? 'Zdejmij okładkę' : 'Ustaw jako okładkę'}</Text>
+            </Pressable>
+            <Pressable onPress={() => viewPhoto && deletePhoto(viewPhoto)} style={st.viewerBtn}><Ionicons name="trash-outline" size={22} color="#fff" /><Text style={st.viewerTxt}>Usuń</Text></Pressable>
+          </View>
+        </View>
+      </Modal>
 
       <Modal visible={catPick} transparent animationType="slide" onRequestClose={() => setCatPick(false)}>
         <Pressable style={st.backdrop} onPress={() => setCatPick(false)} />
@@ -246,5 +346,13 @@ const st = StyleSheet.create({
   note: { backgroundColor: '#F2EFEC', borderRadius: 14, padding: 14, minHeight: 90, fontSize: 16, marginTop: 14, color: colors.text, textAlignVertical: 'top' },
   backdrop: { flex: 1, backgroundColor: 'rgba(0,0,0,0.4)' },
   sheet: { backgroundColor: colors.bg, padding: 20, borderTopLeftRadius: 24, borderTopRightRadius: 24 },
+  noteCard: { backgroundColor: colors.card, borderRadius: 14, padding: 14, marginTop: 10 },
+  addPhoto: { flexDirection: 'row', alignItems: 'center', gap: 4, backgroundColor: colors.primarySoft, borderRadius: 14, paddingHorizontal: 12, paddingVertical: 6, marginTop: 16 },
+  grid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, marginTop: 8 },
+  thumb: { width: (Dimensions.get('window').width - 40 - 16) / 3, aspectRatio: 1, borderRadius: 12, overflow: 'hidden', backgroundColor: '#E7E0DA' },
+  coverTag: { position: 'absolute', top: 6, left: 6, width: 22, height: 22, borderRadius: 11, backgroundColor: colors.primary, alignItems: 'center', justifyContent: 'center' },
+  viewerBar: { flexDirection: 'row', justifyContent: 'space-around', paddingVertical: 18, paddingBottom: 30, backgroundColor: '#111' },
+  viewerBtn: { alignItems: 'center', gap: 4, paddingHorizontal: 10 },
+  viewerTxt: { color: '#fff', fontSize: 13 },
   collRow: { flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 12 },
 });
