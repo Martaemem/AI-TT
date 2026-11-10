@@ -12,6 +12,7 @@ export default function Home({ nav }: { nav: Nav }) {
   const { data } = useStore();
   const [query, setQuery] = useState('');
   const [cat, setCat] = useState<string | null>(null);
+  const [tool, setTool] = useState<string | null>(null);
   const [clipUrl, setClipUrl] = useState<string | null>(null);
 
   // Wykrywanie linku TikTok w schowku po powrocie do aplikacji
@@ -35,11 +36,13 @@ export default function Home({ nav }: { nav: Nav }) {
     return data.tips.filter(
       (t) =>
         (!cat || t.category === cat) &&
+        (!tool || t.tool === tool) &&
         (!q || [t.title, t.tool, t.summary, ...t.tags].some((x) => x.toLowerCase().includes(q))),
     );
-  }, [data.tips, query, cat]);
+  }, [data.tips, query, cat, tool]);
+  const usedTools = data.tools.filter((n) => data.tips.some((t) => t.tool === n));
 
-  const searching = query.trim() !== '' || cat !== null;
+  const searching = query.trim() !== '' || cat !== null || tool !== null;
 
   return (
     <ScrollView contentContainerStyle={{ paddingBottom: 24 }} keyboardShouldPersistTaps="handled">
@@ -48,7 +51,7 @@ export default function Home({ nav }: { nav: Nav }) {
       {clipUrl && (
         <Pressable style={st.clip} onPress={() => nav.push({ name: 'add', url: clipUrl })}>
           <Ionicons name="link" size={22} color={colors.primaryDark} />
-          <Text style={st.clipText} numberOfLines={2}>Wykryto link TikTok w schowku. Dotknij, aby zaimportować poradę.</Text>
+          <Text style={st.clipText} numberOfLines={2}>Wykryto link TikTok w schowku. Dotknij, aby zaimportować porę.</Text>
         </Pressable>
       )}
 
@@ -71,6 +74,15 @@ export default function Home({ nav }: { nav: Nav }) {
           <Chip key={c} label={c} active={cat === c} onPress={() => setCat(cat === c ? null : c)} />
         ))}
       </ScrollView>
+
+      {usedTools.length > 0 && (
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 12 }}>
+          <Text style={st.toolLabel}>Narzędzie:</Text>
+          {usedTools.map((n) => (
+            <Chip key={n} label={n} active={tool === n} onPress={() => setTool(tool === n ? null : n)} />
+          ))}
+        </ScrollView>
+      )}
 
       {data.tips.length === 0 ? (
         <View style={st.empty}>
@@ -144,6 +156,7 @@ const st = StyleSheet.create({
   search: { flexDirection: 'row', alignItems: 'center', gap: 10, marginHorizontal: 20, marginTop: 14, paddingHorizontal: 14, borderRadius: 14, backgroundColor: colors.card },
   rowHead: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginHorizontal: 20, marginBottom: 12, marginTop: 8 },
   h2: { fontSize: 24, fontWeight: '800', color: colors.text },
+  toolLabel: { alignSelf: 'center', color: colors.muted, fontWeight: '700', marginRight: 10 },
   link: { color: colors.primary, fontSize: 17, fontWeight: '700' },
   empty: { alignItems: 'center', padding: 40 },
   emptyTitle: { fontSize: 22, fontWeight: '800', color: colors.text, marginTop: 12 },
