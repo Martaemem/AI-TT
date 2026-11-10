@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Alert, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useStore } from '../store';
-import { colors, TOOL_EMOJI } from '../theme';
+import { colors } from '../theme';
 import { Button, Chip, Header } from '../components/ui';
 import { Nav } from '../nav';
 import { Step, Term, Tip } from '../types';
@@ -11,11 +11,12 @@ const LEVELS: Tip['difficulty'][] = ['łatwe', 'średnie', 'trudne'];
 
 /** Edycja wszystkich pól porady: tytuł, opis, kategoria, ważne informacje, hasła, prompty i kroki. */
 export default function EditTip({ nav, id }: { nav: Nav; id: string }) {
-  const { data, updateTip } = useStore();
+  const { data, updateTip, addTool } = useStore();
   const tip = data.tips.find((t) => t.id === id);
   const [title, setTitle] = useState(tip?.title ?? '');
   const [summary, setSummary] = useState(tip?.summary ?? '');
   const [tool, setTool] = useState(tip?.tool ?? 'AI');
+  const [newTool, setNewTool] = useState('');
   const [category, setCategory] = useState(tip?.category ?? 'Inne');
   const [difficulty, setDifficulty] = useState<Tip['difficulty']>(tip?.difficulty ?? 'łatwe');
   const [keyPoints, setKeyPoints] = useState<string[]>(tip?.keyPoints ?? []);
@@ -61,7 +62,7 @@ export default function EditTip({ nav, id }: { nav: Nav; id: string }) {
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Header onBack={nav.pop} right={<Pressable onPress={save} hitSlop={10}><Text style={st.save}>Zapisz</Text></Pressable>} />
       <ScrollView contentContainerStyle={{ padding: 20, paddingBottom: 60 }} keyboardShouldPersistTaps="handled">
-        <Text style={st.h1}>Edytuj porę</Text>
+        <Text style={st.h1}>Edytuj poradę</Text>
 
         <Text style={st.label}>Tytuł</Text>
         <TextInput value={title} onChangeText={setTitle} style={st.input} placeholder="Tytuł porady" placeholderTextColor={colors.muted} />
@@ -70,10 +71,22 @@ export default function EditTip({ nav, id }: { nav: Nav; id: string }) {
         <TextInput value={summary} onChangeText={setSummary} multiline style={[st.input, st.area]} placeholder="O czym jest ta porada?" placeholderTextColor={colors.muted} />
 
         <Text style={st.label}>Narzędzie AI</Text>
-        <TextInput value={tool} onChangeText={setTool} style={st.input} placeholder="np. ChatGPT" placeholderTextColor={colors.muted} />
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginTop: 8 }}>
-          {Object.keys(TOOL_EMOJI).map((t) => <Chip key={t} label={t} active={tool === t} onPress={() => setTool(t)} />)}
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          {data.tools.map((t) => <Chip key={t} label={t} active={tool === t} onPress={() => setTool(t)} />)}
         </ScrollView>
+        <View style={{ flexDirection: 'row', gap: 8, marginTop: 8 }}>
+          <TextInput value={newTool} onChangeText={setNewTool} style={[st.input, { flex: 1 }]} placeholder="Nowe narzędzie, np. Gamma" placeholderTextColor={colors.muted} />
+          <Button
+            title="Dodaj"
+            onPress={() => {
+              const n = newTool.trim();
+              if (!n) return;
+              addTool(n);
+              setTool(n);
+              setNewTool('');
+            }}
+          />
+        </View>
 
         <Text style={st.label}>Kategoria</Text>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>

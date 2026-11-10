@@ -8,7 +8,7 @@ import { Provider } from '../types';
 const DEFAULT_MODEL: Record<Provider, string> = { groq: 'openai/gpt-oss-120b', gemini: 'gemini-2.5-flash', claude: 'claude-sonnet-5-5' };
 
 export default function More() {
-  const { data, setSettings } = useStore();
+  const { data, setSettings, removeDuplicates } = useStore();
   const [provider, setProvider] = useState<Provider>(data.settings.provider);
   const [key, setKey] = useState(data.settings.apiKey);
   const [model, setModel] = useState(data.settings.model);
@@ -36,6 +36,25 @@ export default function More() {
         <Text style={st.p}>Zapisane porady: {data.tips.length}</Text>
         <Text style={st.p}>Wypróbowane: {done}</Text>
         <Button title="Eksportuj wszystkie porady" icon="share-outline" outline onPress={exportAll} disabled={data.tips.length === 0} style={{ marginTop: 8 }} />
+        <Button
+          title="Usuń zduplikowane porady"
+          icon="copy-outline"
+          outline
+          disabled={data.tips.length === 0}
+          onPress={() => {
+            const urls = data.tips.filter((t) => t.url).map((t) => t.url);
+            const extra = urls.length - new Set(urls).size;
+            if (extra === 0) {
+              Alert.alert('Brak duplikatów', 'Żadna porada nie powtarza się (liczone po linku do filmu).');
+              return;
+            }
+            Alert.alert('Usunąć duplikaty?', `Znaleziono ${extra} powtórzonych porad z tym samym linkiem. Z każdej grupy zostanie ta z największą liczbą notatek, zdjęć i oznaczeń (przy remisie – najstarsza).`, [
+              { text: 'Anuluj', style: 'cancel' },
+              { text: 'Usuń', style: 'destructive', onPress: () => Alert.alert('Gotowe', `Usunięto: ${removeDuplicates()}`) },
+            ]);
+          }}
+          style={{ marginTop: 10 }}
+        />
       </View>
       <View style={st.card}>
         <Text style={st.h}>Ustawienia AI</Text>
