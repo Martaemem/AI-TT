@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Data, Settings } from './types';
+import { Data, Settings, Tip } from './types';
 import { CATEGORIES } from './theme';
 
 const KEY = 'ai-tt:data:v1';
@@ -14,6 +14,12 @@ export const defaultData: Data = {
   settings: { provider: 'gemini', apiKey: '', model: 'gemini-2.5-flash' },
 };
 
+/** Stare porady miały jedną notatkę tekstową – zamieniamy ją na listę notatek. */
+const migrateTip = (t: Tip): Tip =>
+  t.notes || !t.note?.trim()
+    ? { ...t, notes: t.notes ?? [] }
+    : { ...t, note: '', notes: [{ id: `n-${t.id}`, text: t.note.trim(), createdAt: t.createdAt }] };
+
 export async function loadData(): Promise<Data> {
   try {
     const raw = await AsyncStorage.getItem(KEY);
@@ -27,7 +33,7 @@ export async function loadData(): Promise<Data> {
         ? { provider: 'claude', apiKey: saved.apiKey, model: saved.model || 'claude-sonnet-5-5' }
         : defaultData.settings;
     return {
-      tips: parsed.tips ?? [],
+      tips: (parsed.tips ?? []).map(migrateTip),
       collections: parsed.collections ?? defaultData.collections,
       categories: parsed.categories?.length ? parsed.categories : CATEGORIES,
       settings,

@@ -1,6 +1,7 @@
 export type Route =
   | { name: 'detail'; id: string }
   | { name: 'steps'; id: string }
+  | { name: 'edit'; id: string }
   | { name: 'add'; url?: string; auto?: boolean }
   | { name: 'list'; collectionId: string; title: string }; // collectionId: id zbioru, 'all' lub 'favorites'
 

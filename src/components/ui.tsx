@@ -51,8 +51,8 @@ export function CopyBox({ text }: { text: string }) {
 export function TipCard({ tip, onPress, width }: { tip: Tip; onPress: () => void; width?: number }) {
   return (
     <Pressable onPress={onPress} style={[s.card, width ? { width } : { width: '100%' }]}>
-      {tip.thumbnail ? (
-        <Image source={{ uri: tip.thumbnail }} style={StyleSheet.absoluteFill} />
+      {tip.cover ?? tip.thumbnail ? (
+        <Image source={{ uri: tip.cover ?? tip.thumbnail }} style={StyleSheet.absoluteFill} />
       ) : (
         <View style={[StyleSheet.absoluteFill, s.cardPlaceholder]}>
           <Text style={{ fontSize: 56 }}>{toolEmoji(tip.tool)}</Text>

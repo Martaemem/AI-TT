@@ -12,6 +12,7 @@ import Home from './src/screens/Home';
 import AddTip from './src/screens/AddTip';
 import Detail from './src/screens/Detail';
 import Steps from './src/screens/Steps';
+import EditTip from './src/screens/EditTip';
 import List from './src/screens/List';
 import Knowledge from './src/screens/Knowledge';
 import Categories from './src/screens/Categories';
@@ -62,6 +63,7 @@ function Root() {
   if (top) {
     switch (top.name) {
       case 'detail': body = <Detail key={top.id} nav={nav} id={top.id} />; break;
+      case 'edit': body = <EditTip key={top.id} nav={nav} id={top.id} />; break;
       case 'steps': body = <Steps key={top.id} nav={nav} id={top.id} />; break;
       case 'add': body = <AddTip key={top.url} nav={nav} initialUrl={top.url} autoStart={top.auto} />; break;
       case 'list': body = <List nav={nav} collectionId={top.collectionId} title={top.title} />; break;

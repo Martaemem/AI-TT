@@ -2,6 +2,8 @@ export type Term = { name: string; desc: string };
 
 export type Step = { text: string; prompt?: string };
 
+export type Note = { id: string; text: string; createdAt: number };
+
 export type Tip = {
   id: string;
   url?: string;
@@ -23,7 +25,10 @@ export type Tip = {
   favorite: boolean;
   done: boolean;
   rating: number;
-  note: string;
+  note: string; // stare pole; notatki są teraz w `notes`
+  notes?: Note[];
+  photos?: string[]; // własne zdjęcia (pliki w pamięci telefonu)
+  cover?: string; // własna okładka (jedno ze zdjęć)
   collectionIds: string[];
   createdAt: number;
 };
