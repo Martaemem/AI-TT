@@ -51,7 +51,7 @@ export default function Home({ nav }: { nav: Nav }) {
       {clipUrl && (
         <Pressable style={st.clip} onPress={() => nav.push({ name: 'add', url: clipUrl })}>
           <Ionicons name="link" size={22} color={colors.primaryDark} />
-          <Text style={st.clipText} numberOfLines={2}>Wykryto link TikTok w schowku. Dotknij, aby zaimportować porę.</Text>
+          <Text style={st.clipText} numberOfLines={2}>Wykryto link TikTok w schowku. Dotknij, aby zaimportować poradę.</Text>
         </Pressable>
       )}
 

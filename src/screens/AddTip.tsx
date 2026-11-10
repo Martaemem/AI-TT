@@ -91,7 +91,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
         return;
       }
       if (slideError) Alert.alert('Zdjęć nie udało się odczytać', `${slideError}\n\nPorada powstanie bez tekstu ze slajdów.`);
-      setBusy(hasKey ? 'AI porządkuje porę…' : 'Porządkuję porę…');
+      setBusy(hasKey ? 'AI porządkuje poradę…' : 'Porządkuję poradę…');
       const { analysis, error } = await analyzeTip(source, data.settings, caption);
       if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
       const tip: Tip = {
@@ -130,7 +130,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Header onBack={nav.pop} />
       <ScrollView contentContainerStyle={{ padding: 20, paddingTop: 0 }} keyboardShouldPersistTaps="handled">
-        <Text style={st.h1}>Dodaj porę z TikToka</Text>
+        <Text style={st.h1}>Dodaj poradę z TikToka</Text>
         <Text style={st.label}>Link do filmu</Text>
         <TextInput value={url} onChangeText={setUrl} placeholder="https://www.tiktok.com/…" placeholderTextColor={colors.muted} autoCapitalize="none" autoCorrect={false} style={st.input} />
         <Button title="Wklej ze schowka" icon="clipboard-outline" outline onPress={paste} style={{ marginTop: 10 }} />
@@ -156,7 +156,7 @@ export default function AddTip({ nav, initialUrl, autoStart }: { nav: Nav; initi
             <Text style={{ color: colors.muted, marginTop: 8 }}>{busy}</Text>
           </View>
         ) : (
-          <Button title="Uporządkuj porę" icon="sparkles" onPress={() => run()} style={{ marginTop: 20 }} />
+          <Button title="Uporządkuj poradę" icon="sparkles" onPress={() => run()} style={{ marginTop: 20 }} />
         )}
       </ScrollView>
     </KeyboardAvoidingView>
