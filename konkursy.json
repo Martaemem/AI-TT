@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-09T07:41:30+01:00",
+ "updatedAt": "2026-11-10T07:42:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1051,6 +1051,21 @@
    "id": "kasia-2026"
   },
   {
+   "addedAt": "2026-11-10T07:40:48+01:00",
+   "end": "2026-12-04",
+   "note": "Pełnoletni; OBOWIĄZKOWY zapis do newslettera KATALOGu dla kierowców (warunek udziału); 1 zgłoszenie na e-mail; przy kilku poprawnych wygrywa zgłoszenie najbliżej 21.11; odbiór osobiście w Krakowie lub wysyłka za 20 zł.",
+   "organizer": "KATALOG dla kierowców (kdk.pl)",
+   "prizes": "2 × wideorejestrator Orllo Autoplay Pro",
+   "purchase": false,
+   "rulesUrl": "https://www.kdk.pl/konkurs/regulamin.html",
+   "start": null,
+   "task": "Na podstawie testu Suzuki e-Vitara 2WD na kdk.pl odpowiedz na 2 pytania obliczeniowe (zużycie energii na 499 km i dystans wg danych ze specyfikacji) i wyślij formularzem.",
+   "title": "kdk.pl – „Dziękujemy, że nas czytasz” (listopad): wideorejestrator Orllo",
+   "url": "https://www.kdk.pl/konkurs/index.php",
+   "verified": true,
+   "id": "kdk-orllo-listopad"
+  },
+  {
    "end": "2026-11-18",
    "minSpend": 59,
    "note": "18+; zachowaj oryginał paragonu; jeden paragon = jedno zgłoszenie; losowanie 20.11.2026.",
@@ -1775,6 +1790,44 @@
    "id": "nivea-care-biedronka"
   },
   {
+   "addedAt": "2026-11-10T07:40:48+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "Rejestracja do 31.12 godz. 23:59; zachowaj dowód zakupu; strona podaje niespójne liczby nagród, a wiek nie jest na niej podany – sprawdź w regulaminie.",
+   "organizer": "GoldenSubmarine (dla NIVEA)",
+   "prizes": "Karty podarunkowe (m.in. 2500 zł i 100 zł) oraz zestawy kosmetyków – szczegóły w regulaminie",
+   "purchase": true,
+   "rulesUrl": "https://www.goldensubmarine.com/regulaminy/nivea/regulamin-loterii-nivea-men-wygrana-na-twoich-zasadach.pdf",
+   "shops": [],
+   "start": "2026-10-30",
+   "task": "Kup dowolny produkt NIVEA MEN i zarejestruj dowód zakupu w formularzu na stronie loterii; cotygodniowe losowania.",
+   "title": "Loteria NIVEA MEN „Wygrana na Twoich zasadach”",
+   "toBuy": "1 dowolny produkt NIVEA MEN",
+   "url": "https://www.nivea.pl/articles/engage/wygrana",
+   "verified": true,
+   "id": "nivea-men-wygrana"
+  },
+  {
+   "addedAt": "2026-11-10T07:40:48+01:00",
+   "end": "2026-11-19",
+   "minSpend": null,
+   "note": "Konkurs (ocena odpowiedzi); zakup w okresie 5–19.11; zachowaj paragon; wiek i limit znaków sprawdź w regulaminie (PDF nie dał się dziś odczytać).",
+   "organizer": "GoldenSubmarine (dla NIVEA)",
+   "prizes": "150 × bluza Chiara Wear",
+   "purchase": true,
+   "rulesUrl": "https://www.goldensubmarine.com/regulaminy/Nivea/nivea-regulamin-konkursu-repair-and-care-otol-skore-komfortem.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-05",
+   "task": "Kup kosmetyk NIVEA Repair & Care lub Care w Rossmannie i w formularzu odpowiedz: „Co daje Ci poczucie przyjemnego otulenia i dlaczego?”, dołączając zdjęcie dowodu zakupu.",
+   "title": "NIVEA Repair & Care – „Otul skórę komfortem” w Rossmannie",
+   "toBuy": "1 dowolny kosmetyk NIVEA Repair & Care lub Care",
+   "url": "https://www.nivea.pl/artykuly/engage/repair",
+   "verified": true,
+   "id": "nivea-repair-care-rossmann"
+  },
+  {
    "addedAt": "2026-10-31T07:41:10+01:00",
    "end": "2026-11-13",
    "note": "Zgłoszenia do 13.11 godz. 10:00. Trzeba odebrać nagrodę osobiście w redakcji w Świdnicy i pojechać na koncert. Zgoda na publikację danych zwycięzcy.",
@@ -1880,6 +1933,26 @@
    "url": "https://manufakturapapieruczerpanego.pl/mala-rzecz-wielka-radosc-papierowa-zabawka-na-choinke-konkurs-z-cyklu-sztuka-papieru/",
    "verified": true,
    "id": "ozdoba-papierowa"
+  },
+  {
+   "addedAt": "2026-11-10T07:40:48+01:00",
+   "end": "2026-12-29",
+   "minSpend": null,
+   "note": "16+ (niepełnoletni za zgodą opiekuna); tylko stacjonarne Żabki; zachowaj puszkę z zawleczką do końca loterii (19.02.2027); max 10 kodów dziennie; bon tylko na pizzę, zapiekanki, tosty, frytki w Żabce.",
+   "organizer": "Agencja Reklamowa Avanti (dla Pepsi-Cola General Bottlers Poland)",
+   "prizes": "Natychmiastowe bony do Żabki: 10 000 × 20 zł i 40 000 × 10 zł (+ losowanie dodatkowe)",
+   "purchase": true,
+   "rulesUrl": "https://www.joy-pepsico.eu/joypepsico-pl-prod/s3fs-public/coupons/Reg.%20Loteria%20PEPSI_Zabka%202026_FINAL.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-18",
+   "task": "Kup puszkę Pepsi lub Pepsi Zero z oznaczeniem promocyjnym w Żabce, załóż konto na Platformie Joy i wpisz kod spod zawleczki – wynik od razu.",
+   "title": "Loteria „Graj o szamę w Żabce” – Pepsi",
+   "toBuy": "1 puszka Pepsi lub Pepsi Zero z oznaczeniem promocyjnym",
+   "url": "https://www.joy-pepsico.eu/pl-pl/brands/pepsi/promotions/graj-o-szame",
+   "verified": true,
+   "id": "pepsi-zabka-graj-o-szame"
   },
   {
    "addedAt": "2026-11-06T07:38:46+01:00",
@@ -2361,6 +2434,26 @@
    "url": "https://snuza.pl/Konkurs-PIerwsze-noce-ze-Snuza-clinks-pol-599.html",
    "verified": true,
    "id": "snuza-pierwsze-noce"
+  },
+  {
+   "addedAt": "2026-11-10T07:40:48+01:00",
+   "end": "2026-12-18",
+   "minSpend": null,
+   "note": "18+; 1 paragon = 1 zgłoszenie (paragonów nie łączy się); zachowaj ORYGINAŁ paragonu – organizator może go zażądać do 18.02.2027; lista restauracji na stronie loterii.",
+   "organizer": "Fortis (restauracje Sodexo)",
+   "prizes": "21 × karta Allegro 50 zł, 21 × karta Booksy 50 zł, frytkownica, oczyszczacz powietrza i odkurzacz Dreame",
+   "purchase": true,
+   "rulesUrl": "https://www.fortispromocje.pl/files/rIZROgfMAm1jXp4CPoTuykEIxsk00bs0MYqeB2Tk.pdf",
+   "shops": [
+    "Restauracje Sodexo"
+   ],
+   "start": "2026-11-07",
+   "task": "Kup w restauracji Sodexo zestaw: dowolne danie z menu + napój Coca-Cola, Fanta lub Sprite, i zarejestruj paragon (numer + zdjęcie) na pysznenagrody.pl.",
+   "title": "Loteria „Pyszne nagrody” – restauracje Sodexo",
+   "toBuy": "1 zestaw: danie z menu + 1 napój Coca-Cola/Fanta/Sprite",
+   "url": "https://pysznenagrody.pl/",
+   "verified": true,
+   "id": "sodexo-pyszne-nagrody"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
