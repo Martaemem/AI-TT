@@ -9,7 +9,9 @@ import { Nav } from '../nav';
 import { pickPhotos, removePhoto, takePhoto } from '../photos';
 
 export default function Detail({ nav, id }: { nav: Nav; id: string }) {
-  const { data, updateTip, deleteTip, addCollection, addCategory } = useStore();
+  const { data, updateTip, deleteTip, addCollection, addCategory, addTool } = useStore();
+  const [toolPick, setToolPick] = useState(false);
+  const [newTool, setNewTool] = useState('');
   const [catPick, setCatPick] = useState(false);
   const [newCat, setNewCat] = useState('');
   const [redoing, setRedoing] = useState(false);
@@ -24,7 +26,8 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
   const redo = async () => {
     setRedoing(true);
     const { analysis, error } = await analyzeTip(tip.sourceText, data.settings, '');
-    updateTip(tip.id, { ...analysis, checked: [] });
+    // kategoria wybrana przez użytkownika zostaje, jeśli była już ustawiona poza listą domyślną
+    updateTip(tip.id, { ...analysis, category: data.categories.includes(analysis.category) ? analysis.category : tip.category, checked: [] });
     setRedoing(false);
     if (error) Alert.alert('AI niedostępne', `${error}\n\nUżyłem prostego porządkowania offline.`);
   };
@@ -38,7 +41,7 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
     });
 
   const confirmDelete = () =>
-    Alert.alert('Usunąć porę?', tip.title, [
+    Alert.alert('Usunąć poradę?', tip.title, [
       { text: 'Anuluj', style: 'cancel' },
       { text: 'Usuń', style: 'destructive', onPress: () => { (tip.photos ?? []).forEach(removePhoto); deleteTip(tip.id); nav.pop(); } },
     ]);
@@ -104,7 +107,7 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
         <View style={{ padding: 20 }}>
           <Text style={st.title}>{tip.title}</Text>
           <View style={st.meta}>
-            <Badge text={`${toolEmoji(tip.tool)} ${tip.tool}`} />
+            <Pressable onPress={() => setToolPick(true)}><Badge text={`${toolEmoji(tip.tool)} ${tip.tool} ✎`} /></Pressable>
             <Pressable onPress={() => setCatPick(true)}><Badge text={`${tip.category} ✎`} /></Pressable>
             <Badge text={`Poziom: ${tip.difficulty}`} />
           </View>
@@ -171,7 +174,7 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
             );
           })}
 
-          <Button title={redoing ? 'Porządkuję…' : data.settings.apiKey.trim() ? '✨ Ułóż ponownie z AI' : 'Ułóż ponownie'} outline disabled={redoing} onPress={redo} style={{ marginTop: 18 }} />
+          <Button title={redoing ? 'Porządkuję…' : data.settings.apiKey.trim() ? '✨ Uporządkuj ponownie z AI' : 'Uporządkuj ponownie'} outline disabled={redoing} onPress={redo} style={{ marginTop: 18 }} />
 
           {tip.url && (
             <Pressable onPress={() => Linking.openURL(tip.url!)} style={{ marginTop: 18 }}>
@@ -246,6 +249,35 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
               <Text style={st.viewerTxt}>{tip.cover === viewPhoto ? 'Zdejmij okładkę' : 'Ustaw jako okładkę'}</Text>
             </Pressable>
             <Pressable onPress={() => viewPhoto && deletePhoto(viewPhoto)} style={st.viewerBtn}><Ionicons name="trash-outline" size={22} color="#fff" /><Text style={st.viewerTxt}>Usuń</Text></Pressable>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal visible={toolPick} transparent animationType="slide" onRequestClose={() => setToolPick(false)}>
+        <Pressable style={st.backdrop} onPress={() => setToolPick(false)} />
+        <View style={st.sheet}>
+          <Text style={[st.title, { fontSize: 22 }]}>Narzędzie AI</Text>
+          <ScrollView style={{ maxHeight: 320 }}>
+            {data.tools.map((n) => (
+              <Pressable key={n} onPress={() => { updateTip(tip.id, { tool: n }); setToolPick(false); }} style={st.collRow}>
+                <Text style={{ flex: 1, fontSize: 17, color: colors.text }}>{toolEmoji(n)} {n}</Text>
+                <Ionicons name={tip.tool === n ? 'radio-button-on' : 'radio-button-off'} size={24} color={tip.tool === n ? colors.primary : colors.muted} />
+              </Pressable>
+            ))}
+          </ScrollView>
+          <View style={{ flexDirection: 'row', gap: 8, marginTop: 12 }}>
+            <TextInput value={newTool} onChangeText={setNewTool} placeholder="Nowe narzędzie…" placeholderTextColor={colors.muted} style={[st.note, { flex: 1, marginTop: 0, minHeight: 0 }]} />
+            <Button
+              title="Dodaj"
+              onPress={() => {
+                const name = newTool.trim();
+                if (!name) return;
+                addTool(name);
+                updateTip(tip.id, { tool: name });
+                setNewTool('');
+                setToolPick(false);
+              }}
+            />
           </View>
         </View>
       </Modal>
