@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, BackHandler, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
@@ -21,7 +21,10 @@ import More from './src/screens/More';
 type Tab = 'home' | 'knowledge' | 'categories' | 'more';
 
 function Root() {
-  const { ready } = useStore();
+  const { ready, data } = useStore();
+  const tipsRef = useRef(data.tips);
+  tipsRef.current = data.tips;
+  const handledShare = useRef<string | null>(null); // ostatnio obsłużony link z menu „Udostępnij”
   const [tab, setTab] = useState<Tab>('home');
   const [stack, setStack] = useState<Route[]>([]);
   const { hasShareIntent, shareIntent, resetShareIntent } = useShareIntentContext();
@@ -37,8 +40,12 @@ function Root() {
   useEffect(() => {
     if (!ready || !hasShareIntent) return;
     const url = extractTikTokUrl(shareIntent.webUrl ?? shareIntent.text ?? '');
-    if (url) setStack([{ name: 'add', url, auto: true }]);
     resetShareIntent();
+    // Android oddaje ten sam link przy każdym powrocie do aplikacji – importujemy go tylko raz
+    if (!url || handledShare.current === url) return;
+    handledShare.current = url;
+    const existing = tipsRef.current.find((t) => t.url === url);
+    setStack([existing ? { name: 'detail', id: existing.id } : { name: 'add', url, auto: true }]);
   }, [ready, hasShareIntent, shareIntent, resetShareIntent]);
 
   useEffect(() => {
