@@ -18,3 +18,6 @@ export const TOOL_EMOJI: Record<string, string> = {
   ChatGPT: '💬', Claude: '🧠', Gemini: '✨', Midjourney: '🎨', Perplexity: '🔎', Copilot: '🪄',
   Sora: '🎬', Suno: '🎵', Runway: '🎞️', Cursor: '⌨️', NotebookLM: '📓', Canva: '🖼️', 'AI': '🤖',
 };
+
+/** Narzędzia AI dostępne od początku; użytkownik może dodawać własne i usuwać. */
+export const DEFAULT_TOOLS = Object.keys(TOOL_EMOJI);

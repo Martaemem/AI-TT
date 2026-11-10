@@ -39,4 +39,4 @@ export type Provider = 'gemini' | 'groq' | 'claude';
 
 export type Settings = { provider: Provider; apiKey: string; model: string };
 
-export type Data = { tips: Tip[]; collections: Collection[]; categories: string[]; settings: Settings };
+export type Data = { tips: Tip[]; collections: Collection[]; categories: string[]; tools: string[]; settings: Settings };

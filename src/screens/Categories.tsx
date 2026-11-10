@@ -3,13 +3,20 @@ import { Alert, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 
 import { Ionicons } from '@expo/vector-icons';
 import { useStore } from '../store';
 import { colors } from '../theme';
-import { Button, Header } from '../components/ui';
+import { Button, Header, toolEmoji } from '../components/ui';
 import { Nav } from '../nav';
 
 /** Lista kategorii z liczbą porad; dotknięcie otwiera porady z danej kategorii. */
 export default function Categories({ nav }: { nav: Nav }) {
-  const { data, addCategory, deleteCategory } = useStore();
+  const { data, addCategory, deleteCategory, addTool, deleteTool } = useStore();
   const [name, setName] = useState('');
+  const [toolName, setToolName] = useState('');
+
+  const confirmDeleteTool = (n: string) =>
+    Alert.alert(`Usunąć narzędzie „${n}”?`, 'Porady z tym narzędziem dostaną ogólne „AI”.', [
+      { text: 'Anuluj', style: 'cancel' },
+      { text: 'Usuń', style: 'destructive', onPress: () => deleteTool(n) },
+    ]);
 
   const confirmDelete = (c: string) =>
     Alert.alert(`Usunąć kategorię „${c}”?`, 'Porady z tej kategorii trafią do „Inne”.', [
@@ -45,6 +52,36 @@ export default function Categories({ nav }: { nav: Nav }) {
             if (!n) return;
             addCategory(n);
             setName('');
+          }}
+        />
+      </View>
+
+      <Header title="Narzędzia AI" />
+      <Text style={st.sub}>Dotknij narzędzia, aby zobaczyć jego porady. Narzędzie porady zmienisz w jej edycji.</Text>
+      {data.tools.map((n) => {
+        const count = data.tips.filter((t) => t.tool === n).length;
+        return (
+          <Pressable key={n} onPress={() => nav.push({ name: 'list', collectionId: `tool:${n}`, title: n })} style={st.row}>
+            <Text style={st.name}>{toolEmoji(n)} {n}</Text>
+            <Text style={st.count}>{count}</Text>
+            {n !== 'AI' && (
+              <Pressable onPress={() => confirmDeleteTool(n)} hitSlop={10}>
+                <Ionicons name="trash-outline" size={20} color={colors.muted} />
+              </Pressable>
+            )}
+            <Ionicons name="chevron-forward" size={18} color={colors.muted} />
+          </Pressable>
+        );
+      })}
+      <View style={st.add}>
+        <TextInput value={toolName} onChangeText={setToolName} placeholder="Nowe narzędzie…" placeholderTextColor={colors.muted} style={st.input} />
+        <Button
+          title="Dodaj"
+          onPress={() => {
+            const n = toolName.trim();
+            if (!n) return;
+            addTool(n);
+            setToolName('');
           }}
         />
       </View>

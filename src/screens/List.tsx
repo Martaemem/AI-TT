@@ -8,7 +8,7 @@ import { Nav } from '../nav';
 
 export default function List({ nav, collectionId, title }: { nav: Nav; collectionId: string; title: string }) {
   const { data, deleteCollection } = useStore();
-  const tips = data.tips.filter((t) => (collectionId === 'all' ? true : collectionId === 'favorites' ? t.favorite : collectionId.startsWith('cat:') ? t.category === collectionId.slice(4) : t.collectionIds.includes(collectionId)));
+  const tips = data.tips.filter((t) => (collectionId === 'all' ? true : collectionId === 'favorites' ? t.favorite : collectionId.startsWith('cat:') ? t.category === collectionId.slice(4) : collectionId.startsWith('tool:') ? t.tool === collectionId.slice(5) : t.collectionIds.includes(collectionId)));
   const custom = data.collections.some((c) => c.id === collectionId);
 
   return (
