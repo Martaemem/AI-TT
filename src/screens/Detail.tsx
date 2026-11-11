@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Alert, Dimensions, Image, Linking, Modal, Pressable, ScrollView, Share, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Alert, Dimensions, FlatList, Image, Linking, Modal, Pressable, ScrollView, Share, StyleSheet, Text, TextInput, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useStore, uid } from '../store';
 import { colors } from '../theme';
@@ -241,7 +241,26 @@ export default function Detail({ nav, id }: { nav: Nav; id: string }) {
 
       <Modal visible={!!viewPhoto} animationType="fade" onRequestClose={() => setViewPhoto(null)}>
         <View style={{ flex: 1, backgroundColor: '#000' }}>
-          {viewPhoto && <Image source={{ uri: viewPhoto }} style={{ flex: 1 }} resizeMode="contain" />}
+          {viewPhoto && (
+            <>
+              <FlatList
+                data={photos}
+                keyExtractor={(u) => u}
+                horizontal
+                pagingEnabled
+                showsHorizontalScrollIndicator={false}
+                initialScrollIndex={Math.max(0, photos.indexOf(viewPhoto))}
+                getItemLayout={(_, i) => ({ length: SCREEN_W, offset: SCREEN_W * i, index: i })}
+                onMomentumScrollEnd={(e) => {
+                  const next = photos[Math.round(e.nativeEvent.contentOffset.x / SCREEN_W)];
+                  if (next) setViewPhoto(next);
+                }}
+                renderItem={({ item }) => <Image source={{ uri: item }} style={{ width: SCREEN_W, height: '100%' }} resizeMode="contain" />}
+                style={{ flex: 1 }}
+              />
+              <Text style={st.viewerCount}>{photos.indexOf(viewPhoto) + 1} / {photos.length}</Text>
+            </>
+          )}
           <View style={st.viewerBar}>
             <Pressable onPress={() => setViewPhoto(null)} style={st.viewerBtn}><Ionicons name="close" size={22} color="#fff" /><Text style={st.viewerTxt}>Zamknij</Text></Pressable>
             <Pressable onPress={() => { if (viewPhoto) updateTip(tip.id, { cover: tip.cover === viewPhoto ? undefined : viewPhoto }); setViewPhoto(null); }} style={st.viewerBtn}>
@@ -357,6 +376,8 @@ const Action = ({ icon, label, onPress }: { icon: keyof typeof Ionicons.glyphMap
   </Pressable>
 );
 
+const SCREEN_W = Dimensions.get('window').width;
+
 const st = StyleSheet.create({
   hero: { height: 240, backgroundColor: '#8a6f5f', alignItems: 'center', justifyContent: 'center' },
   heart: { position: 'absolute', top: 14, right: 14, width: 44, height: 44, borderRadius: 22, backgroundColor: 'rgba(0,0,0,0.45)', alignItems: 'center', justifyContent: 'center' },
@@ -384,6 +405,7 @@ const st = StyleSheet.create({
   thumb: { width: (Dimensions.get('window').width - 40 - 16) / 3, aspectRatio: 1, borderRadius: 12, overflow: 'hidden', backgroundColor: '#E7E0DA' },
   coverTag: { position: 'absolute', top: 6, left: 6, width: 22, height: 22, borderRadius: 11, backgroundColor: colors.primary, alignItems: 'center', justifyContent: 'center' },
   viewerBar: { flexDirection: 'row', justifyContent: 'space-around', paddingVertical: 18, paddingBottom: 30, backgroundColor: '#111' },
+  viewerCount: { position: 'absolute', top: 40, alignSelf: 'center', color: '#fff', fontSize: 15, fontWeight: '700', backgroundColor: 'rgba(0,0,0,0.5)', paddingHorizontal: 12, paddingVertical: 4, borderRadius: 12, overflow: 'hidden' },
   viewerBtn: { alignItems: 'center', gap: 4, paddingHorizontal: 10 },
   viewerTxt: { color: '#fff', fontSize: 13 },
   collRow: { flexDirection: 'row', alignItems: 'center', gap: 14, paddingVertical: 12 },
