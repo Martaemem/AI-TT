@@ -1,0 +1,54 @@
+name: Deploy BSmak Web
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ccr-7fc4f7ca-w21ipn]
+    paths:
+      - 'recipes/**'
+      - '.github/workflows/deploy-bsmak-web.yml'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: recipes
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npx tsc --noEmit
+      - name: Generate icons
+        run: |
+          npm install --no-save sharp
+          node scripts/make-icons.js
+      - run: npx expo export --platform web
+      - run: cp dist/index.html dist/404.html
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: recipes/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
