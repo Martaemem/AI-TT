@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-10T07:42:00+01:00",
+ "updatedAt": "2026-11-11T07:44:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -687,6 +687,24 @@
    "id": "fanta-halloween"
   },
   {
+   "addedAt": "2026-11-11T07:43:55+01:00",
+   "end": "2026-11-30",
+   "minSpend": null,
+   "note": "18+. Zgłoszenia do 30.11.2026 do godz. 17:00. Zachowaj paragon (organizator może go zażądać do 28.12.2026) i opakowanie z kodem.",
+   "organizer": "FORTIS (dla Coca-Cola HBC Polska)",
+   "prizes": "100 × Philips AirFryer, 1300 × voucher Glovo 100 zł, 5000 × dodatkowy kod",
+   "purchase": true,
+   "rulesUrl": "https://www.coca-cola.com/pl/pl/offerings/fanta-meals/regulamin-loterii",
+   "shops": [],
+   "start": "2026-09-01",
+   "task": "Kup promocyjną Fantę z kodem pod nakrętką/zawleczką i wpisz kod w aplikacji Coca-Cola lub na coca-cola.com/pl/pl.",
+   "title": "Loteria „Fanta Meals” 2026",
+   "toBuy": "1 butelka lub puszka promocyjnej Fanty (Orange, Orange Zero, Shokata Zero, Lemon Zero, Apple-Cherry) z kodem",
+   "url": "https://www.coca-cola.com/pl/pl/offerings/fanta-meals",
+   "verified": true,
+   "id": "fanta-meals-2026"
+  },
+  {
    "addedAt": "2026-11-07T07:39:50+01:00",
    "end": "2027-02-28",
    "note": "Udział bez opłat; tekst niepublikowany i nienagradzany; 1 utwór na osobę; plik doc/rtf/odt/pdf; licencja na antologię i promocję; adres e-mail na stronie konkursu.",
@@ -802,6 +820,21 @@
    "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-lykajac-zloto/3064",
    "verified": true,
    "id": "granice-lykajac-zloto"
+  },
+  {
+   "addedAt": "2026-11-11T07:43:55+01:00",
+   "end": "2026-11-17",
+   "note": "Formularz na stronie (imię, nazwisko, adres, telefon, e-mail); dodanie książki do biblioteczki tylko sugerowane. Wysyłka tylko w Polsce. Jury.",
+   "organizer": "granice.pl",
+   "prizes": "Książka „Na Pomorzu. Zanim zapomni o nas wiatr”",
+   "purchase": false,
+   "rulesUrl": "https://www.granice.pl/regulamin",
+   "start": "2026-11-10",
+   "task": "Odpowiedz w formularzu na pytanie: jakie cechy powinna mieć kobieta, która chce przecierać szlaki w świecie zdominowanym przez mężczyzn?",
+   "title": "granice.pl – książka „Na Pomorzu. Zanim zapomni o nas wiatr”",
+   "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-na-pomorzu-zanim-zapomni-o-nas-wiatr/3065",
+   "verified": true,
+   "id": "granice-na-pomorzu-wiatr"
   },
   {
    "end": "2026-10-26",
@@ -1098,6 +1131,21 @@
    "toBuy": "2 produkty Knorr: Nudle, Danie w kubku lub Gorący Kubek",
    "url": "https://www.promocjeunilever.pl/knorr",
    "id": "knorr-smakowite"
+  },
+  {
+   "addedAt": "2026-11-11T07:43:55+01:00",
+   "end": "2026-11-16",
+   "note": "Do 16.11 godz. 23:59. Zgłoszenie formularzem (imię, nazwisko, e-mail, miasto). Jeden zwycięzca, wybiera komisja; ekipy dowożą nagrodę 23.11 i nagrywają materiał wideo z laureatem; imię i inicjał nazwiska publikowane. Wiek – sprawdź w regulaminie.",
+   "organizer": "Komputronik",
+   "prizes": "2 paczki sprzętu (Lenovo, Logitech G, SteelSeries, Canon i in.) o wartości ok. 20 000 zł",
+   "purchase": false,
+   "rulesUrl": "https://www.komputronik.pl/informacje/wp-content/uploads/2026/11/regulamin-konkursu.pdf",
+   "start": null,
+   "task": "W formularzu na dowozimyokazje.pl odpowiedz: „Gdyby paczka mogła sama wybrać adresata, dlaczego postawiłaby na Ciebie?” (do 500 znaków ze spacjami, tekst autorski).",
+   "title": "Komputronik – „Paczka bez adresu. Kto dowiezie?”",
+   "url": "https://www.komputronik.pl/informacje/promocje/koonkurs-komputronik-na-black-week/",
+   "verified": true,
+   "id": "komputronik-paczka-bez-adresu"
   },
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1521,6 +1569,26 @@
    "url": "https://mangumangas.pl/",
    "verified": true,
    "id": "mangu-mangas-owoce"
+  },
+  {
+   "addedAt": "2026-11-11T07:43:55+01:00",
+   "end": "2026-11-22",
+   "minSpend": null,
+   "note": "18+. Zgłoszenie formularzem (bez publikacji w social media; formularz może pytać o nazwę konta IG/TikTok). Praca musi być własna i oryginalna. Paragon zachowaj do 31.12.2026; 1 paragon = 1 zgłoszenie.",
+   "organizer": "L’Oréal Polska (koordynator: ENYO)",
+   "prizes": "5 × brunch z Lilą Janowską w Warszawie + dojazd + kosmetyki (1262 zł), 50 × zestaw Maybelline (739 zł)",
+   "purchase": true,
+   "rulesUrl": "https://lorealeventy-pl.beauty-campaigns.com/uploads/media/d/6aec36490ec51895854321.pdf",
+   "shops": [
+    "Hebe"
+   ],
+   "start": "2026-11-05",
+   "task": "Kup bazę Grippy Serum lub podkład Super Stay Lumi Matte Maybelline w Hebe i w formularzu dokończ zdanie: „Jaki najbardziej szalony dzień musiał przetrwać Twój ultratrwały makijaż?” (do 300 znaków) + zdjęcie paragonu.",
+   "title": "„Zostań bestie Lili Janowskiej” – Maybelline w Hebe",
+   "toBuy": "1 produkt: baza Grippy Serum lub podkład Super Stay Lumi Matte (odcienie 090–128) – Hebe stacjonarnie lub hebe.pl",
+   "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-maybelline-bestie",
+   "verified": true,
+   "id": "maybelline-hebe-bestie"
   },
   {
    "end": "2026-11-29",
@@ -2346,6 +2414,26 @@
    "url": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-%E2%80%93-lepiej-rosnie-sie-razem-%E2%80%9D-1567161045850562560.pdf",
    "verified": true,
    "id": "rossmann-misja-bebiko"
+  },
+  {
+   "addedAt": "2026-11-11T07:43:55+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+. Trzeba pojechać do ZOO Wrocław. Do formularza numer dowodu zakupu; 1 dowód = 1 zgłoszenie; zachowaj oryginał. Odpowiedź samodzielna i oryginalna. Zgoda na wizerunek nieobowiązkowa. Jury.",
+   "organizer": "MATRIX ATTRACTIONS (współorganizator: ZOO Wrocław)",
+   "prizes": "Wyjazd na safari do Tanzanii dla 4 osób (ok. 60 000 zł)",
+   "purchase": true,
+   "rulesUrl": "https://safariride.pl/regulamin-konkursu",
+   "shops": [
+    "ZOO Wrocław"
+   ],
+   "start": "2026-07-29",
+   "task": "Kup bilet Safari Ride lub bilet konkursowy w ZOO Wrocław i w formularzu odpowiedz: „Jak wyglądałby Twój wymarzony dzień w Afryce?” (po polsku lub angielsku).",
+   "title": "„Przez Wrocław do Tanzanii” – Safari Ride × ZOO Wrocław",
+   "toBuy": "Bilet na atrakcję Safari Ride lub bilet konkursowy z kasy/kanałów sprzedaży ZOO Wrocław",
+   "url": "https://safariride.pl/konkurs",
+   "verified": true,
+   "id": "safari-ride-zoo-wroclaw-tanzania"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
