@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-11T07:44:00+01:00",
+ "updatedAt": "2026-11-12T07:45:37+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -186,6 +186,21 @@
    "id": "black-viking-volvo"
   },
   {
+   "addedAt": "2026-11-12T07:45:00+01:00",
+   "end": "2026-12-21",
+   "note": "18+; zgłoszenie tylko w aplikacji Blix (formularz raz); codzienny los po zalogowaniu; brak obowiązkowej zgody marketingowej; formularz odbioru nagrody natychmiastowej do 31.12.2026.",
+   "organizer": "SMOLAR Agencja Promocyjno-Reklamowa (aplikacja Blix)",
+   "prizes": "Główna: 25 000 zł; natychmiastowe: 1479 nagród pieniężnych 20–1000 zł",
+   "purchase": false,
+   "rulesUrl": "https://www.smolar.pl/sites/default/files/regulamin_loterii_blix.pdf",
+   "start": "2026-11-10",
+   "task": "Zainstaluj aplikację Blix, w widoku loterii wypełnij jednorazowo formularz (e-mail, telefon), potem codziennie odbieraj los i kręć kołem.",
+   "title": "Loteria „ŚWIĄTECZNA Blix”",
+   "url": "https://www.smolar.pl/loteria-blix",
+   "verified": true,
+   "id": "blix-swiateczna-loteria"
+  },
+  {
    "addedAt": "2026-11-04T07:38:30+01:00",
    "end": "2026-11-21",
    "minSpend": null,
@@ -241,6 +256,26 @@
    "url": "https://www.everydayme.pl/konkursy/braun-mediaexpert-2026",
    "verified": true,
    "id": "braun-media-expert-f1"
+  },
+  {
+   "addedAt": "2026-11-12T07:45:00+01:00",
+   "end": "2026-12-21",
+   "minSpend": 100,
+   "note": "18+; tylko zakupy w sklepie internetowym ceramikker.pl; zachowaj numer zamówienia i paragon/fakturę; zwrócone zamówienia się nie liczą; brak obowiązkowej zgody marketingowej.",
+   "organizer": "NOFSZA Sp. z o.o. (sklep ceramikker.pl – PrimeStuff)",
+   "prizes": "Mercedes-Benz CLA 200, 20 000 zł, 10 000 zł, 20 × 1000 zł, 100 × e-bon 500 zł, 11 nagród tygodniowych",
+   "purchase": true,
+   "rulesUrl": "https://ceramikker.pl/wp-content/uploads/2026/09/Regulamin-Turbo-Loteria-2.0.pdf",
+   "shops": [
+    "ceramikker.pl"
+   ],
+   "start": "2026-10-01",
+   "task": "Kup produkty Ceramikker za łącznie min. 100 zł w sklepie ceramikker.pl i zarejestruj na stronie loterii e-mail użyty do zamówień (1 los za każde 100 zł, od 300 zł losy ×3).",
+   "title": "„Turbo Loteria 2.0” – Ceramikker",
+   "toBuy": "produkty Ceramikker za łącznie min. 100 zł (bez kosztów dostawy) – jedno lub kilka zamówień",
+   "url": "https://ceramikker.pl/turbo-loteria2/",
+   "verified": true,
+   "id": "ceramikker-turbo-loteria-2"
   },
   {
    "end": "2026-12-13",
@@ -767,6 +802,28 @@
    "url": "https://www.wyczyscnagrody.pl/akcje/108.html",
    "verified": true,
    "id": "finish-intermarche"
+  },
+  {
+   "addedAt": "2026-11-12T07:45:00+01:00",
+   "end": "2027-01-15",
+   "minSpend": null,
+   "note": "18+; zakup do 31.12.2026, zgłoszenie do 15.01.2027; paragon lub faktura (zdjęcie do 6 MB); regulamin nie wspomina o AI; zgoda na publikację imienia i nazwiska zwycięzców.",
+   "organizer": "Comtel Group Sp. z o.o. Sp. k.",
+   "prizes": "3 × ekspres G3 Ferrari Duchessa + fartuch + książka E. Castagny; 5 × fartuch + książka",
+   "purchase": true,
+   "rulesUrl": "https://www.kulinarnewyzwaniemistrza.pl/Regulamin_konkursu_Kulinarne_Wyzwanie_Mistrza_3_G3Ferrari.pdf",
+   "shops": [
+    "Media Expert",
+    "RTV Euro AGD",
+    "domowypiecdopizzy.pl"
+   ],
+   "start": "2026-10-22",
+   "task": "Kup wybrany piec do pizzy, mikser planetarny lub maszynkę do makaronu G3 Ferrari, wgraj dowód zakupu i opisz przepis na ulubione danie kuchni włoskiej z sekretnym składnikiem lub techniką (bez limitu znaków).",
+   "title": "„Kulinarne Wyzwanie Mistrza 3” – G3 Ferrari",
+   "toBuy": "1 produkt G3 Ferrari z listy (piec do pizzy, mikser planetarny lub maszynka do makaronu); zakup 22.10–31.12.2026",
+   "url": "https://www.kulinarnewyzwaniemistrza.pl/",
+   "verified": true,
+   "id": "g3ferrari-kulinarne-wyzwanie-3"
   },
   {
    "addedAt": "2026-10-30T07:39:18+01:00",
@@ -1322,6 +1379,26 @@
    "url": "https://loteria-kucharek.pl/",
    "verified": true,
    "id": "kucharek-loteria-2026"
+  },
+  {
+   "addedAt": "2026-11-12T07:45:00+01:00",
+   "end": "2026-11-29",
+   "minSpend": 50,
+   "note": "18+; 1 paragon = 1 zgłoszenie; zachowaj oryginał paragonu do 12.03.2027; alkohol (poza wybranymi piwami), papierosy itp. nie wliczają się do kwoty; zgoda marketingowa nieobowiązkowa.",
+   "organizer": "Gratifica Sp. z o.o. (dla PGZ Kupiec)",
+   "prizes": "2 × Citroën C3 (+7500 zł dla wybranej fundacji), 8 × frytkownica Philips, 168 × 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://loteriakupiec.pl/regulamin.pdf",
+   "shops": [
+    "Kupiec"
+   ],
+   "start": "2026-10-05",
+   "task": "Zrób zakupy za min. 50 zł w sklepie sieci Kupiec, w tym min. 1 produkt partnera, i zarejestruj paragon w formularzu na loteriakupiec.pl lub w aplikacji Kupiec.",
+   "title": "Loteria „Grasz. Wygrywasz. Pomagasz.” – sklepy Kupiec",
+   "toBuy": "zakupy za min. 50 zł na jednym paragonie, w tym min. 1 produkt marki partnerskiej (np. Milka, Wedel, Coca-Cola, Lay's)",
+   "url": "https://loteriakupiec.pl/",
+   "verified": true,
+   "id": "kupiec-grasz-wygrywasz-pomagasz"
   },
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1896,6 +1973,21 @@
    "id": "nivea-repair-care-rossmann"
   },
   {
+   "addedAt": "2026-11-12T07:45:00+01:00",
+   "end": "2026-12-14",
+   "note": "18+, obywatele Polski; udział bezpłatny; termin 14.12.2026 do 15:00; ZAKAZ zdjęć generowanych przez AI i fotomontaży; JPG min. 3000 px, proporcje 3:2, z EXIF; licencja dla parku na publikację.",
+   "organizer": "Narwiański Park Narodowy",
+   "prizes": "Grand Prix 4000 zł; w każdej kategorii 3000/2000/1500 zł",
+   "purchase": false,
+   "rulesUrl": "https://npn.gov.pl/pliki-do-pobrania/otworz/55d54218-83c6-40d8-994c-878b63b6def0.pdf",
+   "start": "2026-11-06",
+   "task": "Wyślij mailem na konkursy@npn.pl (temat „Konkurs fotograficzny”) maks. 1 zdjęcie w każdej kategorii: krajobraz, kręgowce, makro – dzika przyroda ekosystemów rzecznych, zdjęcia z Polski, z kartą zgłoszenia.",
+   "title": "Konkurs fotograficzny „Obrazy znad rzeki”",
+   "url": "https://npn.gov.pl/aktualnosci/ogolnopolski-konkurs-fotograficzny-obrazy-znad-rzeki",
+   "verified": true,
+   "id": "npn-obrazy-znad-rzeki"
+  },
+  {
    "addedAt": "2026-10-31T07:41:10+01:00",
    "end": "2026-11-13",
    "note": "Zgłoszenia do 13.11 godz. 10:00. Trzeba odebrać nagrodę osobiście w redakcji w Świdnicy i pojechać na koncert. Zgoda na publikację danych zwycięzcy.",
@@ -2354,6 +2446,21 @@
    "url": "https://www.rmf.fm/r/amazon-2026.html",
    "verified": true,
    "id": "rmf-amazon-zabawka-pasja"
+  },
+  {
+   "addedAt": "2026-11-12T07:45:00+01:00",
+   "end": "2026-11-17",
+   "note": "16+; zgłoszenia do 17.11 godz. 9:00; formularz online (imię, nazwisko, telefon, e-mail); praca musi być własna; zakup nie jest wymagany.",
+   "organizer": "Grupa RMF (RMF FM)",
+   "prizes": "1000 zł (nagroda główna na antenie) + 2 × 500 zł",
+   "purchase": false,
+   "rulesUrl": "https://www.rmf.fm/regulamin-konkursow",
+   "start": null,
+   "task": "W formularzu na stronie RMF FM napisz swój sprawdzony trik na trzymanie wydatków w ryzach (maks. 200 znaków).",
+   "title": "RMF FM – „Graj o 1000 zł!” (KRUK – Odpowiedzialnie. To się ceni)",
+   "url": "https://www.rmf.fm/r/kruk-trzymajmy-sie-zasad.html",
+   "verified": true,
+   "id": "rmf-kruk-trzymaj-wydatki"
   },
   {
    "addedAt": "2026-11-05T07:39:05+01:00",
