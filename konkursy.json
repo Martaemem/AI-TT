@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-12T07:45:37+01:00",
+ "updatedAt": "2026-11-13T07:39:30+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -1091,6 +1091,26 @@
    "id": "intermarche-czysty-przepis"
   },
   {
+   "addedAt": "2026-11-13T07:39:30+01:00",
+   "end": "2026-11-19",
+   "minSpend": null,
+   "note": "18+; zakup 11–17.11, zgłoszenia do 19.11; zakaz tekstów tworzonych przy pomocy AI; 1 kod = 1 zgłoszenie; sprzeciw wobec marketingu bezpośredniego = rezygnacja z udziału.",
+   "organizer": "Obiekt Studio (dla CEDC International)",
+   "prizes": "5 × kontroler Pioneer DJ DDJ-FLX4, 100 × zestaw domówkowy Jägermeister",
+   "purchase": true,
+   "rulesUrl": "https://zappka.app/wp-content/uploads/2026/11/Quest-Jagermeister.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-11",
+   "task": "Kup w Żabce Jägermeistera (min. 100 ml) ze zeskanowaną Żappką, odbierz kod w aplikacji, przejdź bramkę wiekową na stronie i odpowiedz: „Jak planujesz spędzić jesień ze swoim stadem?” (do 500 znaków).",
+   "title": "„Jesień z Jägerem” – Żabka",
+   "toBuy": "1 Jägermeister lub Jägermeister Orange (min. 100 ml), zakup z Żappką",
+   "url": "https://www.jagerwzabce.pl/",
+   "verified": true,
+   "id": "jager-jesien-zabka"
+  },
+  {
    "addedAt": "2026-11-06T07:38:46+01:00",
    "end": "2027-01-06",
    "minSpend": null,
@@ -1173,6 +1193,24 @@
    "url": "https://loteriakimoco.smolar.pl/",
    "verified": true,
    "id": "kimoco-rossmann"
+  },
+  {
+   "addedAt": "2026-11-13T07:39:30+01:00",
+   "end": "2026-12-23",
+   "minSpend": null,
+   "note": "18+; zachowaj oryginał paragonu do końca loterii (bez NIP); 1 paragon = 1 zgłoszenie; sklep stacjonarny lub internetowy w Polsce; zgoda marketingowa dobrowolna.",
+   "organizer": "Smolar (dla Unilever Polska)",
+   "prizes": "30 × airfryer Philips OVI Ultra",
+   "purchase": true,
+   "rulesUrl": "https://www.promocjeunilever.pl/sites/e77b57da294efa5c4b80a8451ef9da6b/Regulamin - Podaruj sobie chrupiące Święta.pdf?5f7127508a8feef8e8fc386740e8ebee",
+   "shops": [],
+   "start": "2026-11-12",
+   "task": "Kup jednorazowo 2 produkty Knorr i/lub Hellmann's i zarejestruj dowód zakupu w formularzu na stronie loterii. Wygrywa zgłoszenie, które trafi w ukrytą bramkę czasową.",
+   "title": "Loteria „Podaruj sobie chrupiące Święta” – Knorr i Hellmann's",
+   "toBuy": "2 dowolne produkty Knorr i/lub Hellmann's na jednym paragonie",
+   "url": "https://www.promocjeunilever.pl/knorrxmass/",
+   "verified": true,
+   "id": "knorr-hellmanns-chrupiace-swieta"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
@@ -1988,6 +2026,21 @@
    "id": "npn-obrazy-znad-rzeki"
   },
   {
+   "addedAt": "2026-11-13T07:39:30+01:00",
+   "end": "2027-02-28",
+   "note": "18+; udział bezpłatny; prace pocztą na adres organizatora (liczy się data stempla) – adres i formę sprawdź w regulaminie.",
+   "organizer": "Białoborskie Centrum Kultury i Rekreacji oraz Burmistrz Białego Boru",
+   "prizes": "nagrody pieniężne (szczegóły w regulaminie)",
+   "purchase": false,
+   "rulesUrl": "https://bckbialybor.naszgok.pl/pliki/plik/regulamin-vi-ogolnopolski-konkurs-poetycki-o-jablko-damiany-1793967063.pdf",
+   "start": null,
+   "task": "Wyślij pocztą zestaw 3 wierszy niepublikowanych i nienagradzanych wcześniej (można dodać wiersz o Białym Borze).",
+   "title": "VI Ogólnopolski Konkurs Poetycki „O Jabłko Damiany”",
+   "url": "https://bckbialybor.naszgok.pl/n,vi-ogolnopolski-konkurs-poetycki-o-jablko-damiany",
+   "verified": true,
+   "id": "o-jablko-damiany-6"
+  },
+  {
    "addedAt": "2026-10-31T07:41:10+01:00",
    "end": "2026-11-13",
    "note": "Zgłoszenia do 13.11 godz. 10:00. Trzeba odebrać nagrodę osobiście w redakcji w Świdnicy i pojechać na koncert. Zgoda na publikację danych zwycięzcy.",
@@ -2267,6 +2320,21 @@
    "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-ze-slepa-czarna-noca",
    "verified": true,
    "id": "portalkryminalny-slepa"
+  },
+  {
+   "addedAt": "2026-11-13T07:39:30+01:00",
+   "end": "2026-11-19",
+   "note": "Formularz na stronie (imię, nazwisko, e-mail, telefon, adres). Bez publikacji w social media.",
+   "organizer": "portalkryminalny.pl (nagrody: Wydawnictwo Mova)",
+   "prizes": "5 egzemplarzy książki „Świeca szeptuchy”",
+   "purchase": false,
+   "rulesUrl": "https://portalkryminalny.pl/podstrona/konkursowy-savoir-vivre",
+   "start": "2026-11-10",
+   "task": "Odpowiedz w formularzu na pytanie: jaki tytuł nosi tom opowiadań grozy, w którym ukazał się tekst Pauliny Ziarko?",
+   "title": "portalkryminalny.pl – „Świeca szeptuchy”",
+   "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-ze-swieca-szeptuchy",
+   "verified": true,
+   "id": "portalkryminalny-swieca-szeptuchy"
   },
   {
    "addedAt": "2026-11-06T07:38:46+01:00",
