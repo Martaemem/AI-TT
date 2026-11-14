@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-13T07:39:30+01:00",
+ "updatedAt": "2026-11-14T07:40:02+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -456,6 +456,24 @@
    "id": "dacia-road-to-brussels"
   },
   {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2027-01-03",
+   "minSpend": null,
+   "note": "18+; paragon lub e-paragon bez NIP nabywcy, produkt musi być widoczny; zachowaj paragony do końca loterii; max 10 zgłoszeń dziennie; zakup w automacie się nie liczy.",
+   "organizer": "Advalue (dla Davidoff Café / Tchibo)",
+   "prizes": "Wyjazd dla 2 osób do Monako (ok. 50 000 zł), 100 × 1000 zł",
+   "purchase": true,
+   "rulesUrl": "https://loteriadavidoff.pl/assets/files/regulamin-HqLdLcO.pdf",
+   "shops": [],
+   "start": "2026-11-09",
+   "task": "Kup dowolną kawę Davidoff i zarejestruj dowód zakupu w formularzu na loteriadavidoff.pl; od razu widać wygraną z bramki czasowej.",
+   "title": "Loteria Davidoff – „Wygraj wyjazd do Monako”",
+   "toBuy": "Dowolna kawa Davidoff (opakowanie)",
+   "url": "https://loteriadavidoff.pl/",
+   "verified": true,
+   "id": "davidoff-monako"
+  },
+  {
    "addedAt": "2026-11-02T08:00:00+01:00",
    "end": "2027-03-28",
    "minSpend": null,
@@ -905,6 +923,21 @@
    "id": "granice-rita"
   },
   {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2026-11-19",
+   "note": "Formularz na stronie (imię, nazwisko, adres, telefon, e-mail); jedno zgłoszenie na osobę; wysyłka tylko w Polsce; jury.",
+   "organizer": "granice.pl",
+   "prizes": "Książka „Skwar” Klaudii Winko",
+   "purchase": false,
+   "rulesUrl": "https://www.granice.pl/regulamin",
+   "start": "2026-11-12",
+   "task": "Odpowiedz w formularzu: co jest ważniejsze w rozwiązywaniu zagadek – intuicja, spostrzegawczość czy logiczne myślenie – i dlaczego?",
+   "title": "granice.pl – książka „Skwar”",
+   "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-skwar/3066",
+   "verified": true,
+   "id": "granice-skwar"
+  },
+  {
    "end": "2026-10-26",
    "organizer": "granice.pl",
    "prizes": "Książka",
@@ -1089,6 +1122,26 @@
    "url": "https://www.wyczyscnagrody.pl/akcje/109.html",
    "verified": true,
    "id": "intermarche-czysty-przepis"
+  },
+  {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2026-11-29",
+   "minSpend": null,
+   "note": "18+; zakupy i zgłoszenia 16–29.11; zachowaj oryginalny paragon (weryfikacja do 8.01.2027); jeden paragon = jedno zgłoszenie.",
+   "organizer": "First Line Polska (dla Jacobs Douwe Egberts)",
+   "prizes": "MINI Cooper, 50 × bon Dino 200 zł, 50 × zestaw kaw Jacobs 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://loteriajacobs.pl/regulamin",
+   "shops": [
+    "Dino"
+   ],
+   "start": "2026-11-16",
+   "task": "Kup w Dino co najmniej 1 kawę Jacobs i zgłoś dowód zakupu w formularzu na loteriajacobs.pl. Każda pełna złotówka wydana na kawy Jacobs na jednym paragonie = 1 los.",
+   "title": "Loteria „Jacobs w Dino”",
+   "toBuy": "Min. 1 opakowanie dowolnej kawy Jacobs",
+   "url": "https://loteriajacobs.pl/",
+   "verified": true,
+   "id": "jacobs-dino"
   },
   {
    "addedAt": "2026-11-13T07:39:30+01:00",
@@ -1686,6 +1739,24 @@
    "id": "mangu-mangas-owoce"
   },
   {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+; tylko paragon fiskalny lub faktura imienna (nie potwierdzenie z terminala); 1 paragon = 1 zgłoszenie; zgoda marketingowa dobrowolna; zwycięzca przenosi prawa autorskie.",
+   "organizer": "Propharma",
+   "prizes": "Pobyt dla 2 osób w Herbarium Hotel & SPA (2248 zł), 3 × zestaw produktów Manuka Health",
+   "purchase": true,
+   "rulesUrl": "https://konkursmanuka.pl/regulamin/",
+   "shops": [],
+   "start": "2026-10-01",
+   "task": "Kup dowolny produkt Manuka Health i w formularzu na konkursmanuka.pl opisz (do 1000 znaków) lub nagraj (do 2 min) swój rytuał z miodem Manuka Health.",
+   "title": "„Pokaż swój świat Mānuka Health”",
+   "toBuy": "1 dowolny produkt Manuka Health (sklep stacjonarny lub online)",
+   "url": "https://konkursmanuka.pl/",
+   "verified": true,
+   "id": "manuka-health-pokaz-swiat"
+  },
+  {
    "addedAt": "2026-11-11T07:43:55+01:00",
    "end": "2026-11-22",
    "minSpend": null,
@@ -2263,6 +2334,24 @@
    "id": "piekno-spadajacych-lisci-6"
   },
   {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+; wymaga NOWEJ umowy na 24 miesiące (bez prawa odstąpienia); ZAKAZ AI; to nie zakup w sklepie, tylko abonament.",
+   "organizer": "Plej sp. z o.o. (Play, fundator Netflix)",
+   "prizes": "Voucher wakacje.pl 10 000 zł, 5 × iPad Air 11\"",
+   "purchase": true,
+   "rulesUrl": "https://media-play.pl/binaries/content/documents/administration/repositories/file-docs/b2c/regulaminy/konkursy/xmass-2026-netflix-x-play",
+   "shops": [],
+   "start": "2026-11-06",
+   "task": "Po zawarciu nowej umowy Play na światłowód z Netflix Podstawowy odpowiedz w formularzu (do 1600 znaków): do jakiego serialowego świata z Netflixa wybrał(a)byś się na wymarzone wakacje i dlaczego?",
+   "title": "Konkurs „Play & Netflix 2026”",
+   "toBuy": "Nowa umowa Play na 24 mies.: Internet Światłowodowy z Netflix Podstawowy (zawarta 5.11–31.12.2026)",
+   "url": "https://www.play.pl/konkursnetflix",
+   "verified": true,
+   "id": "play-netflix-2026"
+  },
+  {
    "addedAt": "2026-11-02T08:00:00+01:00",
    "end": "2026-11-15",
    "note": "Wymagane wydruki 20×30–50×70 cm (koszt po stronie uczestnika); liczy się data doręczenia 15.11; bez wpisowego.",
@@ -2591,6 +2680,26 @@
    "id": "rossmann-misja-bebiko"
   },
   {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2026-11-25",
+   "minSpend": null,
+   "note": "18+, tylko członkowie Klubu Rossmann w aplikacji; ZAKAZ AI w odpowiedzi; jury 110 zwycięzców; licencja na odpowiedź dla organizatora.",
+   "organizer": "Rossmann (fundator Haleon)",
+   "prizes": "10 × bon Zalando 1000 zł, 100 × bon Zalando 500 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-white-week-z-sensodyne-%E2%80%9D-1569710781770014720.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-12",
+   "task": "W aplikacji Rossmann PL dołącz do misji, kup 2 produkty Sensodyne z puli misji na kartę Klubu Rossmann i odpowiedz w aplikacji: „Co robisz, żeby mieć piękny, biały uśmiech?”.",
+   "title": "Misja Zakupowa „White week z Sensodyne” – Rossmann",
+   "toBuy": "2 produkty Sensodyne z puli misji (lista w aplikacji); sklep stacjonarny lub rossmann.pl",
+   "url": "https://www.rossmann.pl/helpcenter/files/regulamin-akcji-%E2%80%9Emisja-zakupowa-white-week-z-sensodyne-%E2%80%9D-1569710781770014720.pdf",
+   "verified": true,
+   "id": "rossmann-sensodyne-white-week"
+  },
+  {
    "addedAt": "2026-11-11T07:43:55+01:00",
    "end": "2026-12-31",
    "minSpend": null,
@@ -2609,6 +2718,21 @@
    "url": "https://safariride.pl/konkurs",
    "verified": true,
    "id": "safari-ride-zoo-wroclaw-tanzania"
+  },
+  {
+   "addedAt": "2026-11-14T07:40:02+01:00",
+   "end": "2026-11-26",
+   "note": "Zgłoś przez formularz, nie komentarzem/postem. 18+; zdjęcie musi być zrobione telefonem Samsung Galaxy (sprawdzane metadane); formularz wymaga konta Samsung; ZAKAZ AI; zdjęcie może być opublikowane na profilach Samsunga.",
+   "organizer": "Samsung Electronics Polska",
+   "prizes": "Galaxy S26 Ultra, 4 × Galaxy Buds4 Pro; publikacja w albumie Polishcore",
+   "purchase": false,
+   "rulesUrl": "https://images.samsung.com/is/content/samsung/assets/pl/regulaminy_2026/REGULAMIN_konkursu_Polishcore.pdf",
+   "start": "2026-11-12",
+   "task": "Zrób telefonem Samsung Galaxy zdjęcie polskiego rękodzieła (np. haft, ceramika) i wyślij je z krótkim uzasadnieniem przez formularz na stronie konkursu.",
+   "title": "Samsung „Polishcore KRAFT” – konkurs fotograficzny",
+   "url": "https://www.samsung.com/pl/campaign/galaxypolishcore/",
+   "verified": true,
+   "id": "samsung-polishcore-kraft"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
