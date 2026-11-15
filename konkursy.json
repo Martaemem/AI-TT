@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-14T07:40:02+01:00",
+ "updatedAt": "2026-11-15T07:42:09+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -607,6 +607,26 @@
    "url": "https://loteriadrosed.pl/",
    "verified": true,
    "id": "drosed-dino-koszyk"
+  },
+  {
+   "addedAt": "2026-11-15T07:42:09+01:00",
+   "end": "2026-12-13",
+   "minSpend": 200,
+   "note": "18+; nagrody wg kolejności zgłoszeń do wyczerpania puli; 1 nagroda na osobę/e-mail; zachowaj oryginał paragonu do 18.02.2027.",
+   "organizer": "SMOLAR (dla AkzoNobel / Dulux)",
+   "prizes": "1000 × e-karta 50 zł (SMYK lub Empik) – kto pierwszy, ten lepszy",
+   "purchase": true,
+   "rulesUrl": "https://www.psb.pokojmarzendulux.pl/regulaminy/Regulamin_promocji_Dulux_EasyCare_(PSB).pdf",
+   "shops": [
+    "PSB Mrówka"
+   ],
+   "start": "2026-11-12",
+   "task": "Kup kolorowe emulsje Dulux EasyCare za min. 200 zł w PSB Mrówka i zarejestruj paragon w formularzu na stronie; wybierz e-kartę SMYK albo e-voucher Empik.",
+   "title": "„Stwórz pokój marzeń z Dulux EasyCare i PSB”",
+   "toBuy": "Emulsje Dulux EasyCare (kolorowe) za min. 200 zł w jednym zakupie",
+   "url": "https://www.psb.pokojmarzendulux.pl/",
+   "verified": true,
+   "id": "dulux-easycare-psb"
   },
   {
    "addedAt": "2026-11-05T07:39:05+01:00",
@@ -1737,6 +1757,26 @@
    "url": "https://mangumangas.pl/",
    "verified": true,
    "id": "mangu-mangas-owoce"
+  },
+  {
+   "addedAt": "2026-11-15T07:42:09+01:00",
+   "end": "2026-11-27",
+   "minSpend": 100,
+   "note": "Trzeba pojechać na miejsce (Łódź); punkt czynny 12–20, nieczynny w niehandlowe niedziele 15 i 22.11; losowanie główne 27.11 o 20:15; regulamin dostępny w punkcie loterii.",
+   "organizer": "Manufaktura (Łódź)",
+   "prizes": "Škoda Fabia, karta podarunkowa 1000 zł + ok. 186 nagród natychmiastowych (apaszki, karty 50 zł, kolczyki itd.)",
+   "purchase": true,
+   "rulesUrl": null,
+   "shops": [
+    "CH Manufaktura (Łódź)"
+   ],
+   "start": "2026-11-13",
+   "task": "Zrób zakupy w CH Manufaktura w Łodzi za min. 100 zł i zgłoś paragon osobiście w punkcie loterii (parter, rotunda z windami) – każde pełne 100 zł = 1 los, max 3 losy na zgłoszenie.",
+   "title": "Loteria „Black Friday w Manufakturze 2026”",
+   "toBuy": "Dowolne zakupy w sklepach Manufaktury za min. 100 zł",
+   "url": "https://www.manufaktura.com/wydarzenia/32124/loteria_black_friday",
+   "verified": true,
+   "id": "manufaktura-black-friday-2026"
   },
   {
    "addedAt": "2026-11-14T07:40:02+01:00",
