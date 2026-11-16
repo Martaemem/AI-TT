@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-15T07:42:09+01:00",
+ "updatedAt": "2026-11-16T07:41:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -236,6 +236,26 @@
    "url": "https://wygraj.bonduelle.pl/",
    "verified": true,
    "id": "bonduelle"
+  },
+  {
+   "addedAt": "2026-11-16T07:40:11+01:00",
+   "end": "2026-12-15",
+   "minSpend": 20,
+   "note": "18+; wymagana aplikacja BPme i karta Mastercard; 9 tygodniowych etapów – zakup i zgłoszenie w tym samym etapie; zakaz tekstów generowanych przez AI; jeden zakup = jedno zgłoszenie.",
+   "organizer": "Albedo Marketing (dla BP i Mastercard)",
+   "prizes": "9 × karta podarunkowa BP 10 000 zł, 1000 × kod rabatowy 150 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.bp.com/content/dam/bp/country-sites/pl_pl/poland/home/regulaminy/Regulamin%20konkursu%20na%20stacjach%20BP_13102026%20final.pdf",
+   "shops": [
+    "BP"
+   ],
+   "start": "2026-10-14",
+   "task": "Zrób zakup za min. 20 zł na stacji BP, płacąc kartą Mastercard po zeskanowaniu aplikacji BPme, i w formularzu odpowiedz na pytanie etapu (max 1000 znaków).",
+   "title": "„BP stacja z nagrodami” – konkurs na stacjach BP",
+   "toBuy": "Dowolne zakupy za min. 20 zł w jednej transakcji (bez alkoholu, papierosów, leków, doładowań), płatność Mastercard + skan BPme",
+   "url": "https://www.bpstacjaznagrodami.pl/",
+   "verified": true,
+   "id": "bp-stacja-z-nagrodami"
   },
   {
    "addedAt": "2026-11-01T07:50:00+01:00",
