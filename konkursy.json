@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-16T07:41:00+01:00",
+ "updatedAt": "2026-11-17T07:56:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -952,17 +952,6 @@
    "id": "granice-na-pomorzu-wiatr"
   },
   {
-   "end": "2026-10-26",
-   "organizer": "granice.pl",
-   "prizes": "Książka",
-   "purchase": false,
-   "start": "2026-10-19",
-   "task": "Gdyby Twoje życie było sztuką teatralną, jaki nosiłaby tytuł?",
-   "title": "granice.pl – książka „Rita, kłopoty i ja”",
-   "url": "https://www.e-konkursy.info/konkurs/wygraj-ksiazke-rita-klopoty-i-ja",
-   "id": "granice-rita"
-  },
-  {
    "addedAt": "2026-11-14T07:40:02+01:00",
    "end": "2026-11-19",
    "note": "Formularz na stronie (imię, nazwisko, adres, telefon, e-mail); jedno zgłoszenie na osobę; wysyłka tylko w Polsce; jury.",
@@ -976,17 +965,6 @@
    "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-skwar/3066",
    "verified": true,
    "id": "granice-skwar"
-  },
-  {
-   "end": "2026-10-26",
-   "organizer": "granice.pl",
-   "prizes": "Książka",
-   "purchase": false,
-   "start": "2026-10-19",
-   "task": "Odpowiedz: jaki zwyczaj z dzieciństwa chciałabyś przywrócić we współczesnym świecie?",
-   "title": "granice.pl – książka „Ukochane kości”",
-   "url": "https://www.e-konkursy.info/konkurs/wygraj-ksiazke-ukochane-kosci",
-   "id": "granice-ukochane-kosci"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
@@ -2427,6 +2405,21 @@
    "id": "ponidzie-2026-foto"
   },
   {
+   "addedAt": "2026-11-17T07:55:00+01:00",
+   "end": "2026-11-26",
+   "note": "Formularz tylko raz na osobę; wymagany adres pocztowy; wysyłka tylko w Polsce; wynik mailem.",
+   "organizer": "Portal Kryminalny (nagrody: Wydawnictwo Czarna Owca)",
+   "prizes": "10 × książka „Łowca potworów”",
+   "purchase": false,
+   "rulesUrl": "https://portalkryminalny.pl/podstrona/konkursowy-savoir-vivre",
+   "start": "2026-11-15",
+   "task": "Odpowiedz w formularzu na pytanie: „Jaki tytuł nosił pierwszy tom cyklu o Pawle Hardym?”.",
+   "title": "portalkryminalny.pl – „Łowca potworów”",
+   "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-z-lowca-potworow",
+   "verified": true,
+   "id": "portalkryminalny-lowca-potworow"
+  },
+  {
    "addedAt": "2026-10-31T07:41:10+01:00",
    "end": "2026-11-11",
    "note": "Formularz na stronie (imię, nazwisko, e-mail, telefon, adres). Bez publikacji w social media.",
@@ -2594,6 +2587,24 @@
    "url": "https://chrupnij-auto.pl/",
    "verified": true,
    "id": "pringles-aldi"
+  },
+  {
+   "addedAt": "2026-11-17T07:55:00+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+; sklep stacjonarny lub internetowy w Polsce; 1 paragon = 1 zgłoszenie; zachowaj oryginał paragonu do końca loterii (26.02.2027); maks. 3 wygrane na osobę.",
+   "organizer": "Albedo Marketing (dla HJ Heinz Polska)",
+   "prizes": "60 000 zł, 20 × 2000 zł, 360 × czytnik inkBOOK Solaris 6",
+   "purchase": true,
+   "rulesUrl": "https://www.kraftheinz.com/pl-PL/pudliszki/loteria/terms",
+   "shops": [],
+   "start": "2026-11-02",
+   "task": "Kup min. 3 produkty Pudliszki na jednym paragonie i zgłoś paragon (numer, data, zdjęcie) w formularzu na stronie loterii.",
+   "title": "Loteria Pudliszki „Podjadaj i zgarniaj nagrody!”",
+   "toBuy": "3 dowolne produkty Pudliszki na jednym paragonie",
+   "url": "https://www.kraftheinz.com/pl-PL/pudliszki/loteria",
+   "verified": true,
+   "id": "pudliszki-podjadaj-2026"
   },
   {
    "addedAt": "2026-10-27T07:37:11+01:00",
@@ -2883,6 +2894,31 @@
    "id": "snuza-pierwsze-noce"
   },
   {
+   "addedAt": "2026-11-17T07:55:00+01:00",
+   "end": "2027-05-15",
+   "minSpend": null,
+   "note": "18+; tylko oryginalny paragon fiskalny/e-paragon lub imienna faktura bez NIP – zachowaj oryginał; kilka cylindrów na jednym paragonie = 1 los; maks. 10 zgłoszeń dziennie z jednego IP.",
+   "organizer": "SMOLAR Agencja Promocyjno-Reklamowa (dla SodaStream Poland)",
+   "prizes": "30 000 zł, 6 × 3000 zł, 13 × saturator Sodastream Fresh, 1500 nagród natychmiastowych (butelki, syropy)",
+   "purchase": true,
+   "rulesUrl": "https://www.loteriasodastream.pl/regulaminy/Regulamin_loterii_Babelkowa_loteria_Sodastream.pdf",
+   "shops": [
+    "Media Expert",
+    "Lidl",
+    "Media Markt",
+    "RTV Euro AGD",
+    "Konesso",
+    "SodaStream"
+   ],
+   "start": "2026-11-16",
+   "task": "Wymień pusty cylinder CO2 SodaStream na pełny w sklepie biorącym udział w akcji i zgłoś dowód zakupu w formularzu na stronie loterii.",
+   "title": "„Bąbelkowa loteria Sodastream”",
+   "toBuy": "wymiana min. 1 cylindra CO2 SodaStream (lista sklepów na sodastream.pl, filtr „Wymiana Cylindrów”)",
+   "url": "https://www.loteriasodastream.pl/",
+   "verified": true,
+   "id": "sodastream-babelkowa-loteria"
+  },
+  {
    "addedAt": "2026-11-10T07:40:48+01:00",
    "end": "2026-12-18",
    "minSpend": null,
@@ -3045,6 +3081,26 @@
    "id": "warszawa-naturalnie"
   },
   {
+   "addedAt": "2026-11-17T07:55:00+01:00",
+   "end": "2026-12-16",
+   "minSpend": null,
+   "note": "18+; 1 paragon = 1 zgłoszenie; odpowiedź własna, stworzona na konkurs; zachowaj paragon – zwycięzca przesyła zdjęcie w 5 dni; 1 nagroda na osobę.",
+   "organizer": "2012 sp. z o.o. (dla LOTTE Wedel)",
+   "prizes": "5 × Thermomix, 150 × e-kod 200 zł do Biedronki, 200 × zestaw 10 czekolad Wedel",
+   "purchase": true,
+   "rulesUrl": "https://rozkoszniezwedlem.pl/static/docs/regulamin-konkursu-rozkosznie-z-wedlem-20261116.pdf",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-11-16",
+   "task": "Kup czekoladę E. Wedel w Biedronce, zgłoś paragon w formularzu i odpowiedz: „Jakim deserem z czekolady jest Twoja ulubiona osoba i dlaczego?” (do 1500 znaków).",
+   "title": "„Rozkosznie z Wedlem” – Biedronka",
+   "toBuy": "min. 1 dowolna czekolada E. Wedel",
+   "url": "https://rozkoszniezwedlem.pl/",
+   "verified": true,
+   "id": "wedel-biedronka-rozkosznie"
+  },
+  {
    "addedAt": "2026-11-07T07:39:50+01:00",
    "end": "2026-12-20",
    "minSpend": 20,
@@ -3100,6 +3156,26 @@
    "id": "wedel-zabka-gory"
   },
   {
+   "addedAt": "2026-11-17T07:55:00+01:00",
+   "end": "2026-11-19",
+   "minSpend": null,
+   "note": "18+; każde zgłoszenie = nowy paragon i nowa odpowiedź; paragon z NIP nieważny; nagroda główna wymaga przyjazdu do Warszawy (01–04.2027); licencja na odpowiedź dla organizatora; 1 nagroda na osobę.",
+   "organizer": "GoldenSubmarine (dla Wella Poland)",
+   "prizes": "Metamorfoza u stylistki w Warszawie z dojazdem i noclegiem dla 2 osób (6500 zł), 200 × prostownica GHD Duet Style",
+   "purchase": true,
+   "rulesUrl": "https://konkurswellapro.pl/doc/regulamin_konkursu_wella_professionals_wygraj_metamorfoze.pdf?v=jm45kr",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-05",
+   "task": "Kup produkt Wella Professionals w Rossmannie, zgłoś paragon w formularzu i odpowiedz: „Jak wyglądałaby Twoja wymarzona metamorfoza z Wella Professionals?” (do 500 znaków).",
+   "title": "„Wygraj metamorfozę z Wella Professionals” – Rossmann",
+   "toBuy": "min. 1 produkt Wella Professionals (sklep stacjonarny lub rossmann.pl)",
+   "url": "https://konkurswellapro.pl/",
+   "verified": true,
+   "id": "wella-rossmann-metamorfoza"
+  },
+  {
    "addedAt": "2026-10-28T07:37:02+01:00",
    "end": "2026-10-29",
    "note": "Po teście trzeba napisać recenzję",
@@ -3111,17 +3187,6 @@
    "title": "Wizaż – 100 recenzentek makijażu Eveline Cosmetics",
    "url": "https://wizaz.pl/klub-recenzentki/eveline-make-up-test-recenzentek",
    "id": "wizaz-eveline"
-  },
-  {
-   "end": "2026-10-26",
-   "organizer": "wizaz.pl",
-   "prizes": "50 zestawów emolientów",
-   "purchase": false,
-   "start": "2026-10-23",
-   "task": "Zgłoś się przez formularz do akcji w Klubie Recenzentki na Wizaz.pl.",
-   "title": "Wizaż – recenzentka Nivelium PRO",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-zostan-recenzentka-i-przetestuj-zestawy-kosmetykow-nivelium-pro",
-   "id": "wizaz-nivelium"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
