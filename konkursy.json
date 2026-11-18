@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T07:56:00+01:00",
+ "updatedAt": "2026-11-18T07:40:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -113,22 +113,6 @@
    "url": "https://konkursbakoma.pl/",
    "verified": true,
    "id": "bakoma-dino-relaks"
-  },
-  {
-   "end": "2026-10-27",
-   "minSpend": null,
-   "organizer": "Bakoma",
-   "prizes": "Wg regulaminu",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup min. 2 jogurty pitne biorące udział w akcji z aplikacją Żappka, odbierz kod i odpowiedz na pytanie na stronie akcji.",
-   "title": "KSW × Bakoma w Żabce",
-   "toBuy": "2 jogurty pitne Bakoma z akcji (z aplikacją Żappka)",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-ksw-bakoma-w-zabce",
-   "id": "bakoma-zabka"
   },
   {
    "end": "2026-12-23",
@@ -1142,6 +1126,46 @@
    "id": "intermarche-czysty-przepis"
   },
   {
+   "addedAt": "2026-11-18T07:40:00+01:00",
+   "end": "2026-12-03",
+   "minSpend": 35,
+   "note": "18+; zgłoszenie SMS wg taryfy operatora; 160 znaków łącznie z prefiksem i nr paragonu; każde pełne 35 zł = 1 zgłoszenie; zachowaj paragon; wybiera jury.",
+   "organizer": "LOS MEJORES (dla E.H. Poland – Henkel)",
+   "prizes": "Pralka Bosch Serie 6, 2 suszarki Bosch, 10 bonów Intermarché po 200 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.wyczyscnagrody.pl/akcje/111_Regulamin_OK.pdf",
+   "shops": [
+    "Intermarché"
+   ],
+   "start": "2026-11-19",
+   "task": "Kup produkty Bryza, Woolite i/lub Calgon za min. 35 zł na jednym paragonie w Intermarché i wyślij SMS na 4321: eksperci.numer_paragonu.odpowiedź na pytanie „Co z Ekspertami Prania zyskujesz, że mistrzem się czujesz?” (cały SMS max 160 znaków).",
+   "title": "„Eksperci Prania. Mistrzowie Wygrywania” – Intermarché",
+   "toBuy": "Produkty Bryza, Woolite i/lub Calgon za min. 35 zł (jeden paragon)",
+   "url": "https://www.wyczyscnagrody.pl/akcje/111.html",
+   "verified": true,
+   "id": "intermarche-eksperci-prania"
+  },
+  {
+   "addedAt": "2026-11-18T07:40:00+01:00",
+   "end": "2026-12-03",
+   "minSpend": 35,
+   "note": "18+; zgłoszenie SMS wg taryfy operatora (nie przez bramki internetowe); 160 znaków łącznie z prefiksem i nr paragonu; każde pełne 35 zł = 1 zgłoszenie; zachowaj paragon; wybiera jury.",
+   "organizer": "LOS MEJORES (dla RB Hygiene Home)",
+   "prizes": "Zmywarka Bosch, 2 pralki Bosch, 12 bonów Intermarché po 600 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.wyczyscnagrody.pl/akcje/110_Regulamin.pdf",
+   "shops": [
+    "Intermarché"
+   ],
+   "start": "2026-11-19",
+   "task": "Kup produkty Finish i/lub Vanish za min. 35 zł na jednym paragonie w Intermarché i wyślij SMS na 4321: finishvanish.numer_paragonu.odpowiedź na pytanie „Gdy plamy znikają, czym Twoje święta zachwycają?” (cały SMS max 160 znaków).",
+   "title": "„Plamy znikają. Święta zachwycają” – Finish i Vanish w Intermarché",
+   "toBuy": "Produkty Finish i/lub Vanish za min. 35 zł (jeden paragon)",
+   "url": "https://www.wyczyscnagrody.pl/akcje/110.html",
+   "verified": true,
+   "id": "intermarche-finish-vanish-swieta"
+  },
+  {
    "addedAt": "2026-11-14T07:40:02+01:00",
    "end": "2026-11-29",
    "minSpend": null,
@@ -1724,24 +1748,6 @@
    "id": "lubella-pluszaki"
   },
   {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-10-27",
-   "minSpend": null,
-   "note": "18+ (alkohol); zakupy do 27.10, zgłoszenia do 29.10",
-   "organizer": "Pink Pepper Media",
-   "prizes": "Głośniki JBL PartyBox, czytniki Kindle, bony Żabka 50 zł",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup w Żabce (z aplikacją Żappka) produkt promocyjny Lubelska 0,09 l, wpisz kod z aplikacji w formularzu na cukierekalbopsikus.pl i odpowiedz, jak spędzasz Halloween ze swoją paczką (do 300 znaków).",
-   "title": "Lubelska – „Cukierek albo psikus” w Żabce",
-   "toBuy": "Lubelska 0,09 l z promocji (z aplikacją Żappka)",
-   "url": "https://cukierekalbopsikus.pl/regulamin/",
-   "id": "lubelska-halloween-zabka"
-  },
-  {
    "addedAt": "2026-11-04T07:38:30+01:00",
    "end": "2026-11-15",
    "note": "18+; 1 zgłoszenie na osobę; zgoda na newsletter dobrowolna; wynik ogłaszany na stronie i Instagramie organizatora (nic nie trzeba publikować).",
@@ -1847,6 +1853,26 @@
    "id": "melitta-originals-real-madryt"
   },
   {
+   "addedAt": "2026-11-18T07:40:00+01:00",
+   "end": "2026-11-26",
+   "minSpend": null,
+   "note": "18+; zakupy tylko 18–24.11, zgłoszenia do 26.11; wymagana aplikacja Żappka; ZAKAZ AI (tekst, obraz); bez emoji; 1 kod = 1 zgłoszenie; wygrana praca przechodzi na organizatora.",
+   "organizer": "SMOLAR (Mondelez)",
+   "prizes": "Wyjazd do Paryża dla 2 osób z kursem pieczenia croissantów, 10 × 1000 zł, 500 zestawów skarpet",
+   "purchase": true,
+   "rulesUrl": "https://www.konkurs-rogale-milka-7days.pl/regulaminy/Regulamin_Paryski_konkurs_Milka_i_7Days.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-18",
+   "task": "Kup w Żabce 2 rogale Milka 50 g i/lub 7DAYS 60 g ze skanem Żappki, odbierz kod w aplikacji i w formularzu napisz, co przypomina Ci, że czas na rogalika (max 300 znaków) albo wyślij zdjęcie.",
+   "title": "„Paryski konkurs Milka i 7DAYS” – Żabka",
+   "toBuy": "2 rogale Milka 50 g i/lub 7DAYS 60 g (z aplikacją Żappka)",
+   "url": "https://www.konkurs-rogale-milka-7days.pl/",
+   "verified": true,
+   "id": "milka-7days-zabka-paryz"
+  },
+  {
    "addedAt": "2026-11-01T07:50:00+01:00",
    "end": "2026-11-30",
    "minSpend": null,
@@ -1882,6 +1908,27 @@
    "toBuy": "2 produkty Milka, w tym tabliczka Milka Mmmax",
    "url": "https://milka-lidl.pl/",
    "id": "milka-kino-lidl"
+  },
+  {
+   "addedAt": "2026-11-18T07:40:00+01:00",
+   "end": "2027-01-14",
+   "minSpend": null,
+   "note": "18+; potrzebne konto i karta MOL Move; zapis do loterii jednorazowo PRZED zakupem; wyłączone m.in. alkohol, tytoń, karty podarunkowe. Sprawdzone na oficjalnej stronie loterii.",
+   "organizer": "Nofsza (MOL Polska)",
+   "prizes": "27 × PlayStation 5 Slim z GTA VI, 177 e-kart 500 zł na stacje MOL/LOTOS",
+   "purchase": true,
+   "rulesUrl": "https://loteria.molmove.pl/documents/regulamin-loterii.pdf",
+   "shops": [
+    "MOL",
+    "LOTOS"
+   ],
+   "start": "2026-11-17",
+   "task": "Zapisz się do loterii w aplikacji MOL Move przed zakupem, a potem płać kartą MOL Move na stacjach MOL lub LOTOS (np. min. 1 l paliwa) – losy naliczają się automatycznie.",
+   "title": "Zimowa loteria MOL Move – PS5 z GTA VI",
+   "toBuy": "Dowolny zakup objęty loterią, np. min. 1 l paliwa (paliwo Premium = 3 losy)",
+   "url": "https://loteria.molmove.pl/",
+   "verified": true,
+   "id": "mol-move-zimowa-loteria"
   },
   {
    "addedAt": "2026-11-09T07:40:57+01:00",
@@ -1922,24 +1969,6 @@
    "url": "https://monsterwlidl.pl/",
    "verified": true,
    "id": "monster-mclaren-lidl"
-  },
-  {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-10-27",
-   "minSpend": null,
-   "note": "18+",
-   "organizer": "Albedo Marketing",
-   "prizes": "Wyjazd na F1 do Bahrajnu dla 2 osób, 5600 pakietów żappsów",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup w Żabce napój Monster Energy, zeskanuj aplikację Żappka przed płatnością i zarejestruj otrzymany kod w formularzu na stronie loterii.",
-   "title": "Loteria „Monster w McLaren” – Żabka",
-   "toBuy": "1 napój Monster Energy (z aplikacją Żappka)",
-   "url": "https://monsterxmclaren.pl/",
-   "id": "monster-mclaren-zabka"
   },
   {
    "addedAt": "2026-11-04T07:38:30+01:00",
@@ -2135,6 +2164,24 @@
    "id": "npn-obrazy-znad-rzeki"
   },
   {
+   "addedAt": "2026-11-18T07:40:00+01:00",
+   "end": "2027-01-03",
+   "minSpend": null,
+   "note": "18+; zakupy od 12.11; 1 paragon = 1 zgłoszenie; zachowaj oryginał paragonu; obowiązkowa zgoda na kontakt e-mail/SMS/telefon w sprawie loterii; zakupy z automatów się nie liczą.",
+   "organizer": "Hand Made (Ferrero Polska)",
+   "prizes": "10 bonów wakacyjnych po 10 000 zł (wakacje.pl), 200 zestawów 2 swetrów Nutella",
+   "purchase": true,
+   "rulesUrl": "https://www.nutella.com/pl/pl/xp/nutelladzielsiemiloscianaswieta2026/regulamin/",
+   "shops": [],
+   "start": "2026-11-16",
+   "task": "Kup dowolny produkt Nutella i zarejestruj paragon (zdjęcie) na stronie loterii; wynik od razu po „potrząśnięciu kulą śnieżną”.",
+   "title": "Loteria Nutella „Dziel się miłością na Święta 2026”",
+   "toBuy": "1 dowolny produkt Nutella (krem, Biscuits, B-ready, Croissant itp.)",
+   "url": "https://www.nutella.com/pl/pl/xp/nutelladzielsiemiloscianaswieta2026/",
+   "verified": true,
+   "id": "nutella-dziel-sie-miloscia-2026"
+  },
+  {
    "addedAt": "2026-11-13T07:39:30+01:00",
    "end": "2027-02-28",
    "note": "18+; udział bezpłatny; prace pocztą na adres organizatora (liczy się data stempla) – adres i formę sprawdź w regulaminie.",
@@ -2223,24 +2270,6 @@
    "url": "https://www.everydayme.pl/konkursy/konkurs-oral-b-2026",
    "verified": true,
    "id": "oral-b-media-expert"
-  },
-  {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-27",
-   "minSpend": null,
-   "note": "Zakup do 27.10, rejestracja kodu do 30.10",
-   "organizer": "Mars / Orbit",
-   "prizes": "80 kart Prezentmarzeń po 500 zł",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup 2 gumy z Żappką, zarejestruj kod i kreatywnie opisz idealną 15-minutową przerwę.",
-   "title": "Orbit w Żabce – bon 500 zł do Prezentmarzeń",
-   "toBuy": "Min. 2 gumy Orbit, Airwaves, Winterfresh lub Wrigley’s (z Żappką)",
-   "url": "https://wygrajzorbit.pl/",
-   "id": "orbit-zabka"
   },
   {
    "end": "2026-11-30",
@@ -2535,24 +2564,6 @@
    "id": "portalmedialny-startup"
   },
   {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-27",
-   "minSpend": null,
-   "note": "Zakup do 27.10, zgłoszenie do 29.10",
-   "organizer": "Mondelez / Prince Polo",
-   "prizes": "10 000 zł, 450 bluz",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": null,
-   "task": "Kup 2 wafelki Prince Polo z Żappką i w formularzu napisz, jaki jest Twój ulubiony mix smaków i dlaczego.",
-   "title": "„Miksuj smaki. Po swojemu” – Prince Polo w Żabce",
-   "toBuy": "2 wafelki Prince Polo (z aplikacją Żappka)",
-   "url": "https://konkursprincepolo.pl/",
-   "id": "prince-polo-zabka-miksuj"
-  },
-  {
    "end": "2026-11-25",
    "minSpend": null,
    "note": "18+. Zakupy od 01.09.2026. Jeden paragon to jedno zgłoszenie, max 20 zgłoszeń dziennie. Zachowaj oryginał paragonu (e-paragon wydrukuj). Zakupy z automatów się nie liczą.",
@@ -2589,6 +2600,21 @@
    "id": "pringles-aldi"
   },
   {
+   "addedAt": "2026-11-18T07:40:00+01:00",
+   "end": "2026-11-25",
+   "note": "15+ (niepełnoletni ze zgodą rodzica); jedno zgłoszenie na osobę; ZAKAZ generatywnej AI; trzeba przyjechać do muzeum w Warszawie w terminie wyznaczonym przez organizatora (ok. 3 lub 10.12), dojazd na własny koszt; potwierdzenie do 29.11.",
+   "organizer": "Feeders Agency (LOTTE Wedel)",
+   "prizes": "270 zaproszeń na zwiedzanie Muzeum Fabryka Czekolady E.Wedel i wystawy Ptasie Mleczko z wybranym Ambasadorem",
+   "purchase": false,
+   "rulesUrl": "https://www.beztroskiezwiedzanie.fabrykaczekolady.pl/files/default/regulamin-konkursu-przewodnik-po-beztrosce.pdf",
+   "start": "2026-11-16",
+   "task": "Wybierz jednego z trzech Ambasadorów (Maciej Musiał, Agnes Ratajczak, Julia Żugaj) i w formularzu przekonaj, dlaczego to Ty powinnaś wygrać zaproszenie – max 300 znaków.",
+   "title": "„Przewodnik po beztrosce” – Ptasie Mleczko (E.Wedel)",
+   "url": "https://www.beztroskiezwiedzanie.fabrykaczekolady.pl/",
+   "verified": true,
+   "id": "ptasie-mleczko-przewodnik-po-beztrosce"
+  },
+  {
    "addedAt": "2026-11-17T07:55:00+01:00",
    "end": "2026-12-31",
    "minSpend": null,
@@ -2605,24 +2631,6 @@
    "url": "https://www.kraftheinz.com/pl-PL/pudliszki/loteria",
    "verified": true,
    "id": "pudliszki-podjadaj-2026"
-  },
-  {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-27",
-   "minSpend": null,
-   "note": "Ostatni dzień!",
-   "organizer": "about ad / Kraft Heinz",
-   "prizes": "100 zestawów misek z Bolesławca, 300 gier karcianych",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup 2 produkty Pudliszki z Żappką, odbierz kod i w formularzu napisz, jak namówisz ulubioną osobę na wspólny obiad.",
-   "title": "„Skoczmy na obiad razemmm” – Pudliszki w Żabce",
-   "toBuy": "Min. 2 produkty promocyjne Pudliszki (z aplikacją Żappka)",
-   "url": "https://www.kraftheinz.com/pl-PL/pudliszki/skoczmynaobiad",
-   "id": "pudliszki-zabka"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
@@ -2937,24 +2945,6 @@
    "url": "https://pysznenagrody.pl/",
    "verified": true,
    "id": "sodexo-pyszne-nagrody"
-  },
-  {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-27",
-   "minSpend": null,
-   "note": "18+. Zakup do 27.10, zgłoszenie do 29.10",
-   "organizer": "OS3",
-   "prizes": "150 bluz „Strasznie Fajna Bluza”",
-   "purchase": true,
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup produkt Soplica z Żappką, odbierz kod i w formularzu wymyśl imię oraz zabawny opis mrocznej postaci (do 500 znaków).",
-   "title": "„Soplica Halloween” w Żabce",
-   "toBuy": "1 produkt promocyjny Soplica (z aplikacją Żappka)",
-   "url": "https://soplica.pl/halloween_2026/",
-   "id": "soplica-halloween-zabka"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
