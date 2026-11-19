@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T07:40:00+01:00",
+ "updatedAt": "2026-11-19T07:45:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -633,6 +633,26 @@
    "id": "dulux-easycare-psb"
   },
   {
+   "addedAt": "2026-11-19T07:39:51+01:00",
+   "end": "2026-11-24",
+   "minSpend": null,
+   "note": "16+ (niepełnoletni – zgoda opiekuna); zakaz odpowiedzi w całości wygenerowanych przez AI; zgłoszenie tylko na stronie; zachowaj paragon do 31.03.2027; brak obowiązkowych zgód marketingowych.",
+   "organizer": "AD Butik sp. z o.o. (dla Fazer Poland)",
+   "prizes": "Vouchery turystyczne 2×2000 zł, 2× dwie pary AirPods, 10× dwie bluzy Dumle, 10× dwa kody BLIK po 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://dumle.pl/dokumenty/Regulamin-konkursu-Buy-2-And-Share-Win-Together.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-18",
+   "task": "Kup 2 produkty Dumle w Żabce ze skanem Żappki, odbierz kod z questu w aplikacji, wpisz go na dumle.pl i odpowiedz: „Z kim najchętniej spędzasz każdą wolną chwilę?” (do 200 znaków).",
+   "title": "„Buy 2 & Share. Win Together” – Dumle w Żabce",
+   "toBuy": "2 produkty Dumle (1 lub 2 transakcje, ze skanem Żappki)",
+   "url": "https://dumle.pl/",
+   "verified": true,
+   "id": "dumle-zabka-buy2-share"
+  },
+  {
    "addedAt": "2026-11-05T07:39:05+01:00",
    "end": "2026-12-31",
    "minSpend": null,
@@ -888,6 +908,26 @@
    "id": "garage-so-hard-zabka"
   },
   {
+   "addedAt": "2026-11-19T07:39:51+01:00",
+   "end": "2026-11-29",
+   "minSpend": 1000,
+   "note": "18+, zakup jako konsument (paragon/faktura imienna); 1 los za każde pełne 1000 zł; zgoda marketingowa dobrowolna (daje dodatkowy los); losowanie 04.12.",
+   "organizer": "Grzegrzółka Loterie sp. z o.o.",
+   "prizes": "Audi A3 Sportback, 7× voucher wakacje.pl po 5000 zł",
+   "purchase": true,
+   "rulesUrl": "https://loteria.gastropaczka.pl/regulamin.pdf",
+   "shops": [
+    "gastropaczka.pl"
+   ],
+   "start": "2026-11-16",
+   "task": "Złóż i opłać na gastropaczka.pl jedno zamówienie zestawów za min. 1000 zł, potem wpisz numer zamówienia w formularzu na loteria.gastropaczka.pl.",
+   "title": "Loteria „Black Weeks z Gastro Paczką” – Audi A3 Sportback",
+   "toBuy": "Zamówienie zestawów Gastro Paczka (bez deli.gastropaczka.pl)",
+   "url": "https://loteria.gastropaczka.pl/",
+   "verified": true,
+   "id": "gastropaczka-black-weeks-audi"
+  },
+  {
    "addedAt": "2026-11-01T07:50:00+01:00",
    "end": "2026-12-23",
    "minSpend": 15,
@@ -1001,6 +1041,26 @@
    "id": "hairmate-style-like-a-pro-rossmann"
   },
   {
+   "addedAt": "2026-11-19T07:39:51+01:00",
+   "end": "2026-12-03",
+   "minSpend": null,
+   "note": "18+, wiek potwierdzony w Żappce; zakaz AI; bez emotikon; max 2 zgłoszenia na dobę; zakupy do 01.12, zgłoszenia do 03.12.",
+   "organizer": "SMOLAR Agencja Promocyjno-Reklamowa (dla Carlsberg Polska)",
+   "prizes": "50 bluz, 100 koców, 100 czapek, 100 par skarpet",
+   "purchase": true,
+   "rulesUrl": "https://www.konkurs-harnas.pl/regulaminy/Regulamin_konkursu_Harnas_(Zabka).pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-18",
+   "task": "Kup 2 piwa Harnaś w Żabce ze skanem Żappki, odbierz kod i w formularzu odpowiedz: „Jaką jedną nową rzecz chcesz zrobić w 2027 i dlaczego?” (do 500 znaków).",
+   "title": "„Harnasia Roku” – Harnaś w Żabce",
+   "toBuy": "2 produkty Harnaś (zakupy do 01.12, ze skanem Żappki; bez Żabka Nano)",
+   "url": "https://www.konkurs-harnas.pl/",
+   "verified": true,
+   "id": "harnas-zabka-harnasia-roku"
+  },
+  {
    "end": "2026-11-09",
    "minSpend": null,
    "note": "18+; tylko jedno zgłoszenie na osobę; produkty na jednym paragonie.",
@@ -1035,23 +1095,6 @@
    "toBuy": "2 × Hochland soSER 175 g",
    "url": "https://seriodobry.pl/",
    "id": "hochland-serio-auchan"
-  },
-  {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-28",
-   "minSpend": null,
-   "organizer": "Hochland",
-   "prizes": "5 projektorów Samsung Freestyle, 50 bonów 100 zł do Intermarché",
-   "purchase": true,
-   "shops": [
-    "Intermarché"
-   ],
-   "start": "2026-10-15",
-   "task": "Kup 2 produkty soSER, zachowaj paragon i w formularzu opisz (do 250 znaków) przepis na idealny wieczór filmowy z soSER-em.",
-   "title": "„SERio Przyjemny” – Hochland w Intermarché",
-   "toBuy": "Min. 2 produkty soSER Hochland",
-   "url": "https://serioprzyjemny.pl/",
-   "id": "hochland-soser-intermarche"
   },
   {
    "end": "2026-11-30",
@@ -2109,6 +2152,26 @@
    "url": "https://nivea.pl/zadbajonawilzenie",
    "verified": true,
    "id": "nivea-care-biedronka"
+  },
+  {
+   "addedAt": "2026-11-19T07:39:51+01:00",
+   "end": "2026-11-25",
+   "minSpend": null,
+   "note": "Zasady potwierdzone na oficjalnej stronie NIVEA (PDF regulaminu niedostępny do odczytu) – wiek i limit znaków sprawdź w regulaminie; zachowaj paragon.",
+   "organizer": "GoldenSubmarine sp. z o.o. sp. k. (dla NIVEA)",
+   "prizes": "10× maska LED FOREO FAQ 202, 100× karta podarunkowa Rossmann 100 zł",
+   "purchase": true,
+   "rulesUrl": "https://www.goldensubmarine.com/regulaminy/Nivea/nivea-regulamin-konkursu-nivea-epigenetics.pdf",
+   "shops": [
+    "Rossmann"
+   ],
+   "start": "2026-11-12",
+   "task": "Kup dowolny kosmetyk NIVEA CELLULAR w Rossmannie (sklep lub online), odpowiedz w formularzu: „Jaki jest Twój sekret długowieczności?” i dołącz zdjęcie paragonu.",
+   "title": "„NIVEA Epigenetics – aktywuj długowieczność skóry” – Rossmann",
+   "toBuy": "1 kosmetyk NIVEA CELLULAR",
+   "url": "https://www.nivea.pl/articles/engage/epigenetics",
+   "verified": true,
+   "id": "nivea-epigenetics-rossmann"
   },
   {
    "addedAt": "2026-11-10T07:40:48+01:00",
@@ -3237,6 +3300,21 @@
    "url": "https://www.wroclaw.pl/dla-mieszkanca/podwojne-bilety-na-koncerty-do-nfm-w-listopadzie-konkurs",
    "verified": true,
    "id": "wroclaw-nfm-listopad"
+  },
+  {
+   "addedAt": "2026-11-19T07:39:51+01:00",
+   "end": "2027-01-07",
+   "note": "18+ (pełna zdolność do czynności prawnych); bezpłatny; całkowity zakaz AI (oświadczenie); 1 treatment na osobę, można w zespole 2–3 os.; obowiązkowa zgoda na wykorzystanie wizerunku i licencja dla organizatora; newsletter dobrowolny.",
+   "organizer": "Watchout Studio sp. z o.o. (partner: Polska Gildia Producentów)",
+   "prizes": "35 000 zł, 30 000 zł, 25 000 zł; dla finalistów gala i warsztaty w czerwcu 2027",
+   "purchase": false,
+   "rulesUrl": "https://konkurswyobrazsobie.pl/regulamin/",
+   "start": "2026-11-18",
+   "task": "Napisz po polsku treatment pełnometrażowego filmu fabularnego (9–15 stron, ok. 2800 znaków na stronę, wg szablonu) plus logline 3–4 zdania i wgraj na stronie konkursu.",
+   "title": "Konkurs „Wyobraź sobie” – edycja 2027 (treatment filmowy)",
+   "url": "https://konkurswyobrazsobie.pl/",
+   "verified": true,
+   "id": "wyobraz-sobie-2027"
   },
   {
    "addedAt": "2026-11-08T07:40:33+01:00",
