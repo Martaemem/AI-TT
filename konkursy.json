@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-19T07:45:00+01:00",
+ "updatedAt": "2026-11-20T07:38:41+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -864,6 +864,26 @@
    "url": "https://www.wyczyscnagrody.pl/akcje/108.html",
    "verified": true,
    "id": "finish-intermarche"
+  },
+  {
+   "addedAt": "2026-11-20T07:38:41+01:00",
+   "end": "2027-01-17",
+   "minSpend": null,
+   "note": "18+; potrzebne konto Frisco; zakupy do 31.12.2026, zgłoszenia dopiero 4–17.01.2027; zakaz używania AI; jedno zgłoszenie na osobę; licencja na tekst dla organizatora.",
+   "organizer": "Frisco S.A. (operator: NAV agency)",
+   "prizes": "5 × bon podróżny 20 000 zł, 20 × Booksy 1000 zł, 30 × Suntago 600 zł, 600 × bilety Cinema City, 200 × Katalog Marzeń",
+   "purchase": true,
+   "rulesUrl": "https://www.frisco.pl/stn,pomoc/page,topic/id,40688523568274",
+   "shops": [
+    "Frisco"
+   ],
+   "start": "2026-11-16",
+   "task": "Kup na frisco.pl produkty oznaczone badge’em konkursowym (zamówienie do 31.12.2026, odebrane i zafakturowane), a w dniach 4–17.01.2027 dokończ w formularzu zdanie „W Nowym Roku życzymy Ci…” (maks. 500 znaków).",
+   "title": "„Życzenia warte spełnienia” – konkurs świąteczny Frisco",
+   "toBuy": "Dowolne produkty z badge’em konkursowym na frisco.pl",
+   "url": "https://www.frisco.pl/swiateczne-zakupy",
+   "verified": true,
+   "id": "frisco-zyczenia-warte-spelnienia"
   },
   {
    "addedAt": "2026-11-12T07:45:00+01:00",
@@ -2542,20 +2562,6 @@
    "id": "portalkryminalny-rostoly"
   },
   {
-   "end": "2026-10-29",
-   "note": "Formularz na stronie (imię, adres, telefon), formularz można wypełnić tylko raz. Kończy się dziś.",
-   "organizer": "portalkryminalny.pl",
-   "prizes": "Książka",
-   "purchase": false,
-   "rulesUrl": "https://portalkryminalny.pl/podstrona/konkursowy-savoir-vivre",
-   "start": "2026-10-20",
-   "task": "Odpowiedz, jaki zawód ma główna bohaterka serii Przemysława Piotrowskiego.",
-   "title": "portalkryminalny.pl – „Ślepa, czarna noc”",
-   "url": "https://portalkryminalny.pl/konkursy/w-toku/konkurs-ze-slepa-czarna-noca",
-   "verified": true,
-   "id": "portalkryminalny-slepa"
-  },
-  {
    "addedAt": "2026-11-13T07:39:30+01:00",
    "end": "2026-11-19",
    "note": "Formularz na stronie (imię, nazwisko, e-mail, telefon, adres). Bez publikacji w social media.",
@@ -3075,6 +3081,21 @@
    "id": "swidnica-wiersz-obrazkowy-2026"
   },
   {
+   "addedAt": "2026-11-20T07:38:41+01:00",
+   "end": "2026-11-23",
+   "note": "18+; tylko klienci T-Mobile (abonament/na kartę) z aktywnym numerem, w programie Magenta Moments w aplikacji; udział bezpłatny; zakaz odpowiedzi tworzonych z AI; jedno zgłoszenie na osobę.",
+   "organizer": "T-Mobile Polska S.A.",
+   "prizes": "Wyjazd VIP do Laponii dla 4 osób, 3 × Google Pixel 11 Pro, 300 × karty Biedronka 100 zł",
+   "purchase": false,
+   "rulesUrl": "https://pliki.telepolis.pl/file/267043/original.pdf",
+   "start": "2026-11-10",
+   "task": "W aplikacji Mój T-Mobile rozwiąż quiz (5 pytań, wszystkie poprawnie) i odpowiedz w formularzu, jaką wyjątkową świąteczną niespodziankę mogłyby przygotować elfy w Magenta Moments (maks. 300 znaków ze spacjami).",
+   "title": "„Tropem Dobrych Prezentów” – T-Mobile (Magenta Moments)",
+   "url": "https://www.t-mobile.pl/aplikacja",
+   "verified": true,
+   "id": "tmobile-tropem-dobrych-prezentow"
+  },
+  {
    "end": "2026-10-30",
    "note": "18+. Zgłoś przez formularz na twix.pl, nie komentarzem (1 zgłoszenie). Zakaz treści stworzonych przez AI lub z pomocą AI. Zadania o zastępstwo w pracy są wykluczone. Zwycięzca musi być dostępny 19.11.",
    "organizer": "Mars Polska",
@@ -3227,19 +3248,6 @@
    "url": "https://konkurswellapro.pl/",
    "verified": true,
    "id": "wella-rossmann-metamorfoza"
-  },
-  {
-   "addedAt": "2026-10-28T07:37:02+01:00",
-   "end": "2026-10-29",
-   "note": "Po teście trzeba napisać recenzję",
-   "organizer": "wizaz.pl",
-   "prizes": "100 zestawów Eveline Cosmetics (ok. 340 zł)",
-   "purchase": false,
-   "start": "2026-10-27",
-   "task": "Wypełnij formularz zgłoszeniowy na Wizaz.pl; wybrane osoby dostaną zestaw kosmetyków do ust i oczu i opiszą je w recenzjach na Wizażu.",
-   "title": "Wizaż – 100 recenzentek makijażu Eveline Cosmetics",
-   "url": "https://wizaz.pl/klub-recenzentki/eveline-make-up-test-recenzentek",
-   "id": "wizaz-eveline"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
