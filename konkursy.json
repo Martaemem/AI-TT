@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T07:38:41+01:00",
+ "updatedAt": "2026-11-22T16:02:53+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -38,22 +38,6 @@
    "url": "https://allegro.pl/smart/loteria",
    "verified": true,
    "id": "allegro-smart-loteria"
-  },
-  {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-31",
-   "minSpend": null,
-   "note": "Zachowaj wieczko z kodem i paragon",
-   "organizer": "Hochland / Almette",
-   "prizes": "EkoDOM z działką w górach, 305 × 1000 zł",
-   "purchase": true,
-   "shops": [],
-   "start": "2026-07-13",
-   "task": "Kup promocyjny serek Almette, zachowaj paragon i wieczko z kodem, zarejestruj kod na almette.pl.",
-   "title": "Loteria Almette „Dom z natury 11”",
-   "toBuy": "Min. 1 promocyjny produkt Almette (z kodem pod wieczkiem)",
-   "url": "https://www.almette.pl/loteria-2026/",
-   "id": "almette-dom-z-natury"
   },
   {
    "addedAt": "2026-10-30T07:39:18+01:00",
@@ -372,22 +356,6 @@
    "url": "https://zadbajomagie.pl/",
    "verified": true,
    "id": "coca-cola-biedronka-magia-swiat"
-  },
-  {
-   "addedAt": "2026-10-28T07:37:02+01:00",
-   "end": "2026-10-30",
-   "minSpend": null,
-   "note": "Wymaga aplikacji CokeApp; zachowaj paragon",
-   "organizer": "Coca-Cola",
-   "prizes": "Zestawy ceramiki Bolesławiec, vouchery 20 zł, darmowe nadanie InPost",
-   "purchase": true,
-   "shops": [],
-   "start": "2026-09-07",
-   "task": "Kup napój Coca-Cola objęty promocją, wpisz kod spod nakrętki lub zawleczki w aplikacji CokeApp i użyj tokena jako losu w loterii (albo zbieraj tokeny na ceramikę).",
-   "title": "Loteria Coca-Cola × Bolesławiec 2026",
-   "toBuy": "Napój Coca-Cola z kodem promocyjnym pod nakrętką/zawleczką",
-   "url": "https://www.coca-cola.com/pl/pl/offerings/boleslawiec-2026",
-   "id": "coca-cola-boleslawiec"
   },
   {
    "addedAt": "2026-11-04T07:38:30+01:00",
@@ -761,29 +729,6 @@
    "id": "fa-schauma"
   },
   {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-10-30",
-   "minSpend": null,
-   "organizer": "Coca-Cola / Fanta",
-   "prizes": "Pobyt w zamku Moszna dla 2 osób, maszyny do popcornu, skarpetki Fanta",
-   "purchase": true,
-   "shops": [
-    "Carrefour",
-    "Auchan",
-    "E.Leclerc",
-    "Kaufland",
-    "Stokrotka",
-    "Intermarché",
-    "Dealz"
-   ],
-   "start": "2026-10-01",
-   "task": "Kup dowolną Fantę w Carrefourze, Auchan, E.Leclerc, Kauflandzie, Stokrotce, Intermarché lub Dealz i zarejestruj paragon na stronie loterii.",
-   "title": "Loteria „Fanta Halloween 2026”",
-   "toBuy": "1 dowolna Fanta",
-   "url": "https://www.coca-cola.com/pl/pl/offerings/fanta-halloween",
-   "id": "fanta-halloween"
-  },
-  {
    "addedAt": "2026-11-11T07:43:55+01:00",
    "end": "2026-11-30",
    "minSpend": null,
@@ -1100,23 +1045,6 @@
    "id": "heinz-lidl"
   },
   {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-10-31",
-   "minSpend": null,
-   "organizer": "Creative Ideas",
-   "prizes": "5 × Nintendo Switch 2, 16 bonów Auchan po 250 zł",
-   "purchase": true,
-   "shops": [
-    "Auchan"
-   ],
-   "start": "2026-10-19",
-   "task": "Kup 2 produkty Hochland soSER 175 g w Auchan (sklep lub online), zachowaj paragon i w formularzu na seriodobry.pl napisz swój przepis na SERio przyjemny wieczór.",
-   "title": "„Wieczór, który SERio wciąga” – Hochland w Auchan",
-   "toBuy": "2 × Hochland soSER 175 g",
-   "url": "https://seriodobry.pl/",
-   "id": "hochland-serio-auchan"
-  },
-  {
    "end": "2026-11-30",
    "note": "18+. Trzeba pojechać do salonu na jazdę testową. UWAGA: zgoda na kontakt marketingowy jest warunkiem udziału. Jedno zgłoszenie na osobę.",
    "organizer": "Hyundai Motor Poland",
@@ -1287,21 +1215,6 @@
    "id": "jagermeister-zapoluj-na-nagrody"
   },
   {
-   "addedAt": "2026-10-28T07:37:02+01:00",
-   "end": "2026-10-31",
-   "note": "18+. Bez zakupu (regulamin §2 ust. 3). Typy do pierwszego gwizdka (sob. 31.10, 14:45), potwierdź linkiem z maila. Zgoda marketingowa dobrowolna (daje dodatkowy typ).",
-   "organizer": "CLOVIN S.A. (czystagra.pl)",
-   "prizes": "Koszulka meczowa Jagiellonii z autografami (500 zł)",
-   "purchase": false,
-   "rulesUrl": "https://czystagra.pl/wygrajkoszulke/regulamin.html",
-   "start": "2026-10-26",
-   "task": "W formularzu wytypuj dokładny wynik meczu Wieczysta Kraków – Jagiellonia, posiadanie piłki i liczbę podań Jagiellonii, a potem potwierdź zgłoszenie linkiem z maila.",
-   "title": "Wytypuj mecz Jagiellonii – koszulka z autografami",
-   "url": "https://czystagra.pl/wygrajkoszulke/",
-   "verified": true,
-   "id": "jagiellonia-koszulka"
-  },
-  {
    "end": "2027-03-31",
    "minSpend": null,
    "note": "18+; co tydzień 1 mikser KitchenAid; zachowaj oryginalny paragon; jeden paragon = jedno zgłoszenie; zgłoszenie po godzinie zakupu.",
@@ -1369,21 +1282,6 @@
    "url": "https://www.promocjeunilever.pl/knorrxmass/",
    "verified": true,
    "id": "knorr-hellmanns-chrupiace-swieta"
-  },
-  {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-10-31",
-   "minSpend": null,
-   "organizer": "Unilever / Knorr",
-   "prizes": "Toyota Aygo X, 465 × 100 zł",
-   "purchase": true,
-   "shops": [],
-   "start": "2026-10-01",
-   "task": "Kup 2 produkty Knorr (Nudle, Danie w kubku lub Gorący Kubek), zachowaj paragon i zarejestruj go na stronie promocji.",
-   "title": "Loteria Knorr „Smakowite nagrody!”",
-   "toBuy": "2 produkty Knorr: Nudle, Danie w kubku lub Gorący Kubek",
-   "url": "https://www.promocjeunilever.pl/knorr",
-   "id": "knorr-smakowite"
   },
   {
    "addedAt": "2026-11-11T07:43:55+01:00",
@@ -1956,23 +1854,6 @@
    "id": "milka-biedronka-mmmax"
   },
   {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-10-31",
-   "minSpend": null,
-   "organizer": "Milka / Lidl",
-   "prizes": "10 zestawów kinomana, 30 abonamentów Cinema City Unlimited, 300 podwójnych biletów",
-   "purchase": true,
-   "shops": [
-    "Lidl"
-   ],
-   "start": "2026-10-15",
-   "task": "Kup 2 produkty Milka (w tym Mmmax), zachowaj paragon i w formularzu wymyśl smak i nazwę czekolady inspirowanej ulubionym filmem.",
-   "title": "„Kinowa Milka” w Lidlu",
-   "toBuy": "2 produkty Milka, w tym tabliczka Milka Mmmax",
-   "url": "https://milka-lidl.pl/",
-   "id": "milka-kino-lidl"
-  },
-  {
    "addedAt": "2026-11-18T07:40:00+01:00",
    "end": "2027-01-14",
    "minSpend": null,
@@ -2034,6 +1915,26 @@
    "id": "monster-mclaren-lidl"
   },
   {
+   "addedAt": "2026-11-22T16:02:53+01:00",
+   "end": "2026-12-15",
+   "minSpend": null,
+   "note": "18+; wymagana aplikacja i program Żappka; to promocja sprzedażowa (progi zakupowe i ranking), nie loteria; do wyczerpania puli nagród; także Żabka Nano.",
+   "organizer": "Albedo Marketing (dla Coca-Cola HBC Polska)",
+   "prizes": "1000 napojów Monster, 480 Mystery Boxów (80–300 zł), 4 Premium Mystery Boxy (839 zł) za tygodniowe rankingi",
+   "purchase": true,
+   "rulesUrl": "https://monstermysterybox.pl/storage/1/Regulamin-Program-Monster-w-%C5%BBabka-_TF.pdf",
+   "shops": [
+    "Żabka"
+   ],
+   "start": "2026-11-18",
+   "task": "Kupuj napoje Monster (500 ml, Mega 558 ml lub zestaw Chrupbox + Monster) w Żabce, skanując przed płatnością kod Żappki; zebrane kody wpisuj w formularzu na monstermysterybox.pl i zbieraj progi lub punkty w tygodniowym rankingu.",
+   "title": "„Program Monster” – Monster w Żabce",
+   "toBuy": "Napoje Monster 500 ml / Monster Mega 558 ml / zestaw Chrupbox + Monster – liczba zależna od progu (np. 10 kodów za box 80 zł)",
+   "url": "https://monstermysterybox.pl/",
+   "verified": true,
+   "id": "monster-zabka-program-monster"
+  },
+  {
    "addedAt": "2026-11-04T07:38:30+01:00",
    "end": "2026-12-31",
    "minSpend": 50,
@@ -2085,20 +1986,6 @@
    "url": "https://www.muttikonkurs.pl/",
    "verified": true,
    "id": "mutti-2026-foto"
-  },
-  {
-   "end": "2026-10-31",
-   "note": "18+. Bez zakupu, ale wymagana karta myKiK. Formularz na stronie sprawdź – zgoda na newsletter może być oznaczona jako obowiązkowa. KiK dostaje licencję na zdjęcie. Bony tylko do sklepów stacjonarnych.",
-   "organizer": "KiK Textil",
-   "prizes": "15 × bon KiK 200 zł",
-   "purchase": false,
-   "rulesUrl": "https://firma.kik.pl/fileadmin/gewinnspiele/pl/Teilnahmebedingungen_Fotowettbewerb_PL.pdf",
-   "start": "2026-10-01",
-   "task": "Wyślij kreatywne zdjęcie przez formularz (JPG/PNG, do 10 MB).",
-   "title": "myKiK – zdjęcie „Halloween”",
-   "url": "https://firma.kik.pl/mykikkonkurs",
-   "verified": true,
-   "id": "mykik-halloween"
   },
   {
    "end": "2026-11-04",
@@ -3096,20 +2983,6 @@
    "id": "tmobile-tropem-dobrych-prezentow"
   },
   {
-   "end": "2026-10-30",
-   "note": "18+. Zgłoś przez formularz na twix.pl, nie komentarzem (1 zgłoszenie). Zakaz treści stworzonych przez AI lub z pomocą AI. Zadania o zastępstwo w pracy są wykluczone. Zwycięzca musi być dostępny 19.11.",
-   "organizer": "Mars Polska",
-   "prizes": "PS5 Pro + fotel gamingowy",
-   "purchase": false,
-   "rulesUrl": "https://www.twix.com/pl/regulamin",
-   "start": "2026-10-19",
-   "task": "Napisz, o jakie zadanie poprosiłabyś swojego cyfrowego sobowtóra na jeden dzień.",
-   "title": "Twix – „Doppelgamer”",
-   "url": "https://www.twix.com/pl/",
-   "verified": true,
-   "id": "twix-doppelgamer"
-  },
-  {
    "addedAt": "2026-11-01T07:50:00+01:00",
    "end": "2026-11-01",
    "note": "Kończy się dziś o 23:59; 18+; bez zakupu; maks. 1 nagroda na osobę.",
@@ -3123,21 +2996,6 @@
    "url": "https://vegeta.com/pl/zawsze-oryginalna-zawsze-vegeta/",
    "verified": true,
    "id": "vegeta-do-wszystkiego"
-  },
-  {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-10-31",
-   "note": "18+. Udział bezpłatny, bez zakupu – kod dostajesz za min. 100 pkt w grze na stronie. Zgłoszenia do 31.10, codziennie 00:00–23:59.",
-   "organizer": "Voltaren",
-   "prizes": "3 bilety na finał Ligi Mistrzów UEFA, piłki, torby, koszulki, kubki",
-   "purchase": false,
-   "rulesUrl": "https://www.zostanwgrze.pl/sites/39107f68e464e81a136b1c6b2641ea65/Regulamin%20-%20Zosta%C5%84%20w%20grze%20z%20Voltaren.pdf",
-   "start": "2026-10-01",
-   "task": "Na stronie akcji rozwiąż quiz o produktach Voltaren i zagraj w grę zręcznościową; po zdobyciu min. 100 punktów zarejestruj otrzymany kod w loterii.",
-   "title": "„Zostań w grze z Voltaren”",
-   "url": "https://zostanwgrze.pl/",
-   "verified": true,
-   "id": "voltaren-zostan-w-grze"
   },
   {
    "addedAt": "2026-10-28T07:37:02+01:00",
