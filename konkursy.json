@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-24T08:30:00+01:00",
+ "updatedAt": "2026-11-25T07:57:47+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -492,6 +492,21 @@
    "url": "https://loteriadavidoff.pl/",
    "verified": true,
    "id": "davidoff-monako"
+  },
+  {
+   "addedAt": "2026-11-25T07:57:47+01:00",
+   "end": "2026-11-30",
+   "note": "18+ (uczniowie szkół średnich za zgodą rodzica); bezpłatny; zgłoszenie e-mailem na kancelaria@instytutstratwojennych.pl z kartą zgłoszenia (zał. 1), pocztą lub osobiście – liczy się data wpływu; zakaz AI; laureat przenosi autorskie prawa majątkowe; wyniki do 22.12.2026.",
+   "organizer": "Instytut Strat Wojennych im. Jana Karskiego",
+   "prizes": "12 nagród po 2000 zł (czytnik e-booków + plecak ewakuacyjny z wyposażeniem)",
+   "purchase": false,
+   "rulesUrl": "https://deportacje45.pl/uploads/articles/files/417/regulamindawajczasy!_gornyslask.pdf",
+   "start": "2026-09-01",
+   "task": "Przygotuj własną pracę pisemną (esej, reportaż lub opowiadanie), film albo nagranie audio o stratach Twojej rodziny lub lokalnej społeczności na Górnym Śląsku spowodowanych przez Armię Czerwoną w latach 1945–1947. Brak limitu długości tekstu.",
+   "title": "Konkurs „Dawaj czasy!” – Górny Śląsk",
+   "url": "https://deportacje45.pl/article/417/konkurs",
+   "verified": true,
+   "id": "dawaj-czasy-gorny-slask-2026"
   },
   {
    "addedAt": "2026-11-02T08:00:00+01:00",
@@ -2021,6 +2036,26 @@
    "id": "mutti-2026-foto"
   },
   {
+   "addedAt": "2026-11-25T07:57:47+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+ (pełna zdolność do czynności prawnych), tylko klienci firmy; zgłoszenie formularzem lub pocztą z dopiskiem „Konkurs”; tygodniowe rundy pon. 17:00 – pon. 16:00; laureat odsyła podpisany protokół odbioru.",
+   "organizer": "Natural Pharmaceuticals sp. z o.o.",
+   "prizes": "Co tydzień bon 150 zł do Biedronki",
+   "purchase": true,
+   "rulesUrl": "https://natural.pl/wp-content/uploads/2026/08/REGULAMIN-KONKURUS-MOJE-SUPLEMENTY_B-2026.pdf",
+   "shops": [
+    "natural.pl"
+   ],
+   "start": "2019-12-30",
+   "task": "Odpowiedz w formularzu na pytanie „Dlaczego wybierasz suplementy Natural Pharmaceuticals?” (brak limitu znaków). Co tydzień wybierany jest jeden laureat.",
+   "title": "Konkurs „Moje suplementy” – Natural Pharmaceuticals",
+   "toBuy": "Dowolny suplement Natural Pharmaceuticals zamówiony i opłacony w ciągu ostatnich 12 miesięcy",
+   "url": "https://www.natural.pl/konkurs",
+   "verified": true,
+   "id": "natural-moje-suplementy-2026"
+  },
+  {
    "end": "2026-11-04",
    "minSpend": 15,
    "note": "18+. SMS na 4321 (koszt wg operatora), prefiks PLA, max 250 znaków. Zachowaj oryginał paragonu.",
@@ -2512,34 +2547,6 @@
    "id": "portalmedialny-dyrdymarki"
   },
   {
-   "addedAt": "2026-10-27T07:37:11+01:00",
-   "end": "2026-11-03",
-   "note": "18+ (16–18 za zgodą rodzica). Treść konkursu: do 3.11 (pasek boczny podaje 26.11 – zgłoś się do 3.11). Losowanie spośród poprawnych odpowiedzi. Regulamin na stronie konkursu.",
-   "organizer": "portalmedialny.pl",
-   "prizes": "1 egzemplarz książki Mileny Wójtowicz",
-   "purchase": false,
-   "start": "2026-10-26",
-   "task": "Wypełnij formularz i podaj, ile lat temu Wisława Szymborska dostała Nagrodę Nobla.",
-   "title": "portalmedialny.pl – „Jesteś jeszcze ty”",
-   "url": "https://portalmedialny.pl/art/98026/jestes-jeszcze-ty-milena-wojtowicz.html/",
-   "verified": true,
-   "id": "portalmedialny-jestes-jeszcze-ty"
-  },
-  {
-   "addedAt": "2026-10-31T07:41:10+01:00",
-   "end": "2026-11-03",
-   "note": "18+ (16–18 za zgodą rodzica). Udział bezpłatny, losowanie wśród poprawnych odpowiedzi. Regulamin na stronie konkursu.",
-   "organizer": "Obraz Dnia / portalmedialny.pl",
-   "prizes": "Książka „Powrót do Maple Tree” (Alison Sherlock)",
-   "purchase": false,
-   "start": null,
-   "task": "Kliknij „Biorę udział w konkursie”, wypełnij formularz i poprawnie odpowiedz na zadanie (podpowiedź w podlinkowanym artykule).",
-   "title": "portalmedialny.pl – „Powrót do Maple Tree”",
-   "url": "https://portalmedialny.pl/art/98025/powrot-do-maple-tree-alison-sherlock.html",
-   "verified": true,
-   "id": "portalmedialny-maple-tree"
-  },
-  {
    "end": "2026-11-19",
    "note": "18+ (16–18 za zgodą rodzica). Udział bezpłatny, regulamin na stronie konkursu.",
    "organizer": "portalmedialny.pl",
@@ -2568,25 +2575,6 @@
    "url": "https://princepolo.pl/",
    "verified": true,
    "id": "prince-polo"
-  },
-  {
-   "end": "2026-11-03",
-   "minSpend": null,
-   "note": "18+. Jeden paragon = jedno zgłoszenie; zachowaj oryginał paragonu. Losowanie 6.11.2026.",
-   "organizer": "Smolar",
-   "prizes": "Renault Clio, 5 × bon Orlen 850 zł",
-   "purchase": true,
-   "rulesUrl": "https://chrupnij-auto.pl/regulaminy/Regulamin_Chrupnij_auto.pdf",
-   "shops": [
-    "Aldi"
-   ],
-   "start": "2026-10-19",
-   "task": "Kup min. 1 puszkę Pringles w Aldi i zgłoś numer paragonu w formularzu na stronie loterii.",
-   "title": "„Chrupnij auto” – Pringles w Aldi",
-   "toBuy": "Min. 1 puszka Pringles (dowolny smak)",
-   "url": "https://chrupnij-auto.pl/",
-   "verified": true,
-   "id": "pringles-aldi"
   },
   {
    "addedAt": "2026-11-18T07:40:00+01:00",
