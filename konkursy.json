@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-25T07:57:47+01:00",
+ "updatedAt": "2026-11-26T08:10:12+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -314,6 +314,21 @@
    "id": "ceramikker-turbo-loteria-2"
   },
   {
+   "addedAt": "2026-11-26T08:10:12+01:00",
+   "end": "2027-05-31",
+   "note": "Udział bezpłatny, zgłoszenie przez portal (bez mediów społecznościowych). Konkurs międzynarodowy. Przed wysłaniem przeczytaj warunki uczestnictwa na portalu (wiek, licencja, zasady dot. AI).",
+   "organizer": "CEWE",
+   "prizes": "Pula ponad 250 000 euro dla ok. 1000 laureatów; 1. miejsce: wyjazd fotograficzny za 10 000 euro + vouchery",
+   "purchase": false,
+   "rulesUrl": "https://www.cewe.pl/konkurs-fotograficzny/cewe-photo-award.html",
+   "start": "2026-05-06",
+   "task": "Prześlij do 100 własnych zdjęć w 10 kategoriach (m.in. natura, krajobraz, ludzie, podróże, architektura) przez konto na portalu konkursowym.",
+   "title": "CEWE Photo Award 2027",
+   "url": "https://konkurs.cewe.pl/cewephotoaward2027/pl_pl/",
+   "verified": true,
+   "id": "cewe-photo-award-2027"
+  },
+  {
    "end": "2026-12-13",
    "minSpend": 30,
    "note": "18+. Do 30 zł nie wlicza się alkoholu (poza piwem), tytoniu, leków ani mleka dla niemowląt. Trzeba pojechać do sklepu (urna). Jedna nagroda na osobę.",
@@ -439,26 +454,6 @@
    "url": "https://www.smakjesienizcorega.pl/",
    "verified": true,
    "id": "corega-jesien"
-  },
-  {
-   "addedAt": "2026-10-26T07:36:00+01:00",
-   "end": "2026-11-04",
-   "minSpend": null,
-   "note": "18+. Rossmann stacjonarnie lub rossmann.pl. Jeden paragon = jedno zgłoszenie; zachowaj oryginał paragonu.",
-   "organizer": "Smolar",
-   "prizes": "100 voucherów Slowhop po 1000 zł",
-   "purchase": true,
-   "rulesUrl": "https://www.loteriaczystyswiat.pl/regulaminy/Regulamin_loterii_Czysty_swiat.pdf",
-   "shops": [
-    "Rossmann"
-   ],
-   "start": "2026-10-22",
-   "task": "Kup w Rossmannie produkt promocyjny marek Henkla (m.in. Persil, Perwoll, Somat, Gliss, Taft, Schauma, Fa, Syoss) i zgłoś paragon na stronie loterii.",
-   "title": "Loteria „Czysty świat” – Rossmann",
-   "toBuy": "Min. 1 produkt marek Henkla: Persil, Perwoll, Silan, E, Clin, Bref, Somat, Pur, Gliss, Taft, Schauma, Fa, got2b, LIVE, Creme Supreme, Syoss",
-   "url": "https://www.loteriaczystyswiat.pl/",
-   "verified": true,
-   "id": "czysty-swiat-rossmann"
   },
   {
    "addedAt": "2026-11-04T07:38:30+01:00",
@@ -602,26 +597,6 @@
    "url": "https://www.joy-pepsico.eu/pl-pl/brands/doritos/promotions/doritos-loaded",
    "verified": true,
    "id": "doritos-loaded"
-  },
-  {
-   "addedAt": "2026-11-01T07:50:00+01:00",
-   "end": "2026-11-04",
-   "minSpend": null,
-   "note": "18+; jeden paragon = jedno zgłoszenie; zgoda marketingowa opcjonalna.",
-   "organizer": "SMOLAR (Unilever)",
-   "prizes": "3 × voucher Slowhop 2000 zł, 50 × e-karta Kaufland 100 zł",
-   "purchase": true,
-   "rulesUrl": "https://www.promocjeunilever.pl/sites/f84433c1346533ce8b3e1ffd1e12ba8d/Regulamin%20-%20Poczuj%20jesienny%20chill!.pdf?6f14d0fea7df9941178d0a71fc02b85f=",
-   "shops": [
-    "Kaufland"
-   ],
-   "start": "2026-10-15",
-   "task": "Kup w Kauflandzie promocyjny produkt Dove lub Axe i dokończ zdanie „Czuję jesienny chill...” (maks. 300 znaków).",
-   "title": "„Poczuj jesienny chill!” – Dove i Axe w Kauflandzie",
-   "toBuy": "1 produkt: żel Dove 720 ml / Dove Men+Care 700 ml, dezodorant Dove 300 ml lub żel Axe 900 ml z pompką",
-   "url": "https://www.promocjeunilever.pl/jesiennychill",
-   "verified": true,
-   "id": "dove-axe-kaufland-chill"
   },
   {
    "addedAt": "2026-10-29T07:39:12+01:00",
@@ -825,6 +800,24 @@
    "id": "fantazje-zielonogorskie-2027"
   },
   {
+   "addedAt": "2026-11-26T08:10:12+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+; jeden dowód zakupu = jedno zgłoszenie; zachowaj oryginał paragonu (zwycięzca wysyła skan i oświadczenie w 3 dni robocze); zakup od 26.11.2026.",
+   "organizer": "Content Invest Sp. z o.o. (dla Ferrero Polska)",
+   "prizes": "6 piramid Ferrero Rocher, 120 pater deserowych (126 nagród)",
+   "purchase": true,
+   "rulesUrl": "https://www.blask.ferrerorocher.pl/utils/doc/Regulamin_Loterii_(blask.ferrerorocher.pl).pdf",
+   "shops": [],
+   "start": "2026-11-27",
+   "task": "Kup min. 1 produkt Ferrero Rocher z listy promocyjnej w jednej transakcji i zarejestruj dowód zakupu w formularzu na stronie loterii. Wygrywa pierwsze zgłoszenie po starcie danego przedziału czasowego.",
+   "title": "Loteria „Dodaj Świętom złotego blasku Ferrero Rocher”",
+   "toBuy": "min. 1 produkt promocyjny Ferrero Rocher (np. Ferrero Rocher, Golden Stars Mix, Ferrero Collection)",
+   "url": "https://www.blask.ferrerorocher.pl",
+   "verified": true,
+   "id": "ferrero-rocher-zloty-blask-2026"
+  },
+  {
    "addedAt": "2026-10-29T07:39:12+01:00",
    "end": "2026-11-10",
    "note": "Wymagane darmowe konto Filmweb. Redakcja wybiera 5 najciekawszych odpowiedzi. Limit znaków nie podany.",
@@ -853,25 +846,6 @@
    "url": "https://www.filmweb.pl/contest/5903",
    "verified": true,
    "id": "filmweb-pucio"
-  },
-  {
-   "end": "2026-11-04",
-   "minSpend": 35,
-   "note": "18+. SMS na 4321 (koszt wg operatora) „czystadroga.nr paragonu.odpowiedź”, max 160 znaków. Każde 35 zł na jednym paragonie = 1 zgłoszenie.",
-   "organizer": "Los Mejores",
-   "prizes": "Voucher podróżny 5000 zł, 12 walizek American Tourister, 40 bonów Intermarché 200 zł",
-   "purchase": true,
-   "rulesUrl": "https://www.wyczyscnagrody.pl/akcje/108_Regulamin.pdf",
-   "shops": [
-    "Intermarché"
-   ],
-   "start": "2026-10-22",
-   "task": "Kup Finish i/lub Vanish za min. 35 zł, zachowaj paragon i opisz swoją czystą drogę do wygranej SMS-em.",
-   "title": "„Czysta droga do wygranej” – Intermarché",
-   "toBuy": "Finish i/lub Vanish",
-   "url": "https://www.wyczyscnagrody.pl/akcje/108.html",
-   "verified": true,
-   "id": "finish-intermarche"
   },
   {
    "addedAt": "2026-11-20T07:38:41+01:00",
@@ -1034,21 +1008,6 @@
    "id": "granice-ukryte-na-dnie"
   },
   {
-   "addedAt": "2026-11-02T08:00:00+01:00",
-   "end": "2026-11-04",
-   "note": "Jedno zgłoszenie na osobę; wysyłka tylko w Polsce.",
-   "organizer": "granice.pl",
-   "prizes": "Książka „Wiedźma z piekła”",
-   "purchase": false,
-   "rulesUrl": "https://www.granice.pl/regulamin",
-   "start": "2026-10-28",
-   "task": "Odpowiedz w formularzu na pytanie: jakie trzy rzeczy zabrałabyś na wyprawę do piekła i dlaczego. Najlepszą odpowiedź wybiera redakcja.",
-   "title": "granice.pl – książka „Wiedźma z piekła”",
-   "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-wiedzma-z-piekla/3062",
-   "verified": true,
-   "id": "granice-wiedzma-z-piekla"
-  },
-  {
    "addedAt": "2026-10-30T07:39:18+01:00",
    "end": "2026-11-12",
    "minSpend": null,
@@ -1158,26 +1117,6 @@
    "url": "https://inpost.pl/loteria",
    "verified": true,
    "id": "inpost-loteria"
-  },
-  {
-   "addedAt": "2026-10-31T07:41:10+01:00",
-   "end": "2026-11-04",
-   "minSpend": 35,
-   "note": "18+. SMS na 4321 (koszt wg operatora) „czysty.nr paragonu.odpowiedź”, max 160 znaków. Każde 35 zł = 1 zgłoszenie. Zachowaj paragon.",
-   "organizer": "Los Mejores",
-   "prizes": "5000 zł, 5 frytkownic Bosch, 10 bonów Intermarché 200 zł",
-   "purchase": true,
-   "rulesUrl": "https://www.wyczyscnagrody.pl/akcje/109_Regulamin.pdf",
-   "shops": [
-    "Intermarché"
-   ],
-   "start": "2026-10-22",
-   "task": "Kup produkty Bryza, Woolite, Air Wick, Lovela lub Cillit Bang za min. 35 zł w Intermarché i wyślij SMS z odpowiedzią na pytanie „Jaki jest Twój czysty przepis na wygraną?”.",
-   "title": "„Czysty przepis na wygraną!” – Intermarché",
-   "toBuy": "Produkty Bryza, Woolite, Air Wick, Lovela i/lub Cillit Bang za min. 35 zł na jednym paragonie",
-   "url": "https://www.wyczyscnagrody.pl/akcje/109.html",
-   "verified": true,
-   "id": "intermarche-czysty-przepis"
   },
   {
    "addedAt": "2026-11-18T07:40:00+01:00",
@@ -1665,26 +1604,6 @@
    "id": "loreal-hebe"
   },
   {
-   "addedAt": "2026-10-31T07:41:10+01:00",
-   "end": "2026-11-04",
-   "minSpend": null,
-   "note": "18+. Każde zgłoszenie = osobny paragon; zachowaj oryginał do 11.12.2026.",
-   "organizer": "Columbit",
-   "prizes": "Skuter Vespa Primavera 125, 10 × e-karta Hebe 500 zł, 100 zestawów kosmetyków",
-   "purchase": true,
-   "rulesUrl": "https://lorealeventy-pl.beauty-campaigns.com/uploads/media/b/6ab1308350205616762780.pdf",
-   "shops": [
-    "Hebe"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup dowolny produkt L’Oréal Paris w Hebe i dokończ w formularzu zdanie „Moje laboratorium piękna to…” (max 300 znaków), dołączając zdjęcie paragonu.",
-   "title": "„Domowe laboratorium piękna” – L’Oréal Paris w Hebe",
-   "toBuy": "Min. 1 produkt L’Oréal Paris (sklep Hebe lub hebe.pl)",
-   "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-piekno-napedzane-sila-nauki",
-   "verified": true,
-   "id": "loreal-laboratorium-hebe"
-  },
-  {
    "addedAt": "2026-11-05T07:39:05+01:00",
    "end": "2026-11-17",
    "minSpend": null,
@@ -2054,25 +1973,6 @@
    "url": "https://www.natural.pl/konkurs",
    "verified": true,
    "id": "natural-moje-suplementy-2026"
-  },
-  {
-   "end": "2026-11-04",
-   "minSpend": 15,
-   "note": "18+. SMS na 4321 (koszt wg operatora), prefiks PLA, max 250 znaków. Zachowaj oryginał paragonu.",
-   "organizer": "Albedo Marketing",
-   "prizes": "Bilety do parku Mandoria dla 4 osób, walizki Ochnik, e-kody Biedronka 100 zł",
-   "purchase": true,
-   "rulesUrl": "https://regulaminy.albedomarketing.pl/storage/terms/uyOrMEeZgwgveGoGq9pz6W6ggHvHu8-metaUmVndWxhbWluIE9kIMWbbmlhZGFuaWEgZG8gd3lncmFuaWEgdyBzaWVjaSBCaWVkcm9ua2FfVEYucGRm-.pdf",
-   "shops": [
-    "Biedronka"
-   ],
-   "start": "2026-10-21",
-   "task": "Kup płatki lub batony Nestlé za min. 15 zł w Biedronce i wyślij SMS z odpowiedzią: „Jak wygląda Twoje śniadanie?”",
-   "title": "„Od śniadania do wygrania” – Nestlé w Biedronce",
-   "toBuy": "Płatki śniadaniowe lub batony zbożowe Nestlé za min. 15 zł na jednym paragonie",
-   "url": "https://www.e-konkursy.info/konkurs/konkurs-od-sniadania-do-wygrania-biedronka",
-   "verified": true,
-   "id": "nestle-biedronka"
   },
   {
    "addedAt": "2026-11-07T07:39:50+01:00",
@@ -3004,6 +2904,21 @@
    "id": "swidnica-wiersz-obrazkowy-2026"
   },
   {
+   "addedAt": "2026-11-26T08:10:12+01:00",
+   "end": "2026-11-30",
+   "note": "Udział bezpłatny; formularz do 30.11, 23:59. Trzeba osobiście przywieźć szopkę 3.12.2026 (10–12) pod pomnik Mickiewicza w Krakowie. Szopka do odbioru 1–12.03.2027, potem przechodzi na Muzeum; licencja dla Muzeum na publikację. Formularz pyta o użycie AI.",
+   "organizer": "Muzeum Krakowa",
+   "prizes": "Nagrody pieniężne i dyplomy",
+   "purchase": false,
+   "rulesUrl": "https://szopki.muzeumkrakowa.pl/regulamin/",
+   "start": "2026-11-01",
+   "task": "Własnoręcznie wykonaj szopkę krakowską (kategorie wg wysokości: do 20 cm, 20–70 cm, 70–120 cm, ponad 120 cm, albo kategoria OFF) i zgłoś ją formularzem online; maks. 3 prace na osobę.",
+   "title": "84. Konkurs Szopek Krakowskich",
+   "url": "https://muzeumkrakowa.pl/aktualnosci/84-konkurs-szopek-krakowskich-2026",
+   "verified": true,
+   "id": "szopki-krakowskie-84"
+  },
+  {
    "addedAt": "2026-11-20T07:38:41+01:00",
    "end": "2026-11-23",
    "note": "18+; tylko klienci T-Mobile (abonament/na kartę) z aktywnym numerem, w programie Magenta Moments w aplikacji; udział bezpłatny; zakaz odpowiedzi tworzonych z AI; jedno zgłoszenie na osobę.",
@@ -3163,21 +3078,6 @@
    "url": "https://wozownia.pl/autoportret-3-przeglad-fotografii-prefka/",
    "verified": true,
    "id": "wozownia-autoportret-2026"
-  },
-  {
-   "addedAt": "2026-11-01T07:50:00+01:00",
-   "end": "2026-11-04",
-   "note": "Zgłoszenia do 4.11 do 9:00; trzeba pojechać na koncert do Wrocławia (5.11, 19:00); wygrywa pierwsza i ostatnia poprawna odpowiedź; wygrana na wroclaw.pl maks. raz na 30 dni.",
-   "organizer": "Agencja Rozwoju Aglomeracji Wrocławskiej (wroclaw.pl)",
-   "prizes": "2 × podwójne zaproszenie na koncert 5.11.2026 we Wrocławiu",
-   "purchase": false,
-   "rulesUrl": "https://www.wroclaw.pl/dla-mieszkanca/ogolny-regulamin-konkursow-prowadznych-na-portalu-wroclawpl",
-   "start": "2026-10-29",
-   "task": "W formularzu podaj nazwisko min. jednego słynnego kompozytora, który występował w Oratorium Marianum.",
-   "title": "wroclaw.pl – zaproszenia na koncert Wrocław Baroque Ensemble",
-   "url": "https://www.wroclaw.pl/dla-mieszkanca/koncert-wroclaw-baroque-ensemble-oratorium-marianum-zaproszenia-konkurs",
-   "verified": true,
-   "id": "wroclaw-baroque-zaproszenia"
   },
   {
    "addedAt": "2026-11-04T07:38:30+01:00",
