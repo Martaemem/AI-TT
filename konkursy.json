@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-26T08:10:12+01:00",
+ "updatedAt": "2026-11-27T07:50:10+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -55,26 +55,6 @@
    "id": "allegro-smart-loteria"
   },
   {
-   "addedAt": "2026-10-30T07:39:18+01:00",
-   "end": "2026-11-05",
-   "minSpend": null,
-   "note": "18+. Także zakupy.biedronka.pl. Każde zgłoszenie = nowy paragon i inna odpowiedź. Zachowaj oryginał paragonu.",
-   "organizer": "Creative Ideas Marek Wojcieszyński / Hochland",
-   "prizes": "Voucher wakacje.pl 15 000 zł, 20 ekspresów AeroPress Go Plus z kubkiem",
-   "purchase": true,
-   "rulesUrl": "https://almettesmakiitalii.pl/docs/Regulamin_konkurs_ALMETTE-SMAKI-ITALII_Biedronka.pdf",
-   "shops": [
-    "Biedronka"
-   ],
-   "start": "2026-10-29",
-   "task": "Kup 2 serki Almette SMAKI ITALII w Biedronce, zgłoś paragon w formularzu i zaproponuj nowy smak serii z uzasadnieniem (do 250 znaków).",
-   "title": "„Almette SMAKI ITALII” – Biedronka",
-   "toBuy": "2 serki Almette SMAKI ITALII 150 g (trufla lub czarny czosnek)",
-   "url": "https://almettesmakiitalii.pl/",
-   "verified": true,
-   "id": "almette-smaki-italii-biedronka"
-  },
-  {
    "end": "2026-11-29",
    "minSpend": 50,
    "note": "18+. Jeden kod za każde 50 zł, dodatkowy kod z kartą lub aplikacją Arhelan. Max 5 zgłoszeń dziennie. Zachowaj paragon.",
@@ -92,6 +72,26 @@
    "url": "https://www.loteria.arhelan.pl/",
    "verified": true,
    "id": "arhelan-35"
+  },
+  {
+   "addedAt": "2026-11-27T07:50:10+01:00",
+   "end": "2026-12-23",
+   "minSpend": 50,
+   "note": "Wymagane konto EverydayMe; tylko sklepy stacjonarne; zachowaj oryginał paragonu; każdy paragon tylko raz. Sprawdzone na oficjalnej stronie akcji – limit znaków i wiek sprawdź w regulaminie PDF.",
+   "organizer": "Procter & Gamble DS Polska (EverydayMe)",
+   "prizes": "15 × karta podarunkowa Pluxee 1000 zł",
+   "purchase": true,
+   "rulesUrl": "https://cdn-prd.pgjoltx.com/-/media/Growing-Families-Version1/GF-PL/2026/001---konkursy/konkurs-ariel-x-kaufland-nov-dec-26/Regulamin-konkursu_Kup-i-odwie-swoj-garderob.pdf?rev=29c40b5addd7460eb2a4a895a59b2d3b",
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-11-26",
+   "task": "Kup Ariel za min. 50 zł w Kauflandzie, wgraj paragon w EverydayMe i kreatywnie odpowiedz, co opowiedziałoby Twoje ulubione ubranie.",
+   "title": "„Kup i odśwież swoją garderobę” – Ariel w Kauflandzie",
+   "toBuy": "produkty Ariel (proszek, kapsułki, płyn) za łącznie min. 50 zł",
+   "url": "https://www.everydayme.pl/konkursy/garderoba",
+   "verified": true,
+   "id": "ariel-kaufland-garderoba"
   },
   {
    "addedAt": "2026-11-23T07:45:05+01:00",
@@ -439,6 +439,26 @@
    "id": "coca-cola-swietuj-arlamow"
   },
   {
+   "addedAt": "2026-11-27T07:50:10+01:00",
+   "end": "2026-12-16",
+   "minSpend": null,
+   "note": "18+; zakaz tekstów generowanych przez AI; zachowaj oryginał paragonu (zakup przed zgłoszeniem); tylko sklepy stacjonarne; jedna nagroda danego typu na gospodarstwo domowe.",
+   "organizer": "Smolar Agencja Promocyjno-Reklamowa Sp. z o.o. (dla Unilever)",
+   "prizes": "5 × pralka Samsung EcoBubble, 50 × zestaw produktów Coccolino",
+   "purchase": true,
+   "rulesUrl": "https://www.smolar.pl/sites/default/files/regulamin_-_przytul_sie_do_wygranej_z_misiem.pdf",
+   "shops": [
+    "Kaufland"
+   ],
+   "start": "2026-11-26",
+   "task": "Kup 2 płyny Coccolino w Kauflandzie i w formularzu dokończ zdanie „Zapach prania zimą kojarzy mi się z…” (max 300 znaków ze spacjami).",
+   "title": "„Przytul się do wygranej z misiem!” – Coccolino w Kauflandzie",
+   "toBuy": "min. 2 produkty do płukania Coccolino w jednym zakupie",
+   "url": "https://www.promocjeunilever.pl/coccolino",
+   "verified": true,
+   "id": "coccolino-kaufland-mis"
+  },
+  {
    "end": "2026-11-30",
    "minSpend": null,
    "note": "18+. Jeden paragon to jedno zgłoszenie. Zachowaj oryginał paragonu do zakończenia reklamacji.",
@@ -469,6 +489,21 @@
    "url": "https://www.dacia.pl/kampania/road-to-brussels.html",
    "verified": true,
    "id": "dacia-road-to-brussels"
+  },
+  {
+   "addedAt": "2026-11-27T07:50:10+01:00",
+   "end": "2026-12-21",
+   "note": "18+; udział darmowy; tygodniowe etapy (zgłoszenie liczy się tylko w swoim tygodniu); praca musi być własna i oryginalna; licencja niewyłączna z prawem publikacji; social media niewymagane.",
+   "organizer": "Formaster S.A. (Dafi)",
+   "prizes": "Co tydzień (5 etapów): 500 zł BLIK + 2 zestawy Dafi (374 zł); każdy uczestnik dostaje kod -25% na dafi.pl",
+   "purchase": false,
+   "rulesUrl": "https://homocomplicatus.pl/regulamin-konkursu",
+   "start": "2026-11-17",
+   "task": "Opisz w formularzu swój dziwny, niepraktyczny lub przesadnie skomplikowany nawyk albo rytuał, choć istnieje prostsze rozwiązanie. Regulamin nie podaje limitu znaków.",
+   "title": "„Wielki Atlas Homo complicatus” – Dafi",
+   "url": "https://homocomplicatus.pl/",
+   "verified": true,
+   "id": "dafi-homo-complicatus"
   },
   {
    "addedAt": "2026-11-14T07:40:02+01:00",
@@ -540,26 +575,6 @@
    "url": "https://www.delikatesy.pl/loteria",
    "verified": true,
    "id": "delikatesy-centrum-deszcz"
-  },
-  {
-   "addedAt": "2026-10-29T07:39:12+01:00",
-   "end": "2026-11-05",
-   "minSpend": null,
-   "note": "18+. Zakupy 28.10–03.11, zgłoszenia do 05.11. Bez Żabka Nano. Wymagane aktywne konto Żappka. Praca musi być własną twórczością. Każdy zakup 2 szt. = osobne zgłoszenie.",
-   "organizer": "Studio REC Sp. z o.o.",
-   "prizes": "Voucher Wakacje.pl 10 000 zł, 20 × głośnik JBL PartyBox",
-   "purchase": true,
-   "rulesUrl": "https://konkursdesperados.pl/pdf/regulamin.pdf",
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-28",
-   "task": "Kup 2 Desperados w Żabce z aplikacją Żappka, odbierz kod i opisz straszną opowieść halloweenową (do 1500 znaków) w formularzu.",
-   "title": "„Desperados Halloween 2026” – Żabka",
-   "toBuy": "2 piwa Desperados (jednorazowo, ze zeskanowaną Żappką)",
-   "url": "https://konkursdesperados.pl",
-   "verified": true,
-   "id": "desperados-halloween-zabka"
   },
   {
    "end": "2026-11-12",
@@ -890,26 +905,6 @@
    "id": "g3ferrari-kulinarne-wyzwanie-3"
   },
   {
-   "addedAt": "2026-10-30T07:39:18+01:00",
-   "end": "2026-11-05",
-   "minSpend": null,
-   "note": "18+ (alkohol). Zakupy tylko do 3.11, zgłoszenia do 5.11. Wymaga Żappki z potwierdzonym wiekiem. Zakaz tekstów generowanych przez AI. Max 2 zgłoszenia dziennie.",
-   "organizer": "Smolar / Carlsberg Polska",
-   "prizes": "80 koszulek So Hard, 5 biletów na So Hard Birthday (Warszawa, 4.12)",
-   "purchase": true,
-   "rulesUrl": "https://www.konkursgarage.pl/regulaminy/Regulamin_konkursu_Garage-%28Zabka%29.pdf",
-   "shops": [
-    "Żabka"
-   ],
-   "start": "2026-10-28",
-   "task": "Kup 2 butelki Garage w Żabce z Żappką, odbierz kod i w formularzu wymyśl motyw przewodni wydarzenia So Hard z uzasadnieniem (do 300 znaków).",
-   "title": "„Garage So Hard” – Żabka",
-   "toBuy": "2 butelki Garage 8% 0,4 l (jedna transakcja, ze skanem Żappki)",
-   "url": "https://www.konkursgarage.pl/",
-   "verified": true,
-   "id": "garage-so-hard-zabka"
-  },
-  {
    "addedAt": "2026-11-19T07:39:51+01:00",
    "end": "2026-11-29",
    "minSpend": 1000,
@@ -991,21 +986,6 @@
    "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-skwar/3066",
    "verified": true,
    "id": "granice-skwar"
-  },
-  {
-   "addedAt": "2026-11-02T08:00:00+01:00",
-   "end": "2026-11-05",
-   "note": "Jedno zgłoszenie na osobę; wysyłka tylko w Polsce.",
-   "organizer": "granice.pl",
-   "prizes": "Książka „Ukryte na dnie”",
-   "purchase": false,
-   "rulesUrl": "https://www.granice.pl/regulamin",
-   "start": "2026-10-29",
-   "task": "Odpowiedz w formularzu na pytanie: jaki przedmiot z rodzinnego domu ma dla Ciebie największą wartość sentymentalną i dlaczego.",
-   "title": "granice.pl – książka „Ukryte na dnie”",
-   "url": "https://www.granice.pl/konkurs/wygraj-ksiazke-ukryte-na-dnie/3063",
-   "verified": true,
-   "id": "granice-ukryte-na-dnie"
   },
   {
    "addedAt": "2026-10-30T07:39:18+01:00",
@@ -1585,25 +1565,6 @@
    "id": "logo-mba"
   },
   {
-   "end": "2026-11-05",
-   "minSpend": 49,
-   "note": "18+. Hebe stacjonarnie lub hebe.pl. Odpowiedź do 300 znaków + zdjęcie paragonu. Nagroda to wyjazd na event w Warszawie 26.11.2026.",
-   "organizer": "Columbit",
-   "prizes": "20 × zaproszenie dla 2 osób do Warszawy z noclegiem + 400 zł",
-   "purchase": true,
-   "rulesUrl": "https://columbit.nazwa.pl/regulaminy/2876_L'Oreal_konkurs-Hebe-regulamin.pdf",
-   "shops": [
-    "Hebe"
-   ],
-   "start": "2026-10-23",
-   "task": "Kup min. 2 produkty L’Oréal Paris za min. 49 zł w Hebe i opisz swój przedświąteczny rytuał piękna (do 300 znaków).",
-   "title": "L’Oréal Paris Christmas Avenue – Hebe",
-   "toBuy": "Min. 2 produkty L’Oréal Paris na jednym paragonie",
-   "url": "https://lorealeventy-pl.beauty-campaigns.com/konkurs-lorealparis-christmas-avenue",
-   "verified": true,
-   "id": "loreal-hebe"
-  },
-  {
    "addedAt": "2026-11-05T07:39:05+01:00",
    "end": "2026-11-17",
    "minSpend": null,
@@ -1640,26 +1601,6 @@
    "url": "https://www.konkursloyd.pl/",
    "verified": true,
    "id": "loyd-magiczna-chwila"
-  },
-  {
-   "addedAt": "2026-11-01T07:50:00+01:00",
-   "end": "2026-11-05",
-   "minSpend": 12,
-   "note": "18+; zakaz AI; jeden paragon = jedno zgłoszenie, zachowaj oryginał; sprzeciw wobec marketingu Maspexu oznacza rezygnację z udziału.",
-   "organizer": "Amooco (MW Food / Maspex)",
-   "prizes": "3 × Thermomix TM7, 30 × bon Kaufland 500 zł",
-   "purchase": true,
-   "rulesUrl": "https://smaczniezlubella.pl/pliki/regulamin.pdf",
-   "shops": [
-    "Kaufland"
-   ],
-   "start": "2026-10-16",
-   "task": "Kup w Kauflandzie produkty Lubella lub Łowicz za min. 12 zł i opisz swój sposób na szybki rodzinny obiad (maks. 1000 znaków).",
-   "title": "„Szybko! Smacznie! Obiadowo!” – Lubella i Łowicz w Kauflandzie",
-   "toBuy": "Produkty promocyjne Lubella/Łowicz (lista w regulaminie)",
-   "url": "https://smaczniezlubella.pl/",
-   "verified": true,
-   "id": "lubella-kaufland-obiadowo"
   },
   {
    "end": "2027-02-28",
@@ -2224,6 +2165,26 @@
    "id": "ozdoba-papierowa"
   },
   {
+   "addedAt": "2026-11-27T07:50:10+01:00",
+   "end": "2026-12-21",
+   "minSpend": null,
+   "note": "Wymagane konto EverydayMe; zachowaj paragon; każdy paragon tylko raz. Sprawdzone na oficjalnej stronie akcji – limit znaków i wiek sprawdź w regulaminie PDF.",
+   "organizer": "Procter & Gamble DS Polska (EverydayMe)",
+   "prizes": "1 × roczny zapas Pampers Premium Care, 100 × miesięczny zapas pieluszek",
+   "purchase": true,
+   "rulesUrl": "https://cdn-prd.pgjoltx.com/-/media/Growing-Families-Version1/GF-PL/2026/001---konkursy/pampers-dec-2026/Regulamin-konkursu_Pampers-Mio-sen-zabawa_Biedronka_2627.pdf?rev=7eb8eab2cf614ef0b6b025bc64097fac",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-11-23",
+   "task": "Kup pieluszki Pampers w Biedronce, wgraj paragon w EverydayMe i odpowiedz, co znaczy dla Ciebie i Twojego dziecka ochrona skóry.",
+   "title": "„Miłość, sen, zabawa” – Pampers w Biedronce",
+   "toBuy": "min. 1 opakowanie promocyjnych pieluszek lub pieluchomajtek Pampers",
+   "url": "https://www.everydayme.pl/konkursy/pampers-biedronka",
+   "verified": true,
+   "id": "pampers-biedronka-milosc-sen-zabawa"
+  },
+  {
    "addedAt": "2026-11-10T07:40:48+01:00",
    "end": "2026-12-29",
    "minSpend": null,
@@ -2704,6 +2665,26 @@
    "url": "https://www.samsung.com/pl/campaign/galaxypolishcore/",
    "verified": true,
    "id": "samsung-polishcore-kraft"
+  },
+  {
+   "addedAt": "2026-11-27T07:50:10+01:00",
+   "end": "2026-12-17",
+   "minSpend": null,
+   "note": "18+; tylko sklepy stacjonarne; zachowaj oryginał paragonu; wymagane zdjęcie paragonu i zgoda na kontakt e-mail/SMS; licencja na odpowiedź na 2 lata.",
+   "organizer": "Orangina Schweppes Polska sp. z o.o. (operator H2O Sp. z o.o.)",
+   "prizes": "3 × projektor Samsung Freestyle, 15 × JBL PartyBox 320, 30 × Kindle, 90 × karta Biedronka 100 zł (etapy tygodniowe)",
+   "purchase": true,
+   "rulesUrl": "https://schweppespolska.pl/konkurs-regulamin",
+   "shops": [
+    "Biedronka"
+   ],
+   "start": "2026-11-26",
+   "task": "Kup 2 napoje Schweppes/Dr Pepper/Canada Dry w Biedronce i odpowiedz w formularzu, jak wygląda Wasz idealny jesienny wieczór, gdy każdy lubi coś innego (max 500 znaków).",
+   "title": "„Idealny jesienny wieczór ze Schweppes i Dr Pepper” – Biedronka",
+   "toBuy": "min. 2 produkty Schweppes, Dr Pepper lub Canada Dry na jednym paragonie",
+   "url": "https://schweppespolska.pl/konkurs/",
+   "verified": true,
+   "id": "schweppes-biedronka-jesienny-wieczor"
   },
   {
    "addedAt": "2026-10-26T07:36:00+01:00",
