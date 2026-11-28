@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-27T07:50:10+01:00",
+ "updatedAt": "2026-11-28T07:45:00+01:00",
  "contests": [
   {
    "addedAt": "2026-11-03T07:39:14+01:00",
@@ -127,6 +127,24 @@
    "url": "https://konkursbakoma.pl/",
    "verified": true,
    "id": "bakoma-dino-relaks"
+  },
+  {
+   "addedAt": "2026-11-28T07:44:00+01:00",
+   "end": "2026-12-31",
+   "minSpend": null,
+   "note": "18+; zakaz używania narzędzi AI; każdy zakup = osobny paragon i osobne zgłoszenie; zachowaj oryginalny paragon (bez NIP firmy); zwycięzców powiadamia SMS.",
+   "organizer": "SMOLAR Agencja Promocyjno-Reklamowa (dla Bakoma)",
+   "prizes": "82 nagrody: m.in. 2 bilety VIP na galę KSW, bilety na trybuny, podpisane rękawice, koszulki i plakaty KSW, kody PPV Canal+ Sport",
+   "purchase": true,
+   "rulesUrl": "https://dolaczdowalki.pl/regulaminy/Regulamin_konkursu_Bakoma_x_KSW.pdf",
+   "shops": [],
+   "start": "2026-09-14",
+   "task": "Kup jednorazowo min. 2 produkty z limitowanej edycji Bakoma x KSW, zgłoś paragon w formularzu i wyślij zdjęcie na temat „Pokaż, jak budujesz siłę mistrza z Bakomą” albo odpowiedź tekstową (do 300 znaków).",
+   "title": "Konkurs „Bakoma x KSW” – Dołącz do walki",
+   "toBuy": "min. 2 produkty Bakoma z limitowanej edycji KSW na jednym paragonie",
+   "url": "https://www.dolaczdowalki.pl",
+   "verified": true,
+   "id": "bakoma-ksw-dolacz-do-walki"
   },
   {
    "addedAt": "2026-11-24T08:30:00+01:00",
@@ -3059,36 +3077,6 @@
    "url": "https://wozownia.pl/autoportret-3-przeglad-fotografii-prefka/",
    "verified": true,
    "id": "wozownia-autoportret-2026"
-  },
-  {
-   "addedAt": "2026-11-04T07:38:30+01:00",
-   "end": "2026-11-06",
-   "note": "Zgłoszenia do 6.11 godz. 9:00; wygrywa pierwsze i ostatnie zgłoszenie; odbiór nagrody prawdopodobnie osobiście we Wrocławiu.",
-   "organizer": "Urząd Miejski Wrocławia (portal wroclaw.pl)",
-   "prizes": "2 podwójne zaproszenia na dowolny film (Helios Bielany, Helios Magnolia)",
-   "purchase": false,
-   "rulesUrl": "https://www.wroclaw.pl/dla-mieszkanca/ogolny-regulamin-konkursow-prowadznych-na-portalu-wroclawpl",
-   "start": "2026-11-03",
-   "task": "W formularzu na wroclaw.pl podaj dane i odpowiedz na pytanie: ile kin Helios jest we Wrocławiu?",
-   "title": "wroclaw.pl – podwójne zaproszenia do kin Helios",
-   "url": "https://www.wroclaw.pl/dla-mieszkanca/zaproszenia-na-wybrany-film-do-heliosa",
-   "verified": true,
-   "id": "wroclaw-helios-listopad"
-  },
-  {
-   "addedAt": "2026-11-03T07:39:14+01:00",
-   "end": "2026-11-06",
-   "note": "Zgłoszenia do 6.11 do 9:00; trzeba pojechać na koncert do Wrocławia (7–26.11); wygrywają 3 pierwsze i 3 ostatnie poprawne odpowiedzi; wygrana na wroclaw.pl maks. raz na 30 dni.",
-   "organizer": "Agencja Rozwoju Aglomeracji Wrocławskiej (wroclaw.pl)",
-   "prizes": "6 × podwójne zaproszenie na listopadowy koncert w NFM",
-   "purchase": false,
-   "rulesUrl": "https://www.wroclaw.pl/dla-mieszkanca/ogolny-regulamin-konkursow-prowadznych-na-portalu-wroclawpl",
-   "start": "2026-11-02",
-   "task": "W formularzu odpowiedz, która edycja Konkursu im. Henryka Wieniawskiego właśnie się zakończyła (podpowiedź na stronie NFM).",
-   "title": "wroclaw.pl – podwójne zaproszenia na koncerty w NFM (listopad)",
-   "url": "https://www.wroclaw.pl/dla-mieszkanca/podwojne-bilety-na-koncerty-do-nfm-w-listopadzie-konkurs",
-   "verified": true,
-   "id": "wroclaw-nfm-listopad"
   },
   {
    "addedAt": "2026-11-19T07:39:51+01:00",
